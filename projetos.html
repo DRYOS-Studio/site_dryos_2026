@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projetos — DRYOS Growth Systems</title>
+<meta name="description" content="Portfolio de sistemas e operações construídas pela DRYOS desde 2020.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700;800&family=Onest:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #FAFAF8;
+  --ink: #0A0A0A;
+  --ink-soft: #1A1A1A;
+  --oak: #1F3A2A;
+  --oak-light: #4A6A52;
+  --mute: #6B6B68;
+  --mute-soft: #9A9A95;
+  --line: #1A1A1A14;
+  --line-strong: #1A1A1A2A;
+  --surface: #F2F2EE;
+
+  --font-display: 'Funnel Display', sans-serif;
+  --font-body: 'Onest', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --max-width: 1320px;
+  --gutter: clamp(1.25rem, 4vw, 4rem);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.55;
+  font-weight: 400;
+  overflow-x: hidden;
+  letter-spacing: -0.005em;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  position: relative;
+}
+
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250, 250, 248, 0.88);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem var(--gutter);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.logo-wrap { display: flex; align-items: center; height: 28px; }
+
+.logo-img {
+  height: 24px;
+  width: auto;
+  display: block;
+  filter: invert(1);
+  mix-blend-mode: multiply;
+}
+
+.nav-links { display: flex; gap: 2.5rem; align-items: center; }
+
+.nav-links a {
+  font-size: 13px;
+  color: var(--mute);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover { color: var(--ink); }
+.nav-links a.active { color: var(--ink); font-weight: 600; }
+
+.nav-cta {
+  background: var(--ink);
+  color: var(--bg);
+  padding: 0.6rem 1.1rem;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.nav-cta:hover { background: var(--oak); }
+
+@media (max-width: 768px) { .nav-links { display: none; } }
+
+/* PAGE HEADER */
+.page-header {
+  padding: clamp(4rem, 8vw, 7rem) 0 clamp(3rem, 5vw, 5rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.breadcrumb {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mute);
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.breadcrumb .sep { color: var(--line-strong); }
+
+.page-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  line-height: 0.95;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+  max-width: 16ch;
+}
+
+.page-title strong { font-weight: 800; }
+
+.page-intro {
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  color: var(--ink-soft);
+  max-width: 56ch;
+  line-height: 1.5;
+}
+
+.page-intro strong { font-weight: 600; color: var(--ink); }
+
+/* FILTER BAR */
+.filter-bar {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--mute);
+  border: 1px solid var(--line-strong);
+  padding: 7px 13px;
+  background: var(--bg);
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-tag.active,
+.filter-tag:hover {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+
+/* PROJECT DETAIL */
+.project-detail {
+  padding: clamp(4rem, 7vw, 6rem) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.project-detail:last-of-type { border-bottom: none; }
+
+.project-detail-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.project-meta-col { position: sticky; top: 100px; }
+
+.project-meta-col .label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mute);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.project-meta-col .number {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--oak);
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.project-meta-item {
+  margin-bottom: 1.25rem;
+}
+
+.project-meta-item .field-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mute);
+  margin-bottom: 4px;
+  display: block;
+}
+
+.project-meta-item .field-value {
+  font-family: var(--font-display);
+  font-size: 14px;
+  color: var(--ink);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.project-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--ink);
+}
+
+.project-status::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  background: var(--oak);
+  border-radius: 50%;
+}
+
+.project-detail-name {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.project-detail-tagline {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--oak);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.project-detail-desc {
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 64ch;
+}
+
+.project-detail-desc strong { font-weight: 600; color: var(--ink); }
+
+.project-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--line-strong);
+  border: 1px solid var(--line-strong);
+  margin-top: 2rem;
+}
+
+.project-feature {
+  background: var(--bg);
+  padding: 1.25rem;
+}
+
+.project-feature .feat-num {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--oak);
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.project-feature .feat-text {
+  font-size: 13.5px;
+  color: var(--ink);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .project-detail-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .project-features { grid-template-columns: 1fr; }
+}
+
+/* CTA FINAL */
+.page-cta {
+  padding: clamp(5rem, 10vw, 9rem) 0;
+  background: var(--ink);
+  color: var(--bg);
+  text-align: center;
+}
+
+.page-cta-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #93B596;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.page-cta h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  color: var(--bg);
+  margin-bottom: 1.5rem;
+}
+
+.page-cta h2 strong { font-weight: 800; }
+
+.page-cta p {
+  font-size: 1.05rem;
+  color: rgba(250, 250, 248, 0.7);
+  max-width: 50ch;
+  margin: 0 auto 2.5rem;
+  line-height: 1.5;
+}
+
+.btn-primary {
+  background: var(--bg);
+  color: var(--ink);
+  padding: 1rem 1.75rem;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.25s ease;
+  letter-spacing: -0.005em;
+}
+
+.btn-primary:hover { background: #93B596; }
+
+.btn-primary svg { transition: transform 0.25s ease; }
+.btn-primary:hover svg { transform: translateX(3px); }
+
+/* FOOTER */
+footer {
+  padding: 2.5rem 0 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-meta {
+  display: flex;
+  gap: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--mute);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  flex-wrap: wrap;
+}
+
+.footer-meta a:hover { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo-wrap" aria-label="DRYOS">
+      <img class="logo-img" src="data:image/jpeg;base64,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" alt="DRYOS">
+    </a>
+    <div class="nav-links">
+      <a href="/#vilões">Vilões</a>
+      <a href="/#core">Core</a>
+      <a href="/#spark">Spark</a>
+      <a href="/#studio">Studio</a>
+      <a href="/projetos" class="active">Projetos</a>
+    </div>
+    <a href="/#diagnostico" class="nav-cta">Diagnóstico →</a>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">DRYOS</a>
+      <span class="sep">/</span>
+      <span>Projetos</span>
+    </div>
+    <h1 class="page-title">Sistemas em <strong>produção.</strong></h1>
+    <p class="page-intro">
+      Cada projeto é uma operação real, em produção, resolvendo dor específica de cliente real. Aqui está o que construímos — entre Core, Spark, Studio e produtos próprios.
+    </p>
+  </div>
+</section>
+
+<!-- PROJECT 1: EVENTMETRICS -->
+<section class="project-detail" id="eventmetrics">
+  <div class="container">
+    <div class="project-detail-grid">
+      <div class="project-meta-col">
+        <span class="number">— 01</span>
+        <div class="project-meta-item">
+          <span class="field-label">Linha</span>
+          <span class="field-value">Studio</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="field-label">Categoria</span>
+          <span class="field-value">Plataforma SaaS</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="field-label">Status</span>
+          <span class="project-status">Em produção</span>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="project-detail-name">Eventmetrics</h2>
+        <div class="project-detail-tagline">— Inteligência de eventos · 2024</div>
+        <p class="project-detail-desc">
+          Plataforma de analytics e gestão para organizadores de eventos. Reúne em um único painel <strong>métricas em tempo real, controle financeiro, gestão de equipe e relatórios automatizados</strong> — substituindo planilhas dispersas e ferramentas isoladas.
+        </p>
+
+        <div class="project-features">
+          <div class="project-feature">
+            <span class="feat-num">— 01</span>
+            <span class="feat-text">Dashboard executivo com KPIs em tempo real</span>
+          </div>
+          <div class="project-feature">
+            <span class="feat-num">— 02</span>
+            <span class="feat-text">Gestão financeira integrada (receita, despesa, margem)</span>
+          </div>
+          <div class="project-feature">
+            <span class="feat-num">— 03</span>
+            <span class="feat-text">Relatórios automatizados por evento</span>
+          </div>
+          <div class="project-feature">
+            <span class="feat-num">— 04</span>
+            <span class="feat-text">Controle de equipe e operação no dia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT 2: CASA FINANCEIRA -->
+<section class="project-detail" id="casa-financeira">
+  <div class="container">
+    <div class="project-detail-grid">
+      <div class="project-meta-col">
+        <span class="number">— 02</span>
+        <div class="project-meta-item">
+          <span class="field-label">Linha</span>
+          <span class="field-value">Studio</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="field-label">Categoria</span>
+          <span class="field-value">Sistema de gestão</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="field-label">Status</span>
+          <span class="project-status">Em produção</span>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="project-detail-name">Casa Financeira</h2>
+        <div class="project-detail-tagline">— Sistema de gestão financeira · 2024</div>
+        <p class="project-detail-desc">
+          Sistema sob medida de gestão financeira para empresa que sentia o caos dos controles fragmentados em planilhas. Concentra <strong>fluxo de caixa, conciliação bancária, controle de DRE e relatórios executivos</strong> em uma plataforma única.
+        </p>
+
+        <div class="project-features">
+          <div class="project-feature">
+            <span class="feat-num">— 01</span>
+            <span class="feat-text">Fluxo de caixa em tempo real</span>
+          </div>
+          <div class="project-feature">
+            <span class="feat-num">— 02</span>
+            <span class="feat-text">Conciliação bancária automatizada</span>
+          </div>
+          <div class="project-feature">
+            <span class="feat-num">— 03</span>
+            <span class="feat-text">DRE gerencial com comparativos</span>
+          </div>
+          <div class="project-feature">
+            <span class="feat-num">— 04</span>
+            <span class="feat-text">Relatórios executivos personalizados</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT 3: ALTIS CORTEX -->
+<section class="project-detail" id="altis-cortex">
+  <div class="container">
+    <div class="project-detail-grid">
+      <div class="project-meta-col">
+        <span class="number">— 03</span>
+        <div class="project-meta-item">
+          <span class="field-label">Linha</span>
+          <span class="field-value">Core</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="field-label">Categoria</span>
+          <span class="field-value">Plataforma operacional</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="field-label">Status</span>
+          <span class="project-status">Em produção</span>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="project-detail-name">Altis Cortex</h2>
+        <div class="project-detail-tagline">— Implementação completa do Core · 2024</div>
+        <p class="project-detail-desc">
+          Implementação ponta a ponta do DRYOS Core no Altis Lisboa, primeira empresa a operar com a plataforma completa. <strong>Oito módulos integrados, agente Aegis no comercial via WhatsApp, dashboard executivo</strong> e governança própria. Caso real que validou a arquitetura do Core.
+        </p>
+
+        <div class="project-features">
+          <div class="project-feature">
+            <span class="feat-num">— 01</span>
+            <span class="feat-text">CRM, Deals e Inbox omnichannel ativos</span>
+          </div>
+          <div class="project-feature">
+            <span class="feat-num">— 02</span>
+            <span class="feat-text">Aegis no comercial via WhatsApp 24/7</span>
+          </div>
+          <div class="project-feature">
+            <span class="feat-num">— 03</span>
+            <span class="feat-text">Insights executivos com narrativa IA</span>
+          </div>
+          <div class="project-feature">
+            <span class="feat-num">— 04</span>
+            <span class="feat-text">Reach, Flow e Guard em operação</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT 4: DEMARCHI -->
+<section class="project-detail" id="demarchi">
+  <div class="container">
+    <div class="project-detail-grid">
+      <div class="project-meta-col">
+        <span class="number">— 04</span>
+        <div class="project-meta-item">
+          <span class="field-label">Linha</span>
+          <span class="field-value">Studio</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="field-label">Categoria</span>
+          <span class="field-value">Catálogo digital</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="field-label">Status</span>
+          <span class="project-status">Em produção</span>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="project-detail-name">DeMarchi Automotive</h2>
+        <div class="project-detail-tagline">— Catálogo de produtos automotivos · 2024</div>
+        <p class="project-detail-desc">
+          Catálogo digital sob medida para distribuidora automotiva, com <strong>busca inteligente por compatibilidade, integração com estoque em tempo real e jornada de cotação automatizada via WhatsApp</strong>. Substitui o vai-e-vem manual de pedidos por planilha e ligação.
+        </p>
+
+        <div class="project-features">
+          <div class="project-feature">
+            <span class="feat-num">— 01</span>
+            <span class="feat-text">Busca por compatibilidade e modelo</span>
+          </div>
+          <div class="project-feature">
+            <span class="feat-num">— 02</span>
+            <span class="feat-text">Integração em tempo real com estoque</span>
+          </div>
+          <div class="project-feature">
+            <span class="feat-num">— 03</span>
+            <span class="feat-text">Cotação automatizada via WhatsApp</span>
+          </div>
+          <div class="project-feature">
+            <span class="feat-num">— 04</span>
+            <span class="feat-text">Painel administrativo completo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT 5: KRATOS CONTENT -->
+<section class="project-detail" id="kratos-content">
+  <div class="container">
+    <div class="project-detail-grid">
+      <div class="project-meta-col">
+        <span class="number">— 05</span>
+        <div class="project-meta-item">
+          <span class="field-label">Linha</span>
+          <span class="field-value">Spark</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="field-label">Categoria</span>
+          <span class="field-value">Sistema de conteúdo</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="field-label">Status</span>
+          <span class="project-status">Em produção</span>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="project-detail-name">Kratos Social Content</h2>
+        <div class="project-detail-tagline">— Produção de conteúdo com IA · 2024</div>
+        <p class="project-detail-desc">
+          Sistema de produção de conteúdo para redes sociais com <strong>agentes IA especializados em pauta, copywriting, adequação por canal e calendário editorial</strong>. Transforma briefing em pauta, pauta em copy, copy em peça pronta — tudo em fluxo único, sob a supervisão da equipe.
+        </p>
+
+        <div class="project-features">
+          <div class="project-feature">
+            <span class="feat-num">— 01</span>
+            <span class="feat-text">Agente de pauta orientado a marca</span>
+          </div>
+          <div class="project-feature">
+            <span class="feat-num">— 02</span>
+            <span class="feat-text">Copywriting com tom de voz definido</span>
+          </div>
+          <div class="project-feature">
+            <span class="feat-num">— 03</span>
+            <span class="feat-text">Adequação automática por canal</span>
+          </div>
+          <div class="project-feature">
+            <span class="feat-num">— 04</span>
+            <span class="feat-text">Calendário editorial integrado</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="page-cta">
+  <div class="container">
+    <span class="page-cta-eyebrow">— Próximo projeto</span>
+    <h2>Vai ser o <strong>seu?</strong></h2>
+    <p>
+      Diagnóstico gratuito de 60 minutos. A gente avalia se faz sentido um Core, um Spark ou um Studio pra sua operação — e te apresenta o caminho.
+    </p>
+    <a href="/#diagnostico" class="btn-primary">
+      Agendar diagnóstico
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M5 12h14M13 6l6 6-6 6"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <span style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--mute);">DRYOS Growth Systems</span>
+      <div class="footer-meta">
+        <a href="/#vilões">Vilões</a>
+        <a href="/#core">Core</a>
+        <a href="/#spark">Spark</a>
+        <a href="/#studio">Studio</a>
+        <a href="/projetos">Projetos</a>
+        <a href="mailto:hello@dryos.com.br">hello@dryos.com.br</a>
+        <span>© 2026</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
