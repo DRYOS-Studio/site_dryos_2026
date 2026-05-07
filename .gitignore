@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Imagens originais (preservadas localmente — não versionadas pra manter o repo leve)
+images/**/originals/
+
+# Editor / OS
+*.swp
+.idea/
+.vscode/
+Thumbs.db
