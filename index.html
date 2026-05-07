@@ -2113,21 +2113,26 @@ footer {
 
 .villain-card:hover { background: var(--surface); }
 
-.villain-glyph {
-  width: 48px;
-  height: 48px;
-  color: var(--oak);
-  margin-bottom: 1.4rem;
-  display: block;
-  flex-shrink: 0;
-  transition: color 0.25s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+.villain-image {
+  margin: -2rem -1.75rem 1.5rem;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--surface);
+  position: relative;
 }
 
-.villain-glyph svg { width: 100%; height: 100%; display: block; }
+.villain-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+  filter: saturate(0.92);
+}
 
-.villain-card:hover .villain-glyph {
-  color: var(--ink);
-  transform: rotate(-3deg);
+.villain-card:hover .villain-image img {
+  transform: scale(1.04);
+  filter: saturate(1);
 }
 
 .villain-num {
@@ -2434,15 +2439,9 @@ footer {
     <div class="villains-grid">
 
       <div class="villain-card reveal">
-        <span class="villain-glyph" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-            <line x1="6" y1="5" x2="6" y2="19"/>
-            <line x1="10" y1="5" x2="10" y2="19"/>
-            <line x1="14" y1="5" x2="14" y2="19"/>
-            <line x1="18" y1="5" x2="18" y2="19"/>
-            <line x1="4" y1="14" x2="20" y2="10"/>
-          </svg>
-        </span>
+        <div class="villain-image">
+          <img src="images/villains/villain-01-manualis.jpg" alt="Ilustração editorial do Capitão Manualis, oficial militar engolido por espirais de papel" loading="lazy" width="800" height="800">
+        </div>
         <span class="villain-num">— 01</span>
         <h3 class="villain-name">Capitão Manualis</h3>
         <p class="villain-quote">"Sempre foi assim. Pra quê mudar?"</p>
@@ -2452,13 +2451,9 @@ footer {
       </div>
 
       <div class="villain-card reveal">
-        <span class="villain-glyph" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
-            <rect x="3" y="7" width="4" height="14"/>
-            <rect x="10" y="3" width="4" height="18"/>
-            <rect x="17" y="9" width="4" height="12"/>
-          </svg>
-        </span>
+        <div class="villain-image">
+          <img src="images/villains/villain-02-silos.jpg" alt="Ilustração editorial do Senhor dos Silos, aristocrata isolado no topo de um silo entre outros dois" loading="lazy" width="800" height="800">
+        </div>
         <span class="villain-num">— 02</span>
         <h3 class="villain-name">Senhor dos Silos</h3>
         <p class="villain-quote">"Esse dado é do nosso setor."</p>
@@ -2468,12 +2463,9 @@ footer {
       </div>
 
       <div class="villain-card reveal">
-        <span class="villain-glyph" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 12a9 9 0 1 0 3-6.7"/>
-            <polyline points="3 4 3 12 11 12"/>
-          </svg>
-        </span>
+        <div class="villain-image">
+          <img src="images/villains/villain-03-retrabalho.jpg" alt="Ilustração editorial da Dama do Retrabalho, nobre barroca cercada por braços fantasma bordando em loop" loading="lazy" width="800" height="800">
+        </div>
         <span class="villain-num">— 03</span>
         <h3 class="villain-name">Dama do Retrabalho</h3>
         <p class="villain-quote">"Pode refazer, não era isso."</p>
@@ -2483,14 +2475,9 @@ footer {
       </div>
 
       <div class="villain-card reveal">
-        <span class="villain-glyph" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 3 H19"/>
-            <path d="M5 21 H19"/>
-            <path d="M5 3 L12 12 L19 3"/>
-            <path d="M5 21 L12 12 L19 21"/>
-          </svg>
-        </span>
+        <div class="villain-image">
+          <img src="images/villains/villain-04-lento.jpg" alt="Ilustração editorial do General Lento, oficial idoso bocejando em poltrona com ampulheta e relógio sem ponteiros" loading="lazy" width="800" height="800">
+        </div>
         <span class="villain-num">— 04</span>
         <h3 class="villain-name">General Lento</h3>
         <p class="villain-quote">"Não há pressa, amanhã a gente vê."</p>
@@ -2500,13 +2487,9 @@ footer {
       </div>
 
       <div class="villain-card reveal">
-        <span class="villain-glyph" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="9"/>
-            <path d="M9.5 9.5a2.5 2.5 0 0 1 5 0c0 1.7-2.5 2-2.5 4"/>
-            <circle cx="12" cy="17.5" r="0.6" fill="currentColor"/>
-          </svg>
-        </span>
+        <div class="villain-image">
+          <img src="images/villains/villain-05-achismo.jpg" alt="Ilustração editorial do Oráculo do Achismo, adivinho teatral sobre bola de cristal com interrogações" loading="lazy" width="800" height="800">
+        </div>
         <span class="villain-num">— 05</span>
         <h3 class="villain-name">Oráculo do Achismo</h3>
         <p class="villain-quote">"Eu acho que tá vendendo bem..."</p>
@@ -2516,13 +2499,9 @@ footer {
       </div>
 
       <div class="villain-card reveal">
-        <span class="villain-glyph" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 4 L21 4 L13 14 L11 14 Z"/>
-            <line x1="12" y1="17" x2="12" y2="18.5"/>
-            <line x1="12" y1="20.5" x2="12" y2="22"/>
-          </svg>
-        </span>
+        <div class="villain-image">
+          <img src="images/villains/villain-06-drenador.jpg" alt="Ilustração editorial do Drenador de Margem, gentleman vaidoso caminhando enquanto moedas pingam dele" loading="lazy" width="800" height="800">
+        </div>
         <span class="villain-num">— 06</span>
         <h3 class="villain-name">Drenador de Margem</h3>
         <p class="villain-quote">"Essa perda é pequena... deixa pra lá."</p>
@@ -2532,14 +2511,9 @@ footer {
       </div>
 
       <div class="villain-card reveal">
-        <span class="villain-glyph" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-            <line x1="3" y1="21" x2="3" y2="17"/>
-            <line x1="9" y1="21" x2="9" y2="13"/>
-            <line x1="15" y1="21" x2="15" y2="9"/>
-            <line x1="21" y1="21" x2="21" y2="5" stroke-dasharray="3 2"/>
-          </svg>
-        </span>
+        <div class="villain-image">
+          <img src="images/villains/villain-07-enganador.jpg" alt="Ilustração editorial do Enganador do Crescimento, charlatão de cartola apontando pra estrela em escada quebrada de interrogações" loading="lazy" width="800" height="800">
+        </div>
         <span class="villain-num">— 07</span>
         <h3 class="villain-name">Enganador do Crescimento</h3>
         <p class="villain-quote">"É só crescer, depois a gente organiza."</p>
