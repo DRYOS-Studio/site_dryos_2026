@@ -1617,17 +1617,119 @@ footer {
   margin-bottom: 2rem;
 }
 
-.contact-form-placeholder {
-  background: rgba(250, 250, 248, 0.05);
-  border: 1px dashed rgba(250, 250, 248, 0.2);
-  padding: 2.5rem 1.5rem;
-  text-align: center;
-  border-radius: 4px;
+.contact-form { display: flex; flex-direction: column; gap: 0.9rem; margin-bottom: 1.25rem; }
+
+.contact-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+}
+
+.contact-form-field { display: flex; flex-direction: column; gap: 6px; }
+
+.contact-form-field label {
   font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.05em;
+  font-size: 10px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(250, 250, 248, 0.4);
+  color: rgba(250, 250, 248, 0.5);
+}
+
+.contact-form-field input,
+.contact-form-field select {
+  background: rgba(250, 250, 248, 0.04);
+  border: 1px solid rgba(250, 250, 248, 0.15);
+  color: var(--bg);
+  padding: 0.8rem 0.9rem;
+  font-family: var(--font-body);
+  font-size: 14px;
+  border-radius: 2px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.contact-form-field input::placeholder {
+  color: rgba(250, 250, 248, 0.3);
+}
+
+.contact-form-field input:focus,
+.contact-form-field select:focus {
+  outline: none;
+  border-color: #93B596;
+  background: rgba(250, 250, 248, 0.06);
+}
+
+.contact-form-field select {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6' fill='none'><path d='M1 1l4 4 4-4' stroke='%23FAFAF8' stroke-opacity='0.5' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem center;
+  padding-right: 2.25rem;
+  cursor: pointer;
+}
+
+.contact-form-field select option { background: var(--ink); color: var(--bg); }
+
+.contact-form-submit {
+  background: #93B596;
+  color: var(--ink);
+  border: none;
+  padding: 1rem 1.5rem;
+  margin-top: 0.4rem;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.contact-form-submit:hover { background: #B5D4B8; }
+.contact-form-submit:disabled { opacity: 0.6; cursor: wait; }
+.contact-form-submit svg { transition: transform 0.2s ease; }
+.contact-form-submit:hover:not(:disabled) svg { transform: translateX(3px); }
+
+.contact-form-success {
+  padding: 2rem 1.5rem;
+  background: rgba(147, 181, 150, 0.08);
+  border: 1px solid rgba(147, 181, 150, 0.3);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.contact-form-success strong {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--bg);
+  display: block;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.contact-form-success p {
+  font-size: 14px;
+  color: rgba(250, 250, 248, 0.7);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.contact-form-error {
+  padding: 0.85rem 1rem;
+  background: rgba(220, 90, 90, 0.08);
+  border: 1px solid rgba(220, 90, 90, 0.3);
+  border-radius: 4px;
+  color: rgba(250, 250, 248, 0.85);
+  font-size: 13px;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .contact-form-row { grid-template-columns: 1fr; }
 }
 
 .contact-direct-area {
@@ -2775,10 +2877,74 @@ footer {
           Preencha em 2 minutos. A gente analisa o contexto e responde com um plano de diagnóstico em até 24h úteis.
         </p>
 
-        <!-- PLACEHOLDER: substituir pelo embed do RD Station Marketing depois -->
-        <div class="contact-form-placeholder">
-          [ Formulário RD Station ]<br>
-          Embed será inserido aqui
+        <form class="contact-form" id="dryos-diagnostico-form" novalidate>
+          <div class="contact-form-field">
+            <label for="cf-nome">Nome completo *</label>
+            <input type="text" id="cf-nome" name="nome" required autocomplete="name">
+          </div>
+
+          <div class="contact-form-row">
+            <div class="contact-form-field">
+              <label for="cf-email">Email *</label>
+              <input type="email" id="cf-email" name="email" required autocomplete="email">
+            </div>
+            <div class="contact-form-field">
+              <label for="cf-telefone">Telefone *</label>
+              <input type="tel" id="cf-telefone" name="telefone" required autocomplete="tel" placeholder="(00) 00000-0000">
+            </div>
+          </div>
+
+          <div class="contact-form-field">
+            <label for="cf-cargo">Cargo *</label>
+            <input type="text" id="cf-cargo" name="cargo" required autocomplete="organization-title">
+          </div>
+
+          <div class="contact-form-row">
+            <div class="contact-form-field">
+              <label for="cf-produto">Produto de interesse *</label>
+              <select id="cf-produto" name="produto_interesse" required>
+                <option value="" disabled selected>Selecione</option>
+                <option value="Core">DRYOS Core</option>
+                <option value="Spark">DRYOS Spark</option>
+                <option value="Studio">DRYOS Studio</option>
+                <option value="Não sei ainda">Não sei ainda — quero diagnóstico</option>
+              </select>
+            </div>
+            <div class="contact-form-field">
+              <label for="cf-faturamento">Faturamento mensal *</label>
+              <select id="cf-faturamento" name="faturamento_mensal" required>
+                <option value="" disabled selected>Selecione</option>
+                <option value="Até R$ 100k">Até R$ 100k</option>
+                <option value="R$ 100k a R$ 500k">R$ 100k a R$ 500k</option>
+                <option value="R$ 500k a R$ 1M">R$ 500k a R$ 1M</option>
+                <option value="R$ 1M a R$ 5M">R$ 1M a R$ 5M</option>
+                <option value="Acima de R$ 5M">Acima de R$ 5M</option>
+              </select>
+            </div>
+          </div>
+
+          <input type="hidden" name="utm_source">
+          <input type="hidden" name="utm_medium">
+          <input type="hidden" name="utm_campaign">
+          <input type="hidden" name="utm_content">
+          <input type="hidden" name="utm_term">
+          <input type="hidden" name="gclid">
+          <input type="hidden" name="fbclid">
+          <input type="hidden" name="referrer_origin">
+          <input type="hidden" name="landing_page">
+          <input type="hidden" name="conversion_url">
+
+          <button type="submit" class="contact-form-submit">
+            <span class="contact-form-submit-text">Enviar diagnóstico</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+          </button>
+        </form>
+
+        <div class="contact-form-success" id="dryos-diagnostico-success" hidden>
+          <strong>Recebido.</strong>
+          <p>Vamos analisar seu contexto e responder com um plano de diagnóstico em até 24h úteis.</p>
         </div>
 
         <p class="contact-note">
@@ -2898,6 +3064,27 @@ footer {
 </footer>
 
 <script>
+// UTM / tracking capture — roda imediatamente, persiste em sessionStorage entre páginas
+(function captureTracking() {
+  const TRACKING_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid', 'fbclid'];
+  const params = new URLSearchParams(window.location.search);
+  TRACKING_KEYS.forEach(key => {
+    const val = params.get(key);
+    if (val) sessionStorage.setItem('dryos_' + key, val);
+  });
+  if (!sessionStorage.getItem('dryos_referrer_origin') && document.referrer) {
+    try {
+      const refHost = new URL(document.referrer).hostname;
+      if (refHost && refHost !== window.location.hostname) {
+        sessionStorage.setItem('dryos_referrer_origin', document.referrer);
+      }
+    } catch (e) { /* referrer inválido */ }
+  }
+  if (!sessionStorage.getItem('dryos_landing_page')) {
+    sessionStorage.setItem('dryos_landing_page', window.location.href);
+  }
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
   const words = document.querySelectorAll('.hero h1 .word');
   words.forEach((word, i) => {
@@ -2913,6 +3100,63 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.15, rootMargin: '0px 0px -80px 0px' });
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // FORMULÁRIO DE DIAGNÓSTICO — envio pra RD Station
+  const RD_TOKEN = '609c72c917d53ef9dd91cbcc92c630a3';
+  const RD_IDENTIFICADOR = 'site-dryos-diagnostico';
+
+  const form = document.getElementById('dryos-diagnostico-form');
+  if (form) {
+    const successBox = document.getElementById('dryos-diagnostico-success');
+    const submitBtn = form.querySelector('.contact-form-submit');
+    const submitText = form.querySelector('.contact-form-submit-text');
+
+    // Popula campos ocultos de tracking a partir do sessionStorage
+    const TRACKING_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid', 'fbclid', 'referrer_origin', 'landing_page'];
+    TRACKING_KEYS.forEach(key => {
+      const input = form.querySelector(`input[name="${key}"]`);
+      if (input) input.value = sessionStorage.getItem('dryos_' + key) || '';
+    });
+    const conversionUrlInput = form.querySelector('input[name="conversion_url"]');
+    if (conversionUrlInput) conversionUrlInput.value = window.location.href;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+
+      const oldErr = form.querySelector('.contact-form-error');
+      if (oldErr) oldErr.remove();
+
+      submitBtn.disabled = true;
+      submitText.textContent = 'Enviando…';
+
+      const payload = new URLSearchParams();
+      payload.append('token_rdstation', RD_TOKEN);
+      payload.append('identificador', RD_IDENTIFICADOR);
+      for (const [key, value] of new FormData(form).entries()) {
+        if (value) payload.append(key, value);
+      }
+
+      try {
+        const res = await fetch('https://www.rdstation.com.br/api/1.3/conversions', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: payload.toString()
+        });
+        if (!res.ok) throw new Error('rd-error');
+        form.hidden = true;
+        successBox.hidden = false;
+        successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } catch (err) {
+        submitBtn.disabled = false;
+        submitText.textContent = 'Tentar novamente';
+        const errBox = document.createElement('div');
+        errBox.className = 'contact-form-error';
+        errBox.textContent = 'Não foi possível enviar agora. Tente novamente ou fale direto pelo WhatsApp.';
+        form.appendChild(errBox);
+      }
+    });
+  }
 });
 </script>
 

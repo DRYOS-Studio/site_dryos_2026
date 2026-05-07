@@ -722,5 +722,28 @@ footer {
   </div>
 </footer>
 
+<script>
+// UTM / tracking capture — persiste em sessionStorage entre páginas
+(function captureTracking() {
+  const TRACKING_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid', 'fbclid'];
+  const params = new URLSearchParams(window.location.search);
+  TRACKING_KEYS.forEach(key => {
+    const val = params.get(key);
+    if (val) sessionStorage.setItem('dryos_' + key, val);
+  });
+  if (!sessionStorage.getItem('dryos_referrer_origin') && document.referrer) {
+    try {
+      const refHost = new URL(document.referrer).hostname;
+      if (refHost && refHost !== window.location.hostname) {
+        sessionStorage.setItem('dryos_referrer_origin', document.referrer);
+      }
+    } catch (e) { /* referrer inválido */ }
+  }
+  if (!sessionStorage.getItem('dryos_landing_page')) {
+    sessionStorage.setItem('dryos_landing_page', window.location.href);
+  }
+})();
+</script>
+
 </body>
 </html>
