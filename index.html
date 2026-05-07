@@ -1126,6 +1126,135 @@ nav {
   .proof-grid { grid-template-columns: 1fr; gap: 1.5rem; }
 }
 
+/* Testimonials carousel */
+.testimonials-carousel {
+  margin-top: 1rem;
+  position: relative;
+}
+
+.testimonial-track {
+  display: grid;
+}
+
+.testimonial-slide {
+  grid-column: 1;
+  grid-row: 1;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.45s ease, transform 0.45s ease, visibility 0s linear 0.45s;
+  pointer-events: none;
+}
+
+.testimonial-slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 0.45s ease, transform 0.45s ease, visibility 0s linear 0s;
+  pointer-events: auto;
+}
+
+.testimonials-carousel .proof-meta {
+  position: static;
+}
+
+.testimonial-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--line);
+}
+
+.testimonial-counter {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--mute);
+  text-transform: uppercase;
+}
+
+.testimonial-counter .testimonial-current {
+  color: var(--ink);
+}
+
+.testimonial-counter .testimonial-sep {
+  margin: 0 4px;
+  color: var(--line);
+}
+
+.testimonial-dots {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.testimonial-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--mute);
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.testimonial-dot:hover {
+  border-color: var(--ink);
+}
+
+.testimonial-dot.is-active {
+  background: var(--oak);
+  border-color: var(--oak);
+  transform: scale(1.15);
+}
+
+.testimonial-nav-group {
+  display: inline-flex;
+  gap: 8px;
+}
+
+.testimonial-nav {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.testimonial-nav:hover {
+  border-color: var(--oak);
+  color: var(--oak);
+}
+
+.testimonial-nav:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .testimonial-controls {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+  .testimonial-dots {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+    margin-top: 0.25rem;
+  }
+}
+
 /* CTA */
 .cta-section {
   padding: clamp(5rem, 10vw, 9rem) 0;
@@ -3164,18 +3293,96 @@ footer {
       <h2 class="section-title">Operações reais.<br><strong>Resultados em produção.</strong></h2>
     </div>
 
-    <div class="proof-grid">
-      <div class="proof-meta">
-        <span class="label">Em destaque</span>
-        <div class="name">Altis Lisboa</div>
-        <span class="status">Em produção</span>
+    <div class="testimonials-carousel" data-active="0">
+      <div class="testimonial-track">
+        <article class="testimonial-slide is-active" aria-hidden="false">
+          <div class="proof-grid">
+            <div class="proof-meta">
+              <span class="label">Em destaque</span>
+              <div class="name">Altis Lisboa</div>
+              <span class="status">Em produção</span>
+            </div>
+            <div>
+              <p class="quote">
+                Antes a gente crescia na <strong>força bruta.</strong> Hoje, crescemos com inteligência. A equipe da DRYOS não veio com palestras — eles vieram e <strong>instalaram os processos.</strong> Hoje tenho clareza total dos dados e nossa infraestrutura roda sem que eu precise vigiar cada detalhe.
+              </p>
+              <div class="quote-attr">
+                <strong>Ana Maria</strong> · Altis Lisboa
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-slide" aria-hidden="true">
+          <div class="proof-grid">
+            <div class="proof-meta">
+              <span class="label">Cliente</span>
+              <div class="name">Academia Tio Sam</div>
+              <span class="status">Em produção</span>
+            </div>
+            <div>
+              <p class="quote">
+                Antes do trabalho com a DRYOS, a Academia Tio Sam tinha resultados, mas os processos eram <strong>muito intuitivos</strong> e a gestão acontecia mais no automático do que de forma estratégica. Ao longo do projeto, estruturamos <strong>rotinas, indicadores e fluxos claros</strong>, o que aumentou muito a consciência sobre cada etapa da operação. Hoje conseguimos enxergar com clareza onde estamos crescendo e quais decisões precisam ser tomadas.
+              </p>
+              <div class="quote-attr">
+                <strong>Suellen Monnerat</strong> · Gestora Administrativa, Academia Tio Sam
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-slide" aria-hidden="true">
+          <div class="proof-grid">
+            <div class="proof-meta">
+              <span class="label">Cliente</span>
+              <div class="name">Gois Fit</div>
+              <span class="status">Em produção</span>
+            </div>
+            <div>
+              <p class="quote">
+                O trabalho com a DRYOS foi um <strong>divisor de águas</strong> para a Gois Fit. Saímos de uma atuação muito operacional, reagindo ao dia a dia, para uma <strong>implantação clara de processos</strong> que organizaram a casa e deram previsibilidade ao negócio. Ganhamos muito mais consciência de mercado: entendemos melhor nossos números, nossos canais de aquisição e o comportamento dos clientes, o que nos permitiu planejar e buscar crescimento de forma intencional, e não por tentativa e erro.
+              </p>
+              <div class="quote-attr">
+                <strong>Bárbara Gois</strong> · CEO, Gois Fit
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-slide" aria-hidden="true">
+          <div class="proof-grid">
+            <div class="proof-meta">
+              <span class="label">Cliente</span>
+              <div class="name">Acorp Eventos</div>
+              <span class="status">Em produção</span>
+            </div>
+            <div>
+              <p class="quote">
+                A <strong>expertise técnica</strong> e a capacidade de compreensão das nossas necessidades específicas foram fundamentais para o sucesso do projeto. A DRYOS não apenas atendeu às nossas expectativas, mas as superou, proporcionando <strong>soluções inovadoras e personalizadas</strong> que otimizaram nossos processos e aumentaram significativamente nossa eficiência operacional.
+              </p>
+              <div class="quote-attr">
+                <strong>Jane Araujo</strong> · Sócia Diretora, Acorp Eventos
+              </div>
+            </div>
+          </div>
+        </article>
       </div>
-      <div>
-        <p class="quote">
-          Antes a gente crescia na <strong>força bruta.</strong> Hoje, crescemos com inteligência. A equipe da DRYOS não veio com palestras — eles vieram e <strong>instalaram os processos.</strong> Hoje tenho clareza total dos dados e nossa infraestrutura roda sem que eu precise vigiar cada detalhe.
-        </p>
-        <div class="quote-attr">
-          <strong>Ana Maria</strong> · Altis Lisboa
+
+      <div class="testimonial-controls">
+        <div class="testimonial-counter"><span class="testimonial-current">01</span> <span class="testimonial-sep">/</span> <span class="testimonial-total">04</span></div>
+        <div class="testimonial-dots" role="tablist" aria-label="Selecionar depoimento">
+          <button type="button" class="testimonial-dot is-active" data-index="0" role="tab" aria-selected="true" aria-label="Depoimento 1: Altis Lisboa"></button>
+          <button type="button" class="testimonial-dot" data-index="1" role="tab" aria-selected="false" aria-label="Depoimento 2: Academia Tio Sam"></button>
+          <button type="button" class="testimonial-dot" data-index="2" role="tab" aria-selected="false" aria-label="Depoimento 3: Gois Fit"></button>
+          <button type="button" class="testimonial-dot" data-index="3" role="tab" aria-selected="false" aria-label="Depoimento 4: Acorp Eventos"></button>
+        </div>
+        <div class="testimonial-nav-group">
+          <button type="button" class="testimonial-nav prev" aria-label="Depoimento anterior">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M9 12L4 7L9 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button type="button" class="testimonial-nav next" aria-label="Próximo depoimento">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5 2L10 7L5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
         </div>
       </div>
     </div>
@@ -3463,6 +3670,67 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.15, rootMargin: '0px 0px -80px 0px' });
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // CARROSSEL DE DEPOIMENTOS
+  const carousel = document.querySelector('.testimonials-carousel');
+  if (carousel) {
+    const slides = carousel.querySelectorAll('.testimonial-slide');
+    const dots = carousel.querySelectorAll('.testimonial-dot');
+    const prevBtn = carousel.querySelector('.testimonial-nav.prev');
+    const nextBtn = carousel.querySelector('.testimonial-nav.next');
+    const currentEl = carousel.querySelector('.testimonial-current');
+    const totalEl = carousel.querySelector('.testimonial-total');
+    const total = slides.length;
+    let active = 0;
+    let autoplayId = null;
+    const AUTOPLAY_MS = 8000;
+    const pad = (n) => String(n).padStart(2, '0');
+    if (totalEl) totalEl.textContent = pad(total);
+
+    function go(i) {
+      active = (i + total) % total;
+      slides.forEach((s, idx) => {
+        const isActive = idx === active;
+        s.classList.toggle('is-active', isActive);
+        s.setAttribute('aria-hidden', String(!isActive));
+      });
+      dots.forEach((d, idx) => {
+        const isActive = idx === active;
+        d.classList.toggle('is-active', isActive);
+        d.setAttribute('aria-selected', String(isActive));
+      });
+      if (currentEl) currentEl.textContent = pad(active + 1);
+    }
+
+    function startAutoplay() {
+      stopAutoplay();
+      autoplayId = window.setInterval(() => go(active + 1), AUTOPLAY_MS);
+    }
+    function stopAutoplay() {
+      if (autoplayId) { window.clearInterval(autoplayId); autoplayId = null; }
+    }
+
+    prevBtn && prevBtn.addEventListener('click', () => { go(active - 1); startAutoplay(); });
+    nextBtn && nextBtn.addEventListener('click', () => { go(active + 1); startAutoplay(); });
+    dots.forEach((d, idx) => d.addEventListener('click', () => { go(idx); startAutoplay(); }));
+
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+    carousel.addEventListener('focusin', stopAutoplay);
+    carousel.addEventListener('focusout', startAutoplay);
+
+    // Suporte a swipe em mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    carousel.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+    carousel.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const dx = touchEndX - touchStartX;
+      if (Math.abs(dx) > 40) { go(active + (dx < 0 ? 1 : -1)); startAutoplay(); }
+    }, { passive: true });
+
+    if (total > 1) startAutoplay();
+  }
 
   // FORMULÁRIO DE DIAGNÓSTICO — envio pra RD Station
   const RD_TOKEN = '609c72c917d53ef9dd91cbcc92c630a3';
