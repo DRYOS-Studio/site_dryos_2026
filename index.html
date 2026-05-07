@@ -689,6 +689,55 @@ nav {
 
 .spark-item:hover { background: var(--surface); }
 
+/* Spark CTA card (mesmo grid, fundo preto) */
+.spark-cta-card {
+  background: var(--ink);
+  color: var(--bg);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  transition: background 0.25s ease;
+  min-height: 280px;
+}
+
+.spark-cta-card:hover { background: var(--oak); }
+
+.spark-cta-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #93B596;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+}
+
+.spark-cta-text {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  color: var(--bg);
+  margin-bottom: 1rem;
+}
+
+.spark-cta-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #93B596;
+  margin-top: auto;
+}
+
+.spark-cta-arrow svg { transition: transform 0.2s ease; }
+.spark-cta-card:hover .spark-cta-arrow svg { transform: translateX(4px); }
+
 .spark-num {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -1411,6 +1460,121 @@ footer {
   .project-num { padding-top: 0; }
 }
 
+/* STUDIO TYPES (V3+ — categorias declaradas) */
+.studio-types {
+  margin-top: 2rem;
+}
+
+.studio-type-featured {
+  background: var(--ink);
+  color: var(--bg);
+  padding: 1.75rem;
+  margin-bottom: 1px;
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  transition: background 0.25s ease;
+}
+
+.studio-type-featured:hover { background: var(--oak); }
+
+.studio-type-featured .type-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #93B596;
+  letter-spacing: 0.08em;
+  padding-top: 4px;
+}
+
+.studio-type-featured .type-name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--bg);
+  letter-spacing: -0.025em;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.studio-type-featured .type-badge {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  background: #93B596;
+  color: var(--ink);
+  padding: 2px 7px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.studio-type-featured .type-cat {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: rgba(250, 250, 248, 0.5);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.studio-type-featured .type-desc {
+  font-size: 14px;
+  color: rgba(250, 250, 248, 0.75);
+  line-height: 1.55;
+}
+
+/* Tipos secundários — grid 2x2 */
+.studio-types-secondary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--line-strong);
+  border: 1px solid var(--line-strong);
+  border-top: none;
+}
+
+.studio-type {
+  background: var(--bg);
+  padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 1rem;
+  align-items: start;
+  transition: background 0.25s ease;
+}
+
+.studio-type:hover { background: var(--surface); }
+
+.studio-type .type-num {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--oak);
+  letter-spacing: 0.08em;
+  padding-top: 3px;
+}
+
+.studio-type .type-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.015em;
+  margin-bottom: 3px;
+}
+
+.studio-type .type-desc {
+  font-size: 12.5px;
+  color: var(--mute);
+  line-height: 1.45;
+}
+
+@media (max-width: 768px) {
+  .studio-types-secondary { grid-template-columns: 1fr; }
+  .studio-type-featured { grid-template-columns: 1fr; gap: 0.5rem; }
+}
+
 /* CONTACT GRID (V3 — 3 caminhos) */
 .contact-grid {
   display: grid;
@@ -2042,7 +2206,7 @@ footer {
         <div class="path-name">Spark</div>
         <div class="path-tagline">Catálogo · 4 produtos</div>
         <p class="path-desc">
-          Quatro produtos pontuais com IA, prontos pra conectar no que você já usa. Atendimento, integração, agentes especializados e dashboards. Resolve uma dor específica.
+          Cinco produtos pontuais com IA, prontos pra conectar no que você já usa. Atendimento, integração, agentes especializados, dashboards e cobrança. Resolve uma dor específica.
         </p>
         <div class="path-meta">
           <div class="path-meta-item">
@@ -2061,7 +2225,7 @@ footer {
         <div class="path-name">Studio</div>
         <div class="path-tagline">Projetos sob medida</div>
         <p class="path-desc">
-          Para problemas únicos que não cabem em produto. Sistemas sob medida com IA, automação, processos organizados e dados. Linha sob demanda.
+          Para problemas únicos que não cabem em produto. Sistemas e operações sob medida — incluindo Studio Launch, especialidade em infra técnica de lançamentos digitais. Linha sob demanda.
         </p>
         <div class="path-meta">
           <div class="path-meta-item">
@@ -2213,7 +2377,7 @@ footer {
         <span class="number">03 / 04</span>
       </div>
       <div>
-        <h2 class="section-title">Quatro produtos.<br><strong>Uma fagulha</strong> de cada vez.</h2>
+        <h2 class="section-title">Cinco produtos.<br><strong>Uma fagulha</strong> de cada vez.</h2>
         <div class="spark-pricing-tag">
           <strong>Recorrência mensal · Sem fidelidade</strong>
           Cada Spark tem escopo fixo, setup definido e SLA documentado. Implementação em 7-14 dias.
@@ -2283,6 +2447,34 @@ footer {
         </div>
       </div>
 
+      <div class="spark-item reveal">
+        <span class="spark-num">05</span>
+        <div class="spark-content">
+          <div class="spark-name">Cobra</div>
+          <div class="spark-cat">Cobrança automatizada</div>
+          <p class="spark-desc">
+            Régua inteligente de cobrança via WhatsApp, emissão automática de NF, geração de boleto e conciliação bancária. Reduz inadimplência sem o constrangimento de cobrar no braço.
+          </p>
+          <div class="spark-price">
+            <span class="spark-price-label">Implementação</span>
+            <span class="spark-price-value">10 dias úteis</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#diagnostico" class="spark-cta-card reveal">
+        <div>
+          <span class="spark-cta-label">— Combine os Sparks</span>
+          <p class="spark-cta-text">Resolva mais de uma dor com combo personalizado.</p>
+        </div>
+        <span class="spark-cta-arrow">
+          Falar com a equipe
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
+        </span>
+      </a>
+
     </div>
   </div>
 </section>
@@ -2301,14 +2493,53 @@ footer {
     <div class="studio-grid">
       <div>
         <p class="studio-desc">
-          Linha sob demanda para projetos que não cabem em produto. Sistemas sob medida com IA, automação, processos organizados e dados. Inclui cláusula opcional de evolução pra mensalidade recorrente após entrega.
+          Linha sob demanda para projetos que não cabem em produto. Sistemas e operações sob medida com IA, automação, processos organizados e dados. Inclui cláusula opcional de evolução pra mensalidade recorrente após entrega.
         </p>
-        <div class="studio-tag-cloud">
-          <span class="studio-tag">Sistemas internos proprietários</span>
-          <span class="studio-tag">Dashboards ultra-customizados</span>
-          <span class="studio-tag">Plataformas de domínio específico</span>
-          <span class="studio-tag">Integrações complexas legacy</span>
-          <span class="studio-tag">Agentes IA com requisitos únicos</span>
+
+        <div class="studio-types">
+          <!-- DESTAQUE: Studio Launch -->
+          <div class="studio-type-featured">
+            <span class="type-num">— 01</span>
+            <div>
+              <div class="type-name">Studio Launch <span class="type-badge">Especialidade</span></div>
+              <div class="type-cat">Infra técnica de lançamentos digitais</div>
+              <p class="type-desc">
+                Cuidamos da <strong style="color: var(--bg);">infra técnica completa</strong> do seu lançamento — gestão de plataformas, disparos de mensagens, automações de campanha, dashboards em tempo real e o <strong style="color: var(--bg);">Cockpit do Lançamento</strong>, nosso painel exclusivo que integra todos os dados em um só lugar. Trabalhamos com sua agência ou time de marketing — não fazemos copy nem design.
+              </p>
+            </div>
+          </div>
+
+          <!-- Secundários: outros tipos -->
+          <div class="studio-types-secondary">
+            <div class="studio-type">
+              <span class="type-num">— 02</span>
+              <div>
+                <div class="type-name">Studio Custom</div>
+                <div class="type-desc">Sistemas internos sob medida — gestão, controle e fluxos proprietários</div>
+              </div>
+            </div>
+            <div class="studio-type">
+              <span class="type-num">— 03</span>
+              <div>
+                <div class="type-name">Studio Insight</div>
+                <div class="type-desc">Plataformas de inteligência customizadas e dashboards complexos</div>
+              </div>
+            </div>
+            <div class="studio-type">
+              <span class="type-num">— 04</span>
+              <div>
+                <div class="type-name">Studio Bridge+</div>
+                <div class="type-desc">Integrações complexas com sistemas legacy ou requisitos específicos</div>
+              </div>
+            </div>
+            <div class="studio-type">
+              <span class="type-num">— 05</span>
+              <div>
+                <div class="type-name">Studio Agent</div>
+                <div class="type-desc">Agentes IA com requisitos únicos — voice, multimodal, compliance regulado</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -2563,7 +2794,7 @@ footer {
 
           <div class="contact-channels">
 
-            <a href="https://wa.me/5500000000000?text=Oi%2C%20vim%20pelo%20site%20da%20DRYOS" target="_blank" rel="noopener" class="contact-channel">
+            <a href="https://wa.me/5521967287595?text=Oi%2C%20vim%20pelo%20site%20da%20DRYOS" target="_blank" rel="noopener" class="contact-channel">
               <div class="contact-channel-info">
                 <span class="contact-channel-label">WhatsApp</span>
                 <span class="contact-channel-value">Iniciar conversa</span>
@@ -2575,10 +2806,10 @@ footer {
               </span>
             </a>
 
-            <a href="mailto:hello@dryos.com.br" class="contact-channel">
+            <a href="mailto:contato@dryos.com.br" class="contact-channel">
               <div class="contact-channel-info">
                 <span class="contact-channel-label">E-mail</span>
-                <span class="contact-channel-value">hello@dryos.com.br</span>
+                <span class="contact-channel-value">contato@dryos.com.br</span>
               </div>
               <span class="contact-channel-arrow">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -2659,7 +2890,7 @@ footer {
         <a href="#core">Core</a>
         <a href="#spark">Spark</a>
         <a href="#studio">Studio</a>
-        <a href="mailto:hello@dryos.com.br">hello@dryos.com.br</a>
+        <a href="mailto:contato@dryos.com.br">contato@dryos.com.br</a>
         <span>© 2026</span>
       </div>
     </div>
