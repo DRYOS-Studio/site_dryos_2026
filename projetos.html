@@ -411,6 +411,25 @@ footer {
 
 .footer-meta a:hover { color: var(--ink); }
 
+.footer-badge {
+  display: block;
+  width: 132px;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  opacity: 0.92;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.footer-badge:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .footer-badge { width: 116px; }
+}
+
 /* WHATSAPP FLOATING */
 .whatsapp-float {
   position: fixed;
@@ -778,6 +797,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container">
     <div class="footer-grid">
       <span style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--mute);">DRYOS Growth Systems</span>
+      <img src="images/selo-rd-platinum-2026.jpg" alt="Selo RD Partners Platinum 2026" class="footer-badge" width="500" height="250" loading="lazy">
       <div class="footer-meta">
         <a href="/#vilões">Vilões</a>
         <a href="/#core">Core</a>
