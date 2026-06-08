@@ -1373,23 +1373,44 @@ footer {
 
 .footer-meta a:hover { color: var(--ink); }
 
-.footer-badge {
-  display: block;
-  width: 132px;
-  height: auto;
-  border-radius: 6px;
-  border: 1px solid var(--line);
-  opacity: 0.92;
-  transition: opacity 0.25s ease, transform 0.25s ease;
+.partner-seal-row {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 2.25rem;
+  margin-bottom: 2.25rem;
+  border-bottom: 1px solid var(--line);
 }
 
-.footer-badge:hover {
-  opacity: 1;
+.partner-seal {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.85rem 0.95rem 0.95rem;
+  background: var(--bg);
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1), border-color 0.3s ease;
+}
+
+.partner-seal:hover {
   transform: translateY(-2px);
+  border-color: var(--ink);
 }
 
-@media (max-width: 600px) {
-  .footer-badge { width: 116px; }
+.partner-seal-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+
+.partner-seal img {
+  display: block;
+  width: 124px;
+  height: auto;
+  border-radius: 5px;
 }
 
 /* CLIENT LOGOS STRIP */
@@ -1498,7 +1519,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: clamp(2rem, 5vw, 5rem);
-  align-items: start;
+  align-items: center;
   padding-bottom: 4rem;
 }
 
@@ -3643,9 +3664,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- FOOTER -->
 <footer>
   <div class="container">
+    <div class="partner-seal-row">
+      <div class="partner-seal">
+        <span class="partner-seal-label">Parceiro Certificado</span>
+        <img src="images/selo-rd-platinum-2026.jpg" alt="DRYOS — RD Partners Platinum 2026" width="500" height="250" loading="lazy">
+      </div>
+    </div>
     <div class="footer-grid">
       <span style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--mute);">DRYOS Growth Systems</span>
-      <img src="images/selo-rd-platinum-2026.jpg" alt="Selo RD Partners Platinum 2026" class="footer-badge" width="500" height="250" loading="lazy">
       <div class="footer-meta">
         <a href="#vilões">Vilões</a>
         <a href="#core">Core</a>
