@@ -6,6 +6,41 @@
 <meta name="description" content="DRYOS Core — apresentação do produto.">
 <title>DRYOS Core — Apresentação</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+<!-- ===== Tracking (GA4 + Meta Pixel + RD Station) ============================
+     Client-side IDs are public by nature. Swap the 3 placeholders below for the
+     real ones. The RD Station *conversion* (the lead) is sent server-side from
+     api/lead.js with a secret token — NOT here.
+     • GA4_ID      → Measurement ID  (G-XXXXXXXXXX)
+     • META_PIXEL  → numeric Pixel ID
+     • RD loader   → the account-specific loader URL from RD Station
+========================================================================== -->
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<!-- Meta Pixel -->
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'META_PIXEL_ID');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=META_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+
+<!-- RD Station — tracking de visita/UTM/sessão -->
+<script type="text/javascript" async
+  src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/RD_LOADER_UUID-loader.min.js"></script>
 </head>
 <body>
 <title>DRYOS Core — Apresentação</title>
@@ -1191,6 +1226,9 @@
         .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }).catch(function () { return { ok: r.ok, j: {} }; }); })
         .then(function (res) {
           if (res.ok && res.j && res.j.ok) {
+            // Conversão registrada → dispara eventos de marketing (RD recebe via API server-side)
+            try { if (window.gtag) gtag('event', 'generate_lead', { event_category: 'lead', event_label: 'apresentacao-core' }); } catch (e) {}
+            try { if (window.fbq) fbq('track', 'Lead', { content_name: 'apresentacao-core' }); } catch (e) {}
             f.hidden = true;
             document.getElementById('leadSuccess').hidden = false;
           } else {

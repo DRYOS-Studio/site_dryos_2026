@@ -4,12 +4,51 @@
 // Required Vercel env vars (Project → Settings → Environment Variables):
 //   CORE_API_BASE       e.g. https://api.chat.dryos.com.br   (no trailing slash, no /api/v1)
 //   CORE_WEBHOOK_TOKEN  the raw token of a WEBHOOK_INBOUND automation in the target org
+// Optional:
+//   RD_TOKEN            RD Station Marketing "Token público da API" → registers the
+//                       conversion in RD Station Marketing. If unset, RD is skipped.
 //
 // The Core endpoint is POST {CORE_API_BASE}/api/v1/webhooks/automation/{TOKEN}.
 // Reserved body fields consumed by Core: phone, email, idempotencyKey.
 // Everything else (name, source, utm_*) lands in the automation's variables.webhook.*
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+// Best-effort push to RD Station Marketing. The lead already lives in the CRM by
+// the time this runs, so an RD failure is logged but never surfaced to the user.
+async function sendToRD({ name, email, phone, body }) {
+  const token = process.env.RD_TOKEN;
+  if (!token) return; // not configured yet → skip silently
+  try {
+    const controller = new AbortController();
+    const t = setTimeout(() => controller.abort(), 8000);
+    const r = await fetch(
+      `https://api.rd.services/platform/conversions?api_key=${encodeURIComponent(token)}`,
+      {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        signal: controller.signal,
+        body: JSON.stringify({
+          event_type: 'CONVERSION',
+          event_family: 'CDP',
+          payload: {
+            conversion_identifier: 'apresentacao-core',
+            name,
+            email,
+            mobile_phone: phone ? `+${phone}` : undefined,
+            traffic_source: body.utm_source || undefined,
+            traffic_medium: body.utm_medium || undefined,
+            traffic_campaign: body.utm_campaign || undefined,
+          },
+        }),
+      },
+    );
+    clearTimeout(t);
+    if (!r.ok) console.error('lead: RD conversion returned', r.status);
+  } catch (e) {
+    console.error('lead: error posting to RD', e && e.message);
+  }
+}
 
 // BR-friendly phone normalization: digits only; prefix country code 55 for 10–11 digit locals.
 function normalizePhoneBR(raw) {
@@ -77,6 +116,8 @@ module.exports = async (req, res) => {
       console.error('lead: Core webhook returned', r.status);
       return res.status(502).json({ ok: false, error: 'Não consegui registrar agora. Tente pelo WhatsApp.' });
     }
+    // CRM ok → also register the conversion in RD Station (best-effort, never blocks the lead)
+    await sendToRD({ name, email, phone, body });
     return res.status(200).json({ ok: true });
   } catch (e) {
     console.error('lead: error posting to Core', e && e.message);

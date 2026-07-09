@@ -9,3 +9,4 @@ images/**/originals/
 .idea/
 .vscode/
 Thumbs.db
+.vercel
