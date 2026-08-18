@@ -14,6 +14,13 @@
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+// Allowlist: page source → RD Station conversion_identifier. Keeps each landing
+// page's conversions separate in RD without letting the browser pick the value.
+const RD_IDENTIFIERS = {
+  'site-apresentacao-core': 'apresentacao-core',
+  'site-automacoes': 'automacoes',
+};
+
 // Best-effort push to RD Station Marketing. The lead already lives in the CRM by
 // the time this runs, so an RD failure is logged but never surfaced to the user.
 async function sendToRD({ name, email, phone, body }) {
@@ -32,7 +39,7 @@ async function sendToRD({ name, email, phone, body }) {
           event_type: 'CONVERSION',
           event_family: 'CDP',
           payload: {
-            conversion_identifier: 'apresentacao-core',
+            conversion_identifier: RD_IDENTIFIERS[body.source] || 'apresentacao-core',
             name,
             email,
             mobile_phone: phone ? `+${phone}` : undefined,
@@ -94,6 +101,7 @@ module.exports = async (req, res) => {
     idempotencyKey: `${phone}:${email}`,
     name,
     source: String(body.source || 'site-apresentacao-core').slice(0, 80),
+    spark: String(body.spark || '').slice(0, 40) || null,
     utm_source: body.utm_source || null,
     utm_medium: body.utm_medium || null,
     utm_campaign: body.utm_campaign || null,

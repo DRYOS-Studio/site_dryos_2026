@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Automação de atendimento, integração entre sistemas, cobrança, relatórios e agentes de IA. Escopo fixo, no ar em 7 a 14 dias, sem fidelidade. DRYOS.">
+<meta name="keywords" content="automação de processos, automação de atendimento, integração entre sistemas, integração CRM, automação de cobrança, agente de IA, automação de WhatsApp, automação de marketing">
+<title>Automação de processos — DRYOS</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700;800&family=Onest:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KS9H2KN');</script>
+<!-- End Google Tag Manager -->
+
+<style>
+  :root {
+    --bg: #FAFAF8;
+    --ink: #0A0A0A;
+    --ink-soft: #1A1A1A;
+    --oak: #1F3A2A;
+    --oak-light: #4A6A52;
+    --oak-tint: #E9EEE9;
+    --mute: #6B6B68;
+    --mute-soft: #9A9A95;
+    --line: #1A1A1A14;
+    --line-strong: #1A1A1A2A;
+    --surface: #F2F2EE;
+    --surface-2: #ECECE6;
+    --clay: #8A4A33;
+    --wa: #1F7A55;
+    --ig: #B0418C;
+    --good: #2F7A4F;
+    --warn: #B07A12;
+
+    --font-display: "Funnel Display", "Helvetica Neue", "Segoe UI", system-ui, -apple-system, sans-serif;
+    --font-body: "Onest", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+    --max: 1280px;
+    --gutter: clamp(1.25rem, 4vw, 4rem);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.55;
+    letter-spacing: -0.005em;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  ::selection { background: var(--oak); color: var(--bg); }
+  :focus-visible { outline: 2px solid var(--oak); outline-offset: 3px; border-radius: 2px; }
+
+  .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); position: relative; }
+
+  .mono {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mute);
+  }
+
+  /* ---------- NAV ---------- */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(250,250,248,0.85);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem var(--gutter); max-width: var(--max); margin: 0 auto;
+  }
+  .brand { display: flex; align-items: center; gap: 0.6rem; }
+  .brand svg { width: 26px; height: 26px; border-radius: 6px; }
+  .brand-name { font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: -0.02em; }
+  .brand-name span { color: var(--oak-light); font-weight: 500; }
+  .nav-links { display: flex; gap: 2rem; align-items: center; }
+  .nav-links a { font-size: 13px; color: var(--mute); font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-links a.nav-cta {
+    background: var(--ink); color: #fff;
+    padding: 0.55rem 1rem; font-size: 13px; font-weight: 600; border-radius: 7px;
+    transition: background .2s, color .2s;
+  }
+  .nav-links a.nav-cta:hover { background: var(--oak); color: #fff; }
+  @media (max-width: 860px) { .nav-links a:not(.nav-cta) { display: none; } }
+  /* 375px: "DRYOS Automações" + CTA longo não caem na mesma linha */
+  @media (max-width: 460px) {
+    .brand-name span { display: none; }
+    .nav-links a.nav-cta { white-space: nowrap; padding: 0.55rem 0.85rem; }
+  }
+
+  /* ---------- SECTION SCAFFOLD ---------- */
+  section { border-bottom: 1px solid var(--line); }
+  .sec-pad { padding: clamp(4rem, 9vw, 7rem) 0; }
+  .eyebrow {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1rem; margin-bottom: 2.5rem;
+  }
+  .eyebrow .label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--oak-light); }
+  .eyebrow .num { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; color: var(--mute-soft); }
+  .sec-title {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.04;
+    letter-spacing: -0.03em; text-wrap: balance; max-width: 18ch;
+  }
+  .sec-title strong { color: var(--oak); font-weight: 700; }
+  .sec-intro { color: var(--mute); font-size: clamp(1rem,1.6vw,1.18rem); max-width: 56ch; margin-top: 1.25rem; line-height: 1.6; }
+
+  /* reveal */
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+
+  /* ---------- HERO ---------- */
+  .hero { padding: clamp(3.5rem,8vw,6.5rem) 0 clamp(3rem,7vw,5rem); position: relative; overflow: hidden; }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--oak); background: var(--oak-tint); border: 1px solid var(--line);
+    padding: 0.35rem 0.7rem; border-radius: 100px; margin-bottom: 1.6rem;
+  }
+  .hero-tag b { width: 6px; height: 6px; border-radius: 50%; background: var(--oak); }
+  .hero h1 {
+    font-family: var(--font-display); font-weight: 800;
+    font-size: clamp(2.6rem, 7vw, 5.4rem); line-height: 0.98;
+    letter-spacing: -0.04em; text-wrap: balance; max-width: 17ch;
+  }
+  .hero h1 em { font-style: normal; color: var(--oak); }
+  .hero-sub { color: var(--mute); font-size: clamp(1.05rem,1.8vw,1.3rem); max-width: 52ch; margin-top: 1.6rem; line-height: 1.55; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2.2rem; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.8rem 1.3rem; border-radius: 9px; font-size: 14px; font-weight: 600;
+    transition: transform .15s, background .2s, border-color .2s;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--oak); color: var(--bg); }
+  .btn-primary:hover { background: var(--ink); }
+  .btn-ghost { border: 1px solid var(--line-strong); color: var(--ink); }
+  .btn-ghost:hover { background: var(--surface); }
+  .hero-stats { display: flex; flex-wrap: wrap; gap: clamp(1.5rem,4vw,3.5rem); margin-top: 3.2rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+  .hero-stat .v { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.6rem,3vw,2.3rem); letter-spacing: -0.03em; color: var(--ink); }
+  .hero-stat .k { font-size: 13px; color: var(--mute); margin-top: 0.2rem; }
+
+  /* spark rule under the hero stats */
+  .sparks-rule { margin-top: 2.6rem; }
+  .sparks-rule svg { width: 100%; max-width: 580px; height: auto; }
+  .sparks-rule .fagulha { animation: fag 3.6s ease-in-out infinite; transform-origin: center; }
+  .sparks-rule .fagulha:nth-child(2) { animation-delay: .2s; }
+  .sparks-rule .fagulha:nth-child(3) { animation-delay: .4s; }
+  .sparks-rule .fagulha:nth-child(4) { animation-delay: .6s; }
+  .sparks-rule .fagulha:nth-child(5) { animation-delay: .8s; }
+  .sparks-rule .fagulha:nth-child(6) { animation-delay: 1s; }
+  @keyframes fag { 0%,100% { opacity: .55; } 50% { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { .sparks-rule .fagulha { animation: none; opacity: 1; } }
+
+  /* ---------- DIAGNOSTIC (sintoma → automação) ---------- */
+  .diag-section { background: var(--ink); color: var(--bg); border-bottom: none; }
+  .diag-section .eyebrow .label { color: #9DBFA8; }
+  .diag-section .eyebrow .num { color: #6f6f6a; }
+  .diag-section .sec-title { color: var(--bg); }
+  .diag-section .sec-title strong { color: #9DBFA8; }
+  .diag-section .sec-intro { color: #A6A6A0; }
+  .diag-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: #ffffff14; border: 1px solid #ffffff14; border-radius: 14px; overflow: hidden; margin-top: 3rem; }
+  @media (max-width: 1000px) { .diag-grid { grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 560px) { .diag-grid { grid-template-columns: 1fr; } }
+  .diag {
+    background: var(--ink); padding: 1.5rem;
+    display: flex; flex-direction: column; gap: 0.45rem; min-height: 210px;
+    transition: background .25s;
+  }
+  .diag:hover { background: #161616; }
+  .diag .dnum { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; color: #6f6f6a; }
+  .diag .dname { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; letter-spacing: -0.02em; color: var(--bg); }
+  .diag .dquote { font-size: 13.5px; color: #C8C8C2; font-style: italic; }
+  .diag .dsym { font-size: 13px; color: #8f8f8a; line-height: 1.5; margin-top: auto; }
+  .diag .dfix {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: #9DBFA8; display: flex; align-items: center; gap: 0.4rem;
+    margin-top: 0.6rem; padding-top: 0.7rem; border-top: 1px solid #ffffff14;
+  }
+  .diag-cta {
+    background: var(--oak); padding: 1.6rem 1.5rem;
+    display: flex; flex-direction: column; justify-content: space-between; min-height: 210px;
+    transition: background .25s;
+  }
+  .diag-cta:hover { background: var(--oak-light); }
+  .diag-cta .vc-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #BfD4C4; }
+  .diag-cta .vc-text { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.15; margin-top: 0.5rem; }
+  .diag-cta .vc-arrow { font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 0.4rem; margin-top: 1rem; }
+
+  /* ---------- SOLUTIONS ---------- */
+  .sol { border: 1px solid var(--line-strong); border-radius: 16px; overflow: hidden; background: var(--bg); }
+  .sol + .sol { margin-top: 1.2rem; }
+  .sol-inner { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.05fr); }
+  @media (max-width: 920px) { .sol-inner { grid-template-columns: 1fr; } }
+  .sol-copy { padding: 1.8rem 1.7rem 2rem; display: flex; flex-direction: column; }
+  .sol-head { display: flex; align-items: baseline; gap: 0.7rem; flex-wrap: wrap; }
+  .sol-num { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; color: var(--mute-soft); }
+  .sol-name { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.5rem,2.6vw,1.95rem); letter-spacing: -0.03em; line-height: 1.05; text-wrap: balance; }
+  .sol-cat { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--oak-light); margin-top: 0.35rem; }
+  .sol-desc { color: var(--mute); font-size: 14.5px; line-height: 1.6; margin-top: 1rem; max-width: 44ch; }
+  .sol-kills { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: auto; padding-top: 1.4rem; }
+  .kill-pill {
+    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.04em; text-transform: uppercase;
+    background: var(--surface); border: 1px solid var(--line); color: var(--ink-soft);
+    padding: 0.35rem 0.65rem; border-radius: 100px; display: inline-flex; align-items: center; gap: 0.4rem;
+  }
+  .kill-pill b { color: var(--oak); }
+
+  .sol-spec { background: var(--surface); border-left: 1px solid var(--line); padding: 1.8rem 1.7rem 2rem; }
+  @media (max-width: 920px) { .sol-spec { border-left: none; border-top: 1px solid var(--line); } }
+  .spec-h { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--mute-soft); }
+  .sol-spec ul { list-style: none; margin-top: 0.7rem; display: flex; flex-direction: column; gap: 0.45rem; }
+  .sol-spec ul li { font-size: 13.5px; color: var(--ink-soft); display: flex; gap: 0.55rem; align-items: flex-start; line-height: 1.45; }
+  .sol-spec ul li::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--oak); margin-top: 0.5rem; flex: none; }
+  .sol-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; margin-top: 1.3rem; padding-top: 1.2rem; border-top: 1px solid var(--line); }
+  .sol-flow .fx {
+    font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.03em; text-transform: uppercase;
+    background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 0.28rem 0.5rem; color: var(--ink-soft);
+  }
+  .sol-flow .fx.end { background: var(--oak-tint); border-color: #1F3A2A22; color: var(--oak); font-weight: 500; }
+  .sol-flow .fa { color: var(--mute-soft); font-size: 11px; font-style: normal; }
+  .sol-sla { display: flex; flex-wrap: wrap; gap: 1.4rem; margin-top: 1.2rem; padding-top: 1.1rem; border-top: 1px solid var(--line); }
+  .sol-sla div .k { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--mute-soft); }
+  .sol-sla div .v { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; letter-spacing: -0.02em; color: var(--oak); margin-top: 0.1rem; }
+
+  /* ---------- PROOF BAND ---------- */
+  .proof { background: var(--ink); color: var(--bg); }
+  .proof .label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #9DBFA8; }
+  .proof h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.6rem,3.5vw,2.5rem); letter-spacing: -0.03em; line-height: 1.05; margin-top: 0.8rem; text-wrap: balance; max-width: 22ch; }
+  .proof-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: #ffffff14; border: 1px solid #ffffff14; border-radius: 14px; overflow: hidden; margin-top: 2.5rem; }
+  @media (max-width: 640px) { .proof-stats { grid-template-columns: 1fr; } }
+  .proof-stat { background: var(--ink); padding: 1.6rem 1.5rem; }
+  .proof-stat .v { font-family: var(--font-display); font-weight: 800; font-size: clamp(2rem,4vw,2.8rem); letter-spacing: -0.03em; color: #fff; }
+  .proof-stat .v span { color: #9DBFA8; }
+  .proof-stat .k { font-size: 13px; color: #A6A6A0; margin-top: 0.3rem; }
+  .proof-note { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.03em; color: #6f6f6a; margin-top: 1.2rem; }
+  .proof-quote { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid #ffffff14; display: grid; grid-template-columns: 200px 1fr; gap: 2rem; }
+  @media (max-width: 760px) { .proof-quote { grid-template-columns: 1fr; gap: 1rem; } }
+  .proof-quote .pq-meta .nm { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; color: var(--bg); }
+  .proof-quote .pq-meta .st { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.06em; text-transform: uppercase; color: #9DBFA8; margin-top: 0.3rem; display: block; }
+  .proof-quote blockquote { font-size: clamp(1rem,1.6vw,1.15rem); color: #C8C8C2; line-height: 1.6; max-width: 60ch; }
+  .proof-quote blockquote strong { color: #fff; font-weight: 500; }
+  .proof-quote .attr { font-size: 13px; color: #8f8f8a; margin-top: 0.9rem; }
+
+  /* ---------- STEPS ---------- */
+  .steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--line-strong); border: 1px solid var(--line-strong); border-radius: 16px; overflow: hidden; margin-top: 3rem; }
+  @media (max-width: 900px) { .steps { grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 560px) { .steps { grid-template-columns: 1fr; } }
+  .step { background: var(--bg); padding: 1.6rem 1.5rem 1.8rem; display: flex; flex-direction: column; gap: 0.4rem; }
+  .step .snum { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; color: var(--oak-light); }
+  .step h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; letter-spacing: -0.02em; margin-top: 0.2rem; }
+  .step p { font-size: 13.5px; color: var(--mute); line-height: 1.55; }
+  .step .stime { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-soft); margin-top: auto; padding-top: 1rem; }
+
+  /* "o que a gente não faz" band */
+  .notband { margin-top: 2.5rem; background: var(--oak-tint); border: 1px solid var(--line); border-radius: 14px; padding: 1.6rem 1.7rem; }
+  .notband .h { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; letter-spacing: -0.02em; color: var(--oak); }
+  .notband ul { list-style: none; margin-top: 0.9rem; display: grid; grid-template-columns: repeat(2,1fr); gap: 0.5rem 2rem; }
+  @media (max-width: 760px) { .notband ul { grid-template-columns: 1fr; } }
+  .notband ul li { font-size: 13.5px; color: var(--ink-soft); display: flex; gap: 0.55rem; align-items: flex-start; line-height: 1.5; }
+  .notband ul li i { color: var(--clay); font-style: normal; font-weight: 700; flex: none; }
+
+  /* ---------- COMBOS ---------- */
+  .combos { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--line-strong); border: 1px solid var(--line-strong); border-radius: 16px; overflow: hidden; margin-top: 3rem; }
+  @media (max-width: 900px) { .combos { grid-template-columns: 1fr; } }
+  .combo { background: var(--bg); padding: 1.7rem 1.6rem 1.9rem; display: flex; flex-direction: column; gap: 0.5rem; }
+  .combo .cmix { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; }
+  .combo .cmix span { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; letter-spacing: -0.02em; color: var(--oak); }
+  .combo .cmix i { color: var(--mute-soft); font-style: normal; font-size: 0.95rem; }
+  .combo h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; letter-spacing: -0.025em; margin-top: 0.3rem; text-wrap: balance; }
+  .combo p { font-size: 13.5px; color: var(--mute); line-height: 1.55; }
+  .combo .cfor { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-soft); margin-top: auto; padding-top: 1.1rem; border-top: 1px solid var(--line); }
+
+  /* ---------- CATALOG (o que a gente automatiza) ---------- */
+  .cat-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--line-strong); border: 1px solid var(--line-strong); border-radius: 16px; overflow: hidden; margin-top: 3rem; }
+  @media (max-width: 1040px) { .cat-grid { grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 640px) { .cat-grid { grid-template-columns: 1fr; } }
+  .cat { background: var(--bg); padding: 1.6rem 1.5rem 1.8rem; }
+  .cat h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; letter-spacing: -0.02em; }
+  .cat .ctag { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--oak-light); }
+  .cat ul { list-style: none; margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+  .cat ul li { font-size: 13px; color: var(--ink-soft); line-height: 1.45; display: flex; gap: 0.5rem; align-items: flex-start; }
+  .cat ul li::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--oak); margin-top: 0.45rem; flex: none; }
+  .cat-note { margin-top: 1.6rem; font-size: 13.5px; color: var(--mute); max-width: 70ch; }
+  .cat-note strong { color: var(--ink-soft); font-weight: 500; }
+
+  /* ---------- ECOSYSTEM ---------- */
+  .eco-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--line-strong); border: 1px solid var(--line-strong); border-radius: 16px; overflow: hidden; margin-top: 3rem; }
+  @media (max-width: 900px) { .eco-grid { grid-template-columns: 1fr; } }
+  .eco-card { background: var(--bg); padding: 1.7rem 1.6rem; display: flex; flex-direction: column; gap: 0.35rem; }
+  .eco-card.here { background: var(--oak); color: var(--bg); }
+  .eco-num { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; color: var(--mute-soft); }
+  .eco-card.here .eco-num { color: #9DBFA8; }
+  .eco-name { font-family: var(--font-display); font-weight: 700; font-size: 1.55rem; letter-spacing: -0.02em; display: flex; align-items: center; gap: 0.6rem; margin-top: 0.15rem; flex-wrap: wrap; }
+  .eco-here { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.06em; text-transform: uppercase; background: var(--bg); color: var(--oak); border-radius: 100px; padding: 0.18rem 0.5rem; font-weight: 500; }
+  .eco-tag { font-size: 12.5px; color: var(--mute); }
+  .eco-card.here .eco-tag { color: #C8D6CB; }
+  .eco-card p { font-size: 13px; color: var(--ink-soft); line-height: 1.55; margin-top: 0.55rem; flex: 1; }
+  .eco-card.here p { color: #DCE6DD; }
+  .eco-meta { display: flex; gap: 1.2rem; margin-top: 1rem; padding-top: 0.85rem; border-top: 1px solid var(--line); }
+  .eco-card.here .eco-meta { border-top-color: #ffffff22; }
+  .eco-meta span { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--mute); }
+  .eco-card.here .eco-meta span { color: #9DBFA8; }
+
+  /* ---------- FAQ ---------- */
+  .faq-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.6rem 3rem; margin-top: 3rem; }
+  @media (max-width: 760px) { .faq-grid { grid-template-columns: 1fr; } }
+  .faq-item h4 { font-family: var(--font-display); font-weight: 600; font-size: 1.08rem; letter-spacing: -0.01em; }
+  .faq-item p { color: var(--mute); font-size: 14px; margin-top: 0.45rem; line-height: 1.55; max-width: 52ch; }
+
+  /* ---------- CTA ---------- */
+  .cta { background: var(--oak); color: var(--bg); text-align: center; }
+  .cta h2 { font-family: var(--font-display); font-weight: 800; font-size: clamp(2rem,5vw,3.6rem); letter-spacing: -0.03em; line-height: 1; text-wrap: balance; }
+  .cta p { color: #C8D6CB; max-width: 48ch; margin: 1.2rem auto 0; font-size: 1.1rem; }
+
+  /* lead form */
+  .lead-form { max-width: 440px; margin: 2.2rem auto 0; background: var(--bg); border-radius: 16px; padding: 1.6rem; text-align: left; box-shadow: 0 24px 60px -24px #00000055; }
+  .lead-form .row { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 0.8rem; }
+  .lead-form label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--mute); }
+  .lead-form input, .lead-form select { font-family: var(--font-body); font-size: 15px; padding: 0.7rem 0.85rem; border: 1px solid var(--line-strong); border-radius: 9px; background: #fff; color: var(--ink); width: 100%; }
+  .lead-form input:focus, .lead-form select:focus { outline: 2px solid var(--oak); outline-offset: 1px; border-color: var(--oak); }
+  .lead-form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .lead-form button { width: 100%; background: var(--oak); color: #fff; font-family: var(--font-body); font-weight: 600; font-size: 15px; padding: 0.85rem; border-radius: 9px; cursor: pointer; border: none; transition: background 0.2s; margin-top: 0.3rem; }
+  .lead-form button:hover { background: var(--ink); }
+  .lead-form button:disabled { opacity: 0.6; cursor: default; }
+  .lead-status { font-size: 13px; margin-top: 0.8rem; text-align: center; min-height: 1.1em; }
+  .lead-status.err { color: #C0573B; }
+  .lead-form .privacy { font-size: 11px; color: var(--mute-soft); text-align: center; margin-top: 0.7rem; }
+  .lead-success { max-width: 440px; margin: 2.2rem auto 0; background: var(--bg); border-radius: 16px; padding: 2.2rem 1.6rem; text-align: center; box-shadow: 0 24px 60px -24px #00000055; }
+  .lead-success .ic { font-size: 2.2rem; }
+  .lead-success h4 { font-family: var(--font-display); font-weight: 700; font-size: 1.4rem; letter-spacing: -0.02em; margin-top: 0.5rem; color: var(--ink); }
+  .lead-success p { color: var(--mute); font-size: 14px; margin-top: 0.4rem; }
+
+  /* ---------- FOOTER ---------- */
+  footer { padding: 2.5rem var(--gutter); }
+  .foot-inner { max-width: var(--max); margin: 0 auto; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; }
+  .foot-inner .mono { color: var(--mute-soft); }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS9H2KN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<!-- ================= NAV ================= -->
+<nav>
+  <div class="nav-inner">
+    <a href="#top" class="brand" aria-label="DRYOS Automações">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="5" fill="#1F3A2A"/><path fill="#FAFAF8" fill-rule="evenodd" d="M9 8h7a8 8 0 0 1 0 16H9zm4 4v8h3a4 4 0 0 0 0-8z"/></svg>
+      <span class="brand-name">DRYOS <span>Automações</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#dor">Onde dói</a>
+      <a href="#automacoes">As automações</a>
+      <a href="#catalogo">O que automatizamos</a>
+      <a href="#como">Como funciona</a>
+      <a href="#faq">FAQ</a>
+      <a href="#falar" class="nav-cta">Falar com a equipe</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="container">
+    <span class="hero-tag reveal"><b></b>Automação de processos com IA</span>
+    <h1 class="reveal">Você não precisa de tudo. Precisa <em>automatizar o que sangra</em>.</h1>
+    <p class="hero-sub reveal">Atendimento que responde sozinho, sistemas que finalmente conversam entre si, cobrança que roda sem ninguém lembrar, relatório que chega antes de você pedir. A DRYOS monta a automação, conecta no que você já usa e entrega rodando em 7 a 14 dias — com escopo, prazo e SLA por escrito antes de começar.</p>
+    <div class="hero-actions reveal">
+      <a href="#automacoes" class="btn btn-primary">Ver as automações
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#dor" class="btn btn-ghost">Descobrir qual eu preciso</a>
+    </div>
+    <div class="hero-stats reveal">
+      <div class="hero-stat"><div class="v">7–14</div><div class="k">dias úteis pra entrar no ar</div></div>
+      <div class="hero-stat"><div class="v">0</div><div class="k">meses de fidelidade</div></div>
+      <div class="hero-stat"><div class="v">SLA</div><div class="k">documentado antes de começar</div></div>
+      <div class="hero-stat"><div class="v">24/7</div><div class="k">rodando sem depender de gente</div></div>
+    </div>
+
+    <div class="sparks-rule reveal">
+      <svg viewBox="0 0 580 60" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Cinco marcas alinhadas representando as cinco frentes de automação">
+        <line x1="40" y1="30" x2="540" y2="30" stroke="rgba(31,58,42,0.18)" stroke-width="1" stroke-dasharray="3 5"/>
+        <g class="fagulha"><g transform="translate(80,30)">
+          <line x1="0" y1="-11" x2="0" y2="-5" stroke="#1F3A2A" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="0" y1="5" x2="0" y2="11" stroke="#1F3A2A" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="-11" y1="0" x2="-5" y2="0" stroke="#1F3A2A" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="5" y1="0" x2="11" y2="0" stroke="#1F3A2A" stroke-width="1.6" stroke-linecap="round"/>
+          <circle cx="0" cy="0" r="3.5" fill="#1F3A2A"/>
+        </g></g>
+        <g class="fagulha"><g transform="translate(190,30)">
+          <line x1="0" y1="-11" x2="0" y2="-5" stroke="#1F3A2A" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="0" y1="5" x2="0" y2="11" stroke="#1F3A2A" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="-11" y1="0" x2="-5" y2="0" stroke="#1F3A2A" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="5" y1="0" x2="11" y2="0" stroke="#1F3A2A" stroke-width="1.6" stroke-linecap="round"/>
+          <circle cx="0" cy="0" r="3.5" fill="#1F3A2A"/>
+        </g></g>
+        <g class="fagulha"><g transform="translate(290,30)">
+          <line x1="0" y1="-13" x2="0" y2="-6" stroke="#1F3A2A" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="0" y1="6" x2="0" y2="13" stroke="#1F3A2A" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="-13" y1="0" x2="-6" y2="0" stroke="#1F3A2A" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="6" y1="0" x2="13" y2="0" stroke="#1F3A2A" stroke-width="1.8" stroke-linecap="round"/>
+          <circle cx="0" cy="0" r="4.5" fill="#1F3A2A"/>
+        </g></g>
+        <g class="fagulha"><g transform="translate(390,30)">
+          <line x1="0" y1="-11" x2="0" y2="-5" stroke="#1F3A2A" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="0" y1="5" x2="0" y2="11" stroke="#1F3A2A" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="-11" y1="0" x2="-5" y2="0" stroke="#1F3A2A" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="5" y1="0" x2="11" y2="0" stroke="#1F3A2A" stroke-width="1.6" stroke-linecap="round"/>
+          <circle cx="0" cy="0" r="3.5" fill="#1F3A2A"/>
+        </g></g>
+        <g class="fagulha"><g transform="translate(500,30)">
+          <line x1="0" y1="-11" x2="0" y2="-5" stroke="#1F3A2A" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="0" y1="5" x2="0" y2="11" stroke="#1F3A2A" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="-11" y1="0" x2="-5" y2="0" stroke="#1F3A2A" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="5" y1="0" x2="11" y2="0" stroke="#1F3A2A" stroke-width="1.6" stroke-linecap="round"/>
+          <circle cx="0" cy="0" r="3.5" fill="#1F3A2A"/>
+        </g></g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<!-- ================= DIAGNOSTIC ================= -->
+<section class="diag-section sec-pad" id="dor">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="label">— O diagnóstico</span><span class="num">01 / 08</span></div>
+    <h2 class="sec-title reveal">Qual vilão está <strong>na sua operação?</strong></h2>
+    <p class="sec-intro reveal">Automação não começa por ferramenta, começa por sintoma. Ache o seu na lista — a automação que resolve vem colada. Se você reconhecer três ou mais, o seu caso provavelmente é de plataforma, não de automação pontual: a gente fala isso no diagnóstico em vez de te vender de menos.</p>
+
+    <div class="diag-grid reveal">
+      <div class="diag">
+        <span class="dnum">— 01</span>
+        <span class="dname">Capitão Manualis</span>
+        <span class="dquote">"Sempre foi assim. Pra quê mudar?"</span>
+        <span class="dsym">Todo atendimento é digitado do zero. Toda pergunta repetida consome uma pessoa.</span>
+        <span class="dfix">→ Automação de atendimento</span>
+      </div>
+      <div class="diag">
+        <span class="dnum">— 02</span>
+        <span class="dname">Senhor dos Silos</span>
+        <span class="dquote">"Esse dado é do nosso setor."</span>
+        <span class="dsym">O mesmo cliente cadastrado em três lugares. Ninguém vê o todo sem exportar planilha.</span>
+        <span class="dfix">→ Integração entre sistemas</span>
+      </div>
+      <div class="diag">
+        <span class="dnum">— 03</span>
+        <span class="dname">Dama do Retrabalho</span>
+        <span class="dquote">"Pode refazer, não era isso."</span>
+        <span class="dsym">Redigitação entre sistemas. Cada erro de digitação viaja pra dentro da operação.</span>
+        <span class="dfix">→ Integração entre sistemas</span>
+      </div>
+      <div class="diag">
+        <span class="dnum">— 04</span>
+        <span class="dname">General Lento</span>
+        <span class="dquote">"Não há pressa, amanhã a gente vê."</span>
+        <span class="dsym">Lead manda mensagem às 21h e espera até segunda. Tudo passa pela mesma pessoa.</span>
+        <span class="dfix">→ Automação de atendimento</span>
+      </div>
+      <div class="diag">
+        <span class="dnum">— 05</span>
+        <span class="dname">Oráculo do Achismo</span>
+        <span class="dquote">"Eu acho que tá vendendo bem..."</span>
+        <span class="dsym">Não existe número na mesa na hora de decidir. O relatório sai quando alguém lembra.</span>
+        <span class="dfix">→ Automação de relatórios</span>
+      </div>
+      <div class="diag">
+        <span class="dnum">— 06</span>
+        <span class="dname">Drenador de Margem</span>
+        <span class="dquote">"Essa perda é pequena... deixa pra lá."</span>
+        <span class="dsym">Inadimplência que ninguém cobra porque cobrar no braço é constrangedor.</span>
+        <span class="dfix">→ Automação de cobrança</span>
+      </div>
+      <div class="diag">
+        <span class="dnum">— 07</span>
+        <span class="dname">Enganador do Crescimento</span>
+        <span class="dquote">"É só crescer, depois a gente organiza."</span>
+        <span class="dsym">Mais volume entrando no mesmo processo improvisado. A conta chega depois.</span>
+        <span class="dfix">→ Automação de relatórios</span>
+      </div>
+      <a href="#automacoes" class="diag-cta">
+        <div>
+          <span class="vc-label">— As cinco frentes</span>
+          <p class="vc-text">Pra cada sintoma, uma automação de escopo fechado.</p>
+        </div>
+        <span class="vc-arrow">Ver as automações
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SOLUTIONS ================= -->
+<section class="sec-pad" id="automacoes">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="label">— As automações</span><span class="num">02 / 08</span></div>
+    <h2 class="sec-title reveal">Cinco frentes. <strong>Uma dor de cada vez.</strong></h2>
+    <p class="sec-intro reveal">Cada automação tem escopo fixo, prazo definido e SLA documentado. O que está listado em "o que entra" é o que a gente entrega — nada de "e muito mais".</p>
+
+    <!-- 01 ATENDIMENTO -->
+    <div class="sol reveal" style="margin-top:3rem">
+      <div class="sol-inner">
+        <div class="sol-copy">
+          <div class="sol-head"><span class="sol-num">— 01</span><span class="sol-name">Automação de atendimento</span></div>
+          <div class="sol-cat">WhatsApp e e-mail · primeira camada com IA</div>
+          <p class="sol-desc">Agente IA que atende WhatsApp e e-mail em primeira camada — qualifica, responde dúvidas frequentes, encaminha pro humano certo e registra tudo no CRM. O lead que chega de madrugada é atendido de madrugada.</p>
+          <div class="sol-kills">
+            <span class="kill-pill"><b>✕</b> Capitão Manualis</span>
+            <span class="kill-pill"><b>✕</b> General Lento</span>
+          </div>
+        </div>
+        <div class="sol-spec">
+          <div class="spec-h">O que entra</div>
+          <ul>
+            <li>Conexão do número de WhatsApp que você já usa</li>
+            <li>Base de respostas treinada no seu material</li>
+            <li>Regras de qualificação e triagem por assunto</li>
+            <li>Handoff pro humano com o contexto da conversa</li>
+            <li>Registro de cada conversa e cada contato</li>
+            <li>Painel de conversas e histórico</li>
+          </ul>
+          <div class="sol-flow">
+            <span class="fx">Mensagem chega</span><i class="fa">→</i>
+            <span class="fx">Agente qualifica</span><i class="fa">→</i>
+            <span class="fx">Resolve ou encaminha</span><i class="fa">→</i>
+            <span class="fx end">Registrado</span>
+          </div>
+          <div class="sol-sla">
+            <div><div class="k">Implementação</div><div class="v">10 dias úteis</div></div>
+            <div><div class="k">Modelo</div><div class="v">Recorrente</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 INTEGRAÇÃO -->
+    <div class="sol reveal">
+      <div class="sol-inner">
+        <div class="sol-copy">
+          <div class="sol-head"><span class="sol-num">— 02</span><span class="sol-name">Integração entre sistemas</span></div>
+          <div class="sol-cat">CRM, ERP, e-mail marketing, checkout, planilhas</div>
+          <p class="sol-desc">Conecta o que você já usa: ferramenta de e-mail com CRM, checkout com CRM, ERP com planilha, anúncio com funil. O lead entra numa ponta e chega na outra sem ninguém copiar e colar — inclusive na pressa de um lançamento, quando errar de mão custa venda.</p>
+          <div class="sol-kills">
+            <span class="kill-pill"><b>✕</b> Senhor dos Silos</span>
+            <span class="kill-pill"><b>✕</b> Dama do Retrabalho</span>
+          </div>
+        </div>
+        <div class="sol-spec">
+          <div class="spec-h">O que entra</div>
+          <ul>
+            <li>Mapa das fontes e dos destinos dos dados</li>
+            <li>Integração com RD Station, ActiveCampaign, Hotmart e afins</li>
+            <li>Integrações ponto a ponto entre os sistemas do escopo</li>
+            <li>Regras de deduplicação e de conflito (quem manda)</li>
+            <li>Sincronização por evento ou agendada</li>
+            <li>Log de execução consultável</li>
+            <li>Alerta quando uma ponte falha</li>
+          </ul>
+          <div class="sol-flow">
+            <span class="fx">Sistema A</span><i class="fa">→</i>
+            <span class="fx">Regra de transformação</span><i class="fa">→</i>
+            <span class="fx">Sistema B</span><i class="fa">→</i>
+            <span class="fx end">Log + alerta</span>
+          </div>
+          <div class="sol-sla">
+            <div><div class="k">Implementação</div><div class="v">14 dias úteis</div></div>
+            <div><div class="k">Modelo</div><div class="v">Recorrente</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 AGENTE DE IA -->
+    <div class="sol reveal">
+      <div class="sol-inner">
+        <div class="sol-copy">
+          <div class="sol-head"><span class="sol-num">— 03</span><span class="sol-name">Agente de IA especializado</span></div>
+          <div class="sol-cat">FAQ extensiva, suporte técnico, qualificação avançada</div>
+          <p class="sol-desc">Agente treinado num domínio específico do seu negócio — FAQ extensiva, suporte técnico, qualificação avançada. Aprende com os seus documentos e processos, e sabe a hora de passar pro humano.</p>
+          <div class="sol-kills">
+            <span class="kill-pill"><b>✕</b> Capitão Manualis</span>
+            <span class="kill-pill"><b>✕</b> General Lento</span>
+          </div>
+        </div>
+        <div class="sol-spec">
+          <div class="spec-h">O que entra</div>
+          <ul>
+            <li>Ingestão dos seus documentos e materiais</li>
+            <li>Escopo e limites do agente definidos por escrito</li>
+            <li>Fallback pro humano quando a pergunta sai do escopo</li>
+            <li>Tom de voz calibrado com você</li>
+            <li>Ciclo de revisão das respostas nas primeiras semanas</li>
+            <li>Atualização da base quando o seu material muda</li>
+          </ul>
+          <div class="sol-flow">
+            <span class="fx">Pergunta</span><i class="fa">→</i>
+            <span class="fx">Busca na sua base</span><i class="fa">→</i>
+            <span class="fx">Responde com fonte</span><i class="fa">→</i>
+            <span class="fx end">Fora do escopo? humano</span>
+          </div>
+          <div class="sol-sla">
+            <div><div class="k">Implementação</div><div class="v">14 dias úteis</div></div>
+            <div><div class="k">Modelo</div><div class="v">Recorrente</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 RELATÓRIOS -->
+    <div class="sol reveal">
+      <div class="sol-inner">
+        <div class="sol-copy">
+          <div class="sol-head"><span class="sol-num">— 04</span><span class="sol-name">Automação de relatórios</span></div>
+          <div class="sol-cat">Dashboard de KPIs + relatório semanal no WhatsApp</div>
+          <p class="sol-desc">Dashboard executivo com KPIs em tempo real e relatório semanal no WhatsApp escrito por IA — com 3 insights e 3 ações sugeridas. O número chega até você em vez de esperar alguém lembrar de puxar.</p>
+          <div class="sol-kills">
+            <span class="kill-pill"><b>✕</b> Oráculo do Achismo</span>
+            <span class="kill-pill"><b>✕</b> Enganador do Crescimento</span>
+          </div>
+        </div>
+        <div class="sol-spec">
+          <div class="spec-h">O que entra</div>
+          <ul>
+            <li>Definição dos KPIs que realmente decidem</li>
+            <li>Conexão das fontes de dados do escopo</li>
+            <li>Dashboard executivo em tempo real</li>
+            <li>Relatório semanal no WhatsApp escrito por IA</li>
+            <li>3 insights + 3 ações sugeridas por relatório</li>
+            <li>Alerta quando um indicador sai da faixa</li>
+          </ul>
+          <div class="sol-flow">
+            <span class="fx">Fontes</span><i class="fa">→</i>
+            <span class="fx">KPIs</span><i class="fa">→</i>
+            <span class="fx">Dashboard + relatório</span><i class="fa">→</i>
+            <span class="fx end">3 ações na sua mão</span>
+          </div>
+          <div class="sol-sla">
+            <div><div class="k">Implementação</div><div class="v">14 dias úteis</div></div>
+            <div><div class="k">Modelo</div><div class="v">Recorrente</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 COBRANÇA -->
+    <div class="sol reveal">
+      <div class="sol-inner">
+        <div class="sol-copy">
+          <div class="sol-head"><span class="sol-num">— 05</span><span class="sol-name">Automação de cobrança</span></div>
+          <div class="sol-cat">Régua no WhatsApp, nota fiscal, boleto/Pix, conciliação</div>
+          <p class="sol-desc">Régua inteligente de cobrança via WhatsApp, emissão automática de NF, geração de boleto e conciliação bancária. Reduz inadimplência sem o constrangimento de cobrar no braço — e sem ninguém precisar lembrar.</p>
+          <div class="sol-kills">
+            <span class="kill-pill"><b>✕</b> Drenador de Margem</span>
+          </div>
+        </div>
+        <div class="sol-spec">
+          <div class="spec-h">O que entra</div>
+          <ul>
+            <li>Régua de cobrança: antes, no dia e depois do vencimento</li>
+            <li>Mensagem própria por etapa, no seu tom</li>
+            <li>Emissão automática de nota fiscal</li>
+            <li>Geração de boleto e Pix</li>
+            <li>Conciliação bancária dos pagamentos</li>
+            <li>Painel de inadimplência e escalonamento pro humano</li>
+          </ul>
+          <div class="sol-flow">
+            <span class="fx">Vencimento</span><i class="fa">→</i>
+            <span class="fx">Régua no WhatsApp</span><i class="fa">→</i>
+            <span class="fx">Pagou?</span><i class="fa">→</i>
+            <span class="fx end">Concilia ou escalona</span>
+          </div>
+          <div class="sol-sla">
+            <div><div class="k">Implementação</div><div class="v">10 dias úteis</div></div>
+            <div><div class="k">Modelo</div><div class="v">Recorrente</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CATALOG ================= -->
+<section class="sec-pad" id="catalogo">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="label">— O que automatizamos</span><span class="num">03 / 08</span></div>
+    <h2 class="sec-title reveal">Concretamente, <strong>o que a gente monta.</strong></h2>
+    <p class="sec-intro reveal">Não é lista de capacidade genérica — são as automações que já saem da nossa mão. Se a sua estiver aqui, a gente já fez. Se não estiver, provavelmente cabe: o padrão é o mesmo.</p>
+
+    <div class="cat-grid reveal">
+
+      <div class="cat">
+        <span class="ctag">— 01</span>
+        <h3>Marketing &amp; lançamento</h3>
+        <ul>
+          <li>Lead de anúncio (Meta, Google) caindo direto no CRM</li>
+          <li>Ferramenta de e-mail ↔ CRM: RD Station, ActiveCampaign, Mailchimp</li>
+          <li>Formulário do site → CRM + aviso no WhatsApp</li>
+          <li>Plataforma de lançamento (Hotmart, Eduzz, Kiwify) → CRM</li>
+          <li>Checkout aprovado → acesso liberado + e-mail de boas-vindas</li>
+          <li>Tag e segmento aplicados por comportamento do lead</li>
+          <li>Régua de aquecimento e recuperação de carrinho</li>
+          <li>Lista de inscritos sincronizada entre página e e-mail</li>
+        </ul>
+      </div>
+
+      <div class="cat">
+        <span class="ctag">— 02</span>
+        <h3>Vendas</h3>
+        <ul>
+          <li>Distribuição automática de lead pro vendedor certo</li>
+          <li>Qualificação por IA antes de chegar no humano</li>
+          <li>Follow-up automático por etapa do funil</li>
+          <li>Lead quente notificado no WhatsApp do vendedor</li>
+          <li>Estágio do CRM atualizado por evento, sem ninguém arrastar card</li>
+          <li>No-show de reunião → régua de resgate</li>
+          <li>Proposta enviada → lembrete automático de retorno</li>
+        </ul>
+      </div>
+
+      <div class="cat">
+        <span class="ctag">— 03</span>
+        <h3>Financeiro</h3>
+        <ul>
+          <li>Régua de cobrança no WhatsApp: antes, no dia e depois</li>
+          <li>Emissão automática de nota fiscal</li>
+          <li>Geração de boleto e Pix</li>
+          <li>Conciliação bancária dos pagamentos recebidos</li>
+          <li>Aviso de inadimplência e escalonamento pro humano</li>
+          <li>Renovação e recorrência avisadas antes de vencer</li>
+        </ul>
+      </div>
+
+      <div class="cat">
+        <span class="ctag">— 04</span>
+        <h3>Dados &amp; operação</h3>
+        <ul>
+          <li>Planilha ↔ sistema, nos dois sentidos</li>
+          <li>ERP ↔ CRM sem redigitação</li>
+          <li>Dashboard de KPIs em tempo real</li>
+          <li>Relatório semanal automático no WhatsApp ou e-mail</li>
+          <li>Alerta quando um indicador sai da faixa</li>
+          <li>Log de execução e alerta quando uma integração falha</li>
+          <li>Deduplicação de contatos entre bases</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <p class="cat-note reveal"><strong>Não achou a sua?</strong> Traz no diagnóstico. A resposta honesta é uma de três: já fazemos, cabe no mesmo padrão, ou não é automação — é outro problema. As três a gente diz na primeira conversa, não depois de assinar.</p>
+  </div>
+</section>
+
+<!-- ================= PROOF BAND ================= -->
+<section class="proof sec-pad">
+  <div class="container">
+    <span class="label reveal">— Na prática</span>
+    <h2 class="reveal">Operações reais. Resultados em produção.</h2>
+    <div class="proof-stats reveal">
+      <div class="proof-stat"><div class="v"><span>−34%</span></div><div class="k">no tempo de 1ª resposta, com a IA filtrando e respondendo</div></div>
+      <div class="proof-stat"><div class="v">71<span>%</span></div><div class="k">dos leads concluem o fluxo de qualificação sozinhos</div></div>
+      <div class="proof-stat"><div class="v">24/7</div><div class="k">de atendimento, sem ninguém depender do horário comercial</div></div>
+    </div>
+    <p class="proof-note reveal">Medições de operações DRYOS em produção. O resultado varia com o volume e o desenho de cada operação.</p>
+
+    <div class="proof-quote reveal">
+      <div class="pq-meta">
+        <div class="nm">Gois Fit</div>
+        <span class="st">Em produção</span>
+      </div>
+      <div>
+        <blockquote>O trabalho com a DRYOS foi um <strong>divisor de águas</strong> para a Gois Fit. Saímos de uma atuação muito operacional, reagindo ao dia a dia, para uma <strong>implantação clara de processos</strong> que organizaram a casa e deram previsibilidade ao negócio.</blockquote>
+        <p class="attr"><strong>Bárbara Gois</strong> · CEO, Gois Fit</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section class="sec-pad" id="como">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="label">— Como funciona</span><span class="num">04 / 08</span></div>
+    <h2 class="sec-title reveal">Escopo fixo. <strong>Antes de começar.</strong></h2>
+    <p class="sec-intro reveal">A parte que a maioria pula: você sabe exatamente o que vai receber, em quanto tempo e sob qual SLA — por escrito — antes de assinar qualquer coisa.</p>
+
+    <div class="steps reveal">
+      <div class="step">
+        <span class="snum">— 01</span>
+        <h3>Diagnóstico</h3>
+        <p>30 minutos pra entender o gargalo e apontar qual automação resolve. Se nenhuma resolver, a gente fala — e indica o caminho certo.</p>
+        <span class="stime">Gratuito · 30 min</span>
+      </div>
+      <div class="step">
+        <span class="snum">— 02</span>
+        <h3>Escopo assinado</h3>
+        <p>Antes de qualquer linha de código: o que entra, o que não entra, o prazo e o SLA. Documentado. Mudança de escopo é conversa nova, não surpresa na fatura.</p>
+        <span class="stime">Por escrito</span>
+      </div>
+      <div class="step">
+        <span class="snum">— 03</span>
+        <h3>Implementação</h3>
+        <p>A gente constrói, conecta no que você já usa e entrega rodando. Você acompanha o progresso — não recebe um "tá quase" por três meses.</p>
+        <span class="stime">7 a 14 dias úteis</span>
+      </div>
+      <div class="step">
+        <span class="snum">— 04</span>
+        <h3>Operação</h3>
+        <p>Recorrência mensal sem fidelidade, com ajuste contínuo e SLA valendo. Se deixar de fazer sentido, você sai — e os dados são seus.</p>
+        <span class="stime">Mensal · sem fidelidade</span>
+      </div>
+    </div>
+
+    <div class="notband reveal">
+      <div class="h">O que a gente não faz</div>
+      <ul>
+        <li><i>✕</i> Consultoria que entrega slide e vai embora. A DRYOS constrói e opera.</li>
+        <li><i>✕</i> Promessa de "+X% em Y dias". Escopo e prazo a gente garante; resultado depende da sua operação.</li>
+        <li><i>✕</i> Reestruturar a operação inteira. Isso é plataforma, outro tamanho de projeto — falamos no diagnóstico.</li>
+        <li><i>✕</i> Ferramenta que você configura sozinho. Quem implementa somos nós.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMBOS ================= -->
+<section class="sec-pad" id="combos">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="label">— Combinações</span><span class="num">05 / 08</span></div>
+    <h2 class="sec-title reveal">Uma automação resolve. <strong>Duas mudam o jogo.</strong></h2>
+    <p class="sec-intro reveal">As automações foram desenhadas pra rodar juntas. Estas são as combinações que mais pedem — cada uma soma escopo, não complexidade.</p>
+
+    <div class="combos reveal">
+      <div class="combo">
+        <div class="cmix"><span>Atendimento</span><i>+</i><span>Agente de IA</span></div>
+        <h3>Atendimento que não dorme</h3>
+        <p>A primeira camada filtra e qualifica; o agente treinado no seu material resolve a dúvida técnica sem acionar ninguém. O humano entra só no que exige humano.</p>
+        <span class="cfor">Pra quem perde lead fora do horário</span>
+      </div>
+      <div class="combo">
+        <div class="cmix"><span>Cobrança</span><i>+</i><span>Relatórios</span></div>
+        <h3>Receita previsível</h3>
+        <p>A régua cobra sozinha e concilia; o relatório mostra inadimplência, previsão de caixa e o que mudou na semana. Você para de descobrir o furo no fim do mês.</p>
+        <span class="cfor">Pra quem tem recorrência ou carteira</span>
+      </div>
+      <div class="combo">
+        <div class="cmix"><span>Integração</span><i>+</i><span>Relatórios</span></div>
+        <h3>Fim dos silos</h3>
+        <p>As pontes unificam o dado espalhado; o dashboard finalmente mostra o todo. Decisão deixa de depender de alguém consolidar planilha na sexta.</p>
+        <span class="cfor">Pra quem tem dado em 3+ ferramentas</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ECOSYSTEM ================= -->
+<section class="sec-pad" id="ecossistema">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="label">— Tamanho do problema</span><span class="num">06 / 08</span></div>
+    <h2 class="sec-title reveal">Automação é a entrada. <strong>Não é o teto.</strong></h2>
+    <p class="sec-intro reveal">Nem todo problema se resolve automatizando. Antes de te vender uma automação, a gente confere em qual dos três tamanhos o seu caso cabe — e diz se você precisa de menos ou de mais do que veio buscar.</p>
+
+    <div class="eco-grid reveal">
+      <div class="eco-card here">
+        <span class="eco-num">— I</span>
+        <div class="eco-name">Uma dor específica <span class="eco-here">você está aqui</span></div>
+        <div class="eco-tag">Automação pontual</div>
+        <p>O atendimento não dá conta, os sistemas não conversam, a cobrança não sai. Escopo fixo, conecta no que você já usa, no ar em 7 a 14 dias e sem fidelidade.</p>
+        <div class="eco-meta"><span>Mensal</span><span>7–14 dias</span></div>
+      </div>
+      <div class="eco-card">
+        <span class="eco-num">— II</span>
+        <div class="eco-name">A operação inteira</div>
+        <div class="eco-tag">Plataforma completa</div>
+        <p>Quando são três, quatro dores ao mesmo tempo, automatizar em cima do improviso só acelera o improviso. Aí o caminho é estruturar a operação numa plataforma só: atendimento, CRM, funil, automações e indicadores no mesmo lugar.</p>
+        <div class="eco-meta"><span>Mensal</span><span>2–4 semanas</span></div>
+      </div>
+      <div class="eco-card">
+        <span class="eco-num">— III</span>
+        <div class="eco-name">Um problema único</div>
+        <div class="eco-tag">Projeto sob medida</div>
+        <p>O que não cabe em produto nem em automação de catálogo — sistema próprio, infraestrutura técnica de lançamento, integração que ninguém tem. Escopo desenhado do zero.</p>
+        <div class="eco-meta"><span>Por projeto</span><span>Sob demanda</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="sec-pad" id="faq">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="label">— Perguntas frequentes</span><span class="num">07 / 08</span></div>
+    <h2 class="sec-title reveal">Antes de você <strong>perguntar.</strong></h2>
+
+    <div class="faq-grid reveal">
+      <div class="faq-item">
+        <h4>Sem fidelidade é sem fidelidade mesmo?</h4>
+        <p>Sim. A recorrência é mensal e você sai quando quiser, sem multa. A aposta é que a automação se pague — não que o contrato te prenda.</p>
+      </div>
+      <div class="faq-item">
+        <h4>O que exatamente é "escopo fixo"?</h4>
+        <p>Antes de começar você recebe por escrito o que entra, o que não entra, o prazo e o SLA. Se surgir algo fora dali, é uma conversa nova — não uma surpresa na fatura nem um "isso não estava combinado".</p>
+      </div>
+      <div class="faq-item">
+        <h4>Preciso trocar as ferramentas que já uso?</h4>
+        <p>Não. A automação é feita pra conectar no que existe — seu WhatsApp, seu CRM, seu ERP, sua ferramenta de e-mail, suas planilhas. Se alguma realmente não der conta, a gente aponta no diagnóstico em vez de você descobrir no meio do caminho.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Vocês integram com a ferramenta X?</h4>
+        <p>Se ela tem API ou webhook, sim — é o caso da grande maioria (RD Station, ActiveCampaign, Hotmart, Eduzz, Kiwify, ERPs, gateways de pagamento). Se ela não expõe nada, existem caminhos alternativos e existem casos sem solução limpa: a gente confere a sua lista no diagnóstico antes de prometer.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Preciso já ter um CRM?</h4>
+        <p>Não necessariamente. A automação de atendimento registra contatos e conversas por conta própria. Se você já tem CRM, ele continua sendo o dono do dado e a integração faz a ponte.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Quanto custa?</h4>
+        <p>Sob diagnóstico. Cada automação tem escopo fixo, então o preço sai depois de conhecer o tamanho da sua operação — volume de atendimento, quantos sistemas, qual o desenho. Tabela genérica só serviria pra um dos dois sair perdendo.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Posso começar com um e adicionar depois?</h4>
+        <p>Sim — é o caminho mais comum. Você resolve a dor mais caras primeiro e adiciona a próxima quando fizer sentido. Nada do que foi configurado se perde.</p>
+      </div>
+      <div class="faq-item">
+        <h4>E se eu precisar da operação inteira estruturada?</h4>
+        <p>Aí o caminho é estruturar a operação numa plataforma só, não automatizar pedaço por pedaço. Automatizar cinco coisas soltas não substitui uma operação integrada — e a gente prefere dizer isso na primeira conversa do que vender automação demais.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Meus dados ficam misturados com os de outros clientes?</h4>
+        <p>Não. Cada cliente roda em ambiente isolado. E se você sair, a gente te entrega a sua base — os dados sempre foram seus.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta sec-pad" id="falar">
+  <div class="container">
+    <div class="eyebrow reveal" style="justify-content:center"><span class="label" style="color:#9DBFA8">— Uma dor por vez · 08 / 08</span></div>
+    <h2 class="reveal">Qual processo você<br>quer automatizar primeiro?</h2>
+    <p class="reveal">Um diagnóstico gratuito de 30 minutos aponta o gargalo, a automação que resolve e o prazo. Se automação não for a resposta pro seu caso, a gente diz na hora.</p>
+    <form class="lead-form reveal" id="leadForm" novalidate>
+      <input class="hp" id="lf-company" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="row"><label for="lf-name">Nome</label><input id="lf-name" type="text" required autocomplete="name" placeholder="Seu nome"></div>
+      <div class="row"><label for="lf-email">E-mail</label><input id="lf-email" type="email" required autocomplete="email" placeholder="voce@empresa.com"></div>
+      <div class="row"><label for="lf-phone">WhatsApp (com DDD)</label><input id="lf-phone" type="tel" required autocomplete="tel" placeholder="(11) 99999-9999"></div>
+      <div class="row">
+        <label for="lf-spark">O que você quer automatizar?</label>
+        <select id="lf-spark">
+          <option value="">Não sei ainda / quero o diagnóstico</option>
+          <option value="atendimento">Atendimento — perco lead e demoro pra responder</option>
+          <option value="integracao">Integração entre sistemas — CRM, e-mail, ERP, planilha</option>
+          <option value="lancamento">Lançamento — anúncio, checkout e e-mail falando com o CRM</option>
+          <option value="agente-ia">Agente de IA — dúvida técnica repetida</option>
+          <option value="relatorios">Relatórios — decido sem número na mesa</option>
+          <option value="cobranca">Cobrança — inadimplência e cobrança no braço</option>
+        </select>
+      </div>
+      <button type="submit" id="lf-submit">Agendar diagnóstico grátis</button>
+      <div class="lead-status" id="lf-status" role="status" aria-live="polite"></div>
+      <p class="privacy">Seus dados são usados apenas para o contato do diagnóstico.</p>
+    </form>
+    <div class="lead-success reveal" id="leadSuccess" hidden>
+      <div class="ic">💚</div>
+      <h4>Recebido!</h4>
+      <p>Em instantes você recebe nossa mensagem no WhatsApp. Fique de olho!</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="foot-inner">
+    <a href="#top" class="brand">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="5" fill="#1F3A2A"/><path fill="#FAFAF8" fill-rule="evenodd" d="M9 8h7a8 8 0 0 1 0 16H9zm4 4v8h3a4 4 0 0 0 0-8z"/></svg>
+      <span class="brand-name">DRYOS <span>Automações</span></span>
+    </a>
+    <span class="mono">Crescimento com raiz · 2026</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var els = document.querySelectorAll('.reveal');
+    if (reduce || !('IntersectionObserver' in window)) {
+      els.forEach(function (e) { e.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function (e) { io.observe(e); });
+  })();
+</script>
+<script>
+  (function () {
+    var f = document.getElementById('leadForm');
+    if (!f) return;
+    var statusEl = document.getElementById('lf-status');
+    var btn = document.getElementById('lf-submit');
+    function val(id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; }
+    function utm(k) { try { return new URLSearchParams(location.search).get(k) || ''; } catch (e) { return ''; } }
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      statusEl.className = 'lead-status';
+      statusEl.textContent = '';
+      btn.disabled = true;
+      btn.textContent = 'Enviando…';
+      var data = {
+        name: val('lf-name'), email: val('lf-email'), phone: val('lf-phone'),
+        company: val('lf-company'),
+        source: 'site-automacoes',
+        spark: val('lf-spark'),
+        utm_source: utm('utm_source'), utm_medium: utm('utm_medium'),
+        utm_campaign: utm('utm_campaign'), utm_content: utm('utm_content'), utm_term: utm('utm_term')
+      };
+      fetch('/api/lead', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(data) })
+        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }).catch(function () { return { ok: r.ok, j: {} }; }); })
+        .then(function (res) {
+          if (res.ok && res.j && res.j.ok) {
+            // Conversão registrada → evento no dataLayer. As tags de GA4/Meta penduram
+            // nesse evento dentro do GTM (RD recebe a conversão via API server-side).
+            try {
+              (window.dataLayer = window.dataLayer || []).push({
+                event: 'generate_lead', form_id: 'automacoes'
+              });
+            } catch (e) {}
+            f.hidden = true;
+            document.getElementById('leadSuccess').hidden = false;
+          } else {
+            statusEl.className = 'lead-status err';
+            statusEl.textContent = (res.j && res.j.error) || 'Não consegui enviar. Tente de novo.';
+            btn.disabled = false; btn.textContent = 'Agendar diagnóstico grátis';
+          }
+        })
+        .catch(function () {
+          statusEl.className = 'lead-status err';
+          statusEl.textContent = 'Falha de conexão. Tente de novo.';
+          btn.disabled = false; btn.textContent = 'Agendar diagnóstico grátis';
+        });
+    });
+  })();
+</script>
+
+</body>
+</html>
