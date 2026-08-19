@@ -10,3 +10,5 @@ images/**/originals/
 .vscode/
 Thumbs.db
 .vercel
+# Worktrees e estado local de agente (nunca versionar — já entraram como gitlink por acidente)
+.claude/worktrees/
