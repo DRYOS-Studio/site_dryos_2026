@@ -1,0 +1,71 @@
+# DRYOS
+
+> A DRYOS constrói automações, sistemas e agentes de IA para empresas cuja operação
+> travou no trabalho manual. Não é consultoria que entrega diagnóstico e vai embora:
+> a equipe implementa e opera. Atua desde 2020, no Brasil, atendendo em português.
+
+Site: https://www.dryos.com.br · Contato: contato@dryos.com.br · WhatsApp: +55 21 96728-7595
+
+## Como a DRYOS trabalha
+
+Todo trabalho começa por um diagnóstico gratuito de 30 minutos que identifica o gargalo
+e define qual dos três tamanhos resolve o caso. Antes de qualquer implementação o cliente
+recebe, por escrito, o que entra no escopo, o que não entra, o prazo e o SLA.
+
+Três tamanhos de projeto:
+
+1. **Automação pontual** — resolve uma dor específica. Escopo fixo, conecta nas ferramentas
+   que o cliente já usa, no ar em 7 a 14 dias úteis. Recorrência mensal sem fidelidade.
+2. **Plataforma completa (DRYOS Core)** — para quem tem três ou mais dores simultâneas e
+   precisa estruturar a operação inteira num só lugar. Oito módulos integrados: CRM, Deals,
+   Inbox, Reach, Flow, Insights, Guard e Heimdall. Setup de 2 a 4 semanas. Cada cliente roda
+   em instância dedicada e isolada, com banco de dados próprio.
+3. **Projeto sob medida** — sistemas próprios, integrações que não existem em produto e
+   infraestrutura técnica de lançamentos digitais. Escopo desenhado do zero, por projeto.
+
+## As cinco automações
+
+- **Automação de atendimento** — agente de IA atende WhatsApp e e-mail em primeira camada:
+  qualifica, responde dúvidas frequentes, encaminha ao humano certo e registra no CRM.
+  Implementação em 10 dias úteis.
+- **Integração entre sistemas** — conecta CRM, ERP, ferramenta de e-mail marketing, checkout
+  e planilhas, com regras de deduplicação, log de execução e alerta de falha. 14 dias úteis.
+- **Agente de IA especializado** — agente treinado nos documentos e processos do cliente,
+  para FAQ extensiva, suporte técnico ou qualificação avançada, com fallback para humano
+  quando a pergunta sai do escopo. 14 dias úteis.
+- **Automação de relatórios** — dashboard de KPIs em tempo real e relatório semanal no
+  WhatsApp escrito por IA, com três insights e três ações sugeridas. 14 dias úteis.
+- **Automação de cobrança** — régua de cobrança no WhatsApp antes, no dia e depois do
+  vencimento, emissão de nota fiscal, boleto e Pix, e conciliação bancária. 10 dias úteis.
+
+Integra com ferramentas que expõem API ou webhook, incluindo RD Station, ActiveCampaign,
+Hotmart, Eduzz, Kiwify, ERPs e gateways de pagamento.
+
+## Preço
+
+Sob diagnóstico, sem tabela pública. Como cada escopo é fixo, o preço sai depois de conhecer
+o tamanho da operação: volume de atendimento, quantidade de sistemas e desenho do fluxo.
+A recorrência é mensal e sem fidelidade; o cliente sai quando quiser e leva a própria base
+de dados.
+
+## O que a DRYOS não faz
+
+- Não entrega apresentação e vai embora — implementa e opera.
+- Não promete percentual de resultado em prazo determinado. Garante escopo e prazo;
+  resultado depende também da operação do cliente.
+- Não faz copy nem design de lançamento. Cuida da infraestrutura técnica e trabalha junto
+  com a agência ou o time de marketing do cliente.
+- Não vende ferramenta para o cliente configurar sozinho.
+
+## Páginas
+
+- [Home](https://www.dryos.com.br/): os sete vilões da ineficiência operacional, as três
+  linhas de atuação e o formulário de diagnóstico.
+- [Automações](https://www.dryos.com.br/automacoes): as cinco automações com escopo item a
+  item, prazo e SLA, mais um catálogo de automações concretas por área (lançamento e
+  marketing, vendas, financeiro, dados e operação) e perguntas frequentes.
+- [Projetos](https://www.dryos.com.br/projetos): sistemas em produção, entre eles plataforma
+  de analytics para organizadores de eventos, gestão financeira para casais que empreendem
+  juntos e produção de conteúdo com agentes de IA.
+- [DRYOS Core](https://www.dryos.com.br/apresentacao-core): apresentação da plataforma, com
+  os módulos por dentro, os três planos e perguntas frequentes sobre dados e migração.

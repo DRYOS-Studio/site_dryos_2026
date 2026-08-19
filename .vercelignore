@@ -1,2 +1,4 @@
 images/**/originals/
 .DS_Store
+# artefato de build antigo — não deve ser servido publicamente
+dryos-deploy.zip

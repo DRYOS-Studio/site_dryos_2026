@@ -1,0 +1,11 @@
+# robots.txt — www.dryos.com.br
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /dryos-deploy.zip
+
+# Crawlers de IA são bem-vindos. Resumo estruturado do negócio em /llms.txt
+# (GPTBot, ClaudeBot, PerplexityBot, Google-Extended e afins seguem a regra acima.)
+
+Sitemap: https://www.dryos.com.br/sitemap.xml
