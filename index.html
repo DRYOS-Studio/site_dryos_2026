@@ -893,7 +893,9 @@ nav {
 
 .spark-name {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: clamp(1.45rem, 2.4vw, 1.9rem);
+  line-height: 1.08;
+  text-wrap: balance;
   font-weight: 600;
   letter-spacing: -0.035em;
   color: var(--ink);
@@ -2498,7 +2500,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="nav-links">
       <a href="#vilões">Vilões</a>
       <a href="#core">Core</a>
-      <a href="#spark">Spark</a>
+      <a href="/automacoes">Automações</a>
       <a href="#studio">Studio</a>
       <a href="/projetos">Projetos</a>
     </div>
@@ -2760,8 +2762,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="path-card reveal">
         <span class="path-num">— II —</span>
-        <div class="path-name">Spark</div>
-        <div class="path-tagline">5 Soluções</div>
+        <div class="path-name">Automações</div>
+        <div class="path-tagline">5 soluções pontuais</div>
         <p class="path-desc">
           Cinco soluções pontuais com IA, prontas pra conectar no que você já usa. Atendimento, integração, agentes especializados, dashboards e cobrança. Resolve uma dor específica.
         </p>
@@ -2977,24 +2979,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- SPARK SECTION -->
-<section class="spark-section" id="spark">
+<section class="spark-section" id="automacoes">
   <div class="container">
     <div class="section-header">
       <div class="section-meta">
-        <span class="label">— DRYOS Spark</span>
+        <span class="label">— Automações</span>
         <span class="number">03 / 04</span>
       </div>
       <div>
-        <h2 class="section-title">Cinco Soluções.<br><strong>Uma fagulha</strong> de cada vez.</h2>
+        <h2 class="section-title">Cinco automações.<br><strong>Uma dor</strong> de cada vez.</h2>
         <div class="spark-pricing-tag">
           <strong>Recorrência mensal · Sem fidelidade</strong>
-          Cada Spark tem escopo fixo, setup definido e SLA documentado. Implementação em 7-14 dias.
+          Cada automação tem escopo fixo, setup definido e SLA documentado. Implementação em 7-14 dias.
         </div>
       </div>
     </div>
 
     <div class="spark-fagulhas reveal">
-      <svg viewBox="0 0 580 60" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Cinco fagulhas alinhadas representando as cinco soluções Spark">
+      <svg viewBox="0 0 580 60" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Cinco marcas alinhadas representando as cinco frentes de automação">
         <line x1="40" y1="30" x2="540" y2="30" stroke="rgba(31,58,42,0.18)" stroke-width="1" stroke-dasharray="3 5"/>
         <g class="fagulha"><g transform="translate(80,30)">
           <line x1="0" y1="-11" x2="0" y2="-5" stroke="#1F3A2A" stroke-width="1.6" stroke-linecap="round"/>
@@ -3059,10 +3061,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="spark-item reveal">
         <span class="spark-num">01</span>
         <div class="spark-content">
-          <div class="spark-name">Inbox</div>
-          <div class="spark-cat">Atendimento inteligente</div>
+          <div class="spark-name">Automação de atendimento</div>
+          <div class="spark-cat">WhatsApp e e-mail com IA na primeira camada</div>
           <p class="spark-desc">
-            Agente IA que atende WhatsApp e e-mail em primeira camada — qualifica, responde dúvidas frequentes, encaminha pro humano certo, registra tudo no CRM.
+            Um agente de IA atende WhatsApp e e-mail em primeira camada. Ele qualifica, responde as dúvidas frequentes, encaminha pro humano certo e registra tudo no CRM.
           </p>
           <div class="spark-price">
             <span class="spark-price-label">Implementação</span>
@@ -3074,8 +3076,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="spark-item reveal">
         <span class="spark-num">02</span>
         <div class="spark-content">
-          <div class="spark-name">Bridge</div>
-          <div class="spark-cat">Integração entre sistemas</div>
+          <div class="spark-name">Integração entre sistemas</div>
+          <div class="spark-cat">CRM, ERP, e-mail marketing, checkout, planilhas</div>
           <p class="spark-desc">
             Conecta automaticamente os sistemas que você já usa: CRM, ERP, planilhas, WhatsApp. Os dados fluem sozinhos, sem redigitação e sem silos.
           </p>
@@ -3089,10 +3091,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="spark-item reveal">
         <span class="spark-num">03</span>
         <div class="spark-content">
-          <div class="spark-name">Specialist</div>
-          <div class="spark-cat">Agente IA especializado</div>
+          <div class="spark-name">Agente de IA especializado</div>
+          <div class="spark-cat">FAQ extensiva, suporte técnico, qualificação avançada</div>
           <p class="spark-desc">
-            Agente treinado num domínio específico do seu negócio — FAQ extensiva, suporte técnico, qualificação avançada. Aprende com seus documentos e processos.
+            Agente treinado num domínio específico do seu negócio, para FAQ extensiva, suporte técnico ou qualificação avançada. Aprende com seus documentos e processos.
           </p>
           <div class="spark-price">
             <span class="spark-price-label">Implementação</span>
@@ -3104,8 +3106,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="spark-item reveal">
         <span class="spark-num">04</span>
         <div class="spark-content">
-          <div class="spark-name">Pulse</div>
-          <div class="spark-cat">Dashboards & inteligência narrativa</div>
+          <div class="spark-name">Automação de relatórios</div>
+          <div class="spark-cat">Dashboard de KPIs + relatório semanal no WhatsApp</div>
           <p class="spark-desc">
             Dashboard executivo com KPIs em tempo real. Relatório semanal por WhatsApp escrito por IA, com 3 insights e 3 ações sugeridas. Nunca mais decisão no feeling.
           </p>
@@ -3119,8 +3121,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="spark-item reveal">
         <span class="spark-num">05</span>
         <div class="spark-content">
-          <div class="spark-name">Cobra</div>
-          <div class="spark-cat">Cobrança automatizada</div>
+          <div class="spark-name">Automação de cobrança</div>
+          <div class="spark-cat">Régua no WhatsApp, nota fiscal e conciliação</div>
           <p class="spark-desc">
             Régua inteligente de cobrança via WhatsApp, emissão automática de NF, geração de boleto e conciliação bancária. Reduz inadimplência sem o constrangimento de cobrar no braço.
           </p>
@@ -3133,7 +3135,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <a href="#diagnostico" class="spark-cta-card reveal">
         <div>
-          <span class="spark-cta-label">— Combine os Sparks</span>
+          <span class="spark-cta-label">— Combine as automações</span>
           <p class="spark-cta-text">Resolva mais de uma dor com combo personalizado.</p>
         </div>
         <span class="spark-cta-arrow">
@@ -3520,7 +3522,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <select id="cf-produto" name="produto_interesse" required>
                 <option value="" disabled selected>Selecione</option>
                 <option value="Core">DRYOS Core</option>
-                <option value="Spark">DRYOS Spark</option>
+                <option value="Spark">Automações</option>
                 <option value="Studio">DRYOS Studio</option>
                 <option value="Não sei ainda">Não sei ainda, quero o diagnóstico</option>
               </select>
@@ -3675,7 +3677,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="footer-meta">
         <a href="#vilões">Vilões</a>
         <a href="#core">Core</a>
-        <a href="#spark">Spark</a>
+        <a href="/automacoes">Automações</a>
         <a href="#studio">Studio</a>
         <a href="mailto:contato@dryos.com.br">contato@dryos.com.br</a>
         <span>© 2026</span>
