@@ -6,6 +6,8 @@
 
 Site: https://www.dryos.com.br · Contato: contato@dryos.com.br · WhatsApp: +55 21 96728-7595
 
+Conteúdo completo das páginas em markdown: https://www.dryos.com.br/llms-full.txt
+
 ## Como a DRYOS trabalha
 
 Todo trabalho começa por um diagnóstico gratuito de 30 minutos que identifica o gargalo

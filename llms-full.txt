@@ -1,0 +1,992 @@
+# DRYOS — conteúdo completo do site
+
+> Extração em markdown de www.dryos.com.br para consumo por modelos de linguagem. Gerado por scripts/gen-llms-full.py a partir do HTML das páginas — se divergir do site, o site é a fonte de verdade.
+
+Índice curado e resumo do negócio: https://www.dryos.com.br/llms.txt
+Contato: contato@dryos.com.br · WhatsApp +55 21 96728-7595
+
+---
+
+# Home — https://www.dryos.com.br/
+
+DRYOS · Sistema operacional contra a ineficiência · Em produção
+Tem
+7 vilões
+consumindo
+sua
+margem,
+seu
+tempo
+e
+seu
+time.
+Capitão Manualis, Senhor dos Silos, Dama do Retrabalho — toda empresa enfrenta os mesmos inimigos invisíveis. A DRYOS constrói sistemas que derrotam cada um, com IA, automação, processos organizados e dados.
+— Manifesto
+Toda empresa nasce no improviso. Crescer no improviso é arte. Mas sustentar o crescimento no improviso é uma sentença.
+Tem hora que a planilha já não basta. Tem hora que o WhatsApp deixa de ser sistema. Tem hora que "tá na minha cabeça" trava o time inteiro. A gente chama esse momento de teto operacional.
+— Os inimigos
+## Os vilões da ineficiência operacional.
+Sete inimigos. Cada um com nome, frase preferida e modus operandi próprio. Juntos, comem 15-30% da margem, drenam o tempo do time e travam o crescimento. A DRYOS existe pra derrotá-los — uma operação por vez.
+— 01
+### Capitão Manualis
+"Sempre foi assim. Pra quê mudar?"
+Tudo manual: WhatsApp, planilha, caderno. Cada cliente é um esforço repetido. Cada processo, um ritual no braço. O time inteiro escravo da burocracia.
+— 02
+### Senhor dos Silos
+"Esse dado é do nosso setor."
+Dados isolados em cada ferramenta. Cada filial faz do seu jeito. Ninguém vê o todo. Decisão vira achismo coletivo, e a empresa cresce em ilhas.
+— 03
+### Dama do Retrabalho
+"Pode refazer, não era isso."
+Sem padrão, toda entrega começa do zero. Sai funcionário, vai junto o conhecimento. O time refaz, refaz, refaz — e a margem evapora no caminho.
+— 04
+### General Lento
+"Não há pressa, amanhã a gente vê."
+Tudo passa pelo dono. Aprovação, decisão, resposta. A operação acumula porque ele é o único caminho. O negócio não anda quando ele para.
+— 05
+### Oráculo do Achismo
+"Eu acho que tá vendendo bem..."
+Decisão por feeling. Relatório que nunca sai. Não sabe quanto custa cada cliente, qual canal funciona, nem o que está perdendo. Apenas sente.
+— 06
+### Drenador de Margem
+"Essa perda é pequena... deixa pra lá."
+Pequenas falhas que somam grandes prejuízos. CAC alto sem perceber, churn não medido, ticket caindo aos poucos. A empresa fatura, mas a margem evapora.
+— 07
+### Enganador do Crescimento
+"É só crescer, depois a gente organiza."
+Vende a ilusão de que escalar no caos é sucesso. Cresce em receita, cresce em gente, cresce em ferramenta — e cresce o caos junto. A conta chega depois.
+— E os específicos da sua operação
+Os vilões que estão te custando mais aparecem no diagnóstico.
+Agendar agora
+— Três caminhos
+01 / 04
+## Para cada empresa, a porta certa.
+Em vez de tentar caber em todas as situações com um produto único, a DRYOS opera em três linhas distintas. O diagnóstico decide qual cabe.
+— I —
+Core
+Plataforma premium
+Cérebro digital construído pra sua operação. Plataforma com 8 módulos integrados: CRM, Deals, Inbox, Reach, Flow, Insights, Guard e Heimdall. Para quem quer transformar a operação inteira.
+Modelo
+Recorrente
+Setup
+2-4 semanas
+— II —
+Automações
+5 soluções pontuais
+Cinco soluções pontuais com IA, prontas pra conectar no que você já usa. Atendimento, integração, agentes especializados, dashboards e cobrança. Resolve uma dor específica.
+Modelo
+Recorrente
+Setup
+7-14 dias
+— III —
+Studio
+Projetos sob medida
+Para problemas únicos que não cabem em produto. Sistemas e operações sob medida — incluindo Studio Launch, especialidade em infra técnica de lançamentos digitais. Linha sob demanda.
+Modelo
+Por projeto
+Demanda
+Sob demanda
+— DRYOS Core
+02 / 04
+## O cérebro digital da sua operação.
+— Oito módulos. Uma arquitetura. Um sistema.
+Core não é software pontual — é uma plataforma com 8 módulos que orquestram CRM, vendas, atendimento omnichannel, marketing, automação, inteligência, governança e Heimdall em uma única arquitetura. Validado em produção com cliente do segmento de educação.
+01
+#### Tudo num lugar só
+Em vez de planilha, WhatsApp, ferramenta solta e caderno, uma plataforma única que conecta tudo. Sem silos. Sem retrabalho.
+02
+#### Decisão com dados reais
+Dashboards executivos, forecast Monte Carlo e narrativa por IA. O número certo, na hora certa. O fim do "eu acho que tá vendendo bem".
+03
+#### Operação que roda sozinha
+Heimdall é a fábrica de agentes IA do Core: comercial, atendimento, financeiro, suporte, qualificação. Cada agente é configurado com a linguagem e as regras da sua operação, e roda 24/7 ao lado do Flow e do Reach.
+— Módulos do Core
+01
+CRM
+Contatos, empresas, clientes, tarefas e negócios no pipeline
+02
+Deals
+Funis, etapas, produtos, metas, comissões e motivos de perda
+03
+Inbox
+WhatsApp, Instagram, Messenger, conversas e templates omnichannel
+04
+Reach
+Campanhas, email marketing, redes sociais e segmentos
+05
+Flow
+Regras de automação, fila de jobs e logs de execução
+06
+Insights
+Dashboards de vendas, ROI, performance, forecast Monte Carlo e unit economics
+07
+Guard
+Usuários, papéis, permissões, organizações, auditoria e consentimento
+08
+Heimdall
+Fábrica de Agentes
+Sistema de agentes IA especializados, treinados pro contexto da sua operação: comercial, atendimento, financeiro, suporte, qualificação. O agente comercial via WhatsApp já roda em produção há meses; os demais são configurados com sua linguagem, regras e processos.
+Falar com a equipe
+— Automações
+03 / 04
+## Cinco automações. Uma dor de cada vez.
+Recorrência mensal · Sem fidelidade Cada automação tem escopo fixo, setup definido e SLA documentado. Implementação em 7-14 dias.
+01
+Automação de atendimento
+WhatsApp e e-mail com IA na primeira camada
+Um agente de IA atende WhatsApp e e-mail em primeira camada. Ele qualifica, responde as dúvidas frequentes, encaminha pro humano certo e registra tudo no CRM.
+Implementação
+10 dias úteis
+02
+Integração entre sistemas
+CRM, ERP, e-mail marketing, checkout, planilhas
+Conecta automaticamente os sistemas que você já usa: CRM, ERP, planilhas, WhatsApp. Os dados fluem sozinhos, sem redigitação e sem silos.
+Implementação
+14 dias úteis
+03
+Agente de IA especializado
+FAQ extensiva, suporte técnico, qualificação avançada
+Agente treinado num domínio específico do seu negócio, para FAQ extensiva, suporte técnico ou qualificação avançada. Aprende com seus documentos e processos.
+Implementação
+14 dias úteis
+04
+Automação de relatórios
+Dashboard de KPIs + relatório semanal no WhatsApp
+Dashboard executivo com KPIs em tempo real. Relatório semanal por WhatsApp escrito por IA, com 3 insights e 3 ações sugeridas. Nunca mais decisão no feeling.
+Implementação
+14 dias úteis
+05
+Automação de cobrança
+Régua no WhatsApp, nota fiscal e conciliação
+Régua inteligente de cobrança via WhatsApp, emissão automática de NF, geração de boleto e conciliação bancária. Reduz inadimplência sem o constrangimento de cobrar no braço.
+Implementação
+10 dias úteis
+— Todas as automações
+O escopo de cada uma, o prazo e as combinações que mais entregamos.
+Saiba mais
+— DRYOS Studio
+04 / 04
+## Quando o problema é único.
+Linha sob demanda para projetos que não cabem em produto. Sistemas e operações sob medida com IA, automação, processos organizados e dados. Inclui cláusula opcional de evolução pra mensalidade recorrente após entrega.
+— 01
+Studio Launch
+Especialidade
+Infra técnica de lançamentos digitais
+Cuidamos da infra técnica completa do seu lançamento: gestão de plataformas, disparos de mensagens, automações de campanha, dashboards em tempo real e o Cockpit do Lançamento, nosso painel exclusivo que integra todos os dados em um só lugar. Trabalhamos junto com a sua agência ou time de marketing; copy e design ficam com eles.
+— 02
+Studio Custom
+Sistemas internos sob medida: gestão, controle e fluxos proprietários
+— 03
+Studio Insight
+Plataformas de inteligência customizadas e dashboards complexos
+— 04
+Studio Bridge+
+Integrações complexas com sistemas legacy ou requisitos específicos
+— 05
+Studio Agent
+Agentes IA com requisitos únicos: voice, multimodal, compliance regulado
+— Como funciona
+01
+Briefing & Diagnóstico
+Reunião de descoberta + levantamento detalhado de requisitos
+02
+Proposta personalizada
+Escopo travado, cronograma e milestones documentados
+03
+Construção
+Sprints semanais com entregas validadas pelo cliente
+04
+Entrega + evolução opcional
+Garantia documentada + opção de mensalidade recorrente
+Vendido sob demanda. Critérios rígidos de aceitação para manter qualidade.
+— Projetos
+## Sistemas em produção. Operações reais.
+Cada projeto resolve uma dor específica de uma operação real. Aqui estão alguns que construímos — entre Core, Spark, Studio e produtos próprios.
+— 01
+Eventmetrics
+Plataforma SaaS · Studio
+Plataforma de inteligência e analytics para gestão de eventos. Painel executivo, métricas em tempo real e relatórios automatizados pra organizadores.
+Status
+Em produção
+— 02
+Cortex
+Plataforma operacional · Core
+Implementação completa do DRYOS Core num cliente do segmento de educação. CRM, Inbox omnichannel, automações e Heimdall no comercial via WhatsApp.
+Status
+Em produção
+— 03
+DeMarchi Automotive
+Catálogo digital · Studio
+Catálogo digital de produtos automotivos com busca inteligente, integração com estoque e jornada de cotação automatizada.
+Status
+Em produção
+— Portfolio completo
+Veja todos os projetos que já construímos.
+Ver portfolio
+— Clientes
+## Operações reais. Resultados em produção.
+Em destaque
+Cliente Segmento de Educação
+Em produção
+Antes a gente crescia na força bruta. Hoje, crescemos com inteligência. A equipe da DRYOS não veio com palestras — eles vieram e instalaram os processos. Hoje tenho clareza total dos dados e nossa infraestrutura roda sem que eu precise vigiar cada detalhe.
+CEO · Cliente Segmento de Educação
+Cliente
+Academia Tio Sam
+Em produção
+Antes do trabalho com a DRYOS, a Academia Tio Sam tinha resultados, mas os processos eram muito intuitivos e a gestão acontecia mais no automático do que de forma estratégica. Ao longo do projeto, estruturamos rotinas, indicadores e fluxos claros, o que aumentou muito a consciência sobre cada etapa da operação. Hoje conseguimos enxergar com clareza onde estamos crescendo e quais decisões precisam ser tomadas.
+Suellen Monnerat · Gestora Administrativa, Academia Tio Sam
+Cliente
+Gois Fit
+Em produção
+O trabalho com a DRYOS foi um divisor de águas para a Gois Fit. Saímos de uma atuação muito operacional, reagindo ao dia a dia, para uma implantação clara de processos que organizaram a casa e deram previsibilidade ao negócio. Ganhamos muito mais consciência de mercado: entendemos melhor nossos números, nossos canais de aquisição e o comportamento dos clientes, o que nos permitiu planejar e buscar crescimento de forma intencional, e não por tentativa e erro.
+Bárbara Gois · CEO, Gois Fit
+Cliente
+Acorp Eventos
+Em produção
+A expertise técnica e a capacidade de compreensão das nossas necessidades específicas foram fundamentais para o sucesso do projeto. A DRYOS não apenas atendeu às nossas expectativas, mas as superou, proporcionando soluções inovadoras e personalizadas que otimizaram nossos processos e aumentaram significativamente nossa eficiência operacional.
+Jane Araujo · Sócia Diretora, Acorp Eventos
+01
+/
+04
+— Empresas que confiam na DRYOS
+— Setores que atendemos
+Distribuição & Atacado
+Indústria
+Serviços B2B
+Saúde & Clínicas
+Escritórios profissionais
+Educação & Treinamentos
+Construção & Engenharia
+Comércio & Varejo
+— Diagnóstico gratuito
+## Chega de operar no escuro.
+60 minutos pra mapear os vilões da sua operação, estimar o que está te custando hoje e propor o produto certo. Sem compromisso.
+Sem compromisso
+60 min
+Mapa de oportunidades
+Proposta personalizada
+— Ou fale direto
+### Já sabe o que precisa? Manda direto.
+WhatsApp
+Iniciar conversa
+E-mail
+contato@dryos.com.br
+LinkedIn
+/dryos
+Atendimento em horário comercial. Em breve, atendido por Heimdall — os agentes comerciais do nosso próprio Core.
+— Crescimento com raiz
+### Sobre
+Desde 2020, a DRYOS constrói sistemas e operações lucrativas para empresas que precisam crescer com fundação, não no improviso.
+Combinamos estratégia de operações, engenharia de software e inteligência artificial para transformar processos manuais em sistemas que rodam 24/7. Cada cliente recebe uma operação desenhada pra escalar, não uma ferramenta de prateleira.
+Somos Construtores.
+2020
+Operando desde
+8+
+Setores atendidos
+100%
+Em produção real
+
+---
+
+# Automações — https://www.dryos.com.br/automacoes
+
+Automação de processos com IA
+# Você não precisa de tudo. Precisa automatizar o que sangra.
+Atendimento que responde sozinho. Sistemas que finalmente conversam entre si. Cobrança que roda sem ninguém precisar lembrar, relatório que chega antes de você pedir. A gente monta a automação, conecta no que você já usa e entrega rodando em 7 a 14 dias úteis, com escopo, prazo e SLA definidos antes de começar.
+7–14
+dias úteis pra entrar no ar
+0
+meses de fidelidade
+SLA
+documentado antes de começar
+24/7
+rodando sem depender de gente
+— O diagnóstico
+01 / 08
+## Qual vilão está na sua operação?
+Automação não começa por ferramenta, começa por sintoma. Ache o seu na lista abaixo; a automação que resolve vem colada. E se você reconhecer três ou mais, é sinal de que o seu caso pede plataforma, não automação pontual. A gente fala isso no diagnóstico em vez de te vender de menos.
+— 01
+Capitão Manualis
+"Sempre foi assim. Pra quê mudar?"
+Todo atendimento é digitado do zero. Toda pergunta repetida consome uma pessoa.
+→ Automação de atendimento
+— 02
+Senhor dos Silos
+"Esse dado é do nosso setor."
+O mesmo cliente cadastrado em três lugares. Ninguém vê o todo sem exportar planilha.
+→ Integração entre sistemas
+— 03
+Dama do Retrabalho
+"Pode refazer, não era isso."
+Redigitação entre sistemas. Cada erro de digitação viaja pra dentro da operação.
+→ Integração entre sistemas
+— 04
+General Lento
+"Não há pressa, amanhã a gente vê."
+Lead manda mensagem às 21h e espera até segunda. Tudo passa pela mesma pessoa.
+→ Automação de atendimento
+— 05
+Oráculo do Achismo
+"Eu acho que tá vendendo bem..."
+Não existe número na mesa na hora de decidir. O relatório sai quando alguém lembra.
+→ Automação de relatórios
+— 06
+Drenador de Margem
+"Essa perda é pequena... deixa pra lá."
+Inadimplência que ninguém cobra porque cobrar no braço é constrangedor.
+→ Automação de cobrança
+— 07
+Enganador do Crescimento
+"É só crescer, depois a gente organiza."
+Mais volume entrando no mesmo processo improvisado. A conta chega depois.
+→ Automação de relatórios
+— As cinco frentes
+Pra cada sintoma, uma automação de escopo fechado.
+Ver as automações
+— As automações
+02 / 08
+## Cinco frentes. Uma dor de cada vez.
+Cada automação tem escopo fixo, prazo definido e SLA documentado. O que está listado em "o que entra" é o que a gente entrega. Não tem "e muito mais".
+— 01
+Automação de atendimento
+WhatsApp e e-mail · primeira camada com IA
+Um agente de IA atende WhatsApp e e-mail em primeira camada. Ele qualifica, responde as dúvidas frequentes, encaminha pro humano certo e registra tudo no CRM. O lead que chega de madrugada é atendido de madrugada.
+✕ Capitão Manualis
+✕ General Lento
+O que entra
+- Conexão do número de WhatsApp que você já usa
+- Base de respostas treinada no seu material
+- Regras de qualificação e triagem por assunto
+- Handoff pro humano com o contexto da conversa
+- Registro de cada conversa e cada contato
+- Painel de conversas e histórico
+Mensagem chega
+→
+Agente qualifica
+→
+Resolve ou encaminha
+→
+Registrado
+Implementação
+10 dias úteis
+Modelo
+Recorrente
+— 02
+Integração entre sistemas
+CRM, ERP, e-mail marketing, checkout, planilhas
+Conecta o que você já usa: ferramenta de e-mail com CRM, checkout com CRM, ERP com planilha, anúncio com funil. O lead entra numa ponta e chega na outra sem ninguém copiar e colar. Vale sobretudo na pressa de um lançamento, quando errar de mão custa venda.
+✕ Senhor dos Silos
+✕ Dama do Retrabalho
+O que entra
+- Mapa das fontes e dos destinos dos dados
+- Integração com RD Station, ActiveCampaign, Hotmart e afins
+- Integrações ponto a ponto entre os sistemas do escopo
+- Regras de deduplicação e de conflito (quem manda)
+- Sincronização por evento ou agendada
+- Log de execução consultável
+- Alerta quando uma ponte falha
+Sistema A
+→
+Regra de transformação
+→
+Sistema B
+→
+Log + alerta
+Implementação
+14 dias úteis
+Modelo
+Recorrente
+— 03
+Agente de IA especializado
+FAQ extensiva, suporte técnico, qualificação avançada
+Agente treinado num domínio específico do seu negócio, para FAQ extensiva, suporte técnico ou qualificação avançada. Aprende com os seus documentos e processos, e sabe a hora de passar pro humano.
+✕ Capitão Manualis
+✕ General Lento
+O que entra
+- Ingestão dos seus documentos e materiais
+- Escopo e limites do agente definidos em contrato
+- Fallback pro humano quando a pergunta sai do escopo
+- Tom de voz calibrado com você
+- Ciclo de revisão das respostas nas primeiras semanas
+- Atualização da base quando o seu material muda
+Pergunta
+→
+Busca na sua base
+→
+Responde com fonte
+→
+Fora do escopo? humano
+Implementação
+14 dias úteis
+Modelo
+Recorrente
+— 04
+Automação de relatórios
+Dashboard de KPIs + relatório semanal no WhatsApp
+Dashboard executivo com KPIs em tempo real, mais um relatório semanal no WhatsApp escrito por IA, com 3 insights e 3 ações sugeridas. O número chega até você em vez de ficar esperando alguém lembrar de puxar.
+✕ Oráculo do Achismo
+✕ Enganador do Crescimento
+O que entra
+- Definição dos KPIs que realmente decidem
+- Conexão das fontes de dados do escopo
+- Dashboard executivo em tempo real
+- Relatório semanal no WhatsApp escrito por IA
+- 3 insights + 3 ações sugeridas por relatório
+- Alerta quando um indicador sai da faixa
+Fontes
+→
+KPIs
+→
+Dashboard + relatório
+→
+3 ações na sua mão
+Implementação
+14 dias úteis
+Modelo
+Recorrente
+— 05
+Automação de cobrança
+Régua no WhatsApp, nota fiscal, boleto/Pix, conciliação
+Régua de cobrança via WhatsApp, emissão automática de nota fiscal, geração de boleto e Pix, conciliação bancária. Reduz inadimplência sem o constrangimento de cobrar no braço, e sem depender de alguém lembrar.
+✕ Drenador de Margem
+O que entra
+- Régua de cobrança: antes, no dia e depois do vencimento
+- Mensagem própria por etapa, no seu tom
+- Emissão automática de nota fiscal
+- Geração de boleto e Pix
+- Conciliação bancária dos pagamentos
+- Painel de inadimplência e escalonamento pro humano
+Vencimento
+→
+Régua no WhatsApp
+→
+Pagou?
+→
+Concilia ou escalona
+Implementação
+10 dias úteis
+Modelo
+Recorrente
+— O que automatizamos
+03 / 08
+## Concretamente, o que a gente monta.
+Isso não é lista de capacidade genérica. São as automações que já saem da nossa mão. Se a sua estiver aqui, a gente já fez. Se não estiver, provavelmente cabe, porque o padrão é o mesmo.
+— 01
+### Marketing & lançamento
+- Lead de anúncio (Meta, Google) caindo direto no CRM
+- Ferramenta de e-mail ↔ CRM: RD Station, ActiveCampaign, Mailchimp
+- Formulário do site → CRM + aviso no WhatsApp
+- Plataforma de lançamento (Hotmart, Eduzz, Kiwify) → CRM
+- Checkout aprovado → acesso liberado + e-mail de boas-vindas
+- Tag e segmento aplicados por comportamento do lead
+- Régua de aquecimento e recuperação de carrinho
+- Lista de inscritos sincronizada entre página e e-mail
+— 02
+### Vendas
+- Distribuição automática de lead pro vendedor certo
+- Qualificação por IA antes de chegar no humano
+- Follow-up automático por etapa do funil
+- Lead quente notificado no WhatsApp do vendedor
+- Estágio do CRM atualizado por evento, sem ninguém arrastar card
+- No-show de reunião → régua de resgate
+- Proposta enviada → lembrete automático de retorno
+— 03
+### Financeiro
+- Régua de cobrança no WhatsApp: antes, no dia e depois
+- Emissão automática de nota fiscal
+- Geração de boleto e Pix
+- Conciliação bancária dos pagamentos recebidos
+- Aviso de inadimplência e escalonamento pro humano
+- Renovação e recorrência avisadas antes de vencer
+— 04
+### Dados & operação
+- Planilha ↔ sistema, nos dois sentidos
+- ERP ↔ CRM sem redigitação
+- Dashboard de KPIs em tempo real
+- Relatório semanal automático no WhatsApp ou e-mail
+- Alerta quando um indicador sai da faixa
+- Log de execução e alerta quando uma integração falha
+- Deduplicação de contatos entre bases
+Não achou a sua? Traz no diagnóstico. A resposta vai ser uma de três: já fazemos, cabe no mesmo padrão, ou não é caso de automação e sim de outra coisa. Qualquer uma das três você ouve na primeira conversa, não depois de assinar.
+— Na prática
+## Operações reais. Resultados em produção.
+−34%
+no tempo de 1ª resposta, com a IA filtrando e respondendo
+71
+%
+dos leads concluem o fluxo de qualificação sozinhos
+24/7
+de atendimento, sem ninguém depender do horário comercial
+Medições de operações DRYOS em produção. O resultado varia com o volume e o desenho de cada operação.
+Gois Fit
+Em produção
+O trabalho com a DRYOS foi um divisor de águas para a Gois Fit. Saímos de uma atuação muito operacional, reagindo ao dia a dia, para uma implantação clara de processos que organizaram a casa e deram previsibilidade ao negócio.
+Bárbara Gois · CEO, Gois Fit
+— Como funciona
+04 / 08
+## Escopo fixo. Antes de começar.
+É a parte que a maioria pula. Você sabe o que vai receber, em quanto tempo e sob qual SLA antes de assinar qualquer coisa, e recebe isso num documento.
+— 01
+### Diagnóstico
+30 minutos pra entender o gargalo e apontar qual automação resolve. Se nenhuma resolver, a gente fala isso e indica o caminho certo.
+Gratuito · 30 min
+— 02
+### Escopo assinado
+Antes de qualquer linha de código você recebe o que entra, o que não entra, o prazo e o SLA, tudo documentado. Se o escopo mudar, isso é uma conversa nova. Não vira surpresa na fatura.
+Por escrito
+— 03
+### Implementação
+A gente constrói, conecta no que você já usa e entrega rodando. Você acompanha o progresso e não fica ouvindo "tá quase" por três meses.
+7 a 14 dias úteis
+— 04
+### Operação
+Recorrência mensal sem fidelidade, com ajuste contínuo e SLA valendo. Se deixar de fazer sentido, você sai, e os dados vão com você.
+Mensal · sem fidelidade
+O que a gente não faz
+- ✕ Consultoria que entrega slide e vai embora. A DRYOS constrói e opera.
+- ✕ Promessa de "+X% em Y dias". Escopo e prazo a gente garante. Resultado depende da sua operação também.
+- ✕ Reestruturar a operação inteira. Isso é plataforma, um projeto de outro tamanho, e a gente fala sobre ele no diagnóstico.
+- ✕ Ferramenta que você configura sozinho. Quem implementa somos nós.
+— Combinações
+05 / 08
+## Uma automação resolve. Duas mudam o jogo.
+As automações foram desenhadas pra rodar juntas. Estas são as combinações que mais pedem. Cada uma soma escopo, sem somar complexidade.
+Atendimento
++
+Agente de IA
+### Atendimento que não dorme
+A primeira camada filtra e qualifica; o agente treinado no seu material resolve a dúvida técnica sem acionar ninguém. O humano entra só no que exige humano.
+Pra quem perde lead fora do horário
+Cobrança
++
+Relatórios
+### Receita previsível
+A régua cobra sozinha e concilia; o relatório mostra inadimplência, previsão de caixa e o que mudou na semana. Você para de descobrir o furo no fim do mês.
+Pra quem tem recorrência ou carteira
+Integração
++
+Relatórios
+### Fim dos silos
+As pontes unificam o dado espalhado; o dashboard finalmente mostra o todo. Decisão deixa de depender de alguém consolidar planilha na sexta.
+Pra quem tem dado em 3+ ferramentas
+— Tamanho do problema
+06 / 08
+## Automação é a entrada. Não é o teto.
+Nem todo problema se resolve automatizando. Antes de te vender uma automação, a gente confere em qual dos três tamanhos o seu caso cabe, e diz se você precisa de menos ou de mais do que veio buscar.
+— I
+Uma dor específica
+você está aqui
+Automação pontual
+O atendimento não dá conta, os sistemas não conversam, a cobrança não sai. Escopo fixo, conecta no que você já usa, no ar em 7 a 14 dias e sem fidelidade.
+Mensal
+7–14 dias
+— II
+A operação inteira
+Plataforma completa
+Quando são três, quatro dores ao mesmo tempo, automatizar em cima do improviso só acelera o improviso. Aí o caminho é estruturar a operação numa plataforma só: atendimento, CRM, funil, automações e indicadores no mesmo lugar.
+Mensal
+2–4 semanas
+— III
+Um problema único
+Projeto sob medida
+O que não cabe em produto nem em automação de catálogo: sistema próprio, infraestrutura técnica de lançamento, integração que ninguém mais tem. Escopo desenhado do zero.
+Por projeto
+Sob demanda
+— Perguntas frequentes
+07 / 08
+## Antes de você perguntar.
+#### Sem fidelidade é sem fidelidade mesmo?
+Sim. A recorrência é mensal e você sai quando quiser, sem multa. A aposta é que a automação se pague sozinha, não que o contrato te prenda.
+#### O que é "escopo fixo", na prática?
+Antes de começar você recebe num documento o que entra, o que não entra, o prazo e o SLA. Se surgir algo fora dali, a gente conversa. Não aparece como surpresa na fatura nem como "isso não estava combinado".
+#### Preciso trocar as ferramentas que já uso?
+Não. A automação é feita pra conectar no que existe: seu WhatsApp, seu CRM, seu ERP, sua ferramenta de e-mail, suas planilhas. Se alguma realmente não der conta, a gente aponta no diagnóstico, em vez de você descobrir no meio do caminho.
+#### Vocês integram com a ferramenta X?
+Se ela tem API ou webhook, sim, e é o caso da grande maioria: RD Station, ActiveCampaign, Hotmart, Eduzz, Kiwify, ERPs, gateways de pagamento. Se ela não expõe nada, às vezes há caminho alternativo e às vezes não há solução limpa. A gente confere a sua lista no diagnóstico antes de prometer.
+#### Preciso já ter um CRM?
+Não necessariamente. A automação de atendimento registra contatos e conversas por conta própria. Se você já tem CRM, ele continua sendo o dono do dado e a integração faz a ponte.
+#### Quanto custa?
+Sob diagnóstico. Como cada automação tem escopo fixo, o preço só sai depois de conhecer o tamanho da sua operação: volume de atendimento, quantos sistemas, qual o desenho. Tabela genérica serviria pra um dos dois sair perdendo.
+#### Posso começar com um e adicionar depois?
+Sim, e é o caminho mais comum. Você resolve a dor mais cara primeiro e adiciona a próxima quando fizer sentido. Nada do que já foi configurado se perde.
+#### E se eu precisar da operação inteira estruturada?
+Aí o caminho é estruturar a operação numa plataforma só, em vez de automatizar pedaço por pedaço. Cinco automações soltas não substituem uma operação integrada, e a gente prefere dizer isso na primeira conversa do que te vender automação demais.
+#### Meus dados ficam misturados com os de outros clientes?
+Não. Cada cliente roda em ambiente isolado. E se você sair, a gente te entrega a sua base; os dados sempre foram seus.
+— Uma dor por vez · 08 / 08
+## Qual processo você quer automatizar primeiro?
+Num diagnóstico gratuito de 30 minutos a gente acha o gargalo, aponta a automação que resolve e dá o prazo. Se automação não for a resposta pro seu caso, você ouve isso na hora.
+
+---
+
+# Projetos — https://www.dryos.com.br/projetos
+
+DRYOS
+/
+Projetos
+# Sistemas em produção.
+Cada projeto é uma operação real, em produção, resolvendo dor específica de cliente real. Aqui está o que construímos entre Core, Spark, Studio e produtos próprios.
+— 01
+Linha
+Studio
+Categoria
+Plataforma SaaS
+Status
+Em produção
+## Eventmetrics
+— Inteligência de eventos · 2025
+Plataforma de analytics e gestão para organizadores de eventos. Reúne em um único painel métricas em tempo real, controle financeiro, gestão de equipe e relatórios automatizados, no lugar de planilhas dispersas e ferramentas isoladas.
+— 01
+Dashboard executivo com KPIs em tempo real
+— 02
+Gestão financeira integrada (receita, despesa, margem)
+— 03
+Relatórios automatizados por evento
+— 04
+Controle de equipe e operação no dia
+— 02
+Linha
+Studio
+Categoria
+Sistema de gestão
+Status
+Em produção
+## Oikos
+— Gestão financeira para casais que empreendem · 2026
+Sistema sob medida pra casais que empreendem juntos e sentiam o caos dos controles fragmentados em planilhas. Concentra fluxo de caixa, conciliação bancária, controle de DRE e relatórios executivos em uma plataforma única, com vida pessoal e negócio sob o mesmo teto.
+— 01
+Fluxo de caixa em tempo real
+— 02
+Conciliação bancária automatizada
+— 03
+DRE gerencial com comparativos
+— 04
+Relatórios executivos personalizados
+— 03
+Linha
+Core
+Categoria
+Plataforma operacional
+Status
+Em produção
+## Cortex
+— Implementação completa do Core · 2026
+Implementação ponta a ponta do DRYOS Core num cliente do segmento de educação, primeira empresa a operar com a plataforma completa. Oito módulos integrados, Heimdall no comercial via WhatsApp, dashboard executivo e governança própria. Caso real que validou a arquitetura do Core.
+— 01
+CRM, Deals e Inbox omnichannel ativos
+— 02
+Heimdall no comercial via WhatsApp 24/7
+— 03
+Insights executivos com narrativa IA
+— 04
+Reach, Flow e Guard em operação
+— 04
+Linha
+Studio
+Categoria
+Catálogo digital
+Status
+Em produção
+## DeMarchi Automotive
+— Catálogo de produtos automotivos · 2026
+Catálogo digital sob medida para distribuidora automotiva, com busca inteligente por compatibilidade, integração com estoque em tempo real e jornada de cotação automatizada via WhatsApp. Substitui o vai-e-vem manual de pedidos por planilha e ligação.
+— 01
+Busca por compatibilidade e modelo
+— 02
+Integração em tempo real com estoque
+— 03
+Cotação automatizada via WhatsApp
+— 04
+Painel administrativo completo
+— 05
+Linha
+Spark
+Categoria
+Sistema de conteúdo
+Status
+Em produção
+## Kratos Social Content
+— Produção de conteúdo com IA · 2025
+Sistema de produção de conteúdo para redes sociais com agentes IA especializados em pauta, copywriting, adequação por canal e calendário editorial. Recebe o briefing e devolve a peça pronta, passando por pauta e copy no caminho, num fluxo único e sob supervisão da equipe.
+— 01
+Agente de pauta orientado a marca
+— 02
+Copywriting com tom de voz definido
+— 03
+Adequação automática por canal
+— 04
+Calendário editorial integrado
+— Próximo projeto
+## Vai ser o seu?
+Diagnóstico gratuito de 60 minutos. A gente avalia se faz sentido um Core, um Spark ou um Studio pra sua operação, e te apresenta o caminho.
+
+---
+
+# DRYOS Core — https://www.dryos.com.br/apresentacao-core
+
+O cérebro digital da sua operação
+# Um sistema que atende, decide e age — sozinho.
+DRYOS Core unifica WhatsApp, Instagram, CRM, automações e agentes de IA num só lugar. Cada conversa vira dado, cada dado vira ação. Sua operação para de depender de gente lembrando de fazer as coisas.
+8
+canais e módulos integrados
+24/7
+agentes de IA atendendo
+7
+vilões da ineficiência, derrotados
+< 2min
+tempo médio de 1ª resposta
+— Os inimigos
+01 / 06
+## Os vilões da ineficiência operacional.
+Sete inimigos invisíveis. Cada um come margem, drena o tempo do time e trava o crescimento. O DRYOS Core existe pra derrotá-los, uma operação por vez.
+— 01
+Capitão Manualis
+"Sempre foi assim. Pra quê mudar?"
+Tudo manual: WhatsApp, planilha, caderno. Cada cliente é um esforço repetido.
+✓ Basic
+— 02
+Senhor dos Silos
+"Esse dado é do nosso setor."
+Dados isolados em cada ferramenta. Ninguém vê o todo. Decisão vira achismo coletivo.
+✓ Pro
+— 03
+Dama do Retrabalho
+"Pode refazer, não era isso."
+Sem padrão, toda entrega começa do zero. O time refaz, refaz, refaz, e a margem evapora.
+✓ Pro
+— 04
+General Lento
+"Não há pressa, amanhã a gente vê."
+Tudo passa pelo dono. A operação acumula porque ele é o único caminho.
+✓ Pro
+— 05
+Oráculo do Achismo
+"Eu acho que tá vendendo bem..."
+Decisão por feeling. Não sabe quanto custa cada cliente nem qual canal funciona.
+✓ Max
+— 06
+Drenador de Margem
+"Essa perda é pequena... deixa pra lá."
+Pequenas falhas que somam grandes prejuízos. CAC alto, churn não medido, ticket caindo.
+✓ Max
+— 07
+Enganador do Crescimento
+"É só crescer, depois a gente organiza."
+Vende a ilusão de que escalar no caos é sucesso. A conta chega depois.
+✓ Max
+— Os planos
+Pra cada vilão, um plano.
+Ver os 3 planos
+— O sistema por dentro
+02 / 06
+## Uma operação inteira, numa só tela.
+— Inbox omnichannel + CRM
+### WhatsApp, Instagram e o CRM na mesma conversa.
+Toda mensagem de todo canal cai numa fila só. O atendente vê o contato, o negócio aberto, as tags e de qual anúncio o lead veio, tudo sem trocar de aba. O timer de 24h do WhatsApp fica sempre à vista.
+Derrota Capitão Manualis
+Derrota Senhor dos Silos
+— Builder visual de automações
+### Regras que rodam sem ninguém lembrar.
+Monte fluxos arrastando blocos: gatilhos por palavra-chave, inatividade ou horário; mensagens, condições, esperas e split A/B. A IA entra no meio do fluxo pra classificar, responder ou passar pro humano. Métricas de funil por nó mostram onde o lead desiste.
+Derrota Dama do Retrabalho
+Derrota General Lento
+— Contatos + Funil de negócios
+### Cada conversa vira um contato. Cada contato, um negócio.
+O lead que chegou pelo WhatsApp já entra no CRM com tags, origem e campos personalizados. O funil mostra cada negócio na sua etapa, com valor e motivo de perda. Segmentação dinâmica por tags alimenta as automações e as campanhas.
+Derrota Senhor dos Silos
+Derrota Dama do Retrabalho
+— Insights & funil de automação
+### Pare de decidir no escuro.
+Volume por canal, tempo de resposta, taxa de conversão e receita em aberto, todos atualizados em tempo real. As métricas de funil mostram onde o lead abandona o fluxo. O achismo perde pra número.
+Derrota Oráculo do Achismo
+Derrota Drenador de Margem
+— Heimdall · fábrica de agentes IA
+### Um time de IA que nunca dorme.
+Crie agentes treinados na linguagem e nas regras da sua operação. Eles consultam sua base de conhecimento (RAG), usam ferramentas, qualificam leads e passam pro humano na hora certa. Traga sua própria chave de IA (BYOK) com failover automático.
+Derrota General Lento
+Derrota Enganador do Crescimento
+— Na prática
+## Operações reais. Resultados em produção.
+−34%
+no tempo de 1ª resposta, com a IA filtrando e respondendo
+71
+%
+dos leads concluem o fluxo de qualificação sozinhos
+24/7
+de atendimento, sem ninguém depender do horário comercial
+— Os planos
+03 / 06
+## Três planos. Sete vilões derrotados.
+Cada plano ataca inimigos específicos da sua operação. Comece no Basic e suba até o Max sem perder nada no caminho.
+Para começar
+Basic
+Organize a base. Pare o trabalho manual.
+Investimento
+Sob diagnóstico
+Setup + mensalidade conforme a sua operação.
+Derrota
+✕
+Capitão Manualis
+- Inbox de atendimento — WhatsApp
+- Lista de contatos & histórico
+- Automações essenciais (palavra-chave, resposta)
+- Respostas rápidas & notas internas
+- 1 canal de WhatsApp · até 3 atendentes
+- Suporte via WhatsApp
+Começar no Basic
+Mais escolhido
+Para escalar
+Pro
+Mira certa. A operação anda sem o dono.
+Investimento
+Sob diagnóstico
+Setup + mensalidade conforme a sua operação.
+Derrota (+ os do Basic)
+✕
+Senhor dos Silos
+✕
+Dama do Retrabalho
+✕
+General Lento
+- Tudo do Basic
+- CRM completo + funil de negócios (pipeline)
+- Builder visual completo (split, espera, sub-fluxos)
+- Gatilhos por inatividade e horário agendado
+- Segmentos dinâmicos & mensagens agendadas
+- Handoff & roteamento automático pra humano
+- 2 números de WhatsApp · atendentes ilimitados
+- Suporte via WhatsApp
+Começar no Pro
+Operação completa
+Max
+Força total. IA, dados e escala sob controle.
+Investimento
+Sob diagnóstico
+Setup + mensalidade conforme a sua operação.
+Derrota (+ os anteriores)
+✕
+Oráculo do Achismo
+✕
+Drenador de Margem
+✕
+Enganador do Crescimento
+- Tudo do Pro
+- 5 números de WhatsApp + Instagram (omnichannel)
+- Heimdall — agentes de IA 24/7
+- BYOK multi-provider com failover
+- Base de conhecimento (RAG) & ferramentas
+- Insights avançado & funil de automação
+- Multi-cliente / multi-marca
+- Suporte via WhatsApp
+Começar no Max
+🛡️ Infraestrutura dedicada: o servidor é todo seu
+Num SaaS de prateleira você é inquilino. Seus dados moram no servidor de outra empresa, dividido com dezenas de estranhos, e se você cancela, perde tudo. No DRYOS Core funciona ao contrário. O setup provisiona uma instância isolada e exclusiva pra sua operação, com API, banco de dados e armazenamento próprios, sob o seu subdomínio. Seus dados nunca dividem banco com outro cliente. Se um dia você sair, leva tudo com você, porque sempre foi seu. Na prática você fica com a posse de quem mantém servidor próprio sem ter o trabalho de manter um, porque a operação fica na nossa mão. Isolamento total, LGPD by design.
+Dono, não inquilino
+Instância exclusiva
+Cancelou? Leva seus dados
+Subdomínio dedicado
+LGPD by design
+### Compare plano a plano.
+Recurso
+Basic
+para começar
+Pro
+mais escolhido
+Max
+operação completa
+Canais de WhatsApp
+1
+2
+5
+Instagram
+—
+✓
+Atendentes
+até 3
+ilimitado
+Inbox de atendimento
+✓
+Respostas rápidas & notas internas
+✓
+Automações essenciais
+✓
+CRM + funil de negócios
+—
+✓
+Segmentos dinâmicos
+—
+✓
+Builder visual completo (split, espera, sub-fluxos)
+—
+✓
+Gatilhos avançados (inatividade, agendado)
+—
+✓
+Mensagens agendadas
+—
+✓
+Handoff & roteamento p/ humano
+—
+✓
+Heimdall — agentes de IA 24/7
+—
+✓
+BYOK multi-provider (sua chave de IA)
+—
+✓
+Base de conhecimento (RAG)
+—
+✓
+Insights avançado & funil de automação
+—
+✓
+Multi-cliente / multi-marca
+—
+✓
+Infraestrutura dedicada (instância isolada)
+✓
+Suporte via WhatsApp
+✓
+— O ecossistema
+04 / 06
+## O Core é a porta. O ecossistema é o caminho.
+Sua operação começa no Core. Conforme ela amadurece, a DRYOS cresce junto, sem que você troque de fornecedor ou recomece do zero.
+— I
+Core
+você está aqui
+Plataforma premium
+O cérebro digital da sua operação, com 8 módulos integrados: CRM, Deals, Inbox, Reach, Flow, Insights, Guard e Heimdall. Para quem quer transformar a operação inteira.
+Recorrente
+Setup 2–4 semanas
+— II
+Automações
+5 soluções pontuais
+Cinco soluções pontuais com IA, prontas pra conectar no que você já usa: atendimento, integração, agentes especializados, dashboards e cobrança. Resolve uma dor específica.
+Recorrente
+Setup 7–14 dias
+— III
+Studio
+Projetos sob medida
+Para problemas únicos que não cabem em produto. Sistemas e operações sob medida, incluindo o Studio Launch, nossa especialidade em infra técnica de lançamentos digitais.
+Por projeto
+Sob demanda
+— Perguntas frequentes
+05 / 06
+## Antes de você perguntar.
+#### Meus dados ficam misturados com os de outros clientes?
+Não. Cada cliente roda numa instância dedicada e isolada, com banco de dados próprio. Seus dados nunca dividem espaço com outra empresa. Isolamento total, LGPD by design.
+#### E se eu cancelar? Perco meus dados?
+Nunca. Diferente de um SaaS de prateleira, aqui os dados sempre foram seus. Se você decidir sair, a gente te entrega a sua base: contatos, conversas, tudo. Você não fica refém.
+#### Preciso de um número novo de WhatsApp?
+Não necessariamente. Dá pra conectar o número que você já usa via QR Code (em minutos) ou subir pela API Oficial da Meta. A melhor opção a gente define no diagnóstico.
+#### Consigo migrar meus contatos e conversas?
+Sim. A importação dos seus contatos faz parte do setup, então você não recomeça do zero.
+#### E a inteligência artificial, como funciona o custo?
+No Max você traz a sua própria chave de IA (BYOK), com failover automático entre provedores. Assim você controla o gasto direto na fonte. Os detalhes saem no diagnóstico.
+#### Posso trocar de plano depois?
+Sim. Você sobe de plano quando a operação pedir, do Basic pro Pro e do Pro pro Max, sem recomeçar. Tudo que você já configurou é mantido.
+#### Quanto tempo leva pra subir?
+O setup provisiona o seu ambiente dedicado. O cronograma exato depende do escopo e é definido no diagnóstico, junto com o plano de implantação.
+— Chega de operar no escuro · 06 / 06
+## Descubra qual vilão está te custando mais.
+Um diagnóstico gratuito de 30 minutos aponta os vilões ativos na sua operação e qual plano resolve. Sem compromisso.
