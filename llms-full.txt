@@ -153,12 +153,12 @@ Saiba mais
 — DRYOS Studio
 04 / 04
 ## Quando a operação exige um desenho próprio.
-Nem toda operação cabe numa automação pronta. No Studio, desenhamos a forma de trabalhar e construímos o que falta — processo, integração, infraestrutura ou inteligência — para o seu contexto específico. A tecnologia entra para sustentar a operação, não para ditar como ela deve funcionar.
+Nem toda operação cabe numa automação pronta. No Studio, a gente primeiro entende como o trabalho precisa funcionar e depois constrói o que falta: um processo, uma integração, uma infraestrutura ou uma camada de inteligência. A tecnologia entra para dar suporte à operação, não para obrigar a empresa a trabalhar de um jeito novo.
 — 01
 Lançamentos coordenados
 Especialidade
 Infraestrutura e operação técnica de lançamentos digitais
-Cuidamos da infra técnica completa do seu lançamento: gestão de plataformas, disparos de mensagens, automações de campanha, dashboards em tempo real e o Cockpit do Lançamento, nosso painel exclusivo que integra todos os dados em um só lugar. Trabalhamos junto com a sua agência ou time de marketing; copy e design ficam com eles.
+Cuidamos da infraestrutura técnica completa do seu lançamento: gestão de plataformas, disparos de mensagens, automações de campanha, dashboards em tempo real e o Cockpit do Lançamento, nosso painel exclusivo que integra todos os dados em um só lugar. Trabalhamos junto com a sua agência ou o seu time de marketing. Copy e design ficam com eles.
 — 02
 Operações próprias
 Fluxos internos e sistemas de gestão desenhados para o seu contexto
@@ -174,7 +174,7 @@ Agentes de IA para contextos específicos, multimodais ou regulados
 — Como funciona
 01
 Contexto
-Briefing + diagnóstico do problema e da operação
+Briefing e diagnóstico do problema e da operação
 02
 Desenho da operação
 Fluxos, responsabilidades, escopo e critérios de aceitação
@@ -183,8 +183,8 @@ Construção e validação
 Sprints semanais com entregas validadas pelo cliente
 04
 Operação
-Colocamos para rodar, com evolução opcional após a entrega
-Projetos especiais, com critérios claros de aceitação para manter qualidade.
+Colocamos para rodar e, se fizer sentido, continuamos evoluindo depois da entrega
+Projetos especiais, com critérios claros de aceitação para manter a qualidade.
 — Projetos
 ## Sistemas em produção. Operações reais.
 Cada projeto resolve uma dor específica de uma operação real. Aqui estão alguns que construímos — entre plataformas, automações, Studio e produtos próprios.
