@@ -2069,6 +2069,13 @@ footer {
   margin-bottom: 2rem;
 }
 
+.contact-direct-desc {
+  font-size: 14px;
+  color: rgba(250, 250, 248, 0.65);
+  line-height: 1.5;
+  margin: -1rem 0 1.5rem;
+}
+
 .contact-channels {
   display: flex;
   flex-direction: column;
@@ -2089,6 +2096,18 @@ footer {
 
 .contact-channel:first-child { border-top: none; }
 .contact-channel:hover { opacity: 0.7; }
+
+.contact-channel-primary {
+  background: rgba(147, 181, 150, 0.1);
+  border: 1px solid rgba(147, 181, 150, 0.35);
+  padding: 1.15rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-channel-primary:first-child { border-top: 1px solid rgba(147, 181, 150, 0.35); }
+.contact-channel-primary:hover { opacity: 1; background: rgba(147, 181, 150, 0.16); }
+.contact-channel-primary .contact-channel-label { color: #B5D4B8; }
+.contact-channel-primary .contact-channel-value { font-size: 1.2rem; }
 
 .contact-channel-info {
   display: flex;
@@ -3559,15 +3578,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- LADO DIREITO: CANAIS DIRETOS -->
       <div class="contact-direct-area">
         <div>
-          <span class="contact-direct-label">— Ou fale direto</span>
-          <h3 class="contact-direct-title">Já sabe o que precisa? Manda direto.</h3>
+          <span class="contact-direct-label">— Falar com a DRYOS</span>
+          <h3 class="contact-direct-title">Prefere conversar direto?</h3>
+          <p class="contact-direct-desc">Escolha o canal que funciona melhor para você.</p>
 
           <div class="contact-channels">
 
-            <a href="https://wa.me/5521967287595?text=Oi%2C%20vim%20pelo%20site%20da%20DRYOS" target="_blank" rel="noopener" class="contact-channel">
+            <a href="https://wa.me/5521967287595?text=Oi%2C%20vim%20pelo%20site%20da%20DRYOS" target="_blank" rel="noopener" class="contact-channel contact-channel-primary">
               <div class="contact-channel-info">
                 <span class="contact-channel-label">WhatsApp</span>
-                <span class="contact-channel-value">Iniciar conversa</span>
+                <span class="contact-channel-value">Conversar no WhatsApp</span>
               </div>
               <span class="contact-channel-arrow">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -3591,7 +3611,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="https://linkedin.com/company/dryos" target="_blank" rel="noopener" class="contact-channel">
               <div class="contact-channel-info">
                 <span class="contact-channel-label">LinkedIn</span>
-                <span class="contact-channel-value">/dryos</span>
+                <span class="contact-channel-value">Conhecer a DRYOS no LinkedIn</span>
               </div>
               <span class="contact-channel-arrow">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -3604,7 +3624,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <p class="contact-note">
-          Atendimento em horário comercial. Em breve, atendido por Heimdall — os agentes comerciais da própria DRYOS.
+          Respondemos em horário comercial.
         </p>
       </div>
 
