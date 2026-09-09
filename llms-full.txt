@@ -611,13 +611,13 @@ Num diagnóstico gratuito de 30 minutos a gente acha o gargalo, aponta a automa�
 DRYOS
 /
 Projetos
-# Sistemas em produção.
-Cada projeto é uma operação real, em produção, resolvendo dor específica de cliente real. Aqui está o que construímos entre Core, Spark, Studio e produtos próprios.
+# Projetos personalizados em produção.
+Cada projeto nasce de uma operação específica. Entendemos como o trabalho precisa funcionar e construímos o software, as integrações e as automações que fazem aquela operação avançar.
 — 01
 Linha
 Studio
 Categoria
-Plataforma SaaS
+Sistema personalizado
 Status
 Em produção
 ## Eventmetrics
@@ -635,7 +635,7 @@ Controle de equipe e operação no dia
 Linha
 Studio
 Categoria
-Sistema de gestão
+Sistema sob medida
 Status
 Em produção
 ## Oikos
@@ -651,27 +651,27 @@ DRE gerencial com comparativos
 Relatórios executivos personalizados
 — 03
 Linha
-Core
+Studio
 Categoria
-Plataforma operacional
+Sistema operacional sob medida
 Status
 Em produção
 ## Cortex
-— Implementação completa do Core · 2026
-Implementação ponta a ponta do DRYOS Core num cliente do segmento de educação, primeira empresa a operar com a plataforma completa. Oito módulos integrados, Heimdall no comercial via WhatsApp, dashboard executivo e governança própria. Caso real que validou a arquitetura do Core.
+— Sistema operacional para educação · 2026
+Sistema operacional personalizado para uma empresa do segmento de educação, construído para conectar áreas que antes trabalhavam de forma fragmentada. Oito módulos integrados, atendimento comercial via WhatsApp, dashboard executivo e governança própria em uma operação única.
 — 01
-CRM, Deals e Inbox omnichannel ativos
+CRM, negócios e atendimento integrados
 — 02
-Heimdall no comercial via WhatsApp 24/7
+Atendimento comercial via WhatsApp 24/7
 — 03
-Insights executivos com narrativa IA
+Painel executivo com insights em linguagem clara
 — 04
-Reach, Flow e Guard em operação
+Camadas de operação, acompanhamento e governança
 — 04
 Linha
 Studio
 Categoria
-Catálogo digital
+Sistema sob medida
 Status
 Em produção
 ## DeMarchi Automotive
@@ -687,9 +687,9 @@ Cotação automatizada via WhatsApp
 Painel administrativo completo
 — 05
 Linha
-Spark
+Automações
 Categoria
-Sistema de conteúdo
+Automação personalizada
 Status
 Em produção
 ## Kratos Social Content
@@ -705,7 +705,7 @@ Adequação automática por canal
 Calendário editorial integrado
 — Próximo projeto
 ## Vai ser o seu?
-Diagnóstico gratuito de 60 minutos. A gente avalia se faz sentido um Core, um Spark ou um Studio pra sua operação, e te apresenta o caminho.
+Diagnóstico gratuito de 30 minutos. A gente entende sua operação, identifica onde está o maior ganho e apresenta o caminho mais adequado para construir a solução.
 
 ---
 
