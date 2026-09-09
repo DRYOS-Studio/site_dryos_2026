@@ -656,7 +656,7 @@ Categoria
 Sistema operacional sob medida
 Status
 Em produção
-## Cortex
+## Core
 — Sistema operacional para educação · 2026
 Sistema operacional personalizado para uma empresa do segmento de educação, construído para conectar áreas que antes trabalhavam de forma fragmentada. Oito módulos integrados, atendimento comercial via WhatsApp, dashboard executivo e governança própria em uma operação única.
 — 01
