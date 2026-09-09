@@ -61,15 +61,15 @@ Agendar agora
 — Três caminhos
 01 / 04
 ## Para cada empresa, a porta certa.
-Em vez de tentar caber em todas as situações com um produto único, a DRYOS opera em três linhas distintas. O diagnóstico decide qual cabe.
+Nem toda operação precisa começar pela tecnologia. Primeiro entendemos como o trabalho acontece, onde trava e o que precisa ser organizado. A partir daí, definimos o próximo passo.
 — I —
-Core
-Plataforma premium
-Cérebro digital construído pra sua operação. Plataforma com 8 módulos integrados: CRM, Deals, Inbox, Reach, Flow, Insights, Guard e Heimdall. Para quem quer transformar a operação inteira.
-Modelo
-Recorrente
-Setup
-2-4 semanas
+Estruturação de Processos
+Mapa operacional
+Antes de automatizar ou trocar ferramentas, a gente mapeia sua operação: fluxos, gargalos, responsabilidades e indicadores. Você sai com prioridades claras e um plano de execução — que pode começar por uma automação, pelo Core ou pelo Studio.
+Entrada
+Mapa + plano
+Próximo passo
+Sob medida
 — II —
 Automações
 5 soluções pontuais
@@ -88,9 +88,9 @@ Demanda
 Sob demanda
 — DRYOS Core
 02 / 04
-## O cérebro digital da sua operação.
-— Oito módulos. Uma arquitetura. Um sistema.
-Core não é software pontual — é uma plataforma com 8 módulos que orquestram CRM, vendas, atendimento omnichannel, marketing, automação, inteligência, governança e Heimdall em uma única arquitetura. Validado em produção com cliente do segmento de educação.
+## Clareza primeiro. Plataforma depois.
+— Uma base para a operação que já foi estruturada.
+Depois de mapear e organizar a operação, algumas empresas precisam de uma base contínua para fazer os processos rodarem juntos. É aí que entra o DRYOS Core: uma plataforma com 8 módulos que orquestram CRM, vendas, atendimento omnichannel, marketing, automação, inteligência, governança e Heimdall em uma única arquitetura. Validado em produção com cliente do segmento de educação.
 01
 #### Tudo num lugar só
 Em vez de planilha, WhatsApp, ferramenta solta e caderno, uma plataforma única que conecta tudo. Sem silos. Sem retrabalho.
@@ -260,9 +260,9 @@ Construção & Engenharia
 Comércio & Varejo
 — Diagnóstico gratuito
 ## Chega de operar no escuro.
-60 minutos pra mapear os vilões da sua operação, estimar o que está te custando hoje e propor o produto certo. Sem compromisso.
+30 minutos pra mapear os vilões da sua operação, estimar o que está te custando hoje e propor o produto certo. Sem compromisso.
 Sem compromisso
-60 min
+30 min
 Mapa de oportunidades
 Proposta personalizada
 — Ou fale direto

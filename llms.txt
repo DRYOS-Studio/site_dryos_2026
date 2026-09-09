@@ -11,19 +11,23 @@ Conteúdo completo das páginas em markdown: https://www.dryos.com.br/llms-full.
 ## Como a DRYOS trabalha
 
 Todo trabalho começa por um diagnóstico gratuito de 30 minutos que identifica o gargalo
-e define qual dos três tamanhos resolve o caso. Antes de qualquer implementação o cliente
+e define qual porta de entrada resolve o caso. Antes de qualquer implementação o cliente
 recebe, por escrito, o que entra no escopo, o que não entra, o prazo e o SLA.
 
-Três tamanhos de projeto:
+Três portas de entrada:
 
-1. **Automação pontual** — resolve uma dor específica. Escopo fixo, conecta nas ferramentas
+1. **Estruturação de Processos** — mapeia fluxos, gargalos, responsabilidades e indicadores.
+   Entrega prioridades claras e um plano de execução. É o ponto de partida para decidir se o
+   próximo passo é uma automação, o DRYOS Core ou um projeto sob medida.
+2. **Automação pontual** — resolve uma dor específica. Escopo fixo, conecta nas ferramentas
    que o cliente já usa, no ar em 7 a 14 dias úteis. Recorrência mensal sem fidelidade.
-2. **Plataforma completa (DRYOS Core)** — para quem tem três ou mais dores simultâneas e
-   precisa estruturar a operação inteira num só lugar. Oito módulos integrados: CRM, Deals,
-   Inbox, Reach, Flow, Insights, Guard e Heimdall. Setup de 2 a 4 semanas. Cada cliente roda
-   em instância dedicada e isolada, com banco de dados próprio.
 3. **Projeto sob medida** — sistemas próprios, integrações que não existem em produto e
    infraestrutura técnica de lançamentos digitais. Escopo desenhado do zero, por projeto.
+
+O **DRYOS Core** entra quando a operação já foi entendida e precisa de uma base contínua para
+fazer processos, dados, atendimento e automações rodarem juntos. São oito módulos integrados:
+CRM, Deals, Inbox, Reach, Flow, Insights, Guard e Heimdall. Cada cliente roda em instância
+dedicada e isolada, com banco de dados próprio.
 
 ## As cinco automações
 
