@@ -274,6 +274,19 @@ nav {
   margin-bottom: 0.75rem;
 }
 
+.project-detail-name a { transition: color 0.2s ease; }
+.project-detail-name a:hover { color: var(--oak-light); }
+
+.project-detail-link {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.55em;
+  font-weight: 400;
+  color: var(--oak-light);
+  vertical-align: 0.35em;
+  margin-left: 0.15em;
+}
+
 .project-detail-tagline {
   font-family: var(--font-mono);
   font-size: 12px;
@@ -544,8 +557,9 @@ footer {
     "itemListElement": [
      {
       "@type": "ListItem",
-      "position": 1,
-      "name": "Eventmetrics"
+     "position": 1,
+      "name": "Eventmetrics",
+      "url": "https://eventmetrics.com.br"
      },
      {
       "@type": "ListItem",
@@ -559,13 +573,15 @@ footer {
      },
      {
       "@type": "ListItem",
-      "position": 4,
-      "name": "DeMarchi Automotive"
+     "position": 4,
+      "name": "DeMarchi Automotive",
+      "url": "https://catalogo.demarchirodas.com.br/"
      },
      {
       "@type": "ListItem",
-      "position": 5,
-      "name": "Kratos Social Content"
+     "position": 5,
+      "name": "Kratos Social Content",
+      "url": "https://social.kratoshub.com.br/"
      }
     ]
    }
@@ -633,7 +649,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div>
-        <h2 class="project-detail-name">Eventmetrics</h2>
+        <h2 class="project-detail-name"><a href="https://eventmetrics.com.br" target="_blank" rel="noopener">Eventmetrics <span class="project-detail-link" aria-hidden="true">↗</span></a></h2>
         <div class="project-detail-tagline">— Inteligência de eventos · 2025</div>
         <p class="project-detail-desc">
           Plataforma de analytics e gestão para organizadores de eventos. Reúne em um único painel <strong>métricas em tempo real, controle financeiro, gestão de equipe e relatórios automatizados</strong>, no lugar de planilhas dispersas e ferramentas isoladas.
@@ -783,7 +799,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div>
-        <h2 class="project-detail-name">DeMarchi Automotive</h2>
+        <h2 class="project-detail-name"><a href="https://catalogo.demarchirodas.com.br/" target="_blank" rel="noopener">DeMarchi Automotive <span class="project-detail-link" aria-hidden="true">↗</span></a></h2>
         <div class="project-detail-tagline">— Catálogo de produtos automotivos · 2026</div>
         <p class="project-detail-desc">
           Catálogo digital sob medida para distribuidora automotiva, com <strong>busca inteligente por compatibilidade, integração com estoque em tempo real e jornada de cotação automatizada via WhatsApp</strong>. Substitui o vai-e-vem manual de pedidos por planilha e ligação.
@@ -833,7 +849,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div>
-        <h2 class="project-detail-name">Kratos Social Content</h2>
+        <h2 class="project-detail-name"><a href="https://social.kratoshub.com.br/" target="_blank" rel="noopener">Kratos Social Content <span class="project-detail-link" aria-hidden="true">↗</span></a></h2>
         <div class="project-detail-tagline">— Produção de conteúdo com IA · 2025</div>
         <p class="project-detail-desc">
           Sistema de produção de conteúdo para redes sociais com <strong>agentes IA especializados em pauta, copywriting, adequação por canal e calendário editorial</strong>. Recebe o briefing e devolve a peça pronta, passando por pauta e copy no caminho, num fluxo único e sob supervisão da equipe.

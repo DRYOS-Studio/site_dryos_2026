@@ -620,7 +620,8 @@ Categoria
 Sistema personalizado
 Status
 Em produção
-## Eventmetrics
+Eventmetrics
+↗
 — Inteligência de eventos · 2025
 Plataforma de analytics e gestão para organizadores de eventos. Reúne em um único painel métricas em tempo real, controle financeiro, gestão de equipe e relatórios automatizados, no lugar de planilhas dispersas e ferramentas isoladas.
 — 01
@@ -674,7 +675,8 @@ Categoria
 Sistema sob medida
 Status
 Em produção
-## DeMarchi Automotive
+DeMarchi Automotive
+↗
 — Catálogo de produtos automotivos · 2026
 Catálogo digital sob medida para distribuidora automotiva, com busca inteligente por compatibilidade, integração com estoque em tempo real e jornada de cotação automatizada via WhatsApp. Substitui o vai-e-vem manual de pedidos por planilha e ligação.
 — 01
@@ -692,7 +694,8 @@ Categoria
 Automação personalizada
 Status
 Em produção
-## Kratos Social Content
+Kratos Social Content
+↗
 — Produção de conteúdo com IA · 2025
 Sistema de produção de conteúdo para redes sociais com agentes IA especializados em pauta, copywriting, adequação por canal e calendário editorial. Recebe o briefing e devolve a peça pronta, passando por pauta e copy no caminho, num fluxo único e sob supervisão da equipe.
 — 01
