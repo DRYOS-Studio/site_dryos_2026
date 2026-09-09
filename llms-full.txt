@@ -9,6 +9,7 @@ Contato: contato@dryos.com.br · WhatsApp +55 21 96728-7595
 
 # Home — https://www.dryos.com.br/
 
+Pular para o conteúdo
 DRYOS · Sistema operacional contra a ineficiência · Em produção
 Tem
 7 vilões
@@ -186,23 +187,23 @@ Operação
 Colocamos para rodar e, se fizer sentido, continuamos evoluindo depois da entrega
 Projetos especiais, com critérios claros de aceitação para manter a qualidade.
 — Projetos
-## Sistemas em produção. Operações reais.
-Cada projeto resolve uma dor específica de uma operação real. Aqui estão alguns que construímos — entre plataformas, automações, Studio e produtos próprios.
+## Projetos personalizados em produção. Operações reais.
+Cada projeto nasce de uma operação específica. Entendemos como o trabalho precisa funcionar e construímos o software, as integrações e as automações que fazem aquela operação avançar.
 — 01
 Eventmetrics
-Plataforma SaaS · Studio
+Sistema personalizado · Studio
 Plataforma de inteligência e analytics para gestão de eventos. Painel executivo, métricas em tempo real e relatórios automatizados pra organizadores.
 Status
 Em produção
 — 02
-Cortex
-Plataforma operacional
-Estruturação completa da operação comercial de um cliente do segmento de educação, com CRM, Inbox omnichannel, automações e agentes de IA via WhatsApp.
+Core
+Sistema operacional sob medida · Studio
+Sistema operacional personalizado para uma empresa de educação, conectando CRM, atendimento, automações e agentes de IA via WhatsApp.
 Status
 Em produção
 — 03
 DeMarchi Automotive
-Catálogo digital · Studio
+Sistema sob medida · Studio
 Catálogo digital de produtos automotivos com busca inteligente, integração com estoque e jornada de cotação automatizada.
 Status
 Em produção
@@ -277,6 +278,7 @@ Em produção real
 
 # Automações — https://www.dryos.com.br/automacoes
 
+Pular para o conteúdo
 Automação de processos com IA
 # Você não precisa de tudo. Precisa automatizar o que sangra.
 Atendimento que responde sozinho. Sistemas que finalmente conversam entre si. Cobrança que roda sem ninguém precisar lembrar, relatório que chega antes de você pedir. A gente monta a automação, conecta no que você já usa e entrega rodando em 7 a 14 dias úteis, com escopo, prazo e SLA definidos antes de começar.
@@ -608,6 +610,7 @@ Num diagnóstico gratuito de 30 minutos a gente acha o gargalo, aponta a automa�
 
 # Projetos — https://www.dryos.com.br/projetos
 
+Pular para o conteúdo
 DRYOS
 /
 Projetos
@@ -714,6 +717,7 @@ Diagnóstico gratuito de 30 minutos. A gente entende sua operação, identifica 
 
 # DRYOS Core — https://www.dryos.com.br/apresentacao-core
 
+Pular para o conteúdo
 O cérebro digital da sua operação
 # Um sistema que atende, decide e age — sozinho.
 DRYOS Core unifica WhatsApp, Instagram, CRM, automações e agentes de IA num só lugar. Cada conversa vira dado, cada dado vira ação. Sua operação para de depender de gente lembrando de fazer as coisas.

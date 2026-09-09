@@ -61,6 +61,10 @@ body {
 a { color: inherit; text-decoration: none; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; }
 
+:focus-visible { outline: 2px solid #93B596; outline-offset: 3px; border-radius: 2px; }
+.skip-link { position: absolute; left: 1rem; top: -4rem; z-index: 200; padding: .65rem .9rem; background: var(--ink); color: var(--bg); font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; }
+.skip-link:focus-visible { top: 1rem; }
+
 .mono {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -543,7 +547,7 @@ nav {
   .paths-grid { grid-template-columns: 1fr; }
 }
 
-/* CORTEX SPOTLIGHT */
+/* PROCESS STRUCTURING SPOTLIGHT */
 .spotlight-core {
   padding: clamp(4rem, 8vw, 7rem) 0;
   background: var(--ink);
@@ -751,7 +755,7 @@ nav {
   .core-grid { grid-template-columns: 1fr; gap: 2rem; }
 }
 
-/* SPARK SECTION */
+/* AUTOMATIONS SECTION */
 .spark-section {
   padding: clamp(4rem, 8vw, 7rem) 0;
 }
@@ -828,7 +832,7 @@ nav {
 
 .spark-item:hover { background: var(--surface); }
 
-/* Spark CTA card (mesmo grid, fundo preto) */
+/* Automations CTA card (mesmo grid, fundo preto) */
 .spark-cta-card {
   background: var(--ink);
   color: var(--bg);
@@ -2218,7 +2222,7 @@ footer {
   line-height: 1.45;
 }
 
-/* CORTEX TIER FEATURES (V3 — sem preço) */
+/* PROCESS SECTION FEATURES */
 .core-tier-features {
   display: flex;
   flex-direction: column;
@@ -2502,6 +2506,9 @@ footer {
   .whatsapp-float { width: 52px; height: 52px; }
   .whatsapp-float svg { width: 26px; height: 26px; }
 }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}
 </style>
 
 <!-- ===== SEO ===== -->
@@ -2580,6 +2587,8 @@ footer {
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+<a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
@@ -2596,6 +2605,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#diagnostico" class="nav-cta">Diagnóstico →</a>
   </div>
 </nav>
+
+<main id="main-content">
 
 <!-- HERO -->
 <section class="hero">
@@ -2984,7 +2995,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- SPARK SECTION -->
+<!-- AUTOMATIONS SECTION -->
 <section class="spark-section" id="automacoes">
   <div class="container">
     <div class="section-header">
@@ -3271,9 +3282,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="label">— Projetos</span>
       </div>
       <div>
-        <h2 class="section-title">Sistemas em produção.<br><strong>Operações reais.</strong></h2>
+        <h2 class="section-title">Projetos personalizados em produção.<br><strong>Operações reais.</strong></h2>
         <p class="section-intro">
-          Cada projeto resolve uma dor específica de uma operação real. Aqui estão alguns que construímos — entre plataformas, automações, Studio e produtos próprios.
+          Cada projeto nasce de uma operação específica. Entendemos como o trabalho precisa funcionar e construímos o software, as integrações e as automações que fazem aquela operação avançar.
         </p>
       </div>
     </div>
@@ -3284,7 +3295,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="project-num">— 01</span>
         <div class="project-content">
           <div class="project-name">Eventmetrics</div>
-          <div class="project-cat">Plataforma SaaS · Studio</div>
+          <div class="project-cat">Sistema personalizado · Studio</div>
           <p class="project-desc">
             Plataforma de inteligência e analytics para gestão de eventos. Painel executivo, métricas em tempo real e relatórios automatizados pra organizadores.
           </p>
@@ -3298,10 +3309,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/projetos#cortex" class="project-card">
         <span class="project-num">— 02</span>
         <div class="project-content">
-          <div class="project-name">Cortex</div>
-          <div class="project-cat">Plataforma operacional</div>
+        <div class="project-name">Core</div>
+          <div class="project-cat">Sistema operacional sob medida · Studio</div>
           <p class="project-desc">
-            Estruturação completa da operação comercial de um cliente do segmento de educação, com CRM, Inbox omnichannel, automações e agentes de IA via WhatsApp.
+            Sistema operacional personalizado para uma empresa de educação, conectando CRM, atendimento, automações e agentes de IA via WhatsApp.
           </p>
           <div class="project-meta">
             <span class="label">Status</span>
@@ -3314,7 +3325,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="project-num">— 03</span>
         <div class="project-content">
           <div class="project-name">DeMarchi Automotive</div>
-          <div class="project-cat">Catálogo digital · Studio</div>
+          <div class="project-cat">Sistema sob medida · Studio</div>
           <p class="project-desc">
             Catálogo digital de produtos automotivos com busca inteligente, integração com estoque e jornada de cotação automatizada.
           </p>
@@ -3524,11 +3535,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <div class="contact-form-row">
             <div class="contact-form-field">
-              <label for="cf-produto">Produto de interesse *</label>
+                <label for="cf-produto">Caminho de interesse *</label>
               <select id="cf-produto" name="produto_interesse" required>
                 <option value="" disabled selected>Selecione</option>
                 <option value="Estruturação de Processos">Estruturação de Processos</option>
-                <option value="Spark">Automações</option>
+                <option value="Automações">Automações</option>
                 <option value="Studio">DRYOS Studio</option>
                 <option value="Não sei ainda">Não sei ainda, quero o diagnóstico</option>
               </select>
@@ -3671,6 +3682,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- FOOTER -->
+</main>
 <footer>
   <div class="container">
     <div class="partner-seal-row">
@@ -3798,10 +3810,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (total > 1) startAutoplay();
   }
 
-  // FORMULÁRIO DE DIAGNÓSTICO — envio pra RD Station
-  const RD_TOKEN = '609c72c917d53ef9dd91cbcc92c630a3';
-  const RD_IDENTIFICADOR = 'site-dryos-diagnostico';
-
+  // FORMULÁRIO DE DIAGNÓSTICO — envio via endpoint server-side
   const form = document.getElementById('dryos-diagnostico-form');
   if (form) {
     const successBox = document.getElementById('dryos-diagnostico-success');
@@ -3827,18 +3836,24 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.disabled = true;
       submitText.textContent = 'Enviando…';
 
-      const payload = new URLSearchParams();
-      payload.append('token_rdstation', RD_TOKEN);
-      payload.append('identificador', RD_IDENTIFICADOR);
+      const data = {
+        name: form.querySelector('#cf-nome').value.trim(),
+        email: form.querySelector('#cf-email').value.trim(),
+        phone: form.querySelector('#cf-telefone').value.trim(),
+        cargo: form.querySelector('#cf-cargo').value.trim(),
+        produto_interesse: form.querySelector('#cf-produto').value,
+        faturamento_mensal: form.querySelector('#cf-faturamento').value,
+        source: 'site-dryos-diagnostico',
+      };
       for (const [key, value] of new FormData(form).entries()) {
-        if (value) payload.append(key, value);
+        if (value && TRACKING_KEYS.includes(key)) data[key] = value;
       }
 
       try {
-        const res = await fetch('https://www.rdstation.com.br/api/1.3/conversions', {
+        const res = await fetch('/api/lead', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: payload.toString()
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
         });
         if (!res.ok) throw new Error('rd-error');
         submitText.textContent = 'Enviado';

@@ -366,6 +366,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   footer { padding: 2.5rem var(--gutter); }
   .foot-inner { max-width: var(--max); margin: 0 auto; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; }
   .foot-inner .mono { color: var(--mute-soft); }
+  .skip-link { position: absolute; left: 1rem; top: -4rem; z-index: 200; padding: .65rem .9rem; background: var(--ink); color: var(--bg); font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; }
+  .skip-link:focus-visible { top: 1rem; }
 </style>
 
 <!-- ===== SEO ===== -->
@@ -560,6 +562,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 
+<a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
 <!-- ================= NAV ================= -->
 <nav>
   <div class="nav-inner">
@@ -577,6 +581,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </nav>
+
+<main id="main-content">
 
 <!-- ================= HERO ================= -->
 <header class="hero" id="top">
@@ -1181,13 +1187,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </form>
     <div class="lead-success reveal" id="leadSuccess" hidden>
       <div class="ic">💚</div>
-      <h4>Recebido!</h4>
-      <p>Em instantes você recebe nossa mensagem no WhatsApp. Fique de olho!</p>
+      <h4>Recebemos suas informações.</h4>
+      <p>Vamos revisar seu contexto e entrar em contato em até 24 horas úteis para combinar o próximo passo.</p>
     </div>
   </div>
 </section>
 
 <!-- ================= FOOTER ================= -->
+</main>
 <footer>
   <div class="foot-inner">
     <a href="/" class="brand" aria-label="DRYOS — página inicial">
@@ -1251,6 +1258,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 event: 'generate_lead', form_id: 'automacoes'
               });
             } catch (e) {}
+            btn.textContent = 'Enviado';
             f.hidden = true;
             document.getElementById('leadSuccess').hidden = false;
           } else {

@@ -11,7 +11,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projetos personalizados em produção — DRYOS</title>
-<meta name="description" content="Soluções personalizadas que a DRYOS construiu para operações específicas e mantém em produção desde 2020: analytics de eventos, gestão financeira, catálogos digitais e conteúdo com agentes de IA.">
+<meta name="description" content="Soluções personalizadas que a DRYOS constrói para operações específicas: analytics, gestão financeira, catálogos digitais e sistemas com IA em produção.">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta name="theme-color" content="#1F3A2A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,6 +53,10 @@ body {
   overflow-x: hidden;
   letter-spacing: -0.005em;
 }
+
+:focus-visible { outline: 2px solid #93B596; outline-offset: 3px; border-radius: 2px; }
+.skip-link { position: absolute; left: 1rem; top: -4rem; z-index: 200; padding: .65rem .9rem; background: var(--ink); color: var(--bg); font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; }
+.skip-link:focus-visible { top: 1rem; }
 
 a { color: inherit; text-decoration: none; }
 
@@ -159,34 +163,6 @@ nav {
 }
 
 .page-intro strong { font-weight: 600; color: var(--ink); }
-
-/* FILTER BAR */
-.filter-bar {
-  padding: 2rem 0;
-  border-bottom: 1px solid var(--line);
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.filter-tag {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--mute);
-  border: 1px solid var(--line-strong);
-  padding: 7px 13px;
-  background: var(--bg);
-  letter-spacing: 0.02em;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.filter-tag.active,
-.filter-tag:hover {
-  background: var(--ink);
-  color: var(--bg);
-  border-color: var(--ink);
-}
 
 /* PROJECT DETAIL */
 .project-detail {
@@ -519,6 +495,9 @@ footer {
   .whatsapp-float { width: 52px; height: 52px; }
   .whatsapp-float svg { width: 26px; height: 26px; }
 }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}
 </style>
 
 <!-- ===== SEO ===== -->
@@ -596,6 +575,8 @@ footer {
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+<a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
@@ -612,6 +593,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="/#diagnostico" class="nav-cta">Diagnóstico →</a>
   </div>
 </nav>
+
+<main id="main-content">
 
 <!-- PAGE HEADER -->
 <section class="page-header">
@@ -728,7 +711,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- PROJECT 3: CORTEX -->
+<!-- PROJECT 3: CORE -->
 <section class="project-detail" id="cortex">
   <div class="container">
     <div class="project-detail-grid">
@@ -896,6 +879,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- FOOTER -->
+</main>
 <footer>
   <div class="container">
     <div class="partner-seal-row">

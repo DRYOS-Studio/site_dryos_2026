@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Plataforma com 8 módulos integrados: atendimento no WhatsApp, CRM, funil de vendas, automações e agentes de IA. Instância dedicada e seus dados sempre seus.">
-<title>DRYOS Core — plataforma de atendimento, CRM e IA no WhatsApp</title>
+<title>DRYOS Core — atendimento, CRM e IA no WhatsApp</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +26,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:site_name" content="DRYOS">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:url" content="https://www.dryos.com.br/apresentacao-core">
-<meta property="og:title" content="Uma operação inteira, numa só tela">
+<meta property="og:title" content="DRYOS Core — atendimento, CRM e IA no WhatsApp">
 <meta property="og:description" content="Plataforma com 8 módulos integrados: atendimento no WhatsApp, CRM, funil de vendas, automações e agentes de IA. Instância dedicada e seus dados sempre seus.">
 <meta property="og:image" content="https://www.dryos.com.br/images/og/og-core.png">
 <meta property="og:image:width" content="1200">
@@ -111,7 +111,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<title>DRYOS Core — Apresentação</title>
 <style>
   :root {
     --bg: #FAFAF8;
@@ -609,8 +608,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   footer { padding: 2.5rem var(--gutter); }
   .foot-inner { max-width: var(--max); margin: 0 auto; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; }
   .foot-inner .mono { color: var(--mute-soft); }
+  .skip-link { position: absolute; left: 1rem; top: -4rem; z-index: 200; padding: .65rem .9rem; background: var(--ink); color: var(--bg); font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; }
+  .skip-link:focus-visible { top: 1rem; }
 
 </style>
+
+<a class="skip-link" href="#main-content">Pular para o conteúdo</a>
 
 <!-- ================= NAV ================= -->
 <nav>
@@ -629,6 +632,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </nav>
+
+<main id="main-content">
 
 <!-- ================= HERO ================= -->
 <header class="hero" id="top">
@@ -1245,13 +1250,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </form>
     <div class="lead-success reveal" id="leadSuccess" hidden>
       <div class="ic">💚</div>
-      <h4>Recebido!</h4>
-      <p>Em instantes você recebe nossa mensagem no WhatsApp. Fique de olho!</p>
+      <h4>Recebemos suas informações.</h4>
+      <p>Vamos revisar seu contexto e entrar em contato em até 24 horas úteis para combinar o próximo passo.</p>
     </div>
   </div>
 </section>
 
 <!-- ================= FOOTER ================= -->
+</main>
 <footer>
   <div class="foot-inner">
     <a href="/" class="brand" aria-label="DRYOS — página inicial">
@@ -1314,6 +1320,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 event: 'generate_lead', form_id: 'apresentacao-core'
               });
             } catch (e) {}
+            btn.textContent = 'Enviado';
             f.hidden = true;
             document.getElementById('leadSuccess').hidden = false;
           } else {

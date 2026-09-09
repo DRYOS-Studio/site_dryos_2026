@@ -18,7 +18,7 @@ Três portas de entrada:
 
 1. **Estruturação de Processos** — mapeia fluxos, gargalos, responsabilidades e indicadores.
    Entrega prioridades claras e um plano de execução. É o ponto de partida para decidir se o
-   próximo passo é uma automação, o DRYOS Core ou um projeto sob medida.
+   próximo passo é uma automação ou um projeto sob medida.
 2. **Automação pontual** — resolve uma dor específica. Escopo fixo, conecta nas ferramentas
    que o cliente já usa, no ar em 7 a 14 dias úteis. Recorrência mensal sem fidelidade.
 3. **Studio** — quando a operação exige um desenho próprio. A DRYOS desenha a forma de
@@ -71,8 +71,8 @@ de dados.
 - [Automações](https://www.dryos.com.br/automacoes): as cinco automações com escopo item a
   item, prazo e SLA, mais um catálogo de automações concretas por área (lançamento e
   marketing, vendas, financeiro, dados e operação) e perguntas frequentes.
-- [Projetos](https://www.dryos.com.br/projetos): sistemas em produção, entre eles plataforma
-  de analytics para organizadores de eventos, gestão financeira para casais que empreendem
-  juntos e produção de conteúdo com agentes de IA.
+- [Projetos](https://www.dryos.com.br/projetos): soluções personalizadas em produção, entre
+  elas analytics para organizadores de eventos, gestão financeira para casais que empreendem
+  juntos, sistemas operacionais sob medida e produção de conteúdo com agentes de IA.
 - [DRYOS Core](https://www.dryos.com.br/apresentacao-core): apresentação da plataforma, com
   os módulos por dentro, os três planos e perguntas frequentes sobre dados e migração.

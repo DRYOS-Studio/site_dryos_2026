@@ -17,15 +17,16 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 // Allowlist: page source → RD Station conversion_identifier. Keeps each landing
 // page's conversions separate in RD without letting the browser pick the value.
 const RD_IDENTIFIERS = {
+  'site-dryos-diagnostico': 'diagnostico-site',
   'site-apresentacao-core': 'apresentacao-core',
   'site-automacoes': 'automacoes',
 };
 
-// Best-effort push to RD Station Marketing. The lead already lives in the CRM by
-// the time this runs, so an RD failure is logged but never surfaced to the user.
+// Best-effort push to RD Station Marketing. A failure is logged but does not
+// prevent the other capture destination from receiving the lead.
 async function sendToRD({ name, email, phone, body }) {
   const token = process.env.RD_TOKEN;
-  if (!token) return; // not configured yet → skip silently
+  if (!token) return false;
   try {
     const controller = new AbortController();
     const t = setTimeout(() => controller.abort(), 8000);
@@ -51,9 +52,14 @@ async function sendToRD({ name, email, phone, body }) {
       },
     );
     clearTimeout(t);
-    if (!r.ok) console.error('lead: RD conversion returned', r.status);
+    if (!r.ok) {
+      console.error('lead: RD conversion returned', r.status);
+      return false;
+    }
+    return true;
   } catch (e) {
     console.error('lead: error posting to RD', e && e.message);
+    return false;
   }
 }
 
@@ -73,11 +79,6 @@ module.exports = async (req, res) => {
 
   const base = process.env.CORE_API_BASE;
   const token = process.env.CORE_WEBHOOK_TOKEN;
-  if (!base || !token) {
-    console.error('lead: missing CORE_API_BASE or CORE_WEBHOOK_TOKEN env');
-    return res.status(500).json({ ok: false, error: 'Configuração indisponível. Tente pelo WhatsApp.' });
-  }
-
   let body = req.body;
   if (typeof body === 'string') {
     try { body = JSON.parse(body); } catch { body = {}; }
@@ -102,6 +103,9 @@ module.exports = async (req, res) => {
     name,
     source: String(body.source || 'site-apresentacao-core').slice(0, 80),
     spark: String(body.spark || '').slice(0, 40) || null,
+    cargo: String(body.cargo || '').slice(0, 120) || null,
+    produto_interesse: String(body.produto_interesse || '').slice(0, 80) || null,
+    faturamento_mensal: String(body.faturamento_mensal || '').slice(0, 80) || null,
     utm_source: body.utm_source || null,
     utm_medium: body.utm_medium || null,
     utm_campaign: body.utm_campaign || null,
@@ -109,26 +113,32 @@ module.exports = async (req, res) => {
     utm_term: body.utm_term || null,
   };
 
-  try {
-    const url = `${base.replace(/\/+$/, '')}/api/v1/webhooks/automation/${token}`;
-    const controller = new AbortController();
-    const t = setTimeout(() => controller.abort(), 10000);
-    const r = await fetch(url, {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify(payload),
-      signal: controller.signal,
-    });
-    clearTimeout(t);
-    if (!r.ok) {
-      console.error('lead: Core webhook returned', r.status);
-      return res.status(502).json({ ok: false, error: 'Não consegui registrar agora. Tente pelo WhatsApp.' });
+  let coreOk = false;
+  if (base && token) {
+    try {
+      const url = `${base.replace(/\/+$/, '')}/api/v1/webhooks/automation/${token}`;
+      const controller = new AbortController();
+      const t = setTimeout(() => controller.abort(), 10000);
+      const r = await fetch(url, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(payload),
+        signal: controller.signal,
+      });
+      clearTimeout(t);
+      coreOk = r.ok;
+      if (!coreOk) console.error('lead: Core webhook returned', r.status);
+    } catch (e) {
+      console.error('lead: error posting to Core', e && e.message);
     }
-    // CRM ok → also register the conversion in RD Station (best-effort, never blocks the lead)
-    await sendToRD({ name, email, phone, body });
-    return res.status(200).json({ ok: true });
-  } catch (e) {
-    console.error('lead: error posting to Core', e && e.message);
-    return res.status(502).json({ ok: false, error: 'Falha de conexão. Tente novamente.' });
+  } else {
+    console.error('lead: missing CORE_API_BASE or CORE_WEBHOOK_TOKEN env');
   }
+
+  // RD is an independent destination: a Core outage must not block conversion capture.
+  const rdOk = await sendToRD({ name, email, phone, body });
+  if (!coreOk && !rdOk) {
+    return res.status(502).json({ ok: false, error: 'Não consegui registrar agora. Tente pelo WhatsApp.' });
+  }
+  return res.status(200).json({ ok: true });
 };
