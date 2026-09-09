@@ -65,7 +65,7 @@ Nem toda operação precisa começar pela tecnologia. Primeiro entendemos como o
 — I —
 Estruturação de Processos
 Mapa operacional
-Antes de automatizar ou trocar ferramentas, a gente mapeia sua operação: fluxos, gargalos, responsabilidades e indicadores. Você sai com prioridades claras e um plano de execução — que pode começar por uma automação, pelo Core ou pelo Studio.
+Antes de automatizar ou trocar ferramentas, a gente mapeia sua operação: fluxos, gargalos, responsabilidades e indicadores. Você sai com prioridades claras e um plano de execução.
 Entrada
 Mapa + plano
 Próximo passo
@@ -86,47 +86,33 @@ Modelo
 Por projeto
 Demanda
 Sob demanda
-— DRYOS Core
+— Estruturação de Processos
 02 / 04
-## Clareza primeiro. Plataforma depois.
-— Uma base para a operação que já foi estruturada.
-Depois de mapear e organizar a operação, algumas empresas precisam de uma base contínua para fazer os processos rodarem juntos. É aí que entra o DRYOS Core: uma plataforma com 8 módulos que orquestram CRM, vendas, atendimento omnichannel, marketing, automação, inteligência, governança e Heimdall em uma única arquitetura. Validado em produção com cliente do segmento de educação.
+## Antes de automatizar. Entenda o que trava.
+Antes de escolher uma ferramenta, a gente entende como sua operação funciona de verdade: o caminho do cliente, os pontos de decisão, os gargalos e o que hoje depende de memória ou esforço manual. O resultado é um mapa operacional que mostra onde agir primeiro.
 01
-#### Tudo num lugar só
-Em vez de planilha, WhatsApp, ferramenta solta e caderno, uma plataforma única que conecta tudo. Sem silos. Sem retrabalho.
+#### Mapa da operação
+Desenhamos os fluxos críticos, as ferramentas envolvidas, os handoffs e os pontos onde o trabalho para.
 02
-#### Decisão com dados reais
-Dashboards executivos, forecast Monte Carlo e narrativa por IA. O número certo, na hora certa. O fim do "eu acho que tá vendendo bem".
+#### Gargalos prioritários
+Separamos o que realmente custa tempo, margem e crescimento do que pode esperar.
 03
-#### Operação que roda sozinha
-Heimdall é a fábrica de agentes IA do Core: comercial, atendimento, financeiro, suporte, qualificação. Cada agente é configurado com a linguagem e as regras da sua operação, e roda 24/7 ao lado do Flow e do Reach.
-— Módulos do Core
+#### Plano de execução
+Organizamos a sequência das mudanças: o que padronizar, o que automatizar e o que precisa de uma solução própria.
+— O que você leva
 01
-CRM
-Contatos, empresas, clientes, tarefas e negócios no pipeline
+Fluxos críticos
+Como o trabalho acontece hoje, do primeiro contato à entrega.
 02
-Deals
-Funis, etapas, produtos, metas, comissões e motivos de perda
+Gargalos mapeados
+Onde a operação perde tempo, informação ou margem.
 03
-Inbox
-WhatsApp, Instagram, Messenger, conversas e templates omnichannel
+Responsabilidades claras
+Quem decide, executa, aprova e precisa receber cada informação.
 04
-Reach
-Campanhas, email marketing, redes sociais e segmentos
-05
-Flow
-Regras de automação, fila de jobs e logs de execução
-06
-Insights
-Dashboards de vendas, ROI, performance, forecast Monte Carlo e unit economics
-07
-Guard
-Usuários, papéis, permissões, organizações, auditoria e consentimento
-08
-Heimdall
-Fábrica de Agentes
-Sistema de agentes IA especializados, treinados pro contexto da sua operação: comercial, atendimento, financeiro, suporte, qualificação. O agente comercial via WhatsApp já roda em produção há meses; os demais são configurados com sua linguagem, regras e processos.
-Falar com a equipe
+Plano priorizado
+Uma sequência prática para organizar a operação sem começar pela ferramenta.
+Começar pelo mapa
 — Automações
 03 / 04
 ## Cinco automações. Uma dor de cada vez.
@@ -201,7 +187,7 @@ Garantia documentada + opção de mensalidade recorrente
 Vendido sob demanda. Critérios rígidos de aceitação para manter qualidade.
 — Projetos
 ## Sistemas em produção. Operações reais.
-Cada projeto resolve uma dor específica de uma operação real. Aqui estão alguns que construímos — entre Core, Spark, Studio e produtos próprios.
+Cada projeto resolve uma dor específica de uma operação real. Aqui estão alguns que construímos — entre plataformas, automações, Studio e produtos próprios.
 — 01
 Eventmetrics
 Plataforma SaaS · Studio
@@ -210,8 +196,8 @@ Status
 Em produção
 — 02
 Cortex
-Plataforma operacional · Core
-Implementação completa do DRYOS Core num cliente do segmento de educação. CRM, Inbox omnichannel, automações e Heimdall no comercial via WhatsApp.
+Plataforma operacional
+Estruturação completa da operação comercial de um cliente do segmento de educação, com CRM, Inbox omnichannel, automações e agentes de IA via WhatsApp.
 Status
 Em produção
 — 03
@@ -273,7 +259,7 @@ E-mail
 contato@dryos.com.br
 LinkedIn
 /dryos
-Atendimento em horário comercial. Em breve, atendido por Heimdall — os agentes comerciais do nosso próprio Core.
+Atendimento em horário comercial. Em breve, atendido por Heimdall — os agentes comerciais da própria DRYOS.
 — Crescimento com raiz
 ### Sobre
 Desde 2020, a DRYOS constrói sistemas e operações lucrativas para empresas que precisam crescer com fundação, não no improviso.
