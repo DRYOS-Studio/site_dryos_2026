@@ -21,8 +21,9 @@ Três portas de entrada:
    próximo passo é uma automação, o DRYOS Core ou um projeto sob medida.
 2. **Automação pontual** — resolve uma dor específica. Escopo fixo, conecta nas ferramentas
    que o cliente já usa, no ar em 7 a 14 dias úteis. Recorrência mensal sem fidelidade.
-3. **Projeto sob medida** — sistemas próprios, integrações que não existem em produto e
-   infraestrutura técnica de lançamentos digitais. Escopo desenhado do zero, por projeto.
+3. **Studio** — quando a operação exige um desenho próprio. A DRYOS desenha a forma de
+   trabalhar e constrói o que falta: processo, integração, infraestrutura ou inteligência.
+   Inclui infraestrutura técnica de lançamentos digitais. Escopo desenhado do zero, por projeto.
 
 O **DRYOS Core** entra quando a operação já foi entendida e precisa de uma base contínua para
 fazer processos, dados, atendimento e automações rodarem juntos. São oito módulos integrados:
