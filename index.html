@@ -3478,7 +3478,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="contact-form-label">— Diagnóstico estruturado</span>
         <h3 class="contact-form-title">Conte sobre sua operação.</h3>
         <p class="contact-form-desc">
-          Preencha em 2 minutos. A gente analisa o contexto e responde com um plano de diagnóstico em até 24h úteis.
+          Preencha em 2 minutos. A gente revisa o contexto e entra em contato em até 24 horas úteis para combinar o próximo passo.
         </p>
 
         <form class="contact-form" id="dryos-diagnostico-form" novalidate>
@@ -3547,8 +3547,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </form>
 
         <div class="contact-form-success" id="dryos-diagnostico-success" hidden>
-          <strong>Recebido.</strong>
-          <p>Vamos analisar seu contexto e responder com um plano de diagnóstico em até 24h úteis.</p>
+          <strong>Recebemos suas informações.</strong>
+          <p>Vamos revisar seu contexto e entrar em contato em até 24 horas úteis para combinar o próximo passo.</p>
         </div>
 
         <p class="contact-note">
@@ -3821,6 +3821,7 @@ document.addEventListener('DOMContentLoaded', () => {
           body: payload.toString()
         });
         if (!res.ok) throw new Error('rd-error');
+        submitText.textContent = 'Enviado';
         form.hidden = true;
         successBox.hidden = false;
         successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
