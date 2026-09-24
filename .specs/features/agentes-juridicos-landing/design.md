@@ -5,7 +5,7 @@ Spec: `spec.md`. Decisões e razões: `adr.md`. Aqui ficam só a forma e onde mo
 ## Peças
 
 ```
-agentes-juridicos.dryos.com.br/  ──redirect 307 (has host)──▶  /agentes-juridicos (agentes-juridicos.html)
+dryos.com.br/agentes-juridicos  (agentes-juridicos.html, cleanUrls)
         │  submit JSON (areas = array)
         ▼
   /api/lead (api/lead.js)  ── source = site-agentes-juridicos
@@ -28,8 +28,9 @@ github.com/DRYOS-Studio/agentes-juridicos (público)
 |---|---|---|
 | site | `agentes-juridicos.html` | novo. CSS da própria página, tokens copiados de `automacoes.html` (`:root`), seguindo o padrão "page-local design system" do `.specs/codebase/ARCHITECTURE.md` |
 | site | `api/lead.js` | allowlist, `qualify`, cf_* + retry, `idempotencyKey` por origem, Core ∥ RD |
-| site | `vercel.json` | 1 redirect `/` → `/agentes-juridicos` com `has: [{type: host, value: agentes-juridicos.dryos.com.br}]`, `permanent: false`; `functions.api/lead.js.maxDuration: 30` |
+| site | `vercel.json` | `functions.api/lead.js.maxDuration: 30` |
 | site | `privacidade.html` | os 3 pontos do D1 |
+| site | `sitemap.xml` | a URL nova |
 | site | `.specs/codebase/INTEGRATIONS.md` | o RD via `api/lead.js` (D2) |
 | site | `.vercelignore` | `tests/` e `.specs/` (a regra de qualificação ensinaria a forjar lead) |
 | site | `tests/` | `harness.js`, `legacy-*` (snapshot), `lead.test.js`, `mutate.js`, `vercel-config.test.js`, `page.e2e.js`, `mutate-page.js`, `guide-sync.js` |
@@ -54,7 +55,7 @@ Os comandos ficam em `<code data-cmd>`. O G4 compara esse conjunto com o do READ
 | AC | Onde mora a prova | Forma |
 |---|---|---|
 | L1–L7 | `tests/lead.test.js` + `tests/mutate.js` | `node --test tests/*.test.js` · `node tests/mutate.js` (exit 0 = todas as mutações morreram) |
-| P1 | antes do deploy: `tests/vercel-config.test.js` (redirect de `/` com `has` host; nenhum rewrite de `/`). Depois do domínio: `curl -I` nos 2 hosts | teste + curl |
+| P1 | `tests/vercel-config.test.js` (a página existe; nada mexe em `/`) + curl no preview | teste + curl |
 | P2, P3 | `tests/page.e2e.js` (Playwright, servidor estático local, `/api/lead` interceptado: ok, 502, 504 HTML, rede, 400, duplo envio) | e2e + `tests/mutate-page.js` |
 | P4 | `validate-gate` + passo de teclado no e2e | auditoria |
 | G1–G3 | `scripts/check-pack.sh` (plugin) | execução; G3 roda de novo com `DRYOS-Studio/agentes-juridicos` depois do push |

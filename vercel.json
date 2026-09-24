@@ -20,19 +20,6 @@
       ]
     }
   ],
-  "redirects": [
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "agentes-juridicos.dryos.com.br"
-        }
-      ],
-      "destination": "/agentes-juridicos",
-      "permanent": false
-    }
-  ],
   "functions": {
     "api/lead.js": {
       "maxDuration": 30

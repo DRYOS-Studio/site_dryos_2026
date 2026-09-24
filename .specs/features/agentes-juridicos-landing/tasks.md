@@ -19,6 +19,6 @@ spam); correções D10 nos 8 e nos 57.
 
 1. Criar no RD os 11 campos `cf_*` como **texto**: `cf_cargo cf_porte cf_areas cf_whatsapp_quem cf_fora_horario cf_cobranca cf_sistema cf_a_receber cf_dor_principal cf_cidade cf_qualificacao`.
 2. Conferir o fluxo da automação do Core (R5): não mandar WhatsApp para `webhook.source = site-agentes-juridicos`, ver o `webhookChannelId` e, se quiser os campos no card, usar `set_contact_field`.
-3. DNS `agentes-juridicos.dryos.com.br` → Vercel, com o domínio adicionado no projeto do site.
+3. Merge do PR #18 (a URL `dryos.com.br/agentes-juridicos` já funciona, sem DNS).
 4. Org `DRYOS-Studio`: 2FA obrigatório + branch protection no `agentes-juridicos` (sec W8).
 5. Um lead real de teste, conferido no RD (com `cf_*`) e no Core.

@@ -19,7 +19,7 @@ Browser
         +-- static portfolio sections
         +-- vanilla JS: tracking capture
 
-Vercel serves static files, runs `api/lead.js`, and applies headers and the subdomain redirect from vercel.json.
+Vercel serves static files, runs `api/lead.js`, and applies headers from vercel.json.
 ```
 
 ## Identified Patterns

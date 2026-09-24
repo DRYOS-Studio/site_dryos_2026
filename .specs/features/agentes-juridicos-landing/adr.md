@@ -1,16 +1,14 @@
 # ADRs — Landing `agentes-juridicos` (2026-09-24)
 
-## ADR-1: página estática no `site_dryos_2026`, servida por host
+## ADR-1: página estática no `site_dryos_2026`, em `/agentes-juridicos`
 
-**Decisão:** `agentes-juridicos.html` no repo do site; o subdomínio aponta para o mesmo projeto
-Vercel, com **redirect** de `/` condicionado ao host para `/agentes-juridicos`. Rewrite não serve:
-o filesystem tem precedência sobre rewrites (doc `vercel-json`: "precedence is given to the
-filesystem prior to rewrites being applied"), e `/` casa com `index.html`.
+**Decisão:** `agentes-juridicos.html` no repo do site, servida como `dryos.com.br/agentes-juridicos`.
 **Razão:** o `api/lead.js` já integra RD e Core, com honeypot e allowlist, e o `RD_TOKEN` já está no
-projeto. Um projeto Next.js separado duplicaria a integração e o segredo.
-**Custo aceito:** a URL mostra `/agentes-juridicos`; o deploy fica acoplado ao site principal; o resto
-do site também responde no subdomínio (baixo impacto; a landing declara `canonical`).
-**Alternativa descartada:** Next.js separado.
+projeto. Sem subdomínio não há DNS nem regra por host.
+**Histórico:** a primeira versão usava o subdomínio `agentes-juridicos.dryos.com.br` com redirect por host.
+Rewrite não serviria, porque o filesystem tem precedência sobre rewrites e `/` casa com `index.html`.
+O Rafael trocou para a URL no site (2026-09-24).
+**Alternativa descartada:** Next.js separado; subdomínio.
 
 ## ADR-2: qualificação calculada no servidor
 

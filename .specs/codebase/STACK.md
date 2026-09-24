@@ -24,7 +24,7 @@
 - API Style: one JSON endpoint, `POST /api/lead` (Vercel function).
 - Database: none.
 - Authentication: none.
-- Server configuration: `vercel.json` has security headers, a host-conditioned redirect (`agentes-juridicos.dryos.com.br/` → `/agentes-juridicos`) and `maxDuration` for `api/lead.js`.
+- Server configuration: `vercel.json` has security headers and `maxDuration` for `api/lead.js`.
 
 ## Testing
 

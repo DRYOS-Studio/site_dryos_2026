@@ -1,4 +1,4 @@
-# Spec — Landing `agentes-juridicos.dryos.com.br`
+# Spec — Landing `dryos.com.br/agentes-juridicos`
 
 **Objetivo:** trocar a abordagem fria da SDR por lead que chega sozinho. O advogado responde um
 formulário sobre a rotina do escritório e, em troca, recebe um plugin do Claude Code com 8 agentes
@@ -12,7 +12,7 @@ jurídicos e um passo a passo de instalação e teste. O lead vai para o RD Stat
 | D1 | Pacote = amostra ICP: 8 agentes, 2 por área (trabalhista, previdenciário, família, consumidor). Os outros 49 não saem. |
 | D2 | Distribuição: plugin em repo **público** `DRYOS-Studio/agentes-juridicos`. O formulário é filtro *soft*: quem tiver o link instala sem preencher. Aceito. |
 | D3 | Destino: RD Station (evento `agents_escritorio_adv`) **e** Core, com as respostas de qualificação nos dois. |
-| D4 | Domínio `agentes-juridicos.dryos.com.br`. |
+| D4 | URL `dryos.com.br/agentes-juridicos`, dentro do site. O subdomínio foi descartado pelo Rafael em 2026-09-24, depois do PR #18. |
 | D5 | A página mora no `site_dryos_2026` e reusa o `api/lead.js`. |
 | D6 | O lead **não** dispara a Marina automaticamente. A SDR liga. |
 | D7 | Qualificação = ICP completo (3–30 pessoas, Niterói, área de volume) + critérios da Marina. |
@@ -63,7 +63,7 @@ Coluna **Mutação**: a implementação errada que o AC tem de reprovar.
 | L5 | As outras 3 origens (`site-dryos-diagnostico`, `site-apresentacao-core`, `site-automacoes`) mandam ao RD e ao Core o mesmo corpo de antes, sem `cf_*`. Única diferença para todas as origens: `utm_*` viram string de até 120 caracteres (security-gate W2). | teste de snapshot contra o corpo atual | `cf-para-todos`: anexar `cf_*` para qualquer origem |
 | L6 | Se o RD responder 400 à conversão com `cf_*`, a função reenvia uma vez sem `cf_*`. A conversão não se perde se um campo não existir no RD. | teste com fetch mock | `sem-retry`: não reenviar |
 | L7 | Nesta origem, `idempotencyKey = phone:email:site-agentes-juridicos`. O Core descarta chave repetida enquanto o evento existir (`outbox.service.ts:89-109`, `ON CONFLICT DO NOTHING`; eventos PROCESSED são podados em 7 dias, `automations.constants.ts:122`), e quem converteu em outra página perderia esta. | teste | `chave-legada` |
-| P1 | `GET /` no host `agentes-juridicos.dryos.com.br` redireciona para `/agentes-juridicos`; `GET /` no `dryos.com.br` continua servindo a home. (Rewrite não serve: o filesystem tem precedência, doc vercel-json.) | teste do `vercel.json` + `curl -I` nos dois hosts depois do domínio | `redirect-sem-host` · `usa-rewrite` |
+| P1 | `GET /agentes-juridicos` serve a landing; `GET /` continua servindo a home (nada redireciona nem reescreve `/`). | `tests/vercel-config.test.js` + curl no preview e em produção | `redirect-home`: um redirect/rewrite de `/` |
 | P2 | O guia aparece só depois do envio: com `ok:true`, ou, em erro (D8: 5xx, resposta não-JSON, rede, timeout de 25 s), junto com um link de WhatsApp. Um 400 (nome, e-mail ou WhatsApp inválido) não libera o guia: mostra o erro para correção, porque o lead ainda é salvável. Durante o envio, o botão fica desabilitado com "Enviando…". | Playwright com a rota mockada ok, 502, HTML 504, abort | `mostra-antes` · `erro-sem-guia` · `rede-sem-guia` · `duplo-envio` · `sem-enviando` · `evento-no-erro` (`json-sem-try` é equivalente: a rejeição cai no `.catch`) |
 | P3 | Sucesso dispara `dataLayer` `generate_lead` com `form_id: 'agentes-juridicos'`. Em erro, não dispara. | Playwright | `evento-no-erro`: disparar no erro |
 | P4 | Cada campo tem label; grupos de opção usam `fieldset`/`legend`; o form é navegável só por teclado; o aviso de privacidade linka `/privacidade`; em 375 px, sem scroll horizontal. | validate-gate + Playwright com teclado e viewport 375 | — (auditoria) |
@@ -82,7 +82,7 @@ Coluna **Mutação**: a implementação errada que o AC tem de reprovar.
 - **R5:** o fluxo da automação do Core ligada ao `CORE_WEBHOOK_TOKEN` define se sai WhatsApp e se os campos vão para o card (`set_contact_field`). O D6 depende de o Rafael conferir esse fluxo.
 - **R2:** premissa de que o app desktop deixa adicionar marketplace próprio pela tela. Não verificado; os docs só dizem "+ → Plugins". Se não der para confirmar, o guia usa o terminal, que é o caminho que o G3 prova.
 - **R3:** exige plano pago do Claude (Pro ou superior; o gratuito não inclui Claude Code). O guia diz isso antes do passo 1.
-- **R4:** resolvida no Design: rewrite de `/` não dispara (o filesystem tem precedência, doc vercel-json), por isso é redirect com `has: host`. O P1 prova depois do domínio ligado.
+- **R4:** sem objeto desde a troca do D4 (não há mais regra por host).
 - **R6:** no Windows, os agentes chamam `python3`. O instalador do python.org não cria esse comando. Na minha leitura, o Python da Microsoft Store cria o alias, mas não está verificado e não há Windows para testar. O guia manda instalar pela Store e o FAQ cobre o "python3 não encontrado".
 
 ## Fora de escopo

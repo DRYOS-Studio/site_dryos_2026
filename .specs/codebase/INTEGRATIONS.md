@@ -16,7 +16,6 @@
   - `X-Content-Type-Options: nosniff`
   - `X-Frame-Options: DENY`
   - `Referrer-Policy: strict-origin-when-cross-origin`
-- redirect `/` → `/agentes-juridicos` only for host `agentes-juridicos.dryos.com.br` (rewrite would not fire: filesystem wins over rewrites)
 - `functions.api/lead.js.maxDuration: 30`
 
 **Operational notes:** `README.md` documents both drag-and-drop deploy and Git-based deploy. The repository is already connected to GitHub locally.

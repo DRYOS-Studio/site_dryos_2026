@@ -137,6 +137,6 @@ Spec-driven documentation generated for project analysis and future planning.
 ## Added 2026-09-24 (landing agentes-juridicos)
 
 - `api/lead.js`: Vercel function de captura de lead (RD + Core).
-- `agentes-juridicos.html`: landing do subdomínio `agentes-juridicos.dryos.com.br` (redirect em `vercel.json`).
+- `agentes-juridicos.html`: landing em `/agentes-juridicos`.
 - `tests/`: testes e baterias de mutação (fora do deploy).
 - `.specs/features/agentes-juridicos-landing/`: spec, design, ADRs, tasks e gates.
