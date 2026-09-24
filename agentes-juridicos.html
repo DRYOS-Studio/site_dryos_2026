@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="8 agentes de IA para o Claude Code que redigem peças trabalhistas, previdenciárias, de família e de consumidor. Grátis para escritórios de advocacia.">
+<title>Agentes jurídicos para o Claude | DRYOS</title>
+<link rel="canonical" href="https://www.dryos.com.br/agentes-juridicos">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:title" content="8 agentes jurídicos para o Claude, grátis">
+<meta property="og:description" content="Agentes que redigem peças trabalhistas, previdenciárias, de família e de consumidor. Instale e teste hoje no seu escritório.">
+<meta property="og:url" content="https://www.dryos.com.br/agentes-juridicos">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@500;600;700;800&family=Onest:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KS9H2KN');</script>
+<!-- End Google Tag Manager -->
+
+<style>
+  :root {
+    --bg: #FAFAF8;
+    --ink: #0A0A0A;
+    --ink-soft: #1A1A1A;
+    --oak: #1F3A2A;
+    --oak-light: #4A6A52;
+    --oak-tint: #E9EEE9;
+    --mute: #6B6B68;
+    --mute-soft: #9A9A95;
+    --line: #1A1A1A14;
+    --line-strong: #1A1A1A2A;
+    --surface: #F2F2EE;
+    --clay: #8A4A33;
+    --wa: #17603F;
+
+    --font-display: "Funnel Display", "Helvetica Neue", "Segoe UI", system-ui, -apple-system, sans-serif;
+    --font-body: "Onest", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+    --max: 1280px;
+    --gutter: clamp(1.25rem, 4vw, 4rem);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  body { font-family: var(--font-body); background: var(--bg); color: var(--ink); font-size: 16px; line-height: 1.55; letter-spacing: -0.005em; overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--oak); color: var(--bg); }
+  :focus-visible { outline: 2px solid var(--oak); outline-offset: 3px; border-radius: 2px; }
+  [hidden] { display: none !important; }
+
+  .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); position: relative; }
+  .skip-link { position: absolute; left: 1rem; top: -4rem; z-index: 200; padding: .65rem .9rem; background: var(--ink); color: var(--bg); font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; }
+  .skip-link:focus-visible { top: 1rem; }
+
+  /* ---------- NAV ---------- */
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(250,250,248,0.85); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid var(--line); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 1rem var(--gutter); max-width: var(--max); margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 0.6rem; }
+  .brand svg { width: 26px; height: 26px; border-radius: 6px; }
+  .brand-name { font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: -0.02em; }
+  .brand-name span { color: var(--oak-light); font-weight: 500; }
+  .nav-links { display: flex; gap: 2rem; align-items: center; }
+  .nav-links a { font-size: 13px; color: var(--mute); font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-links a.nav-cta { background: var(--ink); color: #fff; padding: 0.55rem 1rem; font-size: 13px; font-weight: 600; border-radius: 7px; transition: background .2s; }
+  .nav-links a.nav-cta:hover { background: var(--oak); }
+  @media (max-width: 860px) { .nav-links a:not(.nav-cta) { display: none; } }
+  @media (max-width: 460px) { .brand-name span { display: none; } .nav-links a.nav-cta { white-space: nowrap; padding: 0.55rem 0.85rem; } }
+
+  /* ---------- SECTIONS ---------- */
+  section { border-bottom: 1px solid var(--line); }
+  .sec-pad { padding: clamp(4rem, 9vw, 7rem) 0; }
+  .label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--oak-light); display: block; margin-bottom: 1.2rem; }
+  .sec-title { font-family: var(--font-display); font-weight: 700; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.04; letter-spacing: -0.03em; text-wrap: balance; max-width: 20ch; }
+  .sec-title strong { color: var(--oak); font-weight: 700; }
+  .sec-intro { color: var(--mute); font-size: clamp(1rem,1.6vw,1.18rem); max-width: 60ch; margin-top: 1.25rem; line-height: 1.6; }
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .reveal { opacity: 1; transform: none; transition: none; } }
+
+  /* ---------- HERO ---------- */
+  .hero { padding: clamp(3.5rem,8vw,6.5rem) 0 clamp(3rem,7vw,5rem); }
+  .hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--oak); background: var(--oak-tint); border: 1px solid var(--line); padding: 0.35rem 0.7rem; border-radius: 100px; margin-bottom: 1.6rem; }
+  .hero-tag b { width: 6px; height: 6px; border-radius: 50%; background: var(--oak); }
+  .hero h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.5rem, 6.6vw, 5rem); line-height: 0.98; letter-spacing: -0.04em; text-wrap: balance; max-width: 18ch; }
+  .hero h1 em { font-style: normal; color: var(--oak); }
+  .hero-sub { color: var(--mute); font-size: clamp(1.05rem,1.8vw,1.3rem); max-width: 54ch; margin-top: 1.6rem; line-height: 1.55; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2.2rem; }
+  .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.3rem; border-radius: 9px; font-size: 14px; font-weight: 600; transition: transform .15s, background .2s; border: none; cursor: pointer; font-family: var(--font-body); }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--oak); color: var(--bg); }
+  .btn-primary:hover { background: var(--ink); }
+  .btn-ghost { border: 1px solid var(--line-strong); color: var(--ink); background: transparent; }
+  .btn-ghost:hover { background: var(--surface); }
+  .hero-req { margin-top: 1.4rem; font-size: 13px; color: var(--mute); max-width: 60ch; }
+  .hero-req strong { color: var(--ink-soft); font-weight: 600; }
+
+  /* ---------- AGENTES ---------- */
+  .cat-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--line-strong); border: 1px solid var(--line-strong); border-radius: 16px; overflow: hidden; margin-top: 3rem; }
+  @media (max-width: 1040px) { .cat-grid { grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 640px) { .cat-grid { grid-template-columns: 1fr; } }
+  .cat { background: var(--bg); padding: 1.6rem 1.5rem 1.8rem; }
+  .cat .ctag { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--oak-light); }
+  .cat h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; letter-spacing: -0.02em; margin-top: 1.1rem; }
+  .cat h3:first-of-type { margin-top: 0.5rem; }
+  .cat p { font-size: 13.5px; color: var(--mute); line-height: 1.5; margin-top: 0.3rem; }
+  .cat-note { margin-top: 1.6rem; font-size: 13.5px; color: var(--mute); max-width: 72ch; }
+  .cat-note strong { color: var(--ink-soft); font-weight: 500; }
+
+  /* ---------- COMO ---------- */
+  .steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--line-strong); border: 1px solid var(--line-strong); border-radius: 16px; overflow: hidden; margin-top: 3rem; }
+  @media (max-width: 760px) { .steps { grid-template-columns: 1fr; } }
+  .step { background: var(--bg); padding: 1.6rem 1.5rem 1.8rem; }
+  .step .snum { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; color: var(--oak-light); }
+  .step h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; letter-spacing: -0.02em; margin-top: 0.4rem; }
+  .step p { font-size: 13.5px; color: var(--mute); line-height: 1.55; margin-top: 0.3rem; }
+
+  /* ---------- FORM ---------- */
+  .form-section { background: var(--oak); color: var(--bg); border-bottom: none; }
+  .form-section .label { color: #9DBFA8; }
+  .form-section .sec-title { color: var(--bg); }
+  .form-section .sec-intro { color: #C8D6CB; }
+  .lead-form { max-width: 720px; margin-top: 2.5rem; background: var(--bg); color: var(--ink); border-radius: 16px; padding: clamp(1.2rem, 3vw, 2rem); box-shadow: 0 24px 60px -24px #00000055; position: relative; }
+  .form-progress { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--mute); margin-bottom: 1.2rem; }
+  .form-step h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; letter-spacing: -0.02em; margin-bottom: 1.2rem; }
+  fieldset { border: none; margin-bottom: 1.4rem; }
+  legend { font-weight: 600; font-size: 15px; color: var(--ink-soft); margin-bottom: 0.6rem; }
+  .opts { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .opt { position: relative; }
+  .opt input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .opt span { display: inline-block; padding: 0.55rem 0.85rem; border: 1px solid var(--line-strong); border-radius: 9px; font-size: 14px; background: #fff; cursor: pointer; transition: background .15s, border-color .15s; }
+  .opt input:checked + span { background: var(--oak-tint); border-color: var(--oak); color: var(--oak); font-weight: 600; }
+  .opt input:focus-visible + span { outline: 2px solid var(--oak); outline-offset: 2px; }
+  .row { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 1rem; }
+  .row label { font-weight: 600; font-size: 14px; color: var(--ink-soft); }
+  .row input { font-family: var(--font-body); font-size: 15px; padding: 0.7rem 0.85rem; border: 1px solid var(--line-strong); border-radius: 9px; background: #fff; color: var(--ink); width: 100%; }
+  .row input:focus { outline: 2px solid var(--oak); outline-offset: 1px; border-color: var(--oak); }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .form-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; align-items: center; margin-top: 0.4rem; }
+  .form-actions .btn-primary { flex: 1 1 220px; justify-content: center; padding: 0.9rem 1.3rem; font-size: 15px; }
+  .btn:disabled { opacity: 0.6; cursor: default; transform: none; }
+  .lead-status { font-size: 13.5px; margin-top: 0.9rem; min-height: 1.2em; }
+  .lead-status.err { color: #A8442C; }
+  .privacy { font-size: 12px; color: var(--mute); margin-top: 0.9rem; }
+  .privacy a { text-decoration: underline; }
+
+  /* ---------- GUIA ---------- */
+  .guide { background: var(--bg); }
+  .guide-notice { background: var(--oak-tint); border: 1px solid var(--line); border-radius: 12px; padding: 1.1rem 1.3rem; margin-top: 2rem; max-width: 72ch; font-size: 14.5px; }
+  .guide-notice.err { background: #F6EDE8; }
+  .guide-notice a { font-weight: 600; text-decoration: underline; color: var(--wa); }
+  .tabs { display: flex; gap: 0.5rem; margin-top: 2.5rem; flex-wrap: wrap; }
+  .tabs button { font-family: var(--font-body); font-size: 14px; font-weight: 600; padding: 0.6rem 1.1rem; border-radius: 9px; border: 1px solid var(--line-strong); background: #fff; color: var(--ink); cursor: pointer; }
+  .tabs button[aria-selected="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .gsteps { list-style: none; counter-reset: g; margin-top: 1.6rem; max-width: 780px; }
+  .gsteps > li { counter-increment: g; position: relative; padding: 0 0 1.6rem 2.8rem; }
+  .gsteps > li::before { content: counter(g); position: absolute; left: 0; top: 0; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--oak); color: #fff; font-family: var(--font-mono); font-size: 12px; display: grid; place-items: center; }
+  .gsteps h4 { font-family: var(--font-display); font-weight: 700; font-size: 1.12rem; letter-spacing: -0.015em; }
+  .gsteps p { font-size: 14.5px; color: var(--mute); margin-top: 0.3rem; max-width: 64ch; }
+  .gsteps p a { text-decoration: underline; color: var(--ink-soft); }
+  .cmd { display: flex; align-items: stretch; margin-top: 0.6rem; max-width: 640px; background: var(--ink); border-radius: 9px; overflow: hidden; }
+  .cmd code { flex: 1; font-family: var(--font-mono); font-size: 13px; color: #EDEDE8; padding: 0.75rem 0.9rem; overflow-x: auto; white-space: pre; }
+  .cmd button { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.05em; text-transform: uppercase; background: #ffffff14; color: #EDEDE8; border: none; padding: 0 0.9rem; cursor: pointer; }
+  .cmd button:hover { background: #ffffff26; }
+  .prompt-box code { white-space: pre-wrap; }
+  .guide-sub { font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; letter-spacing: -0.02em; margin-top: 2.6rem; }
+  .faq-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.6rem 3rem; margin-top: 1.6rem; }
+  @media (max-width: 760px) { .faq-grid { grid-template-columns: 1fr; } }
+  .faq-item h4 { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; letter-spacing: -0.01em; }
+  .faq-item p { color: var(--mute); font-size: 14px; margin-top: 0.45rem; line-height: 1.55; max-width: 52ch; }
+  .faq-item code { font-family: var(--font-mono); font-size: 12.5px; background: var(--surface); padding: 0.1rem 0.35rem; border-radius: 4px; }
+
+  /* ---------- ROTINA ---------- */
+  .rotina { background: var(--ink); color: var(--bg); }
+  .rotina .label { color: #9DBFA8; }
+  .rotina .sec-title { color: var(--bg); }
+  .rotina .sec-title strong { color: #9DBFA8; }
+  .rotina .sec-intro { color: #A6A6A0; }
+  .rotina .btn-primary { background: var(--bg); color: var(--ink); margin-top: 2rem; }
+  .rotina .btn-primary:hover { background: #9DBFA8; }
+
+  footer { padding: 2.5rem var(--gutter); }
+  .foot-inner { max-width: var(--max); margin: 0 auto; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; }
+  .foot-links { display: flex; flex-wrap: wrap; align-items: center; gap: 1.4rem; }
+  .foot-links a, .foot-links .mono { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--mute); }
+  .foot-links a:hover { color: var(--oak); }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS9H2KN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://www.dryos.com.br/" class="brand" aria-label="DRYOS — página inicial">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="5" fill="#1F3A2A"/><path fill="#FAFAF8" fill-rule="evenodd" d="M9 8h7a8 8 0 0 1 0 16H9zm4 4v8h3a4 4 0 0 0 0-8z"/></svg>
+      <span class="brand-name">DRYOS <span>Agentes jurídicos</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#agentes">Os agentes</a>
+      <a href="#como">Como funciona</a>
+      <a href="#receber" class="nav-cta">Receber os agentes</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main-content" tabindex="-1">
+
+<header class="hero">
+  <div class="container">
+    <span class="hero-tag reveal"><b></b>Grátis para escritórios de advocacia</span>
+    <h1 class="reveal">8 agentes de IA que redigem peças. <em>Teste hoje no seu escritório.</em></h1>
+    <p class="hero-sub reveal">Agentes para o Claude Code nas áreas trabalhista, previdenciária, de família e do consumidor. Eles entrevistam você sobre o caso, redigem a peça e entregam com checklist. Você revisa e assina.</p>
+    <div class="hero-actions reveal">
+      <a href="#receber" class="btn btn-primary">Receber os agentes
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#agentes" class="btn btn-ghost">Ver os 8 agentes</a>
+    </div>
+    <p class="hero-req reveal"><strong>Requisito:</strong> plano pago do Claude (Pro ou superior). O plano gratuito não inclui o Claude Code.</p>
+  </div>
+</header>
+
+<section class="sec-pad" id="agentes">
+  <div class="container">
+    <span class="label">— Os agentes</span>
+    <h2 class="sec-title reveal">Dois agentes por área, <strong>prontos para a rotina do escritório</strong>.</h2>
+    <div class="cat-grid reveal">
+      <div class="cat">
+        <span class="ctag">Trabalhista</span>
+        <h3>Reclamação trabalhista</h3>
+        <p>Inicial com pedido líquido (CLT 840) e prescrição conferida.</p>
+        <h3>Cálculo de verbas rescisórias</h3>
+        <p>Verbas por tipo de desligamento, FGTS e multa.</p>
+      </div>
+      <div class="cat">
+        <span class="ctag">Previdenciário</span>
+        <h3>Aposentadoria por tempo</h3>
+        <p>Regras de transição da EC 103/2019 comparadas para o seu cliente.</p>
+        <h3>BPC/LOAS</h3>
+        <p>Requisitos, renda per capita e requerimento ou ação.</p>
+      </div>
+      <div class="cat">
+        <span class="ctag">Família</span>
+        <h3>Divórcio consensual</h3>
+        <p>Minuta de escritura com partilha e averbações.</p>
+        <h3>Ação de alimentos</h3>
+        <p>Necessidade × possibilidade, provisórios e cálculo.</p>
+      </div>
+      <div class="cat">
+        <span class="ctag">Consumidor</span>
+        <h3>Prática abusiva</h3>
+        <p>Ação com base nos arts. 39 e 51 do CDC.</p>
+        <h3>Vício de produto ou serviço</h3>
+        <p>Vício × defeito, prazos e pedidos.</p>
+      </div>
+    </div>
+    <p class="cat-note reveal"><strong>O que sai deles é rascunho.</strong> O advogado revisa e assina, e a responsabilidade técnica continua dele (EAOAB, art. 32).</p>
+  </div>
+</section>
+
+<section class="sec-pad" id="como">
+  <div class="container">
+    <span class="label">— Como funciona</span>
+    <h2 class="sec-title reveal">Responda, instale, <strong>teste com um caso fictício</strong>.</h2>
+    <div class="steps reveal">
+      <div class="step"><span class="snum">01</span><h3>Conte sobre o escritório</h3><p>Algumas perguntas sobre a rotina do escritório e para onde mandar os agentes.</p></div>
+      <div class="step"><span class="snum">02</span><h3>Instale no Claude Code</h3><p>Passo a passo para Mac e Windows, com os comandos prontos para copiar.</p></div>
+      <div class="step"><span class="snum">03</span><h3>Faça o teste</h3><p>Um caso fictício pronto para colar. Você vê o agente trabalhando antes de usar num caso real.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-pad form-section" id="receber">
+  <div class="container">
+    <span class="label">— Receber os agentes</span>
+    <h2 class="sec-title">Conte um pouco do escritório e <strong style="color:#9DBFA8">receba o passo a passo</strong>.</h2>
+    <p class="sec-intro">As respostas ajudam a gente a entender a rotina de escritórios como o seu. O guia de instalação aparece logo depois do envio.</p>
+
+    <form class="lead-form" id="leadForm" novalidate>
+      <input class="hp" id="hp_ref" name="hp_ref" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p class="form-progress" id="formProgress" aria-live="polite">Etapa 1 de 2 · Sobre o escritório</p>
+
+      <div class="form-step" id="step1">
+        <fieldset><legend>Você é…</legend><div class="opts">
+          <label class="opt"><input type="radio" name="cargo" value="socio"><span>Sócio(a)</span></label>
+          <label class="opt"><input type="radio" name="cargo" value="advogado"><span>Advogado(a)</span></label>
+          <label class="opt"><input type="radio" name="cargo" value="secretaria"><span>Secretaria / recepção</span></label>
+          <label class="opt"><input type="radio" name="cargo" value="estagiario"><span>Estagiário(a)</span></label>
+          <label class="opt"><input type="radio" name="cargo" value="juridico_empresa"><span>Jurídico de empresa</span></label>
+          <label class="opt"><input type="radio" name="cargo" value="estudante"><span>Estudante</span></label>
+        </div></fieldset>
+        <fieldset><legend>Quantas pessoas trabalham no escritório?</legend><div class="opts">
+          <label class="opt"><input type="radio" name="porte" value="solo"><span>Só eu</span></label>
+          <label class="opt"><input type="radio" name="porte" value="2"><span>2</span></label>
+          <label class="opt"><input type="radio" name="porte" value="3_10"><span>3 a 10</span></label>
+          <label class="opt"><input type="radio" name="porte" value="11_30"><span>11 a 30</span></label>
+          <label class="opt"><input type="radio" name="porte" value="30_mais"><span>Mais de 30</span></label>
+        </div></fieldset>
+        <fieldset><legend>Áreas de atuação (marque todas)</legend><div class="opts">
+          <label class="opt"><input type="checkbox" name="areas" value="trabalhista"><span>Trabalhista</span></label>
+          <label class="opt"><input type="checkbox" name="areas" value="previdenciario"><span>Previdenciário</span></label>
+          <label class="opt"><input type="checkbox" name="areas" value="familia"><span>Família</span></label>
+          <label class="opt"><input type="checkbox" name="areas" value="consumidor"><span>Consumidor</span></label>
+          <label class="opt"><input type="checkbox" name="areas" value="civel"><span>Cível</span></label>
+          <label class="opt"><input type="checkbox" name="areas" value="criminal"><span>Criminal</span></label>
+          <label class="opt"><input type="checkbox" name="areas" value="tributario"><span>Tributário</span></label>
+          <label class="opt"><input type="checkbox" name="areas" value="empresarial"><span>Empresarial</span></label>
+          <label class="opt"><input type="checkbox" name="areas" value="imobiliario"><span>Imobiliário</span></label>
+        </div></fieldset>
+        <fieldset><legend>Quem responde o WhatsApp dos clientes?</legend><div class="opts">
+          <label class="opt"><input type="radio" name="whatsapp_quem" value="socio"><span>O sócio</span></label>
+          <label class="opt"><input type="radio" name="whatsapp_quem" value="equipe"><span>Alguém da equipe</span></label>
+          <label class="opt"><input type="radio" name="whatsapp_quem" value="sem_responsavel"><span>Quem estiver livre</span></label>
+          <label class="opt"><input type="radio" name="whatsapp_quem" value="nao_atende"><span>Não atendemos por WhatsApp</span></label>
+        </div></fieldset>
+        <fieldset><legend>Quando chega mensagem à noite ou no fim de semana…</legend><div class="opts">
+          <label class="opt"><input type="radio" name="fora_horario" value="na_hora"><span>Alguém responde na hora</span></label>
+          <label class="opt"><input type="radio" name="fora_horario" value="dia_seguinte"><span>Responde no dia útil seguinte</span></label>
+          <label class="opt"><input type="radio" name="fora_horario" value="demora_dias"><span>Às vezes leva dias</span></label>
+        </div></fieldset>
+        <fieldset><legend>Quem cobra honorário atrasado?</legend><div class="opts">
+          <label class="opt"><input type="radio" name="cobranca" value="socio"><span>O sócio</span></label>
+          <label class="opt"><input type="radio" name="cobranca" value="equipe"><span>Alguém da equipe</span></label>
+          <label class="opt"><input type="radio" name="cobranca" value="sistema"><span>Um sistema cobra</span></label>
+          <label class="opt"><input type="radio" name="cobranca" value="ninguem"><span>Ninguém cobra</span></label>
+        </div></fieldset>
+        <fieldset><legend>Onde ficam os processos e a agenda?</legend><div class="opts">
+          <label class="opt"><input type="radio" name="sistema" value="software_juridico"><span>Software jurídico</span></label>
+          <label class="opt"><input type="radio" name="sistema" value="planilha"><span>Planilha</span></label>
+          <label class="opt"><input type="radio" name="sistema" value="agenda_papel"><span>Agenda ou papel</span></label>
+          <label class="opt"><input type="radio" name="sistema" value="nenhum"><span>Não temos controle</span></label>
+        </div></fieldset>
+        <fieldset><legend>Você sabe quanto tem de honorário a receber?</legend><div class="opts">
+          <label class="opt"><input type="radio" name="a_receber" value="sei"><span>Sei de cabeça</span></label>
+          <label class="opt"><input type="radio" name="a_receber" value="mais_ou_menos"><span>Mais ou menos</span></label>
+          <label class="opt"><input type="radio" name="a_receber" value="nao_sei"><span>Não sei</span></label>
+        </div></fieldset>
+        <fieldset><legend>O que mais pesa hoje?</legend><div class="opts">
+          <label class="opt"><input type="radio" name="dor_principal" value="whatsapp"><span>WhatsApp que não para</span></label>
+          <label class="opt"><input type="radio" name="dor_principal" value="cliente_esfria"><span>Cliente novo que esfria</span></label>
+          <label class="opt"><input type="radio" name="dor_principal" value="cobranca"><span>Honorário que ninguém cobra</span></label>
+          <label class="opt"><input type="radio" name="dor_principal" value="sistemas"><span>Sistemas que não conversam</span></label>
+          <label class="opt"><input type="radio" name="dor_principal" value="numeros"><span>Decidir sem número</span></label>
+          <label class="opt"><input type="radio" name="dor_principal" value="pecas"><span>Peça começada do zero</span></label>
+        </div></fieldset>
+        <div class="form-actions">
+          <button type="button" class="btn btn-primary" id="toStep2">Continuar</button>
+        </div>
+      </div>
+
+      <div class="form-step" id="step2" hidden>
+        <h3 tabindex="-1" id="step2Title">Para onde mandamos os agentes</h3>
+        <div class="row"><label for="lf-name">Nome</label><input id="lf-name" type="text" required autocomplete="name"></div>
+        <div class="row"><label for="lf-email">E-mail</label><input id="lf-email" type="email" required autocomplete="email"></div>
+        <div class="row"><label for="lf-phone">WhatsApp (com DDD)</label><input id="lf-phone" type="tel" required autocomplete="tel" placeholder="(21) 99999-9999"></div>
+        <div class="row"><label for="lf-cidade">Cidade do escritório</label><input id="lf-cidade" type="text" required autocomplete="address-level2" maxlength="80"></div>
+        <div class="form-actions">
+          <button type="button" class="btn btn-ghost" id="backStep1">Voltar</button>
+          <button type="submit" class="btn btn-primary" id="lf-submit">Receber os agentes</button>
+        </div>
+        <p class="privacy">Usamos seus dados para liberar os agentes e para a nossa equipe entrar em contato sobre a rotina do escritório. Veja a <a href="/privacidade">política de privacidade</a>.</p>
+      </div>
+      <div class="lead-status" id="lf-status" role="status" aria-live="polite"></div>
+    </form>
+    <p class="hp" id="copyStatus" role="status" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="sec-pad guide" id="guia" hidden>
+  <div class="container">
+    <span class="label">— Passo a passo</span>
+    <h2 class="sec-title" tabindex="-1" id="guiaTitle">Instale os agentes <strong>e faça o teste</strong>.</h2>
+    <p class="guide-notice" id="guideOk" hidden>Recebemos suas respostas. Siga os passos abaixo; se travar em algum, fale com a gente pelo <a href="https://wa.me/5521967287595?text=Oi%2C%20vim%20pela%20p%C3%A1gina%20dos%20agentes%20jur%C3%ADdicos" target="_blank" rel="noopener">WhatsApp</a>.</p>
+    <p class="guide-notice err" id="guideErr" hidden>Não conseguimos registrar seus dados agora, mas o guia está liberado. Se quiser que a gente fale com você, mande um oi no <a href="https://wa.me/5521967287595?text=Oi%2C%20vim%20pela%20p%C3%A1gina%20dos%20agentes%20jur%C3%ADdicos" target="_blank" rel="noopener">WhatsApp</a>.</p>
+
+    <div class="tabs" role="tablist" aria-label="Sistema operacional">
+      <button type="button" role="tab" id="tab-mac" aria-controls="panel-mac" aria-selected="true">Mac</button>
+      <button type="button" role="tab" id="tab-win" aria-controls="panel-win" aria-selected="false" tabindex="-1">Windows</button>
+    </div>
+
+    <div role="tabpanel" id="panel-mac" aria-labelledby="tab-mac">
+      <ol class="gsteps">
+        <li><h4>Abra o Terminal</h4><p>Tecle <strong>Cmd + Espaço</strong>, digite "Terminal" e aperte Enter.</p></li>
+        <li><h4>Instale as ferramentas da Apple</h4><p>Elas trazem o git e o Python. Uma janela vai pedir confirmação: clique em <strong>Instalar</strong>. Se aparecer "already installed", pode seguir.</p>
+          <div class="cmd"><code data-cmd>xcode-select --install</code><button type="button" data-copy>Copiar</button></div></li>
+        <li><h4>Instale o Claude Code</h4>
+          <div class="cmd"><code data-cmd>curl -fsSL https://claude.ai/install.sh | bash</code><button type="button" data-copy>Copiar</button></div></li>
+        <li><h4>Crie uma pasta para os agentes</h4>
+          <div class="cmd"><code data-cmd>mkdir -p ~/agentes-juridicos &amp;&amp; cd ~/agentes-juridicos</code><button type="button" data-copy>Copiar</button></div></li>
+      </ol>
+    </div>
+    <div role="tabpanel" id="panel-win" aria-labelledby="tab-win" hidden>
+      <ol class="gsteps">
+        <li><h4>Instale o Git for Windows</h4><p>Baixe em <a href="https://git-scm.com/downloads/win" target="_blank" rel="noopener">git-scm.com/downloads/win</a> e avance com as opções padrão.</p></li>
+        <li><h4>Instale o Python</h4><p>Abra a Microsoft Store, busque "Python 3" (publicado pela Python Software Foundation) e clique em <strong>Obter</strong>.</p></li>
+        <li><h4>Abra o PowerShell</h4><p>Tecle <strong>Windows</strong>, digite "PowerShell" e aperte Enter.</p></li>
+        <li><h4>Instale o Claude Code</h4>
+          <div class="cmd"><code data-cmd>irm https://claude.ai/install.ps1 | iex</code><button type="button" data-copy>Copiar</button></div></li>
+        <li><h4>Crie uma pasta para os agentes</h4><p>Feche e abra o PowerShell de novo, e rode:</p>
+          <div class="cmd"><code data-cmd>mkdir -Force $HOME\agentes-juridicos; cd $HOME\agentes-juridicos</code><button type="button" data-copy>Copiar</button></div></li>
+      </ol>
+    </div>
+
+    <h3 class="guide-sub">Instalar os agentes</h3>
+    <ol class="gsteps">
+      <li><h4>Abra o Claude Code na pasta</h4><p>Na primeira vez, o navegador abre para você entrar com a sua conta do Claude.</p>
+        <div class="cmd"><code data-cmd>claude</code><button type="button" data-copy>Copiar</button></div></li>
+      <li><h4>Adicione o catálogo da DRYOS</h4><p>Dentro do Claude Code:</p>
+        <div class="cmd"><code data-cmd>/plugin marketplace add DRYOS-Studio/agentes-juridicos</code><button type="button" data-copy>Copiar</button></div></li>
+      <li><h4>Instale os agentes</h4><p>Quando o Claude perguntar, escolha <strong>User scope</strong>.</p>
+        <div class="cmd"><code data-cmd>/plugin install agentes-juridicos@dryos</code><button type="button" data-copy>Copiar</button></div></li>
+      <li><h4>Confira</h4><p>Digite <code>/plugin</code>, vá até a aba <strong>Installed</strong> e veja <code>agentes-juridicos</code> na lista. Tecle Esc para sair.</p></li>
+    </ol>
+
+    <h3 class="guide-sub">Fazer o teste</h3>
+    <p class="sec-intro">Cole a mensagem abaixo no Claude Code. O caso é fictício; não use dados de cliente real no teste. O agente pode fazer perguntas antes de redigir e depois entrega a minuta com as averbações e o checklist.</p>
+    <div class="cmd prompt-box"><code data-prompt>Use o agente divorcio-consensual. Caso fictício para teste: Ana Souza e Bruno Lima, casados desde 2015 no regime de comunhão parcial, sem filhos, querem se divorciar em cartório. Têm um apartamento em Niterói (R$ 400.000) que fica com Ana, que paga R$ 200.000 a Bruno. Sem pensão entre eles. Redija a minuta da escritura.</code><button type="button" data-copy>Copiar</button></div>
+    <p class="sec-intro">Para chamar outro agente, diga o nome dele no pedido, por exemplo: "Use o agente bpc-loas para…".</p>
+
+    <h3 class="guide-sub">Perguntas frequentes</h3>
+    <div class="faq-grid">
+      <div class="faq-item"><h4>Apareceu "python3: command not found"</h4><p>Os agentes de cálculo usam o Python. No Mac, rode <code>xcode-select --install</code> de novo. No Windows, instale o Python pela Microsoft Store, feche e abra o PowerShell. Se ainda falhar, peça ao Claude: "faça a conta sem usar Python".</p></div>
+      <div class="faq-item"><h4>E o sigilo dos meus clientes?</h4><p>O que você digita no Claude Code vai para os servidores da Anthropic, a empresa que faz o Claude. Anonimize nomes e documentos quando puder e siga a política do seu escritório.</p></div>
+      <div class="faq-item"><h4>O Claude pediu permissão para rodar um comando</h4><p>Os agentes só precisam rodar <code>python3</code> (para cálculos) e criar os arquivos da peça na pasta dos agentes. Não aprove comandos que você não entende, e não abra no Claude Code documentos de origem desconhecida.</p></div>
+      <div class="faq-item"><h4>Deu "/plugin isn't available in this environment"</h4><p>Você está no app de desktop ou numa sessão na nuvem. Use o Terminal (Mac) ou o PowerShell (Windows), como no passo a passo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-pad rotina">
+  <div class="container">
+    <span class="label">— Além da peça</span>
+    <h2 class="sec-title">Os agentes redigem a peça. <strong>A rotina em volta dela também pode rodar sozinha.</strong></h2>
+    <p class="sec-intro">A DRYOS automatiza a rotina do escritório que não é advocacia: atendimento no WhatsApp, cobrança de honorários, sistemas conectados e relatórios. O diagnóstico é gratuito e leva 30 minutos.</p>
+    <a href="https://www.dryos.com.br/#diagnostico" class="btn btn-primary">Conhecer a DRYOS</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <a href="https://www.dryos.com.br/" class="brand" aria-label="DRYOS — página inicial">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="5" fill="#1F3A2A"/><path fill="#FAFAF8" fill-rule="evenodd" d="M9 8h7a8 8 0 0 1 0 16H9zm4 4v8h3a4 4 0 0 0 0-8z"/></svg>
+      <span class="brand-name">DRYOS</span>
+    </a>
+    <div class="foot-links">
+      <a href="https://www.dryos.com.br/">Início</a>
+      <a href="/privacidade">Privacidade</a>
+      <span class="mono">Crescimento com raiz · 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var els = document.querySelectorAll('.reveal');
+    if (reduce || !('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function (e) { io.observe(e); });
+  })();
+</script>
+<script>
+  (function () {
+    var f = document.getElementById('leadForm');
+    var statusEl = document.getElementById('lf-status');
+    var btn = document.getElementById('lf-submit');
+    var step1 = document.getElementById('step1'), step2 = document.getElementById('step2');
+    var progress = document.getElementById('formProgress');
+    var RADIOS = ['cargo', 'porte', 'whatsapp_quem', 'fora_horario', 'cobranca', 'sistema', 'a_receber', 'dor_principal'];
+    var sending = false;
+
+    function val(id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; }
+    function radio(n) { var el = f.querySelector('input[name="' + n + '"]:checked'); return el ? el.value : ''; }
+    function areas() { return Array.prototype.map.call(f.querySelectorAll('input[name="areas"]:checked'), function (e) { return e.value; }); }
+    function utm(k) { try { return new URLSearchParams(location.search).get(k) || ''; } catch (e) { return ''; } }
+    function setStatus(msg, err) { statusEl.className = 'lead-status' + (err ? ' err' : ''); statusEl.textContent = msg || ''; }
+
+    document.getElementById('toStep2').addEventListener('click', function () {
+      var missing = RADIOS.filter(function (n) { return !radio(n); });
+      if (!areas().length) missing.push('areas');
+      if (missing.length) {
+        setStatus('Responda todas as perguntas para continuar.', true);
+        var first = f.querySelector('input[name="' + missing[0] + '"]');
+        if (first) first.focus();
+        return;
+      }
+      setStatus('');
+      step1.hidden = true; step2.hidden = false;
+      progress.textContent = 'Etapa 2 de 2 · Seus dados';
+      document.getElementById('step2Title').focus();
+    });
+    document.getElementById('backStep1').addEventListener('click', function () {
+      step2.hidden = true; step1.hidden = false;
+      progress.textContent = 'Etapa 1 de 2 · Sobre o escritório';
+      setStatus('');
+    });
+
+    function showGuide(ok) {
+      f.hidden = true;
+      document.getElementById('guia').hidden = false;
+      document.getElementById(ok ? 'guideOk' : 'guideErr').hidden = false;
+      document.getElementById('guiaTitle').focus();
+    }
+
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (sending) return;
+      var name = val('lf-name'), email = val('lf-email'), phone = val('lf-phone'), cidade = val('lf-cidade');
+      var empty = [['lf-name', name], ['lf-email', email], ['lf-phone', phone], ['lf-cidade', cidade]].filter(function (x) { return !x[1]; });
+      if (empty.length) {
+        var el = document.getElementById(empty[0][0]);
+        setStatus('Preencha o campo "' + document.querySelector('label[for="' + empty[0][0] + '"]').textContent + '".', true);
+        el.focus();
+        return;
+      }
+      sending = true;
+      setStatus('');
+      btn.disabled = true; btn.textContent = 'Enviando…';
+      var data = {
+        name: name, email: email, phone: phone, cidade: cidade,
+        company: val('hp_ref'),
+        source: 'site-agentes-juridicos',
+        areas: areas(),
+        utm_source: utm('utm_source'), utm_medium: utm('utm_medium'),
+        utm_campaign: utm('utm_campaign'), utm_content: utm('utm_content'), utm_term: utm('utm_term')
+      };
+      RADIOS.forEach(function (n) { data[n] = radio(n); });
+      var ctrl = ('AbortController' in window) ? new AbortController() : null;
+      var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 25000);
+      fetch('/api/lead', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(data), signal: ctrl ? ctrl.signal : undefined })
+        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, status: r.status, j: j }; }, function () { return { ok: false, status: r.status, j: {} }; }); })
+        .then(function (res) {
+          clearTimeout(timer);
+          if (res.status === 400) {
+            // Validação (nome, e-mail, WhatsApp): o lead ainda dá para salvar, então pede correção.
+            sending = false; btn.disabled = false; btn.textContent = 'Receber os agentes';
+            setStatus((res.j && res.j.error) || 'Confira seus dados.', true);
+            return;
+          }
+          if (res.ok && res.j && res.j.ok) {
+            try { (window.dataLayer = window.dataLayer || []).push({ event: 'generate_lead', form_id: 'agentes-juridicos' }); } catch (e) {}
+            showGuide(true);
+          } else {
+            showGuide(false);
+          }
+        })
+        .catch(function () { clearTimeout(timer); showGuide(false); });
+    });
+
+    // Abas Mac / Windows
+    var tabs = [document.getElementById('tab-mac'), document.getElementById('tab-win')];
+    function select(i) {
+      tabs.forEach(function (t, j) {
+        var on = i === j;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      });
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(i); });
+      t.addEventListener('keydown', function (e) {
+        var n = e.key === 'ArrowRight' || e.key === 'ArrowLeft' ? (i + 1) % 2 : e.key === 'Home' ? 0 : e.key === 'End' ? 1 : -1;
+        if (n >= 0) { select(n); tabs[n].focus(); e.preventDefault(); }
+      });
+    });
+    if (/Win/i.test(navigator.platform || navigator.userAgent)) select(1);
+
+    // Copiar comandos
+    document.querySelectorAll('[data-copy]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var code = b.parentNode.querySelector('code');
+        if (!navigator.clipboard) return;
+        navigator.clipboard.writeText(code.textContent).then(function () {
+          b.textContent = 'Copiado';
+          document.getElementById('copyStatus').textContent = 'Comando copiado.';
+          setTimeout(function () { b.textContent = 'Copiar'; }, 1600);
+        });
+      });
+    });
+  })();
+</script>
+</body>
+</html>

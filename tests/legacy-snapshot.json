@@ -1,0 +1,107 @@
+[
+  {
+    "rd": [
+      {
+        "event_type": "CONVERSION",
+        "event_family": "CDP",
+        "payload": {
+          "conversion_identifier": "diagnostico-site",
+          "name": "Ana Lima",
+          "email": "ana@ex.com",
+          "mobile_phone": "+5521999990000",
+          "traffic_source": "g",
+          "traffic_medium": "cpc",
+          "traffic_campaign": "c"
+        }
+      }
+    ],
+    "core": [
+      {
+        "phone": "5521999990000",
+        "email": "ana@ex.com",
+        "idempotencyKey": "5521999990000:ana@ex.com",
+        "name": "Ana Lima",
+        "source": "site-dryos-diagnostico",
+        "spark": null,
+        "cargo": "CEO",
+        "produto_interesse": "automacoes",
+        "faturamento_mensal": "50k",
+        "utm_source": "g",
+        "utm_medium": "cpc",
+        "utm_campaign": "c",
+        "utm_content": "x",
+        "utm_term": "t"
+      }
+    ]
+  },
+  {
+    "rd": [
+      {
+        "event_type": "CONVERSION",
+        "event_family": "CDP",
+        "payload": {
+          "conversion_identifier": "apresentacao-core",
+          "name": "Ana Lima",
+          "email": "ana@ex.com",
+          "mobile_phone": "+5521999990000",
+          "traffic_source": "g",
+          "traffic_medium": "cpc",
+          "traffic_campaign": "c"
+        }
+      }
+    ],
+    "core": [
+      {
+        "phone": "5521999990000",
+        "email": "ana@ex.com",
+        "idempotencyKey": "5521999990000:ana@ex.com",
+        "name": "Ana Lima",
+        "source": "site-apresentacao-core",
+        "spark": null,
+        "cargo": "Sócio",
+        "produto_interesse": null,
+        "faturamento_mensal": null,
+        "utm_source": "g",
+        "utm_medium": "cpc",
+        "utm_campaign": "c",
+        "utm_content": "x",
+        "utm_term": "t"
+      }
+    ]
+  },
+  {
+    "rd": [
+      {
+        "event_type": "CONVERSION",
+        "event_family": "CDP",
+        "payload": {
+          "conversion_identifier": "automacoes",
+          "name": "Ana Lima",
+          "email": "ana@ex.com",
+          "mobile_phone": "+5521999990000",
+          "traffic_source": "g",
+          "traffic_medium": "cpc",
+          "traffic_campaign": "c"
+        }
+      }
+    ],
+    "core": [
+      {
+        "phone": "5521999990000",
+        "email": "ana@ex.com",
+        "idempotencyKey": "5521999990000:ana@ex.com",
+        "name": "Ana Lima",
+        "source": "site-automacoes",
+        "spark": "cobranca",
+        "cargo": null,
+        "produto_interesse": null,
+        "faturamento_mensal": null,
+        "utm_source": "g",
+        "utm_medium": "cpc",
+        "utm_campaign": "c",
+        "utm_content": "x",
+        "utm_term": "t"
+      }
+    ]
+  }
+]

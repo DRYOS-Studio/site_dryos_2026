@@ -16,6 +16,7 @@
   - `X-Content-Type-Options: nosniff`
   - `X-Frame-Options: DENY`
   - `Referrer-Policy: strict-origin-when-cross-origin`
+- `functions.api/lead.js.maxDuration: 30`
 
 **Operational notes:** `README.md` documents both drag-and-drop deploy and Git-based deploy. The repository is already connected to GitHub locally.
 
@@ -41,26 +42,25 @@
 - preconnect to `https://fonts.gstatic.com`
 - stylesheet for `Funnel Display`, `Onest`, and `JetBrains Mono`
 
-## RD Station
+## Captura de lead: `api/lead.js` (RD Station + DRYOS Core)
 
-**Location:** `index.html`
+**Location:** `api/lead.js` (Vercel function), chamada por `index.html`, `automacoes.html`,
+`apresentacao-core.html` e `agentes-juridicos.html` via `POST /api/lead`.
 
-**Purpose:** diagnostic form conversion capture.
+**Destinos (em paralelo, `Promise.allSettled`):**
 
-**Endpoint:** `https://www.rdstation.com.br/api/1.3/conversions`
+- DRYOS Core: `POST {CORE_API_BASE}/api/v1/webhooks/automation/{CORE_WEBHOOK_TOKEN}`.
+- RD Station Marketing: `POST https://api.rd.services/platform/conversions?api_key={RD_TOKEN}`.
 
-**Configuration in code:**
+Os tokens ficam só em env na Vercel; o browser não vê nenhum.
 
-- `RD_TOKEN`
-- `RD_IDENTIFICADOR = 'site-dryos-diagnostico'`
+**Conversão no RD:** `conversion_identifier` sai da allowlist `RD_IDENTIFIERS` pela `source`, nunca do browser.
 
-**Data sent:**
+**Origem `site-agentes-juridicos`:** `qualify()` valida os enums do formulário e calcula `qualificacao` no servidor.
+Os campos vão ao Core e ao RD como `cf_*` (400 do RD → 1 reenvio sem `cf_*`). A `idempotencyKey` inclui a origem.
+Spec: `.specs/features/agentes-juridicos-landing/`. Testes: `node --test tests/*.test.js` e `node tests/mutate.js`.
 
-- form fields: name, email, phone, role, product interest, monthly revenue
-- hidden attribution fields: UTM fields, `gclid`, `fbclid`, `referrer_origin`, `landing_page`, `conversion_url`
-- RD Station token and identifier
-
-**Failure behavior:** appends an inline error message and lets the user retry or use WhatsApp.
+**Failure behavior:** 200 se ao menos um destino aceitar; 502 se os dois falharem.
 
 ## WhatsApp
 
@@ -116,7 +116,6 @@
 
 ## Integration Risks
 
-- RD Station token is embedded client-side. This may be acceptable for this legacy endpoint pattern, but it is publicly visible.
 - The README checklist references older placeholders such as `hello@dryos.com.br` and a placeholder WhatsApp number, while the code has current contact values.
 - GTM, RD Station, Google Fonts, WhatsApp, and LinkedIn all require network access; offline/local file testing will not fully exercise production behavior.
 - Contact and tracking logic is duplicated across pages.

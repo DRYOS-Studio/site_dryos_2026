@@ -4,3 +4,6 @@ images/**/originals/
 dryos-deploy.zip
 # scripts de build — não têm por que ser servidos publicamente
 scripts/
+# testes e specs internos — a regra de qualificação não pode ser pública
+tests/
+.specs/

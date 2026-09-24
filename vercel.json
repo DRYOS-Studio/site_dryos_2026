@@ -19,5 +19,10 @@
         }
       ]
     }
-  ]
+  ],
+  "functions": {
+    "api/lead.js": {
+      "maxDuration": 30
+    }
+  }
 }
