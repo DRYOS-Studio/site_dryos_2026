@@ -43,7 +43,7 @@
 - Manifesto and operational villain framing.
 - Product paths: Core, Spark, Studio.
 - Project cards and client proof.
-- Diagnostic form with RD Station conversion.
+- Diagnostic form posting to `/api/lead`.
 - Footer and floating WhatsApp CTA.
 
 ### Portfolio Page
@@ -107,8 +107,8 @@
 
 - UI/Interface: `index.html`, `#diagnostico`
 - Business Logic: inline script at the end of `index.html`
-- Data Access: RD Station conversion endpoint via `fetch`
-- Configuration: `RD_TOKEN`, `RD_IDENTIFICADOR`, hidden form fields
+- Data Access: `fetch('/api/lead')`
+- Configuration: hidden form fields; RD/Core tokens only in Vercel env (`api/lead.js`)
 
 **Tracking:**
 
@@ -133,3 +133,10 @@ Agent/tooling worktree metadata. It is untracked in the current git status.
 **`.specs/`:**
 
 Spec-driven documentation generated for project analysis and future planning.
+
+## Added 2026-09-24 (landing agentes-juridicos)
+
+- `api/lead.js`: Vercel function de captura de lead (RD + Core).
+- `agentes-juridicos.html`: landing do subdomínio `agentes-juridicos.dryos.com.br` (redirect em `vercel.json`).
+- `tests/`: testes e baterias de mutação (fora do deploy).
+- `.specs/features/agentes-juridicos-landing/`: spec, design, ADRs, tasks e gates.

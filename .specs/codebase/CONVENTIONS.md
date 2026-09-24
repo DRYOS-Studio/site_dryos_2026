@@ -24,7 +24,7 @@
 **Variables and Constants:**
 
 - Local variables use camelCase: `carousel`, `slides`, `prevBtn`, `successBox`, `conversionUrlInput`.
-- Constants use uppercase snake case when treated as configuration: `TRACKING_KEYS`, `AUTOPLAY_MS`, `RD_TOKEN`, `RD_IDENTIFICADOR`.
+- Constants use uppercase snake case when treated as configuration: `TRACKING_KEYS`, `AUTOPLAY_MS`; no servidor, `RD_IDENTIFIERS` e `QUALIFY_ENUMS` (`api/lead.js`).
 
 ## Code Organization
 
@@ -34,7 +34,7 @@
 - External dependencies are included directly in markup:
   - Google Tag Manager script in `<head>` plus `<noscript>` iframe in `<body>`;
   - Google Fonts links in `<head>`;
-  - RD Station is called with `fetch` from inline JS.
+  - lead forms `fetch('/api/lead')` from inline JS; RD Station and Core are called server-side.
 
 **File Structure:**
 

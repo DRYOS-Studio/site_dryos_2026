@@ -19,7 +19,7 @@ Browser
         +-- static portfolio sections
         +-- vanilla JS: tracking capture
 
-Vercel serves static files and applies security headers from vercel.json.
+Vercel serves static files, runs `api/lead.js`, and applies headers and the subdomain redirect from vercel.json.
 ```
 
 ## Identified Patterns
@@ -65,7 +65,7 @@ Vercel serves static files and applies security headers from vercel.json.
 
 **Purpose:** convert traffic into diagnostic requests and preserve attribution data.
 
-**Implementation:** the form `#dryos-diagnostico-form` uses native required fields and hidden inputs for UTM/referrer fields. On submit, JavaScript builds `URLSearchParams`, appends `token_rdstation` and `identificador`, posts to `https://www.rdstation.com.br/api/1.3/conversions`, then hides the form and shows `#dryos-diagnostico-success`.
+**Implementation:** the form `#dryos-diagnostico-form` uses native required fields and hidden inputs for UTM/referrer fields. On submit, JavaScript posts JSON to `/api/lead` (server-side: RD Station + DRYOS Core, see INTEGRATIONS.md), then hides the form and shows `#dryos-diagnostico-success`.
 
 ### Static Portfolio Linking
 
@@ -95,7 +95,7 @@ The same capture logic exists in both pages, which preserves attribution across 
 User fills #dryos-diagnostico-form
   -> browser validates required fields
   -> submit button disabled and text changes
-  -> payload sent to RD Station conversion API
+  -> payload sent to /api/lead (RD Station + Core, server-side)
   -> success: form hidden, success message shown
   -> failure: inline .contact-form-error appended, button re-enabled
 ```
