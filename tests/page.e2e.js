@@ -143,13 +143,25 @@ const cases = {
 
   'P5 obrigado: noindex; sem r, guia sem aviso; requisito (R3)': (b, u) => scenario(b, u.replace(/$/, '-obrigado'), json(200, { ok: true }), async page =>
     await page.getAttribute('meta[name="robots"]', 'content') === 'noindex'
-    && await notices(page) === 'false,false' && await visible(page, '#guia') && (await page.$$('[data-cmd]')).length >= 8
+    && await notices(page) === 'false,false' && await visible(page, '#guia') && !!(await page.$('a[data-install]'))
     && await visible(page, '#guideReq') && /plano pago/.test(await page.textContent('#guideReq')) && /EAOAB/.test(await page.textContent('#guideReq'))),
 
-  'P4 obrigado: abas por teclado': (b, u) => scenario(b, u.replace(/$/, '-obrigado'), json(200, { ok: true }), async page => {
-    await page.focus('#tab-mac'); await page.keyboard.press('ArrowRight');
-    return await visible(page, '#panel-win') && !(await visible(page, '#panel-mac'))
-      && await page.evaluate(() => document.activeElement.id === 'tab-win');
+  'S4 obrigado: extensão, pasta, deep link e plano B': (b, u) => scenario(b, u.replace(/$/, '-obrigado'), json(200, { ok: true }), async page => {
+    const href = await page.getAttribute('a[data-install]', 'href');
+    const q = new URL(href.replace('vscode://', 'https://x/')).searchParams;
+    const planB = (await page.textContent('code[data-cmd]')).trim();
+    return href.startsWith('vscode://anthropic.claude-code/install-plugin?')
+      && q.get('plugin') === 'agentes-juridicos' && q.get('marketplace') === 'https://www.dryos.com.br/plugins/marketplace.json'
+      && href.includes('marketplace=https%3A%2F%2Fwww.dryos.com.br%2Fplugins%2Fmarketplace.json')
+      && planB === q.get('marketplace') && await visible(page, 'a[data-install]')
+      && await visible(page, '.cmd:has(code[data-cmd]) button[data-copy]')
+      && await page.getAttribute('a[data-ext]', 'href') === 'vscode:extension/anthropic.claude-code'
+      && /Open Folder/.test(await page.textContent('#passo-pasta'));
+  }),
+
+  'S5 obrigado: sem terminal, git ou comandos de shell': (b, u) => scenario(b, u.replace(/$/, '-obrigado'), json(200, { ok: true }), async page => {
+    const t = await page.textContent('#guia');
+    return !/terminal|powershell|git for windows|git-scm|instale o git|winget|curl |irm |xcode-select|\/plugin marketplace add|\/plugin install/i.test(t);
   }),
 
   'F-5 Continuar sem resposta: não avança e foca a pergunta': (b, u) => scenario(b, u, json(200, { ok: true }), async page => {

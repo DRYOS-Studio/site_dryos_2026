@@ -82,15 +82,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .guide-notice { background: var(--oak-tint); border: 1px solid var(--line); border-radius: 12px; padding: 1.1rem 1.3rem; margin-top: 2rem; max-width: 72ch; font-size: 14.5px; }
   .guide-notice.err { background: #F6EDE8; }
   .guide-notice a { font-weight: 600; text-decoration: underline; color: var(--wa); }
-  .tabs { display: flex; gap: 0.5rem; margin-top: 2.5rem; flex-wrap: wrap; }
-  .tabs button { font-family: var(--font-body); font-size: 14px; font-weight: 600; padding: 0.6rem 1.1rem; border-radius: 9px; border: 1px solid var(--line-strong); background: #fff; color: var(--ink); cursor: pointer; }
-  .tabs button[aria-selected="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
   .gsteps { list-style: none; counter-reset: g; margin-top: 1.6rem; max-width: 780px; }
   .gsteps > li { counter-increment: g; position: relative; padding: 0 0 1.6rem 2.8rem; }
   .gsteps > li::before { content: counter(g); position: absolute; left: 0; top: 0; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--oak); color: #fff; font-family: var(--font-mono); font-size: 12px; display: grid; place-items: center; }
-  .gsteps h4 { font-family: var(--font-display); font-weight: 700; font-size: 1.12rem; letter-spacing: -0.015em; }
+  .gsteps h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.12rem; letter-spacing: -0.015em; }
   .gsteps p { font-size: 14.5px; color: var(--mute); margin-top: 0.3rem; max-width: 64ch; }
   .gsteps p a { text-decoration: underline; color: var(--ink-soft); }
+  .install-btn { margin-top: 0.9rem; margin-bottom: 0.4rem; }
+  .gsteps p code { overflow-wrap: anywhere; }
   .cmd { display: flex; align-items: stretch; margin-top: 0.6rem; max-width: 640px; background: var(--ink); border-radius: 9px; overflow: hidden; }
   .cmd code { flex: 1; font-family: var(--font-mono); font-size: 13px; color: #EDEDE8; padding: 0.75rem 0.9rem; overflow-x: auto; white-space: pre; }
   .cmd button { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.05em; text-transform: uppercase; background: #ffffff14; color: #EDEDE8; border: none; padding: 0 0.9rem; cursor: pointer; }
@@ -99,7 +98,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .guide-sub { font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; letter-spacing: -0.02em; margin-top: 2.6rem; }
   .faq-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.6rem 3rem; margin-top: 1.6rem; }
   @media (max-width: 760px) { .faq-grid { grid-template-columns: 1fr; } }
-  .faq-item h4 { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; letter-spacing: -0.01em; }
+  .faq-item h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; letter-spacing: -0.01em; }
   .faq-item p { color: var(--mute); font-size: 14px; margin-top: 0.45rem; line-height: 1.55; max-width: 52ch; }
   .faq-item code { font-family: var(--font-mono); font-size: 12.5px; background: var(--surface); padding: 0.1rem 0.35rem; border-radius: 4px; }
 
@@ -144,56 +143,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="guide-notice err" id="guideErr" hidden>Não conseguimos registrar seus dados agora, mas o guia está liberado. Se quiser que a gente fale com você, mande um oi no <a href="https://wa.me/5521967287595?text=Oi%2C%20vim%20pela%20p%C3%A1gina%20dos%20agentes%20jur%C3%ADdicos" target="_blank" rel="noopener">WhatsApp</a>.</p>
     <p class="sec-intro" id="guideReq"><strong>Antes de começar:</strong> você precisa de um plano pago do Claude (Pro ou superior); o plano gratuito não inclui o Claude Code. O que os agentes entregam é rascunho: o advogado revisa e assina, e a responsabilidade técnica continua dele (EAOAB, art. 32).</p>
 
-    <div class="tabs" role="tablist" aria-label="Sistema operacional">
-      <button type="button" role="tab" id="tab-mac" aria-controls="panel-mac" aria-selected="true">Mac</button>
-      <button type="button" role="tab" id="tab-win" aria-controls="panel-win" aria-selected="false" tabindex="-1">Windows</button>
-    </div>
-
-    <div role="tabpanel" id="panel-mac" aria-labelledby="tab-mac">
-      <ol class="gsteps">
-        <li><h4>Abra o Terminal</h4><p>Tecle <strong>Cmd + Espaço</strong>, digite "Terminal" e aperte Enter.</p></li>
-        <li><h4>Instale as ferramentas da Apple</h4><p>Elas trazem o git e o Python. Uma janela vai pedir confirmação: clique em <strong>Instalar</strong>. Se aparecer "already installed", pode seguir.</p>
-          <div class="cmd"><code data-cmd>xcode-select --install</code><button type="button" data-copy>Copiar</button></div></li>
-        <li><h4>Instale o Claude Code</h4>
-          <div class="cmd"><code data-cmd>curl -fsSL https://claude.ai/install.sh | bash</code><button type="button" data-copy>Copiar</button></div></li>
-        <li><h4>Crie uma pasta para os agentes</h4>
-          <div class="cmd"><code data-cmd>mkdir -p ~/agentes-juridicos &amp;&amp; cd ~/agentes-juridicos</code><button type="button" data-copy>Copiar</button></div></li>
-      </ol>
-    </div>
-    <div role="tabpanel" id="panel-win" aria-labelledby="tab-win" hidden>
-      <ol class="gsteps">
-        <li><h4>Instale o Git for Windows</h4><p>Baixe em <a href="https://git-scm.com/downloads/win" target="_blank" rel="noopener">git-scm.com/downloads/win</a> e avance com as opções padrão.</p></li>
-        <li><h4>Instale o Python</h4><p>Abra a Microsoft Store, busque "Python 3" (publicado pela Python Software Foundation) e clique em <strong>Obter</strong>.</p></li>
-        <li><h4>Abra o PowerShell</h4><p>Tecle <strong>Windows</strong>, digite "PowerShell" e aperte Enter.</p></li>
-        <li><h4>Instale o Claude Code</h4>
-          <div class="cmd"><code data-cmd>irm https://claude.ai/install.ps1 | iex</code><button type="button" data-copy>Copiar</button></div></li>
-        <li><h4>Crie uma pasta para os agentes</h4><p>Feche e abra o PowerShell de novo, e rode:</p>
-          <div class="cmd"><code data-cmd>mkdir -Force $HOME\agentes-juridicos; cd $HOME\agentes-juridicos</code><button type="button" data-copy>Copiar</button></div></li>
-      </ol>
-    </div>
-
-    <h2 class="guide-sub">Instalar os agentes</h2>
+    <h2 class="guide-sub">Instalação</h2>
+    <p class="sec-intro">Faça no computador (Mac ou Windows), não no celular.</p>
     <ol class="gsteps">
-      <li><h4>Abra o Claude Code na pasta</h4><p>Na primeira vez, o navegador abre para você entrar com a sua conta do Claude.</p>
-        <div class="cmd"><code data-cmd>claude</code><button type="button" data-copy>Copiar</button></div></li>
-      <li><h4>Adicione o catálogo da DRYOS</h4><p>Dentro do Claude Code:</p>
-        <div class="cmd"><code data-cmd>/plugin marketplace add DRYOS-Studio/agentes-juridicos</code><button type="button" data-copy>Copiar</button></div></li>
-      <li><h4>Instale os agentes</h4><p>Quando o Claude perguntar, escolha <strong>User scope</strong>.</p>
-        <div class="cmd"><code data-cmd>/plugin install agentes-juridicos@dryos</code><button type="button" data-copy>Copiar</button></div></li>
-      <li><h4>Confira</h4><p>Digite <code>/plugin</code>, vá até a aba <strong>Installed</strong> e veja <code>agentes-juridicos</code> na lista. Tecle Esc para sair.</p></li>
+      <li><h3>Instale o VS Code</h3><p>É o editor gratuito da Microsoft. Baixe em <a href="https://code.visualstudio.com/download" target="_blank" rel="noopener">code.visualstudio.com/download</a> e instale com as opções padrão.</p></li>
+      <li><h3>Instale a extensão Claude Code</h3><p>Clique em <a href="vscode:extension/anthropic.claude-code" data-ext>abrir a extensão no VS Code</a> e em <strong>Install</strong>. Se o link não abrir, tecle <strong>Cmd + Shift + X</strong> (Mac) ou <strong>Ctrl + Shift + X</strong> (Windows) no VS Code, busque "Claude Code" (publicada pela Anthropic) e clique em <strong>Install</strong>.</p></li>
+      <li id="passo-pasta"><h3>Crie uma pasta e abra no VS Code</h3><p>Crie a pasta "Agentes jurídicos" em Documentos. No VS Code, vá em <strong>File → Open Folder</strong> (Arquivo → Abrir Pasta) e escolha essa pasta. É nela que o Claude salva as peças.</p></li>
+      <li><h3>Entre com a sua conta</h3><p>Clique no ícone do Claude Code (✻) na barra da esquerda e, no painel, em <strong>Sign in</strong>. O navegador abre para você entrar com a sua conta do Claude.</p></li>
+      <li id="instalar"><h3>Instale os agentes</h3><p>Clique no botão. Ele abre o VS Code direto na instalação. Se o VS Code perguntar se pode abrir o link, confirme. Se ele pedir para adicionar o catálogo da DRYOS, confira que o endereço é <code>https://www.dryos.com.br/plugins/marketplace.json</code> e confirme. Depois escolha <strong>Install for you</strong>.</p>
+        <a class="btn btn-primary install-btn" href="vscode://anthropic.claude-code/install-plugin?plugin=agentes-juridicos&amp;marketplace=https%3A%2F%2Fwww.dryos.com.br%2Fplugins%2Fmarketplace.json" data-install>Instalar os agentes</a>
+        <p><strong>Não abriu?</strong> No painel do Claude, digite <code>/plugins</code>, vá na aba <strong>Marketplaces</strong>, cole o endereço abaixo e confirme. Depois, na aba <strong>Plugins</strong>, clique em <strong>Install</strong> em <code>agentes-juridicos</code> e escolha <strong>Install for you</strong>.</p>
+        <div class="cmd"><code data-cmd>https://www.dryos.com.br/plugins/marketplace.json</code><button type="button" data-copy aria-label="Copiar o endereço do catálogo">Copiar</button></div></li>
     </ol>
 
     <h2 class="guide-sub">Fazer o teste</h2>
-    <p class="sec-intro">Cole a mensagem abaixo no Claude Code. O caso é fictício; não use dados de cliente real no teste. O agente pode fazer perguntas antes de redigir e depois entrega a minuta com as averbações e o checklist.</p>
-    <div class="cmd prompt-box"><code data-prompt>Use o agente divorcio-consensual. Caso fictício para teste: Ana Souza e Bruno Lima, casados desde 2015 no regime de comunhão parcial, sem filhos, querem se divorciar em cartório. Têm um apartamento em Niterói (R$ 400.000) que fica com Ana, que paga R$ 200.000 a Bruno. Sem pensão entre eles. Redija a minuta da escritura.</code><button type="button" data-copy>Copiar</button></div>
+    <p class="sec-intro">Cole a mensagem abaixo no painel do Claude, no VS Code. O caso é fictício; não use dados de cliente real no teste. O agente pode fazer perguntas antes de redigir e depois entrega a minuta com as averbações e o checklist.</p>
+    <div class="cmd prompt-box"><code data-prompt>Use o agente divorcio-consensual. Caso fictício para teste: Ana Souza e Bruno Lima, casados desde 2015 no regime de comunhão parcial, sem filhos, querem se divorciar em cartório. Têm um apartamento em Niterói (R$ 400.000) que fica com Ana, que paga R$ 200.000 a Bruno. Sem pensão entre eles. Redija a minuta da escritura.</code><button type="button" data-copy aria-label="Copiar a mensagem de teste">Copiar</button></div>
     <p class="sec-intro">Para chamar outro agente, diga o nome dele no pedido, por exemplo: "Use o agente bpc-loas para…".</p>
 
     <h2 class="guide-sub">Perguntas frequentes</h2>
     <div class="faq-grid">
-      <div class="faq-item"><h4>Apareceu "python3: command not found"</h4><p>Os agentes de cálculo usam o Python. No Mac, rode <code>xcode-select --install</code> de novo. No Windows, instale o Python pela Microsoft Store, feche e abra o PowerShell. Se ainda falhar, peça ao Claude: "faça a conta sem usar Python".</p></div>
-      <div class="faq-item"><h4>E o sigilo dos meus clientes?</h4><p>O que você digita no Claude Code vai para os servidores da Anthropic, a empresa que faz o Claude. Anonimize nomes e documentos quando puder e siga a política do seu escritório.</p></div>
-      <div class="faq-item"><h4>O Claude pediu permissão para rodar um comando</h4><p>Os agentes só precisam rodar <code>python3</code> (para cálculos) e criar os arquivos da peça na pasta dos agentes. Não aprove comandos que você não entende, e não abra no Claude Code documentos de origem desconhecida.</p></div>
-      <div class="faq-item"><h4>Deu "/plugin isn't available in this environment"</h4><p>Você está no app de desktop ou numa sessão na nuvem. Use o Terminal (Mac) ou o PowerShell (Windows), como no passo a passo.</p></div>
+      <div class="faq-item"><h3>O Claude avisou que a conta não foi conferida por código</h3><p>Os agentes de cálculo conferem a conta com o Python. Sem ele, fazem a conta no texto e avisam. Para conferir, peça ao Claude "instale o Python". Ele pede permissão antes de instalar. Depois de instalar no Windows, feche e abra o VS Code.</p></div>
+      <div class="faq-item"><h3>E o sigilo dos meus clientes?</h3><p>O que você digita no Claude Code vai para os servidores da Anthropic, a empresa que faz o Claude. Anonimize nomes e documentos quando puder e siga a política do seu escritório.</p></div>
+      <div class="faq-item"><h3>O Claude pediu permissão para rodar um comando</h3><p>Os agentes só precisam instalar e rodar o Python (para cálculos) e criar os arquivos da peça na pasta dos agentes. Não aprove comandos que você não entende, e não abra no Claude Code documentos de origem desconhecida.</p></div>
     </div>
     <p class="hp" id="copyStatus" role="status" aria-live="polite"></p>
   </div>
@@ -235,25 +207,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         (window.dataLayer = window.dataLayer || []).push({ event: 'generate_lead', form_id: 'agentes-juridicos' });
       }
     } catch (e) {}
-
-    // Abas Mac / Windows
-    var tabs = [document.getElementById('tab-mac'), document.getElementById('tab-win')];
-    function select(i) {
-      tabs.forEach(function (t, j) {
-        var on = i === j;
-        t.setAttribute('aria-selected', on ? 'true' : 'false');
-        t.tabIndex = on ? 0 : -1;
-        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
-      });
-    }
-    tabs.forEach(function (t, i) {
-      t.addEventListener('click', function () { select(i); });
-      t.addEventListener('keydown', function (e) {
-        var n = e.key === 'ArrowRight' || e.key === 'ArrowLeft' ? (i + 1) % 2 : e.key === 'Home' ? 0 : e.key === 'End' ? 1 : -1;
-        if (n >= 0) { select(n); tabs[n].focus(); e.preventDefault(); }
-      });
-    });
-    if (/Win/i.test(navigator.platform || navigator.userAgent)) select(1);
 
     // Copiar comandos
     document.querySelectorAll('[data-copy]').forEach(function (b) {
