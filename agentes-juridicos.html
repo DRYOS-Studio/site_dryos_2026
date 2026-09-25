@@ -133,7 +133,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .opts { display: flex; flex-wrap: wrap; gap: 0.5rem; }
   .opt { position: relative; }
   .opt input { position: absolute; opacity: 0; width: 1px; height: 1px; }
-  .opt span { display: inline-block; padding: 0.55rem 0.85rem; border: 1px solid var(--line-strong); border-radius: 9px; font-size: 14px; background: #fff; cursor: pointer; transition: background .15s, border-color .15s; }
+  .opt span { display: inline-block; padding: 0.8rem 0.95rem; border: 1px solid var(--line-strong); border-radius: 9px; font-size: 14px; background: #fff; cursor: pointer; transition: background .15s, border-color .15s; }
   .opt input:checked + span { background: var(--oak-tint); border-color: var(--oak); color: var(--oak); font-weight: 600; }
   .opt input:focus-visible + span { outline: 2px solid var(--oak); outline-offset: 2px; }
   .row { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 1rem; }
@@ -260,7 +260,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <form class="lead-form" id="leadForm" novalidate>
       <input class="hp" id="hp_ref" name="hp_ref" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <p class="form-progress" id="formProgress" aria-live="polite">Etapa 1 de 2 · Sobre o escritório</p>
+      <p class="form-progress" id="formProgress" aria-live="polite">Pergunta 1 de 10 · Sobre o escritório</p>
 
       <div class="form-step" id="step1">
         <fieldset><legend>Você é…</legend><div class="opts">
@@ -271,14 +271,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <label class="opt"><input type="radio" name="cargo" value="juridico_empresa"><span>Jurídico de empresa</span></label>
           <label class="opt"><input type="radio" name="cargo" value="estudante"><span>Estudante</span></label>
         </div></fieldset>
-        <fieldset><legend>Quantas pessoas trabalham no escritório?</legend><div class="opts">
+        <fieldset hidden><legend>Quantas pessoas trabalham no escritório?</legend><div class="opts">
           <label class="opt"><input type="radio" name="porte" value="solo"><span>Só eu</span></label>
           <label class="opt"><input type="radio" name="porte" value="2"><span>2</span></label>
           <label class="opt"><input type="radio" name="porte" value="3_10"><span>3 a 10</span></label>
           <label class="opt"><input type="radio" name="porte" value="11_30"><span>11 a 30</span></label>
           <label class="opt"><input type="radio" name="porte" value="30_mais"><span>Mais de 30</span></label>
         </div></fieldset>
-        <fieldset><legend>Áreas de atuação (marque todas)</legend><div class="opts">
+        <fieldset hidden><legend>Áreas de atuação (marque todas)</legend><div class="opts">
           <label class="opt"><input type="checkbox" name="areas" value="trabalhista"><span>Trabalhista</span></label>
           <label class="opt"><input type="checkbox" name="areas" value="previdenciario"><span>Previdenciário</span></label>
           <label class="opt"><input type="checkbox" name="areas" value="familia"><span>Família</span></label>
@@ -289,35 +289,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <label class="opt"><input type="checkbox" name="areas" value="empresarial"><span>Empresarial</span></label>
           <label class="opt"><input type="checkbox" name="areas" value="imobiliario"><span>Imobiliário</span></label>
         </div></fieldset>
-        <fieldset><legend>Quem responde o WhatsApp dos clientes?</legend><div class="opts">
+        <fieldset hidden><legend>Quem responde o WhatsApp dos clientes?</legend><div class="opts">
           <label class="opt"><input type="radio" name="whatsapp_quem" value="socio"><span>O sócio</span></label>
           <label class="opt"><input type="radio" name="whatsapp_quem" value="equipe"><span>Alguém da equipe</span></label>
           <label class="opt"><input type="radio" name="whatsapp_quem" value="sem_responsavel"><span>Quem estiver livre</span></label>
           <label class="opt"><input type="radio" name="whatsapp_quem" value="nao_atende"><span>Não atendemos por WhatsApp</span></label>
         </div></fieldset>
-        <fieldset><legend>Quando chega mensagem à noite ou no fim de semana…</legend><div class="opts">
+        <fieldset hidden><legend>Quando chega mensagem à noite ou no fim de semana…</legend><div class="opts">
           <label class="opt"><input type="radio" name="fora_horario" value="na_hora"><span>Alguém responde na hora</span></label>
           <label class="opt"><input type="radio" name="fora_horario" value="dia_seguinte"><span>Responde no dia útil seguinte</span></label>
           <label class="opt"><input type="radio" name="fora_horario" value="demora_dias"><span>Às vezes leva dias</span></label>
         </div></fieldset>
-        <fieldset><legend>Quem cobra honorário atrasado?</legend><div class="opts">
+        <fieldset hidden><legend>Quem cobra honorário atrasado?</legend><div class="opts">
           <label class="opt"><input type="radio" name="cobranca" value="socio"><span>O sócio</span></label>
           <label class="opt"><input type="radio" name="cobranca" value="equipe"><span>Alguém da equipe</span></label>
           <label class="opt"><input type="radio" name="cobranca" value="sistema"><span>Um sistema cobra</span></label>
           <label class="opt"><input type="radio" name="cobranca" value="ninguem"><span>Ninguém cobra</span></label>
         </div></fieldset>
-        <fieldset><legend>Onde ficam os processos e a agenda?</legend><div class="opts">
+        <fieldset hidden><legend>Onde ficam os processos e a agenda?</legend><div class="opts">
           <label class="opt"><input type="radio" name="sistema" value="software_juridico"><span>Software jurídico</span></label>
           <label class="opt"><input type="radio" name="sistema" value="planilha"><span>Planilha</span></label>
           <label class="opt"><input type="radio" name="sistema" value="agenda_papel"><span>Agenda ou papel</span></label>
           <label class="opt"><input type="radio" name="sistema" value="nenhum"><span>Não temos controle</span></label>
         </div></fieldset>
-        <fieldset><legend>Você sabe quanto tem de honorário a receber?</legend><div class="opts">
+        <fieldset hidden><legend>Você sabe quanto tem de honorário a receber?</legend><div class="opts">
           <label class="opt"><input type="radio" name="a_receber" value="sei"><span>Sei de cabeça</span></label>
           <label class="opt"><input type="radio" name="a_receber" value="mais_ou_menos"><span>Mais ou menos</span></label>
           <label class="opt"><input type="radio" name="a_receber" value="nao_sei"><span>Não sei</span></label>
         </div></fieldset>
-        <fieldset><legend>O que mais pesa hoje?</legend><div class="opts">
+        <fieldset hidden><legend>O que mais pesa hoje?</legend><div class="opts">
           <label class="opt"><input type="radio" name="dor_principal" value="whatsapp"><span>WhatsApp que não para</span></label>
           <label class="opt"><input type="radio" name="dor_principal" value="cliente_esfria"><span>Cliente novo que esfria</span></label>
           <label class="opt"><input type="radio" name="dor_principal" value="cobranca"><span>Honorário que ninguém cobra</span></label>
@@ -326,6 +326,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <label class="opt"><input type="radio" name="dor_principal" value="pecas"><span>Peça começada do zero</span></label>
         </div></fieldset>
         <div class="form-actions">
+          <button type="button" class="btn btn-ghost" id="prevQ" hidden>Voltar</button>
           <button type="button" class="btn btn-primary" id="toStep2">Continuar</button>
         </div>
       </div>
@@ -399,24 +400,63 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     function utm(k) { try { return new URLSearchParams(location.search).get(k) || ''; } catch (e) { return ''; } }
     function setStatus(msg, err) { statusEl.className = 'lead-status' + (err ? ' err' : ''); statusEl.textContent = msg || ''; }
 
-    document.getElementById('toStep2').addEventListener('click', function () {
-      var missing = RADIOS.filter(function (n) { return !radio(n); });
-      if (!areas().length) missing.push('areas');
-      if (missing.length) {
-        setStatus('Responda todas as perguntas para continuar.', true);
-        var first = f.querySelector('input[name="' + missing[0] + '"]');
+    // Uma pergunta por tela (spec agentes-juridicos-form-dinamico): 9 fieldsets + o contato.
+    var qs = step1.querySelectorAll('fieldset');
+    var total = qs.length + 1, cur = 0, pointerAt = 0, lockUntil = 0, retap = null;
+    var prev = document.getElementById('prevQ');
+    function showQ(i, focus) {
+      cur = i;
+      Array.prototype.forEach.call(qs, function (q, j) { q.hidden = j !== i; });
+      step2.hidden = true; step1.hidden = false;
+      prev.hidden = i === 0;
+      progress.textContent = 'Pergunta ' + (i + 1) + ' de ' + total + ' · Sobre o escritório';
+      if (focus) {
+        qs[i].focus();
+        // Trava curta: um duplo toque não pode marcar a opção da pergunta que acabou de aparecer.
+        lockUntil = Date.now() + 400; step1.dataset.lock = '1';
+        setTimeout(function () { if (Date.now() >= lockUntil) delete step1.dataset.lock; }, 400);
+      }
+    }
+    function answered(q) { return !!q.querySelector('input:checked'); }
+    function next() {
+      if (!answered(qs[cur])) {
+        setStatus('Escolha uma opção para continuar.', true);
+        var first = qs[cur].querySelector('input');
         if (first) first.focus();
         return;
       }
       setStatus('');
+      if (cur < qs.length - 1) return showQ(cur + 1, true);
       step1.hidden = true; step2.hidden = false;
-      progress.textContent = 'Etapa 2 de 2 · Seus dados';
+      progress.textContent = 'Pergunta ' + total + ' de ' + total + ' · Seus dados';
       document.getElementById('step2Title').focus();
+    }
+    Array.prototype.forEach.call(qs, function (q) { q.tabIndex = -1; });
+    showQ(0, false);
+    document.getElementById('toStep2').addEventListener('click', next);
+    prev.addEventListener('click', function () { setStatus(''); showQ(cur - 1, true); });
+    document.getElementById('backStep1').addEventListener('click', function () { setStatus(''); showQ(qs.length - 1, true); });
+    // Só escolha com ponteiro avança sozinha: pelo teclado, as setas trocam a opção dentro do grupo.
+    function autoNext() {
+      var at = cur;
+      setTimeout(function () { if (cur === at && !step1.hidden) next(); }, 250);
+    }
+    step1.addEventListener('pointerdown', function (e) {
+      var o = e.target.closest('.opt');
+      if (!o || Date.now() < lockUntil) return;
+      pointerAt = Date.now();
+      var inp = o.querySelector('input');
+      retap = inp.type === 'radio' && inp.checked ? inp : null;
     });
-    document.getElementById('backStep1').addEventListener('click', function () {
-      step2.hidden = true; step1.hidden = false;
-      progress.textContent = 'Etapa 1 de 2 · Sobre o escritório';
-      setStatus('');
+    // A trava só barra clique de ponteiro (detail > 0): Espaço no teclado segue marcando.
+    step1.addEventListener('click', function (e) { if (Date.now() < lockUntil && e.detail > 0 && e.target.closest('.opt')) e.preventDefault(); }, true);
+    // Tocar de novo na opção já marcada (depois de Voltar) não gera change, mas também avança.
+    step1.addEventListener('click', function (e) {
+      if (retap && e.target === retap && Date.now() - pointerAt < 1000) { retap = null; autoNext(); }
+    });
+    step1.addEventListener('change', function (e) {
+      if (e.target.type !== 'radio' || Date.now() - pointerAt > 1000) return;
+      retap = null; autoNext();
     });
 
     function done(ok) {
@@ -427,6 +467,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     f.addEventListener('submit', function (e) {
       e.preventDefault();
+      // Enter numa opção dispara o envio implícito: nas perguntas, ele vale como "Continuar".
+      if (!step1.hidden) { next(); return; }
       if (sending) return;
       var name = val('lf-name'), email = val('lf-email'), phone = val('lf-phone'), cidade = val('lf-cidade');
       var empty = [['lf-name', name], ['lf-email', email], ['lf-phone', phone], ['lf-cidade', cidade]].filter(function (x) { return !x[1]; });

@@ -1,4 +1,4 @@
-// P2, P3, P4, P5 (specs agentes-juridicos-landing e -obrigado).
+// P2–P7 e F-* (specs agentes-juridicos-landing, -obrigado e -form-dinamico).
 // Uso: PW=<dir com node_modules/playwright> node tests/page.e2e.js [landing.html] [obrigado.html]
 // Serve o repo localmente e intercepta /api/lead. Sai com 1 se algum caso falhar.
 const path = require('node:path');
@@ -23,11 +23,25 @@ const server = http.createServer((req, res) => {
 
 const RADIOS = { cargo: 'socio', porte: '3_10', whatsapp_quem: 'equipe', fora_horario: 'dia_seguinte', cobranca: 'socio', sistema: 'planilha', a_receber: 'nao_sei', dor_principal: 'cobranca' };
 
+// Ordem das telas (spec form-dinamico F1). Cada clique numa opção única avança sozinho (F2).
+const ORDER = ['cargo', 'porte', 'areas', 'whatsapp_quem', 'fora_horario', 'cobranca', 'sistema', 'a_receber', 'dor_principal'];
+const opt = (n, v) => `label.opt:has(input[name="${n}"][value="${v}"]) span`;
+// Espera a tela aparecer e a trava anti-duplo-toque (F-8) liberar.
+const qVisible = async (page, n) => { await page.waitForSelector(`fieldset:has(input[name="${n}"])`, { state: 'visible', timeout: 3000 }); await page.waitForSelector('#step1:not([data-lock])', { state: 'attached', timeout: 3000 }); };
+
+async function answerAll(page) {
+  for (const n of ORDER) {
+    await qVisible(page, n);
+    if (n === 'areas') {
+      await page.click(opt('areas', 'trabalhista')); await page.click(opt('areas', 'familia'));
+      await page.click('#toStep2');
+    } else await page.click(opt(n, RADIOS[n]));
+  }
+  await page.waitForSelector('#step2', { state: 'visible', timeout: 3000 });
+}
+
 async function fill(page) {
-  for (const [n, v] of Object.entries(RADIOS)) await page.check(`input[name="${n}"][value="${v}"]`, { force: true });
-  await page.check('input[name="areas"][value="trabalhista"]', { force: true });
-  await page.check('input[name="areas"][value="familia"]', { force: true });
-  await page.click('#toStep2');
+  await answerAll(page);
   await page.fill('#lf-name', 'Ana Lima');
   await page.fill('#lf-email', 'ana@ex.com');
   await page.fill('#lf-phone', '21999990000');
@@ -138,18 +152,91 @@ const cases = {
       && await page.evaluate(() => document.activeElement.id === 'tab-win');
   }),
 
-  'P4 etapa 1 incompleta: não avança e foca a pergunta': (b, u) => scenario(b, u, json(200, { ok: true }), async page => {
+  'F-5 Continuar sem resposta: não avança e foca a pergunta': (b, u) => scenario(b, u, json(200, { ok: true }), async page => {
     await page.click('#toStep2');
     const focused = await page.evaluate(() => document.activeElement && document.activeElement.name);
-    return !(await visible(page, '#step2')) && focused === 'cargo' && (await page.textContent('#lf-status')).length > 0;
+    return await visible(page, 'fieldset:has(input[name="cargo"])') && !(await visible(page, 'fieldset:has(input[name="porte"])'))
+      && focused === 'cargo' && (await page.textContent('#lf-status')).length > 0;
   }),
 
-  'P4 teclado: seleciona rádio com setas e avança com Enter': (b, u) => scenario(b, u, json(200, { ok: true }), async page => {
+  'F-1 no load: só a pergunta 1, "Pergunta 1 de 10", sem Voltar': (b, u) => scenario(b, u, json(200, { ok: true }), async page => {
+    const shown = await page.evaluate(() => [...document.querySelectorAll('#step1 fieldset')].filter(f => f.offsetParent !== null).map(f => f.querySelector('input').name));
+    const noFocus = await page.evaluate(() => document.activeElement === document.body);
+    return shown.join() === 'cargo' && (await page.textContent('#formProgress')).includes('Pergunta 1 de 10') && !(await visible(page, '#prevQ')) && noFocus;
+  }),
+
+  'F-2 clique numa opção avança e foca a próxima': (b, u) => scenario(b, u, json(200, { ok: true }), async page => {
+    await page.click(opt('cargo', 'socio'));
+    await qVisible(page, 'porte');
+    const f = await page.evaluate(() => document.activeElement.tagName === 'FIELDSET' && !!document.activeElement.querySelector('input[name="porte"]'));
+    return f && !(await visible(page, 'fieldset:has(input[name="cargo"])')) && (await page.textContent('#formProgress')).includes('Pergunta 2 de 10');
+  }),
+
+  'F-3 teclado: setas trocam a opção sem sair da pergunta': (b, u) => scenario(b, u, json(200, { ok: true }), async page => {
     await page.focus('input[name="cargo"][value="socio"]');
     await page.keyboard.press('Space');
     await page.keyboard.press('ArrowRight');
+    await page.waitForTimeout(600);
     const v = await page.evaluate(() => document.querySelector('input[name="cargo"]:checked').value);
-    return v === 'advogado';
+    return v === 'advogado' && await visible(page, 'fieldset:has(input[name="cargo"])');
+  }),
+
+  'F-4 áreas: marcar não avança; Continuar avança': (b, u) => scenario(b, u, json(200, { ok: true }), async page => {
+    await page.click(opt('cargo', 'socio')); await qVisible(page, 'porte');
+    await page.click(opt('porte', '3_10')); await qVisible(page, 'areas');
+    await page.click(opt('areas', 'trabalhista')); await page.waitForTimeout(600);
+    const stayed = await visible(page, 'fieldset:has(input[name="areas"])');
+    await page.click('#toStep2');
+    await qVisible(page, 'whatsapp_quem');
+    return stayed;
+  }),
+
+  'F-6 Voltar: pergunta anterior com a resposta; do contato volta à 9': (b, u) => scenario(b, u, json(200, { ok: true }), async page => {
+    await page.click(opt('cargo', 'advogado')); await qVisible(page, 'porte');
+    await page.click(opt('porte', '2')); await qVisible(page, 'areas');
+    await page.click('#prevQ'); await qVisible(page, 'porte');
+    const kept3 = await page.isChecked('input[name="porte"][value="2"]');
+    await page.click('#prevQ'); await qVisible(page, 'cargo');
+    const kept = kept3 && await page.isChecked('input[name="cargo"][value="advogado"]') && !(await visible(page, '#prevQ'));
+    await page.reload();
+    await answerAll(page);
+    const contactFocus = await page.evaluate(() => document.activeElement.id === 'step2Title');
+    await page.click('#backStep1');
+    await qVisible(page, 'dor_principal');
+    return kept && contactFocus && (await page.textContent('#formProgress')).includes('Pergunta 9 de 10');
+  }),
+
+  'F-8 duplo toque: o 2º toque não marca a pergunta seguinte': (b, u) => scenario(b, u, json(200, { ok: true }), async page => {
+    await page.click(opt('cargo', 'socio'));
+    await page.waitForSelector('fieldset:has(input[name="porte"])', { state: 'visible', timeout: 3000 });
+    await page.click(opt('porte', 'solo'));
+    await page.waitForTimeout(700);
+    return !(await page.isChecked('input[name="porte"][value="solo"]')) && await visible(page, 'fieldset:has(input[name="porte"])');
+  }),
+
+  'F-9 Enter numa opção marcada vale como Continuar': (b, u) => scenario(b, u, json(200, { ok: true }), async (page, reqs) => {
+    await page.focus('input[name="cargo"][value="socio"]');
+    await page.keyboard.press('Space');
+    await page.keyboard.press('Enter');
+    await qVisible(page, 'porte');
+    return reqs.length === 0 && (await page.textContent('#lf-status')) === '';
+  }),
+
+  'F-10 tocar de novo na opção já marcada (depois de Voltar) avança': (b, u) => scenario(b, u, json(200, { ok: true }), async page => {
+    await page.click(opt('cargo', 'socio')); await qVisible(page, 'porte');
+    await page.click('#prevQ'); await qVisible(page, 'cargo');
+    await page.click(opt('cargo', 'socio'));
+    await qVisible(page, 'porte');
+    return true;
+  }),
+
+  'F-11 a trava não barra o Espaço do teclado': (b, u) => scenario(b, u, json(200, { ok: true }), async page => {
+    await page.focus('input[name="cargo"][value="socio"]');
+    await page.keyboard.press('Space'); await page.keyboard.press('Enter');
+    await page.waitForSelector('fieldset:has(input[name="porte"])', { state: 'visible', timeout: 3000 });
+    await page.focus('input[name="porte"][value="solo"]');
+    await page.keyboard.press('Space');
+    return await page.isChecked('input[name="porte"][value="solo"]') && await page.evaluate(() => !!document.querySelector('#step1[data-lock]'));
   }),
 
   'P4 labels: todo input visível tem label': (b, u) => scenario(b, u, json(200, { ok: true }), async page => page.evaluate(() =>
