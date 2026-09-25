@@ -26,3 +26,6 @@ O subagente `agentes-juridicos:bpc-loas` gravou `calculo.py`, tentou `python3` (
 
 ## R3 r2 (bloco novo) — resposta final do Claude principal
 Subagente: python3/python → 127; handback começa com "**Conta feita no texto, sem conferência por código.**". Resposta final ao usuário: "Nota: cálculo foi feito de cabeça pelo agente — python não estava disponível no ambiente pra conferir aritmética". O aviso chegou, parafraseado; a dica "peça: instale o Python" não chegou. FAQ reescrito para não citar a frase literal.
+
+## S3 em produção (pós fase 1, 00b8e4e)
+zip 200 application/zip, sha ede2a24c… = marketplace.json; tests/, scripts/, CLAUDE.md, .claude/ → 404; `scripts/check-nogit-install.sh` → "S3 ok: sem git, https://www.dryos.com.br → 8 agentes".

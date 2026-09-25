@@ -5,7 +5,12 @@ const ROOT = path.join(__dirname, '..');
 const FILES = { L: path.join(ROOT, 'agentes-juridicos.html'), O: path.join(ROOT, 'agentes-juridicos-obrigado.html') };
 const orig = { L: fs.readFileSync(FILES.L, 'utf8'), O: fs.readFileSync(FILES.O, 'utf8') };
 const guide = orig.O.slice(orig.O.indexOf('<section class="sec-pad guide"'), orig.O.indexOf('</section>', orig.O.indexOf('<section class="sec-pad guide"')) + 10);
+const pasta = orig.O.split('\n').find(l => l.includes('id="passo-pasta"')) + '\n';
 const M = {
+  'link-plugin-errado': ['O', 'install-plugin?plugin=agentes-juridicos&amp;', 'install-plugin?plugin=agentes&amp;'],
+  'link-marketplace-git': ['O', 'marketplace=https%3A%2F%2Fwww.dryos.com.br%2Fplugins%2Fmarketplace.json', 'marketplace=DRYOS-Studio%2Fagentes-juridicos'],
+  'sem-pasta': ['O', pasta, ''],
+  'volta-terminal': ['O', '<ol class="gsteps">', '<ol class="gsteps"><li><h4>Abra o PowerShell</h4><p>Rode <code>irm https://claude.ai/install.ps1 | iex</code></p></li>'],
   'guia-na-landing': ['L', '<section class="sec-pad rotina">', guide.replace('id="guia">', 'id="guia" hidden>') + '\n<section class="sec-pad rotina">'],
   'erro-fica': ['L', '          } else {\n            done(false);', "          } else {\n            setStatus('Erro', true); sending = false; btn.disabled = false;"],
   'rede-fica': ['L', '.catch(function () { clearTimeout(timer); done(false); });', '.catch(function () { clearTimeout(timer); });'],
@@ -81,7 +86,9 @@ const JOBS = Number(process.env.MUT_JOBS) || 6;
 const README = process.env.GUIDE_README || 'https://raw.githubusercontent.com/DRYOS-Studio/agentes-juridicos/main/README.md';
 const gs = f => spawnSync(process.execPath, [path.join(__dirname, 'guide-sync.js'), README, ...(f ? [f] : [])], { encoding: 'utf8' }).status;
 const gf = path.join(os.tmpdir(), 'aj-guia-diverge.html');
-fs.writeFileSync(gf, orig.O.replace('<code data-cmd>claude</code>', '<code data-cmd>claude --x</code>'));
+const GA = '<code data-cmd>https://www.dryos.com.br/plugins/marketplace.json</code>';
+if (orig.O.split(GA).length !== 2) { console.log('ANCHOR-MISSING guia-diverge'); process.exit(1); }
+fs.writeFileSync(gf, orig.O.replace(GA, '<code data-cmd>https://www.dryos.com.br/plugins/outro.json</code>'));
 const g0 = gs(), g1 = gs(gf); fs.unlinkSync(gf);
 if (g0 !== 0) { console.log('BASELINE FAIL guide-sync'); survived++; }
 else if (g1 === 0) { console.log('SURVIVED guia-diverge'); survived++; } else console.log('killed   guia-diverge ← guide-sync');
