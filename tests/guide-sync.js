@@ -2,7 +2,7 @@
 // Uso: node tests/guide-sync.js [README local | URL raw]  (default: raw do GitHub)
 const fs = require('node:fs'); const path = require('node:path');
 const SRC = process.argv[2] || 'https://raw.githubusercontent.com/DRYOS-Studio/agentes-juridicos/main/README.md';
-const PAGE = process.argv[3] || path.join(__dirname, '..', 'agentes-juridicos.html');
+const PAGE = process.argv[3] || path.join(__dirname, '..', 'agentes-juridicos-obrigado.html');
 const dec = s => s.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, '&');
 
 (async () => {

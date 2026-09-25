@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instale os agentes jurídicos | DRYOS</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@500;600;700;800&family=Onest:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KS9H2KN');</script>
+<!-- End Google Tag Manager -->
+
+<style>
+  :root {
+    --bg: #FAFAF8;
+    --ink: #0A0A0A;
+    --ink-soft: #1A1A1A;
+    --oak: #1F3A2A;
+    --oak-light: #4A6A52;
+    --oak-tint: #E9EEE9;
+    --mute: #6B6B68;
+    --mute-soft: #9A9A95;
+    --line: #1A1A1A14;
+    --line-strong: #1A1A1A2A;
+    --surface: #F2F2EE;
+    --clay: #8A4A33;
+    --wa: #17603F;
+
+    --font-display: "Funnel Display", "Helvetica Neue", "Segoe UI", system-ui, -apple-system, sans-serif;
+    --font-body: "Onest", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+    --max: 1280px;
+    --gutter: clamp(1.25rem, 4vw, 4rem);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  body { font-family: var(--font-body); background: var(--bg); color: var(--ink); font-size: 16px; line-height: 1.55; letter-spacing: -0.005em; overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--oak); color: var(--bg); }
+  :focus-visible { outline: 2px solid var(--oak); outline-offset: 3px; border-radius: 2px; }
+  [hidden] { display: none !important; }
+
+  .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); position: relative; }
+  .skip-link { position: absolute; left: 1rem; top: -4rem; z-index: 200; padding: .65rem .9rem; background: var(--ink); color: var(--bg); font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; }
+  .skip-link:focus-visible { top: 1rem; }
+
+  /* ---------- NAV ---------- */
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(250,250,248,0.85); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid var(--line); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 1rem var(--gutter); max-width: var(--max); margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 0.6rem; }
+  .brand svg { width: 26px; height: 26px; border-radius: 6px; }
+  .brand-name { font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: -0.02em; }
+  .brand-name span { color: var(--oak-light); font-weight: 500; }
+  @media (max-width: 460px) { .brand-name span { display: none; } }
+
+  /* ---------- SECTIONS ---------- */
+  section { border-bottom: 1px solid var(--line); }
+  .sec-pad { padding: clamp(4rem, 9vw, 7rem) 0; }
+  .label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--oak-light); display: block; margin-bottom: 1.2rem; }
+  .sec-title { font-family: var(--font-display); font-weight: 700; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.04; letter-spacing: -0.03em; text-wrap: balance; max-width: 20ch; }
+  .sec-title strong { color: var(--oak); font-weight: 700; }
+  .sec-intro { color: var(--mute); font-size: clamp(1rem,1.6vw,1.18rem); max-width: 60ch; margin-top: 1.25rem; line-height: 1.6; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.3rem; border-radius: 9px; font-size: 14px; font-weight: 600; transition: transform .15s, background .2s; border: none; cursor: pointer; font-family: var(--font-body); }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--oak); color: var(--bg); }
+  .btn-primary:hover { background: var(--ink); }
+
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+  /* ---------- GUIA ---------- */
+  .guide { background: var(--bg); }
+  .guide-notice { background: var(--oak-tint); border: 1px solid var(--line); border-radius: 12px; padding: 1.1rem 1.3rem; margin-top: 2rem; max-width: 72ch; font-size: 14.5px; }
+  .guide-notice.err { background: #F6EDE8; }
+  .guide-notice a { font-weight: 600; text-decoration: underline; color: var(--wa); }
+  .tabs { display: flex; gap: 0.5rem; margin-top: 2.5rem; flex-wrap: wrap; }
+  .tabs button { font-family: var(--font-body); font-size: 14px; font-weight: 600; padding: 0.6rem 1.1rem; border-radius: 9px; border: 1px solid var(--line-strong); background: #fff; color: var(--ink); cursor: pointer; }
+  .tabs button[aria-selected="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .gsteps { list-style: none; counter-reset: g; margin-top: 1.6rem; max-width: 780px; }
+  .gsteps > li { counter-increment: g; position: relative; padding: 0 0 1.6rem 2.8rem; }
+  .gsteps > li::before { content: counter(g); position: absolute; left: 0; top: 0; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--oak); color: #fff; font-family: var(--font-mono); font-size: 12px; display: grid; place-items: center; }
+  .gsteps h4 { font-family: var(--font-display); font-weight: 700; font-size: 1.12rem; letter-spacing: -0.015em; }
+  .gsteps p { font-size: 14.5px; color: var(--mute); margin-top: 0.3rem; max-width: 64ch; }
+  .gsteps p a { text-decoration: underline; color: var(--ink-soft); }
+  .cmd { display: flex; align-items: stretch; margin-top: 0.6rem; max-width: 640px; background: var(--ink); border-radius: 9px; overflow: hidden; }
+  .cmd code { flex: 1; font-family: var(--font-mono); font-size: 13px; color: #EDEDE8; padding: 0.75rem 0.9rem; overflow-x: auto; white-space: pre; }
+  .cmd button { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.05em; text-transform: uppercase; background: #ffffff14; color: #EDEDE8; border: none; padding: 0 0.9rem; cursor: pointer; }
+  .cmd button:hover { background: #ffffff26; }
+  .prompt-box code { white-space: pre-wrap; }
+  .guide-sub { font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; letter-spacing: -0.02em; margin-top: 2.6rem; }
+  .faq-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.6rem 3rem; margin-top: 1.6rem; }
+  @media (max-width: 760px) { .faq-grid { grid-template-columns: 1fr; } }
+  .faq-item h4 { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; letter-spacing: -0.01em; }
+  .faq-item p { color: var(--mute); font-size: 14px; margin-top: 0.45rem; line-height: 1.55; max-width: 52ch; }
+  .faq-item code { font-family: var(--font-mono); font-size: 12.5px; background: var(--surface); padding: 0.1rem 0.35rem; border-radius: 4px; }
+
+  /* ---------- ROTINA ---------- */
+  .rotina { background: var(--ink); color: var(--bg); }
+  .rotina .label { color: #9DBFA8; }
+  .rotina .sec-title { color: var(--bg); }
+  .rotina .sec-title strong { color: #9DBFA8; }
+  .rotina .sec-intro { color: #A6A6A0; }
+  .rotina .btn-primary { background: var(--bg); color: var(--ink); margin-top: 2rem; }
+  .rotina .btn-primary:hover { background: #9DBFA8; }
+
+  footer { padding: 2.5rem var(--gutter); }
+  .foot-inner { max-width: var(--max); margin: 0 auto; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; }
+  .foot-links { display: flex; flex-wrap: wrap; align-items: center; gap: 1.4rem; }
+  .foot-links a, .foot-links .mono { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--mute); }
+  .foot-links a:hover { color: var(--oak); }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS9H2KN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://www.dryos.com.br/" class="brand" aria-label="DRYOS — página inicial">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="5" fill="#1F3A2A"/><path fill="#FAFAF8" fill-rule="evenodd" d="M9 8h7a8 8 0 0 1 0 16H9zm4 4v8h3a4 4 0 0 0 0-8z"/></svg>
+      <span class="brand-name">DRYOS <span>Agentes jurídicos</span></span>
+    </a>
+  </div>
+</nav>
+
+<main id="main-content" tabindex="-1">
+
+<section class="sec-pad guide" id="guia">
+  <div class="container">
+    <span class="label">— Passo a passo</span>
+    <h1 class="sec-title">Instale os agentes <strong>e faça o teste</strong>.</h1>
+    <p class="guide-notice" id="guideOk" hidden>Recebemos suas respostas. Siga os passos abaixo; se travar em algum, fale com a gente pelo <a href="https://wa.me/5521967287595?text=Oi%2C%20vim%20pela%20p%C3%A1gina%20dos%20agentes%20jur%C3%ADdicos" target="_blank" rel="noopener">WhatsApp</a>.</p>
+    <p class="guide-notice err" id="guideErr" hidden>Não conseguimos registrar seus dados agora, mas o guia está liberado. Se quiser que a gente fale com você, mande um oi no <a href="https://wa.me/5521967287595?text=Oi%2C%20vim%20pela%20p%C3%A1gina%20dos%20agentes%20jur%C3%ADdicos" target="_blank" rel="noopener">WhatsApp</a>.</p>
+    <p class="sec-intro" id="guideReq"><strong>Antes de começar:</strong> você precisa de um plano pago do Claude (Pro ou superior); o plano gratuito não inclui o Claude Code. O que os agentes entregam é rascunho: o advogado revisa e assina, e a responsabilidade técnica continua dele (EAOAB, art. 32).</p>
+
+    <div class="tabs" role="tablist" aria-label="Sistema operacional">
+      <button type="button" role="tab" id="tab-mac" aria-controls="panel-mac" aria-selected="true">Mac</button>
+      <button type="button" role="tab" id="tab-win" aria-controls="panel-win" aria-selected="false" tabindex="-1">Windows</button>
+    </div>
+
+    <div role="tabpanel" id="panel-mac" aria-labelledby="tab-mac">
+      <ol class="gsteps">
+        <li><h4>Abra o Terminal</h4><p>Tecle <strong>Cmd + Espaço</strong>, digite "Terminal" e aperte Enter.</p></li>
+        <li><h4>Instale as ferramentas da Apple</h4><p>Elas trazem o git e o Python. Uma janela vai pedir confirmação: clique em <strong>Instalar</strong>. Se aparecer "already installed", pode seguir.</p>
+          <div class="cmd"><code data-cmd>xcode-select --install</code><button type="button" data-copy>Copiar</button></div></li>
+        <li><h4>Instale o Claude Code</h4>
+          <div class="cmd"><code data-cmd>curl -fsSL https://claude.ai/install.sh | bash</code><button type="button" data-copy>Copiar</button></div></li>
+        <li><h4>Crie uma pasta para os agentes</h4>
+          <div class="cmd"><code data-cmd>mkdir -p ~/agentes-juridicos &amp;&amp; cd ~/agentes-juridicos</code><button type="button" data-copy>Copiar</button></div></li>
+      </ol>
+    </div>
+    <div role="tabpanel" id="panel-win" aria-labelledby="tab-win" hidden>
+      <ol class="gsteps">
+        <li><h4>Instale o Git for Windows</h4><p>Baixe em <a href="https://git-scm.com/downloads/win" target="_blank" rel="noopener">git-scm.com/downloads/win</a> e avance com as opções padrão.</p></li>
+        <li><h4>Instale o Python</h4><p>Abra a Microsoft Store, busque "Python 3" (publicado pela Python Software Foundation) e clique em <strong>Obter</strong>.</p></li>
+        <li><h4>Abra o PowerShell</h4><p>Tecle <strong>Windows</strong>, digite "PowerShell" e aperte Enter.</p></li>
+        <li><h4>Instale o Claude Code</h4>
+          <div class="cmd"><code data-cmd>irm https://claude.ai/install.ps1 | iex</code><button type="button" data-copy>Copiar</button></div></li>
+        <li><h4>Crie uma pasta para os agentes</h4><p>Feche e abra o PowerShell de novo, e rode:</p>
+          <div class="cmd"><code data-cmd>mkdir -Force $HOME\agentes-juridicos; cd $HOME\agentes-juridicos</code><button type="button" data-copy>Copiar</button></div></li>
+      </ol>
+    </div>
+
+    <h2 class="guide-sub">Instalar os agentes</h2>
+    <ol class="gsteps">
+      <li><h4>Abra o Claude Code na pasta</h4><p>Na primeira vez, o navegador abre para você entrar com a sua conta do Claude.</p>
+        <div class="cmd"><code data-cmd>claude</code><button type="button" data-copy>Copiar</button></div></li>
+      <li><h4>Adicione o catálogo da DRYOS</h4><p>Dentro do Claude Code:</p>
+        <div class="cmd"><code data-cmd>/plugin marketplace add DRYOS-Studio/agentes-juridicos</code><button type="button" data-copy>Copiar</button></div></li>
+      <li><h4>Instale os agentes</h4><p>Quando o Claude perguntar, escolha <strong>User scope</strong>.</p>
+        <div class="cmd"><code data-cmd>/plugin install agentes-juridicos@dryos</code><button type="button" data-copy>Copiar</button></div></li>
+      <li><h4>Confira</h4><p>Digite <code>/plugin</code>, vá até a aba <strong>Installed</strong> e veja <code>agentes-juridicos</code> na lista. Tecle Esc para sair.</p></li>
+    </ol>
+
+    <h2 class="guide-sub">Fazer o teste</h2>
+    <p class="sec-intro">Cole a mensagem abaixo no Claude Code. O caso é fictício; não use dados de cliente real no teste. O agente pode fazer perguntas antes de redigir e depois entrega a minuta com as averbações e o checklist.</p>
+    <div class="cmd prompt-box"><code data-prompt>Use o agente divorcio-consensual. Caso fictício para teste: Ana Souza e Bruno Lima, casados desde 2015 no regime de comunhão parcial, sem filhos, querem se divorciar em cartório. Têm um apartamento em Niterói (R$ 400.000) que fica com Ana, que paga R$ 200.000 a Bruno. Sem pensão entre eles. Redija a minuta da escritura.</code><button type="button" data-copy>Copiar</button></div>
+    <p class="sec-intro">Para chamar outro agente, diga o nome dele no pedido, por exemplo: "Use o agente bpc-loas para…".</p>
+
+    <h2 class="guide-sub">Perguntas frequentes</h2>
+    <div class="faq-grid">
+      <div class="faq-item"><h4>Apareceu "python3: command not found"</h4><p>Os agentes de cálculo usam o Python. No Mac, rode <code>xcode-select --install</code> de novo. No Windows, instale o Python pela Microsoft Store, feche e abra o PowerShell. Se ainda falhar, peça ao Claude: "faça a conta sem usar Python".</p></div>
+      <div class="faq-item"><h4>E o sigilo dos meus clientes?</h4><p>O que você digita no Claude Code vai para os servidores da Anthropic, a empresa que faz o Claude. Anonimize nomes e documentos quando puder e siga a política do seu escritório.</p></div>
+      <div class="faq-item"><h4>O Claude pediu permissão para rodar um comando</h4><p>Os agentes só precisam rodar <code>python3</code> (para cálculos) e criar os arquivos da peça na pasta dos agentes. Não aprove comandos que você não entende, e não abra no Claude Code documentos de origem desconhecida.</p></div>
+      <div class="faq-item"><h4>Deu "/plugin isn't available in this environment"</h4><p>Você está no app de desktop ou numa sessão na nuvem. Use o Terminal (Mac) ou o PowerShell (Windows), como no passo a passo.</p></div>
+    </div>
+    <p class="hp" id="copyStatus" role="status" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="sec-pad rotina">
+  <div class="container">
+    <span class="label">— Além da peça</span>
+    <h2 class="sec-title">Os agentes redigem a peça. <strong>A rotina em volta dela também pode rodar sozinha.</strong></h2>
+    <p class="sec-intro">A DRYOS automatiza a rotina do escritório que não é advocacia: atendimento no WhatsApp, cobrança de honorários, sistemas conectados e relatórios. O diagnóstico é gratuito e leva 30 minutos.</p>
+    <a href="https://www.dryos.com.br/#diagnostico" class="btn btn-primary">Conhecer a DRYOS</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <a href="https://www.dryos.com.br/" class="brand" aria-label="DRYOS — página inicial">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="5" fill="#1F3A2A"/><path fill="#FAFAF8" fill-rule="evenodd" d="M9 8h7a8 8 0 0 1 0 16H9zm4 4v8h3a4 4 0 0 0 0-8z"/></svg>
+      <span class="brand-name">DRYOS</span>
+    </a>
+    <div class="foot-links">
+      <a href="https://www.dryos.com.br/">Início</a>
+      <a href="/privacidade">Privacidade</a>
+      <span class="mono">Crescimento com raiz · 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var r = new URLSearchParams(location.search).get('r');
+    if (r === 'ok' || r === 'erro') document.getElementById(r === 'ok' ? 'guideOk' : 'guideErr').hidden = false;
+    // generate_lead: 1 vez por envio. A landing grava o token antes de navegar (spec O4).
+    try {
+      if (r === 'ok' && sessionStorage.getItem('aj_lead')) {
+        sessionStorage.removeItem('aj_lead');
+        (window.dataLayer = window.dataLayer || []).push({ event: 'generate_lead', form_id: 'agentes-juridicos' });
+      }
+    } catch (e) {}
+
+    // Abas Mac / Windows
+    var tabs = [document.getElementById('tab-mac'), document.getElementById('tab-win')];
+    function select(i) {
+      tabs.forEach(function (t, j) {
+        var on = i === j;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      });
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(i); });
+      t.addEventListener('keydown', function (e) {
+        var n = e.key === 'ArrowRight' || e.key === 'ArrowLeft' ? (i + 1) % 2 : e.key === 'Home' ? 0 : e.key === 'End' ? 1 : -1;
+        if (n >= 0) { select(n); tabs[n].focus(); e.preventDefault(); }
+      });
+    });
+    if (/Win/i.test(navigator.platform || navigator.userAgent)) select(1);
+
+    // Copiar comandos
+    document.querySelectorAll('[data-copy]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var code = b.parentNode.querySelector('code');
+        if (!navigator.clipboard) return;
+        navigator.clipboard.writeText(code.textContent).then(function () {
+          b.textContent = 'Copiado';
+          document.getElementById('copyStatus').textContent = 'Comando copiado.';
+          setTimeout(function () { b.textContent = 'Copiar'; }, 1600);
+        });
+      });
+    });
+  })();
+</script>
+</body>
+</html>

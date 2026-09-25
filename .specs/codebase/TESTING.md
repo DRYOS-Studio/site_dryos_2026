@@ -8,8 +8,8 @@ Sem `package.json`; tudo roda com Node puro e o Playwright da skill local.
 
 - `node --test tests/*.test.js`: `api/lead.js` (fetch mockado, snapshot das origens antigas) e `vercel.json`.
 - `node tests/mutate.js`: bateria de mutação do `api/lead.js`, feita numa cópia no tmpdir (exit 0 = todas mortas).
-- `PW_CHROME=<chromium> node tests/page.e2e.js`: e2e da `agentes-juridicos.html` com `/api/lead` interceptado. `node tests/mutate-page.js` é a bateria de mutação da página.
-- `node tests/guide-sync.js [README]`: os comandos da página são idênticos aos do README do plugin `DRYOS-Studio/agentes-juridicos`.
+- `PW_CHROME=<chrome-headless-shell> PW_CHROME_FULL=<Chrome for Testing> node tests/page.e2e.js`: e2e da `agentes-juridicos.html` e da `agentes-juridicos-obrigado.html` com `/api/lead` interceptado. O P7 (Voltar via bfcache) precisa do `PW_CHROME_FULL`, porque o headless-shell não tem bfcache; sem ele, o caso falha. `node tests/mutate-page.js` é a bateria de mutação da página.
+- `node tests/guide-sync.js [README]`: os comandos da `agentes-juridicos-obrigado.html` são idênticos aos do README do plugin `DRYOS-Studio/agentes-juridicos`.
 
 `tests/` e `.specs/` ficam fora do deploy (`.vercelignore`).
 
