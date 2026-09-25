@@ -13,7 +13,8 @@ dryos.com.br/agentes-juridicos  (agentes-juridicos.html, cleanUrls)
         ├─ Core  POST /webhooks/automation/{token}  ┐  allSettled (ADR-3)
         └─ RD    POST /platform/conversions  (+cf_*) ┘  400 → 1 retry sem cf_*
         ▼
-  página mostra o guia (ok ou erro; no erro, com link de WhatsApp)
+  navega para /agentes-juridicos-obrigado?r=ok|erro, que mostra o guia (no erro, com link de WhatsApp)
+  (2026-09-25, ver ../agentes-juridicos-obrigado/spec.md)
 
 github.com/DRYOS-Studio/agentes-juridicos (público)
   .claude-plugin/marketplace.json   name = dryos
@@ -45,7 +46,7 @@ github.com/DRYOS-Studio/agentes-juridicos (público)
    - etapa 2, "Para onde mandamos": nome, e-mail, WhatsApp e cidade.
 
    Honeypot enviado como `company`, mas o input tem id/name que o autofill não reconhece (`hp_ref`, `autocomplete="off"`). Aviso e link `/privacidade`. Submit: botão desabilitado + "Enviando…"; `fetch` com timeout de 25 s; resposta não-JSON = erro → guia + WhatsApp (D8).
-4. Guia (`#guia`, `hidden` até o envio), com abas Mac/Windows e os passos: requisitos (plano pago) · ferramentas (Mac: `xcode-select --install`; Windows: Git for Windows + Python da Microsoft Store) · Claude Code · login · marketplace · install · teste com caso fictício. FAQ: python3 não encontrado · sigilo (anonimizar; os dados vão ao provedor do modelo) · rodar numa pasta dedicada e só aprovar comandos `python3` · revisão pelo advogado (EAOAB 32).
+4. Guia (desde 2026-09-25 em `agentes-juridicos-obrigado.html`, ver ../agentes-juridicos-obrigado/spec.md), com abas Mac/Windows e os passos: requisitos (plano pago) · ferramentas (Mac: `xcode-select --install`; Windows: Git for Windows + Python da Microsoft Store) · Claude Code · login · marketplace · install · teste com caso fictício. FAQ: python3 não encontrado · sigilo (anonimizar; os dados vão ao provedor do modelo) · rodar numa pasta dedicada e só aprovar comandos `python3` · revisão pelo advogado (EAOAB 32).
 5. CTA secundário: a rotina do escritório (diagnóstico), para não abandonar o "agente é plus".
 
 Os comandos ficam em `<code data-cmd>`. O G4 compara esse conjunto com o do README.
@@ -56,7 +57,7 @@ Os comandos ficam em `<code data-cmd>`. O G4 compara esse conjunto com o do READ
 |---|---|---|
 | L1–L7 | `tests/lead.test.js` + `tests/mutate.js` | `node --test tests/*.test.js` · `node tests/mutate.js` (exit 0 = todas as mutações morreram) |
 | P1 | `tests/vercel-config.test.js` (a página existe; nada mexe em `/`) + curl no preview | teste + curl |
-| P2, P3 | `tests/page.e2e.js` (Playwright, servidor estático local, `/api/lead` interceptado: ok, 502, 504 HTML, rede, 400, duplo envio) | e2e + `tests/mutate-page.js` |
+| P2, P3 (e P5, P7 de ../agentes-juridicos-obrigado) | `tests/page.e2e.js` (Playwright, servidor estático local, `/api/lead` interceptado: ok, 502, 504 HTML, rede, timeout, 400, duplo envio; P7 em Chrome for Testing com bfcache) | e2e + `tests/mutate-page.js` |
 | P4 | `validate-gate` + passo de teclado no e2e | auditoria |
 | G1–G3 | `scripts/check-pack.sh` (plugin) | execução; G3 roda de novo com `DRYOS-Studio/agentes-juridicos` depois do push |
 | G4 | `tests/guide-sync.js` (lê o README por caminho local ou pela raw URL do GitHub) | script + mutação `guia-diverge` |

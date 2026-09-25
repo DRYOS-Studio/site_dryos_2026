@@ -138,5 +138,7 @@ Spec-driven documentation generated for project analysis and future planning.
 
 - `api/lead.js`: Vercel function de captura de lead (RD + Core).
 - `agentes-juridicos.html`: landing em `/agentes-juridicos`.
+- `agentes-juridicos-obrigado.html`: página de obrigado com o guia, em `/agentes-juridicos-obrigado` (`noindex`; 2026-09-25).
 - `tests/`: testes e baterias de mutação (fora do deploy).
 - `.specs/features/agentes-juridicos-landing/`: spec, design, ADRs, tasks e gates.
+- `.specs/features/agentes-juridicos-obrigado/`: idem para a página de obrigado (substitui P2/P3 da landing).

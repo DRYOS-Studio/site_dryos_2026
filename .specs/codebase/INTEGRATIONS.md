@@ -22,11 +22,13 @@
 
 ## Google Tag Manager
 
-**Location:** `index.html`, `projetos.html`
+**Location:** todas as páginas `.html` da raiz (grep `GTM-KS9H2KN`)
 
 **Container:** `GTM-KS9H2KN`
 
 **Purpose:** analytics/tag management.
+
+**Conversão `generate_lead` (`form_id: agentes-juridicos`):** dispara em `agentes-juridicos-obrigado.html`, uma vez por envio ok (token `aj_lead` em sessionStorage). Nunca usar page_view dessa página como conversão (ADR-1 de `.specs/features/agentes-juridicos-obrigado/`).
 
 **Implementation:** standard GTM script in `<head>` and `<noscript>` iframe after the opening body content.
 
@@ -58,13 +60,13 @@ Os tokens ficam só em env na Vercel; o browser não vê nenhum.
 
 **Origem `site-agentes-juridicos`:** `qualify()` valida os enums do formulário e calcula `qualificacao` no servidor.
 Os campos vão ao Core e ao RD como `cf_*` (400 do RD → 1 reenvio sem `cf_*`). A `idempotencyKey` inclui a origem.
-Spec: `.specs/features/agentes-juridicos-landing/`. Testes: `node --test tests/*.test.js` e `node tests/mutate.js`.
+Spec: `.specs/features/agentes-juridicos-landing/` e `.specs/features/agentes-juridicos-obrigado/` (página de obrigado). Testes: `node --test tests/*.test.js` e `node tests/mutate.js`.
 
 **Failure behavior:** 200 se ao menos um destino aceitar; 502 se os dois falharem.
 
 ## WhatsApp
 
-**Location:** `index.html`, `projetos.html`
+**Location:** todas as páginas `.html` da raiz (grep `GTM-KS9H2KN`)
 
 **Purpose:** direct contact CTA.
 
@@ -77,7 +79,7 @@ Spec: `.specs/features/agentes-juridicos-landing/`. Testes: `node --test tests/*
 
 ## Email
 
-**Location:** `index.html`, `projetos.html`
+**Location:** todas as páginas `.html` da raiz (grep `GTM-KS9H2KN`)
 
 **Purpose:** direct contact CTA.
 

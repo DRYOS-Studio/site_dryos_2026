@@ -36,7 +36,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     --line-strong: #1A1A1A2A;
     --surface: #F2F2EE;
     --clay: #8A4A33;
-    --wa: #17603F;
 
     --font-display: "Funnel Display", "Helvetica Neue", "Segoe UI", system-ui, -apple-system, sans-serif;
     --font-body: "Onest", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -149,32 +148,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .lead-status.err { color: #A8442C; }
   .privacy { font-size: 12px; color: var(--mute); margin-top: 0.9rem; }
   .privacy a { text-decoration: underline; }
-
-  /* ---------- GUIA ---------- */
-  .guide { background: var(--bg); }
-  .guide-notice { background: var(--oak-tint); border: 1px solid var(--line); border-radius: 12px; padding: 1.1rem 1.3rem; margin-top: 2rem; max-width: 72ch; font-size: 14.5px; }
-  .guide-notice.err { background: #F6EDE8; }
-  .guide-notice a { font-weight: 600; text-decoration: underline; color: var(--wa); }
-  .tabs { display: flex; gap: 0.5rem; margin-top: 2.5rem; flex-wrap: wrap; }
-  .tabs button { font-family: var(--font-body); font-size: 14px; font-weight: 600; padding: 0.6rem 1.1rem; border-radius: 9px; border: 1px solid var(--line-strong); background: #fff; color: var(--ink); cursor: pointer; }
-  .tabs button[aria-selected="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
-  .gsteps { list-style: none; counter-reset: g; margin-top: 1.6rem; max-width: 780px; }
-  .gsteps > li { counter-increment: g; position: relative; padding: 0 0 1.6rem 2.8rem; }
-  .gsteps > li::before { content: counter(g); position: absolute; left: 0; top: 0; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--oak); color: #fff; font-family: var(--font-mono); font-size: 12px; display: grid; place-items: center; }
-  .gsteps h4 { font-family: var(--font-display); font-weight: 700; font-size: 1.12rem; letter-spacing: -0.015em; }
-  .gsteps p { font-size: 14.5px; color: var(--mute); margin-top: 0.3rem; max-width: 64ch; }
-  .gsteps p a { text-decoration: underline; color: var(--ink-soft); }
-  .cmd { display: flex; align-items: stretch; margin-top: 0.6rem; max-width: 640px; background: var(--ink); border-radius: 9px; overflow: hidden; }
-  .cmd code { flex: 1; font-family: var(--font-mono); font-size: 13px; color: #EDEDE8; padding: 0.75rem 0.9rem; overflow-x: auto; white-space: pre; }
-  .cmd button { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.05em; text-transform: uppercase; background: #ffffff14; color: #EDEDE8; border: none; padding: 0 0.9rem; cursor: pointer; }
-  .cmd button:hover { background: #ffffff26; }
-  .prompt-box code { white-space: pre-wrap; }
-  .guide-sub { font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; letter-spacing: -0.02em; margin-top: 2.6rem; }
-  .faq-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.6rem 3rem; margin-top: 1.6rem; }
-  @media (max-width: 760px) { .faq-grid { grid-template-columns: 1fr; } }
-  .faq-item h4 { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; letter-spacing: -0.01em; }
-  .faq-item p { color: var(--mute); font-size: 14px; margin-top: 0.45rem; line-height: 1.55; max-width: 52ch; }
-  .faq-item code { font-family: var(--font-mono); font-size: 12.5px; background: var(--surface); padding: 0.1rem 0.35rem; border-radius: 4px; }
 
   /* ---------- ROTINA ---------- */
   .rotina { background: var(--ink); color: var(--bg); }
@@ -371,68 +344,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="lead-status" id="lf-status" role="status" aria-live="polite"></div>
     </form>
-    <p class="hp" id="copyStatus" role="status" aria-live="polite"></p>
-  </div>
-</section>
-
-<section class="sec-pad guide" id="guia" hidden>
-  <div class="container">
-    <span class="label">— Passo a passo</span>
-    <h2 class="sec-title" tabindex="-1" id="guiaTitle">Instale os agentes <strong>e faça o teste</strong>.</h2>
-    <p class="guide-notice" id="guideOk" hidden>Recebemos suas respostas. Siga os passos abaixo; se travar em algum, fale com a gente pelo <a href="https://wa.me/5521967287595?text=Oi%2C%20vim%20pela%20p%C3%A1gina%20dos%20agentes%20jur%C3%ADdicos" target="_blank" rel="noopener">WhatsApp</a>.</p>
-    <p class="guide-notice err" id="guideErr" hidden>Não conseguimos registrar seus dados agora, mas o guia está liberado. Se quiser que a gente fale com você, mande um oi no <a href="https://wa.me/5521967287595?text=Oi%2C%20vim%20pela%20p%C3%A1gina%20dos%20agentes%20jur%C3%ADdicos" target="_blank" rel="noopener">WhatsApp</a>.</p>
-
-    <div class="tabs" role="tablist" aria-label="Sistema operacional">
-      <button type="button" role="tab" id="tab-mac" aria-controls="panel-mac" aria-selected="true">Mac</button>
-      <button type="button" role="tab" id="tab-win" aria-controls="panel-win" aria-selected="false" tabindex="-1">Windows</button>
-    </div>
-
-    <div role="tabpanel" id="panel-mac" aria-labelledby="tab-mac">
-      <ol class="gsteps">
-        <li><h4>Abra o Terminal</h4><p>Tecle <strong>Cmd + Espaço</strong>, digite "Terminal" e aperte Enter.</p></li>
-        <li><h4>Instale as ferramentas da Apple</h4><p>Elas trazem o git e o Python. Uma janela vai pedir confirmação: clique em <strong>Instalar</strong>. Se aparecer "already installed", pode seguir.</p>
-          <div class="cmd"><code data-cmd>xcode-select --install</code><button type="button" data-copy>Copiar</button></div></li>
-        <li><h4>Instale o Claude Code</h4>
-          <div class="cmd"><code data-cmd>curl -fsSL https://claude.ai/install.sh | bash</code><button type="button" data-copy>Copiar</button></div></li>
-        <li><h4>Crie uma pasta para os agentes</h4>
-          <div class="cmd"><code data-cmd>mkdir -p ~/agentes-juridicos &amp;&amp; cd ~/agentes-juridicos</code><button type="button" data-copy>Copiar</button></div></li>
-      </ol>
-    </div>
-    <div role="tabpanel" id="panel-win" aria-labelledby="tab-win" hidden>
-      <ol class="gsteps">
-        <li><h4>Instale o Git for Windows</h4><p>Baixe em <a href="https://git-scm.com/downloads/win" target="_blank" rel="noopener">git-scm.com/downloads/win</a> e avance com as opções padrão.</p></li>
-        <li><h4>Instale o Python</h4><p>Abra a Microsoft Store, busque "Python 3" (publicado pela Python Software Foundation) e clique em <strong>Obter</strong>.</p></li>
-        <li><h4>Abra o PowerShell</h4><p>Tecle <strong>Windows</strong>, digite "PowerShell" e aperte Enter.</p></li>
-        <li><h4>Instale o Claude Code</h4>
-          <div class="cmd"><code data-cmd>irm https://claude.ai/install.ps1 | iex</code><button type="button" data-copy>Copiar</button></div></li>
-        <li><h4>Crie uma pasta para os agentes</h4><p>Feche e abra o PowerShell de novo, e rode:</p>
-          <div class="cmd"><code data-cmd>mkdir -Force $HOME\agentes-juridicos; cd $HOME\agentes-juridicos</code><button type="button" data-copy>Copiar</button></div></li>
-      </ol>
-    </div>
-
-    <h3 class="guide-sub">Instalar os agentes</h3>
-    <ol class="gsteps">
-      <li><h4>Abra o Claude Code na pasta</h4><p>Na primeira vez, o navegador abre para você entrar com a sua conta do Claude.</p>
-        <div class="cmd"><code data-cmd>claude</code><button type="button" data-copy>Copiar</button></div></li>
-      <li><h4>Adicione o catálogo da DRYOS</h4><p>Dentro do Claude Code:</p>
-        <div class="cmd"><code data-cmd>/plugin marketplace add DRYOS-Studio/agentes-juridicos</code><button type="button" data-copy>Copiar</button></div></li>
-      <li><h4>Instale os agentes</h4><p>Quando o Claude perguntar, escolha <strong>User scope</strong>.</p>
-        <div class="cmd"><code data-cmd>/plugin install agentes-juridicos@dryos</code><button type="button" data-copy>Copiar</button></div></li>
-      <li><h4>Confira</h4><p>Digite <code>/plugin</code>, vá até a aba <strong>Installed</strong> e veja <code>agentes-juridicos</code> na lista. Tecle Esc para sair.</p></li>
-    </ol>
-
-    <h3 class="guide-sub">Fazer o teste</h3>
-    <p class="sec-intro">Cole a mensagem abaixo no Claude Code. O caso é fictício; não use dados de cliente real no teste. O agente pode fazer perguntas antes de redigir e depois entrega a minuta com as averbações e o checklist.</p>
-    <div class="cmd prompt-box"><code data-prompt>Use o agente divorcio-consensual. Caso fictício para teste: Ana Souza e Bruno Lima, casados desde 2015 no regime de comunhão parcial, sem filhos, querem se divorciar em cartório. Têm um apartamento em Niterói (R$ 400.000) que fica com Ana, que paga R$ 200.000 a Bruno. Sem pensão entre eles. Redija a minuta da escritura.</code><button type="button" data-copy>Copiar</button></div>
-    <p class="sec-intro">Para chamar outro agente, diga o nome dele no pedido, por exemplo: "Use o agente bpc-loas para…".</p>
-
-    <h3 class="guide-sub">Perguntas frequentes</h3>
-    <div class="faq-grid">
-      <div class="faq-item"><h4>Apareceu "python3: command not found"</h4><p>Os agentes de cálculo usam o Python. No Mac, rode <code>xcode-select --install</code> de novo. No Windows, instale o Python pela Microsoft Store, feche e abra o PowerShell. Se ainda falhar, peça ao Claude: "faça a conta sem usar Python".</p></div>
-      <div class="faq-item"><h4>E o sigilo dos meus clientes?</h4><p>O que você digita no Claude Code vai para os servidores da Anthropic, a empresa que faz o Claude. Anonimize nomes e documentos quando puder e siga a política do seu escritório.</p></div>
-      <div class="faq-item"><h4>O Claude pediu permissão para rodar um comando</h4><p>Os agentes só precisam rodar <code>python3</code> (para cálculos) e criar os arquivos da peça na pasta dos agentes. Não aprove comandos que você não entende, e não abra no Claude Code documentos de origem desconhecida.</p></div>
-      <div class="faq-item"><h4>Deu "/plugin isn't available in this environment"</h4><p>Você está no app de desktop ou numa sessão na nuvem. Use o Terminal (Mac) ou o PowerShell (Windows), como no passo a passo.</p></div>
-    </div>
   </div>
 </section>
 
@@ -508,11 +419,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       setStatus('');
     });
 
-    function showGuide(ok) {
-      f.hidden = true;
-      document.getElementById('guia').hidden = false;
-      document.getElementById(ok ? 'guideOk' : 'guideErr').hidden = false;
-      document.getElementById('guiaTitle').focus();
+    function done(ok) {
+      // Um token órfão (envio ok cuja obrigado não carregou) não pode virar conversão num erro seguinte.
+      if (!ok) { try { sessionStorage.removeItem('aj_lead'); } catch (e) {} }
+      location.assign('/agentes-juridicos-obrigado?r=' + (ok ? 'ok' : 'erro'));
     }
 
     f.addEventListener('submit', function (e) {
@@ -551,45 +461,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             return;
           }
           if (res.ok && res.j && res.j.ok) {
-            try { (window.dataLayer = window.dataLayer || []).push({ event: 'generate_lead', form_id: 'agentes-juridicos' }); } catch (e) {}
-            showGuide(true);
+            // O generate_lead dispara na página de obrigado, que consome este token (spec O4).
+            try { sessionStorage.setItem('aj_lead', '1'); } catch (e) {}
+            done(true);
           } else {
-            showGuide(false);
+            done(false);
           }
         })
-        .catch(function () { clearTimeout(timer); showGuide(false); });
+        .catch(function () { clearTimeout(timer); done(false); });
     });
-
-    // Abas Mac / Windows
-    var tabs = [document.getElementById('tab-mac'), document.getElementById('tab-win')];
-    function select(i) {
-      tabs.forEach(function (t, j) {
-        var on = i === j;
-        t.setAttribute('aria-selected', on ? 'true' : 'false');
-        t.tabIndex = on ? 0 : -1;
-        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
-      });
-    }
-    tabs.forEach(function (t, i) {
-      t.addEventListener('click', function () { select(i); });
-      t.addEventListener('keydown', function (e) {
-        var n = e.key === 'ArrowRight' || e.key === 'ArrowLeft' ? (i + 1) % 2 : e.key === 'Home' ? 0 : e.key === 'End' ? 1 : -1;
-        if (n >= 0) { select(n); tabs[n].focus(); e.preventDefault(); }
-      });
-    });
-    if (/Win/i.test(navigator.platform || navigator.userAgent)) select(1);
-
-    // Copiar comandos
-    document.querySelectorAll('[data-copy]').forEach(function (b) {
-      b.addEventListener('click', function () {
-        var code = b.parentNode.querySelector('code');
-        if (!navigator.clipboard) return;
-        navigator.clipboard.writeText(code.textContent).then(function () {
-          b.textContent = 'Copiado';
-          document.getElementById('copyStatus').textContent = 'Comando copiado.';
-          setTimeout(function () { b.textContent = 'Copiar'; }, 1600);
-        });
-      });
+    // Voltar da obrigado pode restaurar esta página (bfcache, ou o estado do form no Firefox)
+    // com o botão preso em "Enviando…". Num load novo, só reseta se nenhum envio começou antes do pageshow.
+    window.addEventListener('pageshow', function (e) {
+      if (e.persisted || !sending) { sending = false; btn.disabled = false; btn.textContent = 'Receber os agentes'; }
     });
   })();
 </script>

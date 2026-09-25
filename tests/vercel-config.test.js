@@ -8,6 +8,8 @@ const cfg = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'vercel.json')
 
 test('P1: landing exists as a clean URL of the site', () => {
   assert.ok(fs.existsSync(path.join(__dirname, '..', 'agentes-juridicos.html')));
+  // Destino de todo envio do formulário (spec agentes-juridicos-obrigado, P2).
+  assert.ok(fs.existsSync(path.join(__dirname, '..', 'agentes-juridicos-obrigado.html')));
   assert.equal(cfg.cleanUrls, true);
 });
 
