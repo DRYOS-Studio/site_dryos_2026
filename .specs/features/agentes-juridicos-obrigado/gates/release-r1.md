@@ -12,3 +12,6 @@ W5 INTEGRATIONS: GTM Location velho, sem o `generate_lead` → atualizado
 W6 repo sem CLAUDE.md/AGENTS.md → regra "conversão = evento, nunca page_view" fica em INTEGRATIONS + ADR-1; criar CLAUDE.md fica a critério do Rafael
 W7 sitemap lastmod → 2026-09-25
 W8 memória cita "a página" no guide-sync → atualizada
+
+## P6 (preview `site-dryos-2026-podx1b173-dryos-studio.vercel.app`, 2026-09-25)
+`/agentes-juridicos` 200 com `id="leadForm"` · `/agentes-juridicos-obrigado` 200 com `id="guia"` + `noindex` · `?r=ok` 200 · `/` 200 · `/tests/page.e2e.js` 404. Sem Deployment Protection no preview.
