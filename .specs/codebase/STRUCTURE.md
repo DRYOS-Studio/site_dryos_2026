@@ -142,3 +142,4 @@ Spec-driven documentation generated for project analysis and future planning.
 - `tests/`: testes e baterias de mutação (fora do deploy).
 - `.specs/features/agentes-juridicos-landing/`: spec, design, ADRs, tasks e gates.
 - `.specs/features/agentes-juridicos-obrigado/`: idem para a página de obrigado (substitui P2/P3 da landing).
+- `.specs/features/agentes-juridicos-form-dinamico/`: formulário com uma pergunta por tela.

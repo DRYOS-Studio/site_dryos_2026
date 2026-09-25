@@ -41,9 +41,9 @@ github.com/DRYOS-Studio/agentes-juridicos (público)
 
 1. Hero: 8 agentes jurídicos para o Claude, grátis, com o escritório testando hoje. Nota logo abaixo: requer plano pago do Claude (R3).
 2. Os 8 agentes, 2 por área, com o que cada um entrega.
-3. Formulário em 2 etapas, no mesmo `<form>`:
-   - etapa 1, "Sobre o escritório": 9 perguntas em `fieldset`/`legend`, com rádio (checkbox em áreas);
-   - etapa 2, "Para onde mandamos": nome, e-mail, WhatsApp e cidade.
+3. Formulário no mesmo `<form>`. Desde 2026-09-25 é uma pergunta por tela, com as mesmas perguntas (ver ../agentes-juridicos-form-dinamico/spec.md):
+   - telas 1–9, "Sobre o escritório": uma pergunta por tela, em `fieldset`/`legend`, com rádio (checkbox em áreas);
+   - tela 10, "Para onde mandamos": nome, e-mail, WhatsApp e cidade.
 
    Honeypot enviado como `company`, mas o input tem id/name que o autofill não reconhece (`hp_ref`, `autocomplete="off"`). Aviso e link `/privacidade`. Submit: botão desabilitado + "Enviando…"; `fetch` com timeout de 25 s; resposta não-JSON = erro → guia + WhatsApp (D8).
 4. Guia (desde 2026-09-25 em `agentes-juridicos-obrigado.html`, ver ../agentes-juridicos-obrigado/spec.md), com abas Mac/Windows e os passos: requisitos (plano pago) · ferramentas (Mac: `xcode-select --install`; Windows: Git for Windows + Python da Microsoft Store) · Claude Code · login · marketplace · install · teste com caso fictício. FAQ: python3 não encontrado · sigilo (anonimizar; os dados vão ao provedor do modelo) · rodar numa pasta dedicada e só aprovar comandos `python3` · revisão pelo advogado (EAOAB 32).
