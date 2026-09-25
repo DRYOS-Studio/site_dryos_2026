@@ -9,3 +9,4 @@ tests/
 .specs/
 # instruções para agentes — não servir
 CLAUDE.md
+.claude/
