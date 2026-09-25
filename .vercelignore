@@ -7,3 +7,5 @@ scripts/
 # testes e specs internos — a regra de qualificação não pode ser pública
 tests/
 .specs/
+# instruções para agentes — não servir
+CLAUDE.md
