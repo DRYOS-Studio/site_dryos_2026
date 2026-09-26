@@ -190,6 +190,66 @@ nav {
 .hero-visual-svg .hv-node-3 { animation-delay: 2.6s; }
 .hero-visual-svg .hv-node-seed { animation-delay: 1.4s; }
 
+.hero-visual-svg .hv-label {
+  opacity: 0;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: .12em;
+  animation: hv-fade 0.7s ease 2.8s forwards;
+}
+
+.hero-visual-svg .hv-label-center { fill: #4A6A52; }
+
+.hero-visual-svg .hv-pulse {
+  opacity: 0;
+  filter: drop-shadow(0 0 4px rgba(147, 181, 150, 0.55));
+}
+
+.hero-visual-svg .hv-orbit {
+  transform-box: view-box;
+  transform-origin: 200px 320px;
+}
+
+.hero-visual-svg .hv-orbit-upper {
+  animation: hv-orbit-upper 9s ease-in-out 3s infinite;
+}
+
+.hero-visual-svg .hv-orbit-lower {
+  animation: hv-orbit-lower 11s ease-in-out 3.2s infinite;
+}
+
+@keyframes hv-orbit-upper {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes hv-orbit-lower {
+  0%, 100% { transform: rotate(3deg); }
+  50% { transform: rotate(-3deg); }
+}
+
+@keyframes hv-seed-breathe {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.16); opacity: .72; }
+}
+
+.hero-visual-svg .hv-node-seed:first-child {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: hv-fade 0.6s ease 1.4s forwards, hv-seed-breathe 2.8s ease-in-out 3s infinite;
+}
+
+.hero-visual-svg .hv-node-ring {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: hv-fade 0.6s ease 1.4s forwards, hv-ring-breathe 2.8s ease-in-out 3s infinite;
+}
+
+@keyframes hv-ring-breathe {
+  0%, 100% { transform: scale(1); opacity: .25; }
+  50% { transform: scale(1.35); opacity: .08; }
+}
+
 @keyframes hv-fade { to { opacity: 1; } }
 @keyframes hv-draw { to { stroke-dashoffset: 0; } }
 
@@ -2504,8 +2564,15 @@ footer {
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+  .hero-visual-svg .hv-label { opacity: 1; animation: none; }
+  .hero-visual-svg .hv-pulse { display: none; }
+  .hero-visual-svg .hv-orbit { animation: none; transform: none; }
+  .hero-visual-svg .hv-node-seed:first-child,
+  .hero-visual-svg .hv-node-ring { animation: none; opacity: 1; transform: none; }
 }
 </style>
+
+<link rel="stylesheet" href="/motion.css">
 
 <!-- ===== SEO ===== -->
 <link rel="canonical" href="https://www.dryos.com.br/">
@@ -2610,7 +2677,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <svg class="hero-visual-svg" viewBox="0 0 400 640" preserveAspectRatio="xMidYMid meet">
       <line class="hv-surface" x1="40" y1="320" x2="360" y2="320" stroke="rgba(31,58,42,0.14)" stroke-width="1" stroke-dasharray="2 5"/>
 
-      <g fill="none" stroke="#1F3A2A" stroke-linecap="round" stroke-linejoin="round">
+      <g class="hv-orbit hv-orbit-upper" fill="none" stroke="#1F3A2A" stroke-linecap="round" stroke-linejoin="round">
         <path class="hv-line" d="M 200 316 C 199 250, 202 180, 200 80" stroke-width="1.4" stroke-opacity="0.85"/>
         <path class="hv-line" d="M 200 318 C 195 280, 175 230, 155 160" stroke-width="1.2" stroke-opacity="0.7"/>
         <path class="hv-line" d="M 200 318 C 207 280, 225 230, 245 150" stroke-width="1.2" stroke-opacity="0.7"/>
@@ -2618,7 +2685,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <path class="hv-line" d="M 200 320 C 185 298, 155 270, 120 235" stroke-width="0.9" stroke-opacity="0.5"/>
       </g>
 
-      <g fill="none" stroke="#1F3A2A" stroke-linecap="round" stroke-linejoin="round">
+      <g class="hv-orbit hv-orbit-lower" fill="none" stroke="#1F3A2A" stroke-linecap="round" stroke-linejoin="round">
         <path class="hv-line" d="M 200 324 C 198 400, 202 490, 198 600" stroke-width="1.4" stroke-opacity="0.85"/>
         <path class="hv-line" d="M 198 325 C 180 380, 145 430, 115 500" stroke-width="1.2" stroke-opacity="0.75"/>
         <path class="hv-line" d="M 202 325 C 220 380, 255 425, 290 490" stroke-width="1.2" stroke-opacity="0.75"/>
@@ -2631,7 +2698,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </g>
 
       <circle class="hv-node hv-node-seed" cx="200" cy="320" r="5" fill="#1F3A2A"/>
-      <circle class="hv-node hv-node-seed" cx="200" cy="320" r="11" fill="none" stroke="#1F3A2A" stroke-opacity="0.25"/>
+      <circle class="hv-node hv-node-seed hv-node-ring" cx="200" cy="320" r="11" fill="none" stroke="#1F3A2A" stroke-opacity="0.25"/>
 
       <circle class="hv-node hv-node-1" cx="200" cy="80" r="5" fill="#93B596"/>
       <circle class="hv-node hv-node-2" cx="155" cy="160" r="3" fill="#1F3A2A"/>
@@ -2648,6 +2715,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <circle class="hv-node hv-node-3" cx="320" cy="490" r="2" fill="#1F3A2A" fill-opacity="0.5"/>
       <circle class="hv-node hv-node-3" cx="168" cy="600" r="2" fill="#1F3A2A" fill-opacity="0.4"/>
       <circle class="hv-node hv-node-3" cx="232" cy="600" r="2" fill="#1F3A2A" fill-opacity="0.4"/>
+
+      <g class="hv-labels" fill="#1F3A2A">
+        <text class="hv-label" x="214" y="76">ENTRADA</text>
+        <text class="hv-label hv-label-center" x="216" y="306">DECISÃO</text>
+        <text class="hv-label" x="212" y="620">EXECUÇÃO</text>
+      </g>
+
+      <g class="hv-pulses" fill="#93B596" aria-hidden="true">
+        <circle class="hv-pulse" r="2.5">
+          <animateMotion dur="3.8s" begin="3.2s" repeatCount="indefinite" path="M 200 316 C 199 250, 202 180, 200 80"/>
+          <animate attributeName="opacity" values="0;1;1;0" dur="3.8s" begin="3.2s" repeatCount="indefinite"/>
+        </circle>
+        <circle class="hv-pulse" r="2.5">
+          <animateMotion dur="4.2s" begin="4.1s" repeatCount="indefinite" path="M 200 324 C 198 400, 202 490, 198 600"/>
+          <animate attributeName="opacity" values="0;1;1;0" dur="4.2s" begin="4.1s" repeatCount="indefinite"/>
+        </circle>
+        <circle class="hv-pulse" r="2">
+          <animateMotion dur="3.4s" begin="4.8s" repeatCount="indefinite" path="M 200 318 C 195 280, 175 230, 155 160"/>
+          <animate attributeName="opacity" values="0;1;1;0" dur="3.4s" begin="4.8s" repeatCount="indefinite"/>
+        </circle>
+        <circle class="hv-pulse" r="2">
+          <animateMotion dur="3.6s" begin="5.4s" repeatCount="indefinite" path="M 202 325 C 220 380, 255 425, 290 490"/>
+          <animate attributeName="opacity" values="0;1;1;0" dur="3.6s" begin="5.4s" repeatCount="indefinite"/>
+        </circle>
+      </g>
     </svg>
   </div>
   <div class="container">
@@ -2716,7 +2808,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
 
-    <div class="villains-grid">
+    <div class="villains-grid" data-motion-sequence>
 
       <div class="villain-card reveal">
         <div class="villain-image">
@@ -2909,13 +3001,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2 class="section-title">Antes de automatizar.<br><strong>Entenda o que trava.</strong></h2>
     </div>
 
+    <div class="operational-map reveal" role="img" aria-label="Mapa operacional conectando fluxo, gargalos, responsabilidades e plano de execução">
+      <svg viewBox="0 0 960 150" aria-hidden="true" focusable="false">
+        <path class="map-line" pathLength="1" d="M110 75H315M345 75H615M645 75H850" fill="none" stroke="#93B596" stroke-opacity=".7" stroke-width="1.5"/>
+        <path class="map-line" pathLength="1" d="M315 75C335 75 335 38 365 38M615 75C635 75 635 112 665 112" fill="none" stroke="#93B596" stroke-opacity=".45" stroke-width="1"/>
+        <circle class="map-node" cx="110" cy="75" r="5" fill="#93B596"/>
+        <circle class="map-node" cx="330" cy="75" r="8" fill="#1F3A2A" stroke="#93B596"/>
+        <circle class="map-node" cx="630" cy="75" r="8" fill="#1F3A2A" stroke="#93B596"/>
+        <circle class="map-node" cx="850" cy="75" r="5" fill="#93B596"/>
+        <g class="map-pulses" fill="#B7D5BA" aria-hidden="true">
+          <circle class="map-pulse" r="3">
+            <animateMotion dur="3.2s" repeatCount="indefinite" path="M110 75H315"/>
+            <animate attributeName="opacity" values="0;1;1;0" dur="3.2s" repeatCount="indefinite"/>
+          </circle>
+          <circle class="map-pulse" r="3">
+            <animateMotion dur="4s" begin="1.2s" repeatCount="indefinite" path="M345 75H615"/>
+            <animate attributeName="opacity" values="0;1;1;0" dur="4s" begin="1.2s" repeatCount="indefinite"/>
+          </circle>
+          <circle class="map-pulse" r="3">
+            <animateMotion dur="3.4s" begin="2.2s" repeatCount="indefinite" path="M645 75H850"/>
+            <animate attributeName="opacity" values="0;1;1;0" dur="3.4s" begin="2.2s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+        <text class="map-label" x="110" y="105" text-anchor="middle">entrada</text>
+        <text class="map-label map-label-main" x="330" y="50" text-anchor="middle">fluxos</text>
+        <text class="map-label map-label-main" x="630" y="105" text-anchor="middle">decisão</text>
+        <text class="map-label" x="850" y="105" text-anchor="middle">execução</text>
+      </svg>
+    </div>
+
     <div class="core-grid">
       <div>
         <p class="core-desc">
           Antes de escolher uma ferramenta, a gente entende como sua operação funciona de verdade: o caminho do cliente, os pontos de decisão, os gargalos e o que hoje depende de memória ou esforço manual. O resultado é um mapa operacional que mostra onde agir primeiro.
         </p>
 
-        <div class="core-pillars">
+        <div class="core-pillars" data-motion-sequence>
           <div class="pillar">
             <span class="pillar-num">01</span>
             <div class="pillar-content">
@@ -2943,7 +3064,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="core-card">
         <span class="core-card-label">— O que você leva</span>
 
-        <div class="core-modules">
+        <div class="core-modules" data-motion-sequence>
 
           <div class="core-module">
             <span class="core-module-num">01</span>
@@ -3069,7 +3190,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </svg>
     </div>
 
-    <div class="spark-grid">
+    <div class="spark-grid" data-motion-sequence>
 
       <div class="spark-item reveal">
         <span class="spark-num">01</span>
@@ -3758,6 +3879,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let active = 0;
     let autoplayId = null;
     const AUTOPLAY_MS = 8000;
+    const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const pad = (n) => String(n).padStart(2, '0');
     if (totalEl) totalEl.textContent = pad(total);
 
@@ -3777,6 +3899,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startAutoplay() {
+      if (reduceMotion || document.hidden) return;
       stopAutoplay();
       autoplayId = window.setInterval(() => go(active + 1), AUTOPLAY_MS);
     }
@@ -3792,6 +3915,10 @@ document.addEventListener('DOMContentLoaded', () => {
     carousel.addEventListener('mouseleave', startAutoplay);
     carousel.addEventListener('focusin', stopAutoplay);
     carousel.addEventListener('focusout', startAutoplay);
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) stopAutoplay();
+      else startAutoplay();
+    });
 
     // Suporte a swipe em mobile
     let touchStartX = 0;
@@ -3803,7 +3930,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (Math.abs(dx) > 40) { go(active + (dx < 0 ? 1 : -1)); startAutoplay(); }
     }, { passive: true });
 
-    if (total > 1) startAutoplay();
+    if (total > 1 && !reduceMotion) startAutoplay();
   }
 
   // FORMULÁRIO DE DIAGNÓSTICO — envio via endpoint server-side
@@ -3869,5 +3996,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+<script src="/motion.js"></script>
 </body>
 </html>
