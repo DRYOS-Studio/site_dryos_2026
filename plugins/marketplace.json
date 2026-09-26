@@ -9,16 +9,16 @@
   "plugins": [
     {
       "name": "agentes-juridicos",
-      "description": "8 agentes que redigem peças trabalhistas, previdenciárias, de família e de consumidor. Rascunho para revisão do advogado.",
-      "version": "1.1.0",
+      "description": "50 agentes que redigem peças e apoiam rotinas jurídicas em várias áreas. Rascunho para revisão do advogado.",
+      "version": "1.2.0",
       "author": {
         "name": "DRYOS"
       },
       "homepage": "https://www.dryos.com.br/agentes-juridicos",
       "source": {
         "source": "archive",
-        "url": "https://www.dryos.com.br/plugins/agentes-juridicos-1.1.0.zip",
-        "sha256": "ede2a24ccab3b52aa87c7b50cbadfb49adb60c3397c8043e2b2c8058e892d81b"
+        "url": "https://www.dryos.com.br/plugins/agentes-juridicos-1.2.0.zip",
+        "sha256": "663f040d96c6b08a920c6b5d24002c9f9d067f260a69c4b83a6fc671e7984732"
       }
     }
   ]
