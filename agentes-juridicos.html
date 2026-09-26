@@ -61,7 +61,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   nav { position: sticky; top: 0; z-index: 100; background: rgba(250,250,248,0.85); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid var(--line); }
   .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 1rem var(--gutter); max-width: var(--max); margin: 0 auto; }
   .brand { display: flex; align-items: center; gap: 0.6rem; }
-  .brand svg { width: 26px; height: 26px; border-radius: 6px; }
+  .brand .logo-img { width: auto; height: 26px; display: block; }
   .brand-name { font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: -0.02em; }
   .brand-name span { color: var(--oak-light); font-weight: 500; }
   .nav-links { display: flex; gap: 2rem; align-items: center; }
@@ -174,8 +174,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav>
   <div class="nav-inner">
     <a href="https://www.dryos.com.br/" class="brand" aria-label="DRYOS — página inicial">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="5" fill="#1F3A2A"/><path fill="#FAFAF8" fill-rule="evenodd" d="M9 8h7a8 8 0 0 1 0 16H9zm4 4v8h3a4 4 0 0 0 0-8z"/></svg>
-      <span class="brand-name">DRYOS <span>Agentes jurídicos</span></span>
+      <img class="logo-img" src="images/brand/dryos-logo.png" alt="DRYOS">
+      <span class="brand-name"><span>Agentes jurídicos</span></span>
     </a>
     <div class="nav-links">
       <a href="#agentes">Os agentes</a>
@@ -362,8 +362,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer>
   <div class="foot-inner">
     <a href="https://www.dryos.com.br/" class="brand" aria-label="DRYOS — página inicial">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="5" fill="#1F3A2A"/><path fill="#FAFAF8" fill-rule="evenodd" d="M9 8h7a8 8 0 0 1 0 16H9zm4 4v8h3a4 4 0 0 0 0-8z"/></svg>
-      <span class="brand-name">DRYOS</span>
+      <img class="logo-img" src="images/brand/dryos-logo.png" alt="DRYOS">
     </a>
     <div class="foot-links">
       <a href="https://www.dryos.com.br/">Início</a>
