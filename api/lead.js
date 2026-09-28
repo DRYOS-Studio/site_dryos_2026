@@ -36,12 +36,42 @@ const QUALIFY_ENUMS = {
   a_receber: ['sei', 'mais_ou_menos', 'nao_sei'],
   dor_principal: ['whatsapp', 'cliente_esfria', 'cobranca', 'sistemas', 'numeros', 'pecas'],
 };
+const QUALIFY_LABELS = {
+  cargo: {
+    socio: 'Sócio(a)', advogado: 'Advogado(a)', secretaria: 'Secretaria / recepção',
+    estagiario: 'Estagiário(a)', juridico_empresa: 'Jurídico de empresa', estudante: 'Estudante',
+  },
+  porte: { solo: 'Só eu', '2': '2', '3_10': '3 a 10', '11_30': '11 a 30', '30_mais': 'Mais de 30' },
+  whatsapp_quem: {
+    socio: 'O sócio', equipe: 'Alguém da equipe', sem_responsavel: 'Quem estiver livre',
+    nao_atende: 'Não atendemos por WhatsApp',
+  },
+  fora_horario: {
+    na_hora: 'Alguém responde na hora', dia_seguinte: 'Responde no dia útil seguinte',
+    demora_dias: 'Às vezes leva dias',
+  },
+  cobranca: { socio: 'O sócio', equipe: 'Alguém da equipe', sistema: 'Um sistema cobra', ninguem: 'Ninguém cobra' },
+  sistema: {
+    software_juridico: 'Software jurídico', planilha: 'Planilha', agenda_papel: 'Agenda ou papel',
+    nenhum: 'Não temos controle',
+  },
+  a_receber: { sei: 'Sei de cabeça', mais_ou_menos: 'Mais ou menos', nao_sei: 'Não sei' },
+  dor_principal: {
+    whatsapp: 'WhatsApp que não para', cliente_esfria: 'Cliente novo que esfria',
+    cobranca: 'Honorário que ninguém cobra', sistemas: 'Sistemas que não conversam',
+    numeros: 'Decidir sem número', pecas: 'Peça começada do zero',
+  },
+};
 const QUALIFY_AREAS = ['trabalhista', 'previdenciario', 'familia', 'consumidor', 'civel',
   'criminal', 'tributario', 'empresarial', 'imobiliario'];
 // ICP derivado de prospeccao-escritorios.md (fonte executável é esta): 3–30 pessoas, Niterói,
 // área de volume de pessoa física.
 const ICP_PORTES = ['3_10', '11_30'];
 const ICP_AREAS = ['trabalhista', 'previdenciario', 'familia', 'consumidor'];
+const AREA_LABELS = {
+  trabalhista: 'Trabalhista', previdenciario: 'Previdenciário', familia: 'Família', consumidor: 'Consumidor',
+  civel: 'Cível', criminal: 'Criminal', tributario: 'Tributário', empresarial: 'Empresarial', imobiliario: 'Imobiliário',
+};
 // "Niterói", "Niteroi - RJ", "Icaraí, Niterói": the word niteroi anywhere in the city text.
 const isIcpCity = c => /\bniteroi\b/.test(String(c || '').normalize('NFD')
   .replace(/[\u0300-\u036f]/g, '').toLowerCase());
@@ -65,6 +95,10 @@ function qualify(body) {
     f.qualificacao = 'nao_qualificado';
   }
   return f;
+}
+
+function rdLabel(field, value) {
+  return value === null ? undefined : QUALIFY_LABELS[field][value];
 }
 
 // Best-effort push to RD Station Marketing. A failure is logged but does not
@@ -178,17 +212,17 @@ module.exports = async (req, res) => {
     // run separate from a conversion the same person made on another page.
     payload.idempotencyKey = `${phone}:${email}:${QUALIFY_SOURCE}`;
     cf = {
-      job_title: q.cargo === null ? undefined : q.cargo,
+      job_title: rdLabel('cargo', q.cargo),
       city: q.cidade === null ? undefined : q.cidade,
-      cf_numero_de_funcionarios: q.porte === null ? undefined : q.porte,
-      cf_areas: q.areas === null ? undefined : q.areas,
-      cf_whatsapp_quem: q.whatsapp_quem === null ? undefined : q.whatsapp_quem,
-      cf_fora_horario: q.fora_horario === null ? undefined : q.fora_horario,
-      cf_cobranca: q.cobranca === null ? undefined : q.cobranca,
-      cf_sistema: q.sistema === null ? undefined : q.sistema,
-      cf_a_receber: q.a_receber === null ? undefined : q.a_receber,
-      cf_dor_principal: q.dor_principal === null ? undefined : q.dor_principal,
-      cf_qualificacao: q.qualificacao === null ? undefined : q.qualificacao,
+      cf_numero_de_funcionarios: rdLabel('porte', q.porte),
+      cf_areas: q.areas === null ? undefined : q.areas.split(',').map(a => AREA_LABELS[a]).join(', '),
+      cf_whatsapp_quem: rdLabel('whatsapp_quem', q.whatsapp_quem),
+      cf_fora_horario: rdLabel('fora_horario', q.fora_horario),
+      cf_cobranca: rdLabel('cobranca', q.cobranca),
+      cf_sistema: rdLabel('sistema', q.sistema),
+      cf_a_receber: rdLabel('a_receber', q.a_receber),
+      cf_dor_principal: rdLabel('dor_principal', q.dor_principal),
+      cf_qualificacao: q.qualificacao,
     };
   }
 

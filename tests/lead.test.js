@@ -31,12 +31,16 @@ test('L2: the qualification fields reach Core and RD', async () => {
     assert.equal(core[0].body[k], v, `core.${k}`);
   }
   const p = rd[0].body.payload;
-  assert.equal(p.job_title, FIELDS.cargo);
+  assert.equal(p.job_title, 'Sócio(a)');
   assert.equal(p.city, FIELDS.cidade);
-  assert.equal(p.cf_numero_de_funcionarios, FIELDS.porte);
-  for (const k of ['areas', 'whatsapp_quem', 'fora_horario', 'cobranca', 'sistema', 'a_receber', 'dor_principal']) {
-    assert.equal(p[`cf_${k}`], FIELDS[k], `rd.cf_${k}`);
-  }
+  assert.equal(p.cf_numero_de_funcionarios, '3 a 10');
+  assert.equal(p.cf_areas, 'Trabalhista, Família');
+  assert.equal(p.cf_whatsapp_quem, 'Alguém da equipe');
+  assert.equal(p.cf_fora_horario, 'Responde no dia útil seguinte');
+  assert.equal(p.cf_cobranca, 'O sócio');
+  assert.equal(p.cf_sistema, 'Planilha');
+  assert.equal(p.cf_a_receber, 'Não sei');
+  assert.equal(p.cf_dor_principal, 'Honorário que ninguém cobra');
   assert.equal(core[0].body.qualificacao, 'qualificado');
   assert.equal(rd[0].body.payload.cf_qualificacao, 'qualificado');
 });
@@ -81,7 +85,7 @@ test('L4: out-of-enum → null (Core) / omitted (RD), areas filtered, text cappe
   assert.equal(core[0].body.porte, null);
   assert.ok(!('job_title' in p) && !('cf_numero_de_funcionarios' in p));
   assert.equal(core[0].body.areas, 'trabalhista,consumidor');
-  assert.equal(p.cf_areas, 'trabalhista,consumidor');
+  assert.equal(p.cf_areas, 'Trabalhista, Consumidor');
   assert.equal(core[0].body.cidade.length, 80);
   assert.equal(p.city.length, 80);
 });
