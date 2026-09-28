@@ -177,7 +177,19 @@ module.exports = async (req, res) => {
     // Core drops a repeated idempotencyKey while its outbox event exists: keep this form's
     // run separate from a conversion the same person made on another page.
     payload.idempotencyKey = `${phone}:${email}:${QUALIFY_SOURCE}`;
-    cf = Object.fromEntries(Object.entries(q).map(([k, v]) => [`cf_${k}`, v === null ? undefined : v]));
+    cf = {
+      job_title: q.cargo === null ? undefined : q.cargo,
+      city: q.cidade === null ? undefined : q.cidade,
+      cf_numero_de_funcionarios: q.porte === null ? undefined : q.porte,
+      cf_areas: q.areas === null ? undefined : q.areas,
+      cf_whatsapp_quem: q.whatsapp_quem === null ? undefined : q.whatsapp_quem,
+      cf_fora_horario: q.fora_horario === null ? undefined : q.fora_horario,
+      cf_cobranca: q.cobranca === null ? undefined : q.cobranca,
+      cf_sistema: q.sistema === null ? undefined : q.sistema,
+      cf_a_receber: q.a_receber === null ? undefined : q.a_receber,
+      cf_dor_principal: q.dor_principal === null ? undefined : q.dor_principal,
+      cf_qualificacao: q.qualificacao === null ? undefined : q.qualificacao,
+    };
   }
 
   // Core and RD are independent destinations, sent in parallel: one outage or slowness

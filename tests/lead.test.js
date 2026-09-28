@@ -25,11 +25,17 @@ test('L1: conversion_identifier agents_escritorio_adv', async () => {
   assert.equal(rd[0].body.payload.conversion_identifier, 'agents_escritorio_adv');
 });
 
-test('L2: the 10 fields reach Core and RD (cf_*)', async () => {
+test('L2: the qualification fields reach Core and RD', async () => {
   const { rd, core } = await runLead(lead());
   for (const [k, v] of Object.entries(FIELDS)) {
     assert.equal(core[0].body[k], v, `core.${k}`);
-    assert.equal(rd[0].body.payload[`cf_${k}`], v, `rd.cf_${k}`);
+  }
+  const p = rd[0].body.payload;
+  assert.equal(p.job_title, FIELDS.cargo);
+  assert.equal(p.city, FIELDS.cidade);
+  assert.equal(p.cf_numero_de_funcionarios, FIELDS.porte);
+  for (const k of ['areas', 'whatsapp_quem', 'fora_horario', 'cobranca', 'sistema', 'a_receber', 'dor_principal']) {
+    assert.equal(p[`cf_${k}`], FIELDS[k], `rd.cf_${k}`);
   }
   assert.equal(core[0].body.qualificacao, 'qualificado');
   assert.equal(rd[0].body.payload.cf_qualificacao, 'qualificado');
@@ -73,11 +79,11 @@ test('L4: out-of-enum → null (Core) / omitted (RD), areas filtered, text cappe
   const p = rd[0].body.payload;
   assert.equal(core[0].body.cargo, null);
   assert.equal(core[0].body.porte, null);
-  assert.ok(!('cf_cargo' in p) && !('cf_porte' in p));
+  assert.ok(!('job_title' in p) && !('cf_numero_de_funcionarios' in p));
   assert.equal(core[0].body.areas, 'trabalhista,consumidor');
   assert.equal(p.cf_areas, 'trabalhista,consumidor');
   assert.equal(core[0].body.cidade.length, 80);
-  assert.equal(p.cf_cidade.length, 80);
+  assert.equal(p.city.length, 80);
 });
 
 test('L4: areas accepted as array or comma string', async () => {
