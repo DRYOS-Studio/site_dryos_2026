@@ -4,6 +4,8 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /dryos-deploy.zip
+Disallow: /apresentacao-revops
+Disallow: /apresentacao-revops.html
 
 # Crawlers de IA são bem-vindos. Resumo estruturado do negócio em /llms.txt
 # (GPTBot, ClaudeBot, PerplexityBot, Google-Extended e afins seguem a regra acima.)

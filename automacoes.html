@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Automação de atendimento, integração entre sistemas, cobrança, relatórios e agentes de IA. Escopo fixo, no ar em 7 a 14 dias, sem fidelidade. DRYOS.">
-<meta name="keywords" content="automação de processos, automação de atendimento, integração entre sistemas, integração CRM, automação de cobrança, agente de IA, automação de WhatsApp, automação de marketing">
-<title>Automação de processos com IA: atendimento, cobrança | DRYOS</title>
+<meta name="description" content="Automação de WhatsApp, grupos e integrações com API oficial, além de atendimento, cobrança, relatórios e agentes de IA. Escopo fixo, no ar em 7 a 14 dias, sem fidelidade. DRYOS.">
+<meta name="keywords" content="automação de processos, automação de atendimento, automação de WhatsApp, grupos de WhatsApp, API oficial do WhatsApp, integração entre sistemas, integração CRM, automação de cobrança, agente de IA">
+<title>Automação de WhatsApp, grupos e API oficial | DRYOS</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -162,17 +162,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .hero-stat .v { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.6rem,3vw,2.3rem); letter-spacing: -0.03em; color: var(--ink); }
   .hero-stat .k { font-size: 13px; color: var(--mute); margin-top: 0.2rem; }
 
-  /* spark rule under the hero stats */
-  .sparks-rule { margin-top: 2.6rem; }
-  .sparks-rule svg { width: 100%; max-width: 580px; height: auto; }
-  .sparks-rule .fagulha { animation: fag 3.6s ease-in-out infinite; transform-origin: center; }
-  .sparks-rule .fagulha:nth-child(2) { animation-delay: .2s; }
-  .sparks-rule .fagulha:nth-child(3) { animation-delay: .4s; }
-  .sparks-rule .fagulha:nth-child(4) { animation-delay: .6s; }
-  .sparks-rule .fagulha:nth-child(5) { animation-delay: .8s; }
-  .sparks-rule .fagulha:nth-child(6) { animation-delay: 1s; }
-  @keyframes fag { 0%,100% { opacity: .55; } 50% { opacity: 1; } }
-  @media (prefers-reduced-motion: reduce) { .sparks-rule .fagulha { animation: none; opacity: 1; } }
+  /* concrete operational flow under the hero stats */
+  .automation-flow { margin-top: 2.6rem; padding: 1.2rem 0 0.2rem; border-top: 1px solid var(--line); }
+  .automation-flow svg { width: 100%; height: auto; overflow: visible; }
+  .automation-flow .flow-line { stroke: var(--oak); stroke-opacity: .24; stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 1.15s var(--motion-ease); }
+  .automation-flow.in .flow-line { stroke-dashoffset: 0; }
+  .automation-flow .flow-node { fill: var(--bg); stroke: var(--oak); stroke-width: 1.5; opacity: 0; transform-box: fill-box; transform-origin: center; transform: scale(.7); transition: opacity .45s var(--motion-ease), transform .55s var(--motion-ease); }
+  .automation-flow.in .flow-node { opacity: 1; transform: scale(1); }
+  .automation-flow.in .flow-node:nth-of-type(2) { transition-delay: .16s; }
+  .automation-flow.in .flow-node:nth-of-type(3) { transition-delay: .32s; }
+  .automation-flow.in .flow-node:nth-of-type(4) { transition-delay: .48s; }
+  .automation-flow .flow-node-core { fill: var(--oak); stroke: var(--oak); }
+  .automation-flow .flow-label { fill: var(--oak); font-family: var(--font-mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+  .automation-flow .flow-label-main { fill: var(--ink); font-family: var(--font-display); font-size: 16px; font-weight: 700; letter-spacing: -.02em; }
+  .automation-flow .flow-caption { fill: var(--mute); font-family: var(--font-body); font-size: 12px; }
+  .automation-flow .flow-tag { fill: var(--surface); stroke: var(--line); }
+  .automation-flow .flow-tag-text { fill: var(--ink-soft); font-family: var(--font-mono); font-size: 9px; letter-spacing: .05em; text-transform: uppercase; }
+  .automation-flow .flow-packet { fill: #93B596; filter: drop-shadow(0 0 4px rgba(31,58,42,.22)); }
+  .sparks-rule { display: none; }
+  .sol.reveal.in .sol-flow .fx { animation: flow-step 3.2s var(--motion-ease) infinite; }
+  .sol.reveal.in .sol-flow .fx:nth-of-type(2) { animation-delay: .8s; }
+  .sol.reveal.in .sol-flow .fx:nth-of-type(3) { animation-delay: 1.6s; }
+  .sol.reveal.in .sol-flow .fx:nth-of-type(4) { animation-delay: 2.4s; }
+  @keyframes flow-step { 0%, 18%, 100% { background: #fff; border-color: var(--line); } 8% { background: var(--oak-tint); border-color: #1F3A2A44; } }
+  @media (prefers-reduced-motion: reduce) {
+    .automation-flow .flow-line { stroke-dashoffset: 0; transition: none; }
+    .automation-flow .flow-node { opacity: 1; transform: none; transition: none; }
+    .automation-flow .flow-packet { display: none; }
+    .sol.reveal.in .sol-flow .fx { animation: none; }
+  }
 
   /* ---------- DIAGNOSTIC (sintoma → automação) ---------- */
   .diag-section { background: var(--ink); color: var(--bg); border-bottom: none; }
@@ -379,15 +397,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:site_name" content="DRYOS">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:url" content="https://www.dryos.com.br/automacoes">
-<meta property="og:title" content="Você não precisa de tudo. Precisa automatizar o que sangra">
-<meta property="og:description" content="Automação de atendimento, integração entre sistemas, cobrança, relatórios e agentes de IA. Escopo fixo, no ar em 7 a 14 dias, sem fidelidade. DRYOS.">
+<meta property="og:title" content="Automação de WhatsApp, grupos e API oficial | DRYOS">
+<meta property="og:description" content="Automação de WhatsApp, grupos e integrações com API oficial, além de atendimento, cobrança, relatórios e agentes de IA. Escopo fixo, no ar em 7 a 14 dias, sem fidelidade.">
 <meta property="og:image" content="https://www.dryos.com.br/images/og/og-automacoes.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="DRYOS Automações — automação de processos com IA">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Você não precisa de tudo. Precisa automatizar o que sangra">
-<meta name="twitter:description" content="Automação de atendimento, integração entre sistemas, cobrança, relatórios e agentes de IA. Escopo fixo, no ar em 7 a 14 dias, sem fidelidade. DRYOS.">
+<meta name="twitter:title" content="Automação de WhatsApp, grupos e API oficial | DRYOS">
+<meta name="twitter:description" content="Automação de WhatsApp, grupos e integrações com API oficial, além de atendimento, cobrança, relatórios e agentes de IA. Escopo fixo, no ar em 7 a 14 dias, sem fidelidade.">
 <meta name="twitter:image" content="https://www.dryos.com.br/images/og/og-automacoes.png">
 <script type="application/ld+json">
 {
@@ -467,9 +485,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
        "name": "Automação de cobrança",
        "description": "Régua de cobrança no WhatsApp, emissão de nota fiscal, boleto e Pix, e conciliação bancária."
       },
-      "eligibleDuration": {
+     "eligibleDuration": {
        "@type": "QuantitativeValue",
        "value": 10,
+       "unitCode": "DAY"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Automação de WhatsApp com API oficial",
+       "description": "Conecta a operação à API oficial do WhatsApp para atendimento, notificações, templates, distribuição de conversas e integração com CRM."
+      },
+      "eligibleDuration": {
+       "@type": "QuantitativeValue",
+       "value": 14,
+       "unitCode": "DAY"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Automação de grupos de WhatsApp",
+      "description": "Organiza avisos, entradas, segmentação e rotinas de grupos de WhatsApp elegíveis, com regras claras e integração aos sistemas do escopo."
+      },
+      "eligibleDuration": {
+       "@type": "QuantitativeValue",
+       "value": 14,
        "unitCode": "DAY"
       }
      }
@@ -516,7 +560,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
      "name": "Preciso já ter um CRM?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Não necessariamente. A automação de atendimento registra contatos e conversas por conta própria. Se você já tem CRM, ele continua sendo o dono do dado e a integração faz a ponte."
+     "text": "Não necessariamente. A automação de atendimento registra contatos e conversas por conta própria. Se você já tem CRM, ele continua sendo o dono do dado e a integração faz a ponte."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Vocês trabalham com a API oficial e grupos de WhatsApp?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. A gente pode conectar a operação à API oficial do WhatsApp para atendimento e notificações, e desenhar rotinas para grupos elegíveis, como entrada, segmentação e avisos. O diagnóstico define o que a conta e o canal permitem e o que precisa de atendimento individual."
      }
     },
     {
@@ -605,8 +657,55 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="hero-stat"><div class="v">24/7</div><div class="k">rodando sem depender de gente</div></div>
     </div>
 
+    <div class="automation-flow reveal">
+      <svg viewBox="0 0 960 178" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Fluxo de automação: mensagem ou evento, regra com API e IA, ação nos sistemas e resultado para cliente ou equipe">
+        <path class="flow-line" pathLength="1" d="M110 74H285M335 74H505M555 74H745" fill="none"/>
+        <path class="flow-line" pathLength="1" d="M505 74C535 74 535 40 570 40M505 74C535 74 535 108 570 108" fill="none" stroke-opacity=".14"/>
+        <circle class="flow-node" cx="90" cy="74" r="20"/>
+        <circle class="flow-node flow-node-core" cx="310" cy="74" r="25"/>
+        <circle class="flow-node flow-node-core" cx="530" cy="74" r="25"/>
+        <circle class="flow-node" cx="765" cy="74" r="20"/>
+        <g class="flow-packets" aria-hidden="true">
+          <circle class="flow-packet" r="3">
+            <animateMotion dur="3.6s" repeatCount="indefinite" path="M110 74H285M335 74H505M555 74H745"/>
+            <animate attributeName="opacity" values="0;1;1;0" dur="3.6s" repeatCount="indefinite"/>
+          </circle>
+          <circle class="flow-packet" r="2.5">
+            <animateMotion dur="3.4s" begin="1.2s" repeatCount="indefinite" path="M505 74C535 74 535 40 570 40"/>
+            <animate attributeName="opacity" values="0;1;1;0" dur="3.4s" begin="1.2s" repeatCount="indefinite"/>
+          </circle>
+          <circle class="flow-packet" r="2.5">
+            <animateMotion dur="3.2s" begin="2s" repeatCount="indefinite" path="M505 74C535 74 535 108 570 108"/>
+            <animate attributeName="opacity" values="0;1;1;0" dur="3.2s" begin="2s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+        <g aria-hidden="true">
+          <text class="flow-label" x="90" y="34" text-anchor="middle">entrada</text>
+          <text class="flow-label-main" x="90" y="116" text-anchor="middle">Mensagem</text>
+          <text class="flow-caption" x="90" y="134" text-anchor="middle">WhatsApp / evento</text>
+          <text class="flow-label" x="310" y="34" text-anchor="middle">regra</text>
+          <text class="flow-label-main" x="310" y="116" text-anchor="middle">Decide</text>
+          <text class="flow-caption" x="310" y="134" text-anchor="middle">IA + API oficial</text>
+          <text class="flow-label" x="530" y="34" text-anchor="middle">ação</text>
+          <text class="flow-label-main" x="530" y="116" text-anchor="middle">Executa</text>
+          <text class="flow-caption" x="530" y="134" text-anchor="middle">CRM / grupo / cobrança</text>
+          <text class="flow-label" x="765" y="34" text-anchor="middle">resultado</text>
+          <text class="flow-label-main" x="765" y="116" text-anchor="middle">Responde</text>
+          <text class="flow-caption" x="765" y="134" text-anchor="middle">cliente / equipe</text>
+        </g>
+        <g aria-hidden="true">
+          <rect class="flow-tag" x="205" y="158" width="82" height="16" rx="8"/>
+          <text class="flow-tag-text" x="246" y="169" text-anchor="middle">sem copiar</text>
+          <rect class="flow-tag" x="439" y="158" width="82" height="16" rx="8"/>
+          <text class="flow-tag-text" x="480" y="169" text-anchor="middle">com registro</text>
+          <rect class="flow-tag" x="662" y="158" width="82" height="16" rx="8"/>
+          <text class="flow-tag-text" x="703" y="169" text-anchor="middle">com SLA</text>
+        </g>
+      </svg>
+    </div>
+
     <div class="sparks-rule reveal">
-      <svg viewBox="0 0 580 60" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Cinco marcas alinhadas representando as cinco frentes de automação">
+        <svg viewBox="0 0 580 60" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Marcas alinhadas representando as sete frentes de automação">
         <line x1="40" y1="30" x2="540" y2="30" stroke="rgba(31,58,42,0.18)" stroke-width="1" stroke-dasharray="3 5"/>
         <g class="fagulha"><g transform="translate(80,30)">
           <line x1="0" y1="-11" x2="0" y2="-5" stroke="#1F3A2A" stroke-width="1.6" stroke-linecap="round"/>
@@ -707,7 +806,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <a href="#automacoes" class="diag-cta">
         <div>
-          <span class="vc-label">— As cinco frentes</span>
+          <span class="vc-label">— As sete frentes</span>
           <p class="vc-text">Pra cada sintoma, uma automação de escopo fechado.</p>
         </div>
         <span class="vc-arrow">Ver as automações
@@ -722,7 +821,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="sec-pad" id="automacoes">
   <div class="container">
     <div class="eyebrow reveal"><span class="label">— As automações</span><span class="num">02 / 08</span></div>
-    <h2 class="sec-title reveal">Cinco frentes. <strong>Uma dor de cada vez.</strong></h2>
+    <h2 class="sec-title reveal">Sete frentes. <strong>Uma dor de cada vez.</strong></h2>
     <p class="sec-intro reveal">Cada automação tem escopo fixo, prazo definido e SLA documentado. O que está listado em "o que entra" é o que a gente entrega. Não tem "e muito mais".</p>
 
     <!-- 01 ATENDIMENTO -->
@@ -905,6 +1004,78 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
 
+    <!-- 06 WHATSAPP OFICIAL -->
+    <div class="sol reveal">
+      <div class="sol-inner">
+        <div class="sol-copy">
+          <div class="sol-head"><span class="sol-num">— 06</span><span class="sol-name">WhatsApp com API oficial</span></div>
+          <div class="sol-cat">WhatsApp Business Platform · notificações e atendimento</div>
+          <p class="sol-desc">A operação conversa com clientes pelo canal oficial do WhatsApp, com templates aprovados, regras de atendimento e integração ao CRM. Serve para iniciar conversas permitidas, avisar etapas e distribuir o atendimento sem depender de gambiarra.</p>
+          <div class="sol-kills">
+            <span class="kill-pill"><b>✕</b> Canal sem controle</span>
+            <span class="kill-pill"><b>✕</b> Dado espalhado</span>
+          </div>
+        </div>
+        <div class="sol-spec">
+          <div class="spec-h">O que entra</div>
+          <ul>
+            <li>Conexão com a API oficial do WhatsApp Business</li>
+            <li>Configuração de templates e regras de disparo</li>
+            <li>Notificações transacionais e atualizações de status</li>
+            <li>Integração com CRM e sistemas do escopo</li>
+            <li>Distribuição e escalonamento para o time</li>
+            <li>Registro, logs e alerta de falha</li>
+          </ul>
+          <div class="sol-flow">
+            <span class="fx">Evento no sistema</span><i class="fa">→</i>
+            <span class="fx">Regra + template</span><i class="fa">→</i>
+            <span class="fx">API oficial</span><i class="fa">→</i>
+            <span class="fx end">Cliente notificado</span>
+          </div>
+          <div class="sol-sla">
+            <div><div class="k">Implementação</div><div class="v">14 dias úteis</div></div>
+            <div><div class="k">Modelo</div><div class="v">Recorrente</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 GRUPOS -->
+    <div class="sol reveal">
+      <div class="sol-inner">
+        <div class="sol-copy">
+          <div class="sol-head"><span class="sol-num">— 07</span><span class="sol-name">Automação de grupos</span></div>
+          <div class="sol-cat">Grupos de WhatsApp · comunidade e operação</div>
+          <p class="sol-desc">Estrutura rotinas para grupos de WhatsApp: avisos, segmentação, entrada de participantes e encaminhamento para o time. O escopo depende do tipo de grupo e da elegibilidade da conta; a automação respeita os limites do canal e deixa claro o que é grupo, atendimento individual e comunicação oficial.</p>
+          <div class="sol-kills">
+            <span class="kill-pill"><b>✕</b> Grupo sem regra</span>
+            <span class="kill-pill"><b>✕</b> Aviso manual</span>
+          </div>
+        </div>
+        <div class="sol-spec">
+          <div class="spec-h">O que entra</div>
+          <ul>
+            <li>Desenho dos grupos, públicos e objetivos</li>
+            <li>Validação de elegibilidade, entrada e segmentação</li>
+            <li>Calendário de avisos e mensagens operacionais</li>
+            <li>Integração de inscrições e eventos com CRM</li>
+            <li>Regras de moderação e encaminhamento ao humano</li>
+            <li>Relatório de entregas e ocorrências</li>
+          </ul>
+          <div class="sol-flow">
+            <span class="fx">Evento ou inscrição</span><i class="fa">→</i>
+            <span class="fx">Segmenta</span><i class="fa">→</i>
+            <span class="fx">Grupo certo</span><i class="fa">→</i>
+            <span class="fx end">Aviso + registro</span>
+          </div>
+          <div class="sol-sla">
+            <div><div class="k">Implementação</div><div class="v">14 dias úteis</div></div>
+            <div><div class="k">Modelo</div><div class="v">Recorrente</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -970,6 +1141,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li>Alerta quando um indicador sai da faixa</li>
           <li>Log de execução e alerta quando uma integração falha</li>
           <li>Deduplicação de contatos entre bases</li>
+        </ul>
+      </div>
+
+      <div class="cat">
+        <span class="ctag">— 05</span>
+        <h3>WhatsApp &amp; grupos</h3>
+        <ul>
+          <li>Atendimento e notificações pela API oficial</li>
+          <li>Templates aprovados e regras de disparo</li>
+          <li>Distribuição de conversas para o time</li>
+          <li>Entrada, segmentação e avisos em grupos</li>
+          <li>Grupo conectado a inscrição, evento ou CRM</li>
+          <li>Logs, alertas e encaminhamento ao humano</li>
         </ul>
       </div>
 
@@ -1176,6 +1360,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <select id="lf-spark">
           <option value="">Não sei ainda / quero o diagnóstico</option>
           <option value="atendimento">Atendimento — perco lead e demoro pra responder</option>
+          <option value="whatsapp-api-oficial">WhatsApp com API oficial — notificações e atendimento</option>
+          <option value="grupos-whatsapp">Grupos de WhatsApp — avisos, entrada e segmentação</option>
           <option value="integracao">Integração entre sistemas — CRM, e-mail, ERP, planilha</option>
           <option value="lancamento">Lançamento — anúncio, checkout e e-mail falando com o CRM</option>
           <option value="agente-ia">Agente de IA — dúvida técnica repetida</option>
