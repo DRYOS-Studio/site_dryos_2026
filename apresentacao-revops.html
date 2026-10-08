@@ -57,7 +57,6 @@
     font-size: 16px;
     line-height: 1.55;
     letter-spacing: -0.005em;
-    overflow-x: hidden;
   }
   a { color: inherit; text-decoration: none; }
   img { max-width: 100%; display: block; }
@@ -101,8 +100,7 @@
   @media (max-width: 860px) { .nav-links a:not(.nav-cta) { display: none; } }
 
   /* ---------- SECTION SCAFFOLD ---------- */
-  section { border-bottom: 1px solid var(--line); }
-  .sec-pad { padding: clamp(4rem, 8vw, 6.5rem) 0; }
+  .sec-pad { padding: 5rem 1.5rem; border-bottom: 1px solid var(--line); }
   .eyebrow {
     display: flex; align-items: center; justify-content: space-between;
     gap: 1rem; margin-bottom: 2rem;
@@ -126,10 +124,10 @@
   }
 
   /* ---------- HERO ---------- */
-  .hero { padding: clamp(3.5rem,7vw,6rem) 0 clamp(3rem,6vw,4.5rem); position: relative; overflow: hidden; }
+  .hero { padding: 5rem 1.5rem; position: relative; border-bottom: 1px solid var(--line); }
   .hero-tag {
     display: inline-flex; align-items: center; gap: 0.5rem;
-    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em;
     color: var(--oak); background: var(--oak-tint); border: 1px solid var(--line);
     padding: 0.35rem 0.7rem; border-radius: 100px; margin-bottom: 1.6rem;
   }
@@ -158,7 +156,7 @@
   .hero-stat .k { font-size: 13px; color: var(--mute); margin-top: 0.2rem; }
 
   /* ---------- VILLAINS / SILOS WITH EDITORIAL IMAGES ---------- */
-  .silos-section { background: var(--ink); color: var(--bg); }
+  .silos-section { background: var(--ink); color: var(--bg); padding: 5rem 1.5rem; border-bottom: none; }
   .silos-section .eyebrow .label { color: #9DBFA8; }
   .silos-section .eyebrow .num { color: #6f6f6a; }
   .silos-section .sec-title { color: var(--bg); }
@@ -190,12 +188,12 @@
   }
   .villain-card:hover .villain-img-box img { transform: scale(1.05); filter: saturate(1); }
 
-  .villain-num { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; color: #9DBFA8; text-transform: uppercase; }
+  .villain-num { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; color: #9DBFA8; text-transform: uppercase; }
   .villain-name { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: #fff; margin: 0.3rem 0 0.5rem; }
   .villain-quote { font-size: 12.5px; color: #D5D5CF; font-style: italic; background: rgba(255,255,255,0.05); padding: 0.5rem 0.7rem; border-left: 2px solid #9DBFA8; border-radius: 0 4px 4px 0; margin-bottom: 0.7rem; }
   .villain-desc { font-size: 13px; color: #8F8F8A; line-height: 1.5; margin-bottom: 1rem; }
   .villain-cost {
-    font-family: var(--font-mono); font-size: 10px; color: #E58B88; text-transform: uppercase;
+    font-family: var(--font-mono); font-size: 12px; color: #E58B88; letter-spacing: 0.02em;
     margin-top: auto; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; gap: 0.4rem;
   }
 
@@ -218,7 +216,7 @@
 
   .tag-pill {
     display: inline-flex; align-items: center; gap: 0.4rem;
-    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase;
+    font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase;
     background: var(--surface); border: 1px solid var(--line); color: var(--ink-soft);
     padding: 0.3rem 0.6rem; border-radius: 100px; margin-top: 1.2rem;
   }
@@ -228,12 +226,11 @@
   .shot {
     border-radius: 12px; overflow: hidden; background: #fff;
     border: 1px solid var(--line-strong);
-    box-shadow: 0 4px 20px -8px rgba(0,0,0,0.08), 0 20px 45px -20px rgba(31,58,42,0.18);
   }
   .shot-bar { display: flex; align-items: center; gap: 0.5rem; padding: 0.6rem 0.85rem; background: var(--surface); border-bottom: 1px solid var(--line); }
   .shot-bar .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--line-strong); }
-  .shot-bar .url { margin-left: 0.5rem; font-family: var(--font-mono); font-size: 10px; color: var(--mute); background: #fff; border: 1px solid var(--line); padding: 0.18rem 0.6rem; border-radius: 5px; }
-  .shot-body { padding: 1.2rem; font-size: 12px; background: #FCFCFA; }
+  .shot-bar .url { margin-left: 0.5rem; font-family: var(--font-mono); font-size: 12px; color: var(--mute); background: #fff; border: 1px solid var(--line); padding: 0.18rem 0.6rem; border-radius: 5px; }
+  .shot-body { padding: 1.2rem; font-size: 13px; background: #FCFCFA; }
 
   /* MOCKUP 1: ARCHITECTURE NODES */
   .arch-grid { display: flex; flex-direction: column; gap: 0.75rem; }
@@ -244,11 +241,11 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.04);
   }
   .arch-icon { width: 28px; height: 28px; border-radius: 6px; background: var(--oak-tint); color: var(--oak); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 12px; flex: none; }
-  .arch-meta .name { font-weight: 700; font-size: 11.5px; color: var(--ink); }
-  .arch-meta .status { font-family: var(--font-mono); font-size: 9px; color: var(--good); display: flex; align-items: center; gap: 0.3rem; }
+  .arch-meta .name { font-weight: 700; font-size: 13px; color: var(--ink); }
+  .arch-meta .status { font-family: var(--font-mono); font-size: 12px; color: var(--good); display: flex; align-items: center; gap: 0.3rem; }
   .arch-meta .status b { width: 5px; height: 5px; border-radius: 50%; background: var(--good); }
   .arch-connector {
-    text-align: center; font-family: var(--font-mono); font-size: 9px; color: var(--oak-light);
+    text-align: center; font-family: var(--font-mono); font-size: 12px; color: var(--oak-light);
     display: flex; align-items: center; justify-content: center; gap: 0.4rem; padding: 0.2rem 0;
   }
   .arch-connector::before, .arch-connector::after { content: ""; height: 1px; flex: 1; background: var(--line-strong); }
@@ -256,16 +253,16 @@
   /* MOCKUP 2: REVENUE BI DASHBOARD */
   .kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.6rem; margin-bottom: 0.9rem; }
   .kpi-card { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 0.6rem 0.7rem; }
-  .kpi-card .lbl { font-family: var(--font-mono); font-size: 8.5px; color: var(--mute); text-transform: uppercase; }
+  .kpi-card .lbl { font-family: var(--font-mono); font-size: 11px; color: var(--mute); text-transform: uppercase; }
   .kpi-card .val { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: var(--ink); margin: 0.15rem 0; }
-  .kpi-card .sub { font-family: var(--font-mono); font-size: 8.5px; color: var(--good); }
+  .kpi-card .sub { font-family: var(--font-mono); font-size: 12px; color: var(--good); }
   .bi-chart-box { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 0.8rem; }
-  .bi-head { display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: 700; margin-bottom: 0.6rem; }
+  .bi-head { display: flex; justify-content: space-between; align-items: center; font-size: 13px; font-weight: 700; margin-bottom: 0.6rem; }
   .bi-bars { display: flex; align-items: flex-end; gap: 0.5rem; height: 85px; padding-bottom: 0.4rem; border-bottom: 1px solid var(--line); }
   .bi-bar-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 0.3rem; height: 100%; justify-content: flex-end; }
   .bi-bar { width: 100%; border-radius: 3px 3px 0 0; background: var(--oak-tint); position: relative; }
   .bi-bar.active { background: var(--oak); }
-  .bi-bar-lbl { font-family: var(--font-mono); font-size: 8px; color: var(--mute); }
+  .bi-bar-lbl { font-family: var(--font-mono); font-size: 12px; color: var(--mute); }
 
   /* MOCKUP 3: GTM SPEED-TO-LEAD FLOW */
   .sla-flow { display: flex; flex-direction: column; gap: 0.6rem; }
@@ -273,21 +270,21 @@
     background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 0.65rem 0.8rem;
     display: flex; align-items: center; justify-content: space-between; gap: 0.8rem;
   }
-  .sla-step.active { border-left: 3px solid var(--good); }
+  .sla-step.active { border-color: rgba(47, 122, 79, 0.4); background: #FAFDFB; }
   .sla-info { display: flex; align-items: center; gap: 0.6rem; }
-  .sla-badge { font-family: var(--font-mono); font-size: 9px; padding: 0.15rem 0.4rem; border-radius: 4px; background: var(--surface); color: var(--ink); font-weight: 600; }
-  .sla-desc { font-size: 11.5px; font-weight: 600; }
-  .sla-timer { font-family: var(--font-mono); font-size: 9.5px; color: var(--good); font-weight: 600; }
+  .sla-badge { font-family: var(--font-mono); font-size: 11px; padding: 0.15rem 0.4rem; border-radius: 4px; background: var(--surface); color: var(--ink); font-weight: 600; }
+  .sla-desc { font-size: 13px; font-weight: 600; }
+  .sla-timer { font-family: var(--font-mono); font-size: 12px; color: var(--good); font-weight: 600; }
 
   /* MOCKUP 4: CRM KANBAN PIPELINE */
   .pipe-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; }
   .pipe-column { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 0.6rem; }
-  .pipe-header { display: flex; justify-content: space-between; font-size: 10px; font-weight: 700; margin-bottom: 0.5rem; color: var(--ink); }
-  .pipe-badge { font-family: var(--font-mono); font-size: 8.5px; background: #fff; padding: 0.05rem 0.35rem; border-radius: 100px; color: var(--mute); }
+  .pipe-header { display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; margin-bottom: 0.5rem; color: var(--ink); }
+  .pipe-badge { font-family: var(--font-mono); font-size: 11px; background: #fff; padding: 0.05rem 0.35rem; border-radius: 100px; color: var(--mute); }
   .pipe-card-ui { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 0.5rem; margin-bottom: 0.45rem; box-shadow: 0 1px 2px rgba(0,0,0,0.03); }
-  .pipe-card-ui .deal-name { font-weight: 600; font-size: 11px; }
-  .pipe-card-ui .deal-val { font-family: var(--font-mono); font-size: 10px; color: var(--oak); font-weight: 700; margin-top: 0.15rem; }
-  .pipe-card-ui .deal-tag { font-family: var(--font-mono); font-size: 8px; background: var(--oak-tint); color: var(--oak); padding: 0.05rem 0.3rem; border-radius: 3px; display: inline-block; margin-top: 0.3rem; }
+  .pipe-card-ui .deal-name { font-weight: 600; font-size: 13px; }
+  .pipe-card-ui .deal-val { font-family: var(--font-mono); font-size: 12.5px; color: var(--oak); font-weight: 700; margin-top: 0.15rem; }
+  .pipe-card-ui .deal-tag { font-family: var(--font-mono); font-size: 11.5px; background: var(--oak-tint); color: var(--oak); padding: 0.05rem 0.3rem; border-radius: 3px; display: inline-block; margin-top: 0.3rem; }
 
   /* ---------- WEEKS TIMELINE ---------- */
   .weeks-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-top: 3.5rem; }
@@ -301,7 +298,7 @@
   .week-num { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; color: var(--oak); font-weight: 600; text-transform: uppercase; }
   .week-title { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; letter-spacing: -0.02em; }
   .week-desc { font-size: 13.5px; color: var(--mute); line-height: 1.55; }
-  .week-badge { margin-top: auto; padding-top: 0.8rem; border-top: 1px solid var(--line); font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-soft); font-weight: 500; }
+  .week-badge { margin-top: auto; padding-top: 0.8rem; border-top: 1px solid var(--line); font-family: var(--font-mono); font-size: 12px; color: var(--ink-soft); font-weight: 500; }
 
   /* ---------- VISUAL DELIVERABLES GRID ---------- */
   .deliv-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
@@ -313,15 +310,15 @@
     box-shadow: 0 4px 14px rgba(0,0,0,0.03);
   }
   .deliv-top { display: flex; justify-content: space-between; align-items: center; }
-  .deliv-tag { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--oak); background: var(--oak-tint); padding: 0.2rem 0.55rem; border-radius: 4px; font-weight: 600; }
-  .deliv-type { font-family: var(--font-mono); font-size: 10px; color: var(--mute); }
+  .deliv-tag { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--oak); background: var(--oak-tint); padding: 0.2rem 0.55rem; border-radius: 4px; font-weight: 600; }
+  .deliv-type { font-family: var(--font-mono); font-size: 12px; color: var(--mute); }
   .deliv-card h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; letter-spacing: -0.02em; }
   .deliv-card p { font-size: 13.5px; color: var(--mute); line-height: 1.55; }
 
   /* Visual Preview within deliverable card */
   .deliv-preview-box {
     background: var(--surface); border: 1px dashed var(--line-strong); border-radius: 8px;
-    padding: 0.9rem; font-family: var(--font-mono); font-size: 11px; color: var(--ink);
+    padding: 0.9rem; font-family: var(--font-mono); font-size: 12px; color: var(--ink);
   }
   .deliv-preview-box .dp-row { display: flex; justify-content: space-between; padding: 0.25rem 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
   .deliv-preview-box .dp-row:last-child { border-bottom: none; }
@@ -571,7 +568,7 @@
           <div class="bi-chart-box">
             <div class="bi-head">
               <span>Atribuição Real por Canal de Aquisição</span>
-              <span style="font-family:var(--font-mono); font-size:9px; color:var(--mute)">First-to-Last Touch</span>
+              <span style="font-family:var(--font-mono); font-size:11px; color:var(--mute)">First-to-Last Touch</span>
             </div>
             <div class="bi-bars">
               <div class="bi-bar-col"><div class="bi-bar" style="height:45%"></div><span class="bi-bar-lbl">Meta</span></div>
@@ -726,29 +723,25 @@
 
     <div class="weeks-grid reveal">
       <div class="week-card">
-        <span class="week-num">Semana 01</span>
-        <h3 class="week-title">Imersão &amp; As-Is</h3>
+        <h3 class="week-title"><span class="week-num">Semana 01 · </span>Imersão &amp; As-Is</h3>
         <p class="week-desc">Entrevistas estruturadas com lideranças (Mkt, Vendas, CS e Financeiro). Inventário completo de ferramentas e mapeamento da jornada atual.</p>
         <div class="week-badge">Etapa: Diagnóstico Inicial</div>
       </div>
 
       <div class="week-card">
-        <span class="week-num">Semana 02</span>
-        <h3 class="week-title">Raio-X Técnico</h3>
+        <h3 class="week-title"><span class="week-num">Semana 02 · </span>Raio-X Técnico</h3>
         <p class="week-desc">Auditoria profunda de bases de dados, integridade de pipelines no CRM, APIs, webhooks e histórico de conversão real.</p>
         <div class="week-badge">Etapa: Auditoria de Dados</div>
       </div>
 
       <div class="week-card">
-        <span class="week-num">Semana 03</span>
-        <h3 class="week-title">Gargalos &amp; To-Be</h3>
+        <h3 class="week-title"><span class="week-num">Semana 03 · </span>Gargalos &amp; To-Be</h3>
         <p class="week-desc">Mapeamento dos pontos exatos de fuga de receita. Desenho da nova arquitetura de sistemas e seleção de Quick Wins.</p>
         <div class="week-badge">Etapa: Modelagem da Solução</div>
       </div>
 
       <div class="week-card">
-        <span class="week-num">Semana 04</span>
-        <h3 class="week-title">Entrega Executiva</h3>
+        <h3 class="week-title"><span class="week-num">Semana 04 · </span>Entrega Executiva</h3>
         <p class="week-desc">Apresentação dos resultados para os sócios e diretores, entrega dos artefatos formais e Roadmap de Implementação priorizado.</p>
         <div class="week-badge">Etapa: Plano de Voo</div>
       </div>
