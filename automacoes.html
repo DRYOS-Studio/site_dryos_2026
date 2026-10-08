@@ -173,11 +173,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .automation-flow.in .flow-node:nth-of-type(3) { transition-delay: .32s; }
   .automation-flow.in .flow-node:nth-of-type(4) { transition-delay: .48s; }
   .automation-flow .flow-node-core { fill: var(--oak); stroke: var(--oak); }
-  .automation-flow .flow-label { fill: var(--oak); font-family: var(--font-mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+  .automation-flow .flow-label { fill: var(--oak); font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
   .automation-flow .flow-label-main { fill: var(--ink); font-family: var(--font-display); font-size: 16px; font-weight: 700; letter-spacing: -.02em; }
   .automation-flow .flow-caption { fill: var(--mute); font-family: var(--font-body); font-size: 12px; }
   .automation-flow .flow-tag { fill: var(--surface); stroke: var(--line); }
-  .automation-flow .flow-tag-text { fill: var(--ink-soft); font-family: var(--font-mono); font-size: 9px; letter-spacing: .05em; text-transform: uppercase; }
+  .automation-flow .flow-tag-text { fill: var(--ink-soft); font-family: var(--font-mono); font-size: 11px; letter-spacing: .05em; text-transform: uppercase; }
   .automation-flow .flow-packet { fill: #93B596; filter: drop-shadow(0 0 4px rgba(31,58,42,.22)); }
   .sparks-rule { display: none; }
   .sol.reveal.in .sol-flow .fx { animation: flow-step 3.2s var(--motion-ease) infinite; }
@@ -213,7 +213,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .diag .dquote { font-size: 13.5px; color: #C8C8C2; font-style: italic; }
   .diag .dsym { font-size: 13px; color: #8f8f8a; line-height: 1.5; margin-top: auto; }
   .diag .dfix {
-    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
     color: #9DBFA8; display: flex; align-items: center; gap: 0.4rem;
     margin-top: 0.6rem; padding-top: 0.7rem; border-top: 1px solid #ffffff14;
   }
@@ -223,7 +223,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     transition: background .25s;
   }
   .diag-cta:hover { background: var(--oak-light); }
-  .diag-cta .vc-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #BfD4C4; }
+  .diag-cta .vc-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #BfD4C4; }
   .diag-cta .vc-text { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.15; margin-top: 0.5rem; }
   .diag-cta .vc-arrow { font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 0.4rem; margin-top: 1rem; }
 
@@ -236,32 +236,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .sol-head { display: flex; align-items: baseline; gap: 0.7rem; flex-wrap: wrap; }
   .sol-num { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; color: var(--mute-soft); }
   .sol-name { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.5rem,2.6vw,1.95rem); letter-spacing: -0.03em; line-height: 1.05; text-wrap: balance; }
-  .sol-cat { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--oak-light); margin-top: 0.35rem; }
+  .sol-cat { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--oak-light); margin-top: 0.35rem; }
   .sol-desc { color: var(--mute); font-size: 14.5px; line-height: 1.6; margin-top: 1rem; max-width: 44ch; }
   .sol-kills { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: auto; padding-top: 1.4rem; }
   .kill-pill {
-    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.04em; text-transform: uppercase;
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase;
     background: var(--surface); border: 1px solid var(--line); color: var(--ink-soft);
-    padding: 0.35rem 0.65rem; border-radius: 100px; display: inline-flex; align-items: center; gap: 0.4rem;
+    padding: 0.4rem 0.75rem; border-radius: 100px; display: inline-flex; align-items: center; gap: 0.4rem;
   }
   .kill-pill b { color: var(--oak); }
 
   .sol-spec { background: var(--surface); border-left: 1px solid var(--line); padding: 1.8rem 1.7rem 2rem; }
   @media (max-width: 920px) { .sol-spec { border-left: none; border-top: 1px solid var(--line); } }
-  .spec-h { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--mute-soft); }
-  .sol-spec ul { list-style: none; margin-top: 0.7rem; display: flex; flex-direction: column; gap: 0.45rem; }
-  .sol-spec ul li { font-size: 13.5px; color: var(--ink-soft); display: flex; gap: 0.55rem; align-items: flex-start; line-height: 1.45; }
-  .sol-spec ul li::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--oak); margin-top: 0.5rem; flex: none; }
-  .sol-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; margin-top: 1.3rem; padding-top: 1.2rem; border-top: 1px solid var(--line); }
+  .spec-h { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mute); font-weight: 600; }
+  .sol-spec ul { list-style: none; margin-top: 0.8rem; display: flex; flex-direction: column; gap: 0.5rem; }
+  .sol-spec ul li { font-size: 14px; color: var(--ink-soft); display: flex; gap: 0.55rem; align-items: flex-start; line-height: 1.5; }
+  .sol-spec ul li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--oak); margin-top: 0.5rem; flex: none; }
+  .sol-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-top: 1.4rem; padding-top: 1.2rem; border-top: 1px solid var(--line); }
   .sol-flow .fx {
-    font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.03em; text-transform: uppercase;
-    background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 0.28rem 0.5rem; color: var(--ink-soft);
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase;
+    background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 0.35rem 0.65rem; color: var(--ink-soft);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
   }
-  .sol-flow .fx.end { background: var(--oak-tint); border-color: #1F3A2A22; color: var(--oak); font-weight: 500; }
-  .sol-flow .fa { color: var(--mute-soft); font-size: 11px; font-style: normal; }
-  .sol-sla { display: flex; flex-wrap: wrap; gap: 1.4rem; margin-top: 1.2rem; padding-top: 1.1rem; border-top: 1px solid var(--line); }
-  .sol-sla div .k { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--mute-soft); }
-  .sol-sla div .v { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; letter-spacing: -0.02em; color: var(--oak); margin-top: 0.1rem; }
+  .sol-flow .fx.end { background: var(--oak-tint); border-color: #1F3A2A33; color: var(--oak); font-weight: 600; }
+  .sol-flow .fa { color: var(--oak-light); font-size: 12px; font-style: normal; font-weight: 600; }
+  .sol-sla { display: flex; flex-wrap: wrap; gap: 1.8rem; margin-top: 1.4rem; padding-top: 1.2rem; border-top: 1px solid var(--line); }
+  .sol-sla div .k { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mute); font-weight: 500; }
+  .sol-sla div .v { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; letter-spacing: -0.02em; color: var(--oak); margin-top: 0.15rem; }
 
   /* ---------- PROOF BAND ---------- */
   .proof { background: var(--ink); color: var(--bg); }
@@ -273,11 +274,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .proof-stat .v { font-family: var(--font-display); font-weight: 800; font-size: clamp(2rem,4vw,2.8rem); letter-spacing: -0.03em; color: #fff; }
   .proof-stat .v span { color: #9DBFA8; }
   .proof-stat .k { font-size: 13px; color: #A6A6A0; margin-top: 0.3rem; }
-  .proof-note { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.03em; color: #6f6f6a; margin-top: 1.2rem; }
+  .proof-note { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.03em; color: #6f6f6a; margin-top: 1.2rem; }
   .proof-quote { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid #ffffff14; display: grid; grid-template-columns: 200px 1fr; gap: 2rem; }
   @media (max-width: 760px) { .proof-quote { grid-template-columns: 1fr; gap: 1rem; } }
   .proof-quote .pq-meta .nm { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; color: var(--bg); }
-  .proof-quote .pq-meta .st { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.06em; text-transform: uppercase; color: #9DBFA8; margin-top: 0.3rem; display: block; }
+  .proof-quote .pq-meta .st { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #9DBFA8; margin-top: 0.3rem; display: block; }
   .proof-quote blockquote { font-size: clamp(1rem,1.6vw,1.15rem); color: #C8C8C2; line-height: 1.6; max-width: 60ch; }
   .proof-quote blockquote strong { color: #fff; font-weight: 500; }
   .proof-quote .attr { font-size: 13px; color: #8f8f8a; margin-top: 0.9rem; }
@@ -290,7 +291,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .step .snum { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; color: var(--oak-light); }
   .step h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; letter-spacing: -0.02em; margin-top: 0.2rem; }
   .step p { font-size: 13.5px; color: var(--mute); line-height: 1.55; }
-  .step .stime { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-soft); margin-top: auto; padding-top: 1rem; }
+  .step .stime { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-soft); margin-top: auto; padding-top: 1rem; }
 
   /* "o que a gente não faz" band */
   .notband { margin-top: 2.5rem; background: var(--oak-tint); border: 1px solid var(--line); border-radius: 14px; padding: 1.6rem 1.7rem; }
@@ -309,7 +310,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .combo .cmix i { color: var(--mute-soft); font-style: normal; font-size: 0.95rem; }
   .combo h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; letter-spacing: -0.025em; margin-top: 0.3rem; text-wrap: balance; }
   .combo p { font-size: 13.5px; color: var(--mute); line-height: 1.55; }
-  .combo .cfor { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-soft); margin-top: auto; padding-top: 1.1rem; border-top: 1px solid var(--line); }
+  .combo .cfor { font-family: var(--font-body); font-size: 13px; font-weight: 500; color: var(--oak-light); margin-top: auto; padding-top: 1.1rem; border-top: 1px solid var(--line); display: flex; align-items: baseline; gap: 0.4rem; }
+  .combo .cfor::before { content: "Ideal:"; font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--mute); font-weight: 600; flex: none; }
 
   /* ---------- CATALOG (o que a gente automatiza) ---------- */
   .cat-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--line-strong); border: 1px solid var(--line-strong); border-radius: 16px; overflow: hidden; margin-top: 3rem; }
@@ -317,7 +319,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @media (max-width: 640px) { .cat-grid { grid-template-columns: 1fr; } }
   .cat { background: var(--bg); padding: 1.6rem 1.5rem 1.8rem; }
   .cat h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; letter-spacing: -0.02em; }
-  .cat .ctag { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--oak-light); }
+  .cat .ctag { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--oak-light); }
   .cat ul { list-style: none; margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem; }
   .cat ul li { font-size: 13px; color: var(--ink-soft); line-height: 1.45; display: flex; gap: 0.5rem; align-items: flex-start; }
   .cat ul li::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--oak); margin-top: 0.45rem; flex: none; }
@@ -332,20 +334,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .eco-num { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; color: var(--mute-soft); }
   .eco-card.here .eco-num { color: #9DBFA8; }
   .eco-name { font-family: var(--font-display); font-weight: 700; font-size: 1.55rem; letter-spacing: -0.02em; display: flex; align-items: center; gap: 0.6rem; margin-top: 0.15rem; flex-wrap: wrap; }
-  .eco-here { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.06em; text-transform: uppercase; background: var(--bg); color: var(--oak); border-radius: 100px; padding: 0.18rem 0.5rem; font-weight: 500; }
+  .eco-here { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; background: var(--bg); color: var(--oak); border-radius: 100px; padding: 0.2rem 0.6rem; font-weight: 600; }
   .eco-tag { font-size: 12.5px; color: var(--mute); }
   .eco-card.here .eco-tag { color: #C8D6CB; }
   .eco-card p { font-size: 13px; color: var(--ink-soft); line-height: 1.55; margin-top: 0.55rem; flex: 1; }
   .eco-card.here p { color: #DCE6DD; }
   .eco-meta { display: flex; gap: 1.2rem; margin-top: 1rem; padding-top: 0.85rem; border-top: 1px solid var(--line); }
   .eco-card.here .eco-meta { border-top-color: #ffffff22; }
-  .eco-meta span { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--mute); }
+  .eco-meta span { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--mute); }
   .eco-card.here .eco-meta span { color: #9DBFA8; }
 
   /* ---------- FAQ ---------- */
   .faq-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.6rem 3rem; margin-top: 3rem; }
   @media (max-width: 760px) { .faq-grid { grid-template-columns: 1fr; } }
-  .faq-item h4 { font-family: var(--font-display); font-weight: 600; font-size: 1.08rem; letter-spacing: -0.01em; }
+  .faq-item h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.12rem; letter-spacing: -0.01em; }
   .faq-item p { color: var(--mute); font-size: 14px; margin-top: 0.45rem; line-height: 1.55; max-width: 52ch; }
 
   /* ---------- CTA ---------- */
@@ -354,21 +356,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .cta p { color: #C8D6CB; max-width: 48ch; margin: 1.2rem auto 0; font-size: 1.1rem; }
 
   /* lead form */
-  .lead-form { max-width: 440px; margin: 2.2rem auto 0; background: var(--bg); border-radius: 16px; padding: 1.6rem; text-align: left; box-shadow: 0 24px 60px -24px #00000055; }
-  .lead-form .row { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 0.8rem; }
-  .lead-form label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--mute); }
-  .lead-form input, .lead-form select { font-family: var(--font-body); font-size: 15px; padding: 0.7rem 0.85rem; border: 1px solid var(--line-strong); border-radius: 9px; background: #fff; color: var(--ink); width: 100%; }
+  .lead-form { max-width: 460px; margin: 2.2rem auto 0; background: var(--bg); border-radius: 16px; padding: 2rem 1.8rem; text-align: left; box-shadow: 0 24px 60px -24px #00000055; }
+  .lead-form .row { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 0.9rem; }
+  .lead-form label { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; }
+  .lead-form input, .lead-form select { font-family: var(--font-body); font-size: 15px; padding: 0.75rem 0.85rem; border: 1px solid var(--line-strong); border-radius: 9px; background: #fff; color: var(--ink); width: 100%; }
   .lead-form input:focus, .lead-form select:focus { outline: 2px solid var(--oak); outline-offset: 1px; border-color: var(--oak); }
   .lead-form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-  .lead-form button { width: 100%; background: var(--oak); color: #fff; font-family: var(--font-body); font-weight: 600; font-size: 15px; padding: 0.85rem; border-radius: 9px; cursor: pointer; border: none; transition: background 0.2s; margin-top: 0.3rem; }
+  .lead-form button { width: 100%; background: var(--oak); color: #fff; font-family: var(--font-body); font-weight: 600; font-size: 15px; padding: 0.9rem; border-radius: 9px; cursor: pointer; border: none; transition: background 0.2s; margin-top: 0.4rem; }
   .lead-form button:hover { background: var(--ink); }
   .lead-form button:disabled { opacity: 0.6; cursor: default; }
   .lead-status { font-size: 13px; margin-top: 0.8rem; text-align: center; min-height: 1.1em; }
   .lead-status.err { color: #C0573B; }
-  .lead-form .privacy { font-size: 11px; color: var(--mute-soft); text-align: center; margin-top: 0.7rem; }
-  .lead-success { max-width: 440px; margin: 2.2rem auto 0; background: var(--bg); border-radius: 16px; padding: 2.2rem 1.6rem; text-align: center; box-shadow: 0 24px 60px -24px #00000055; }
+  .lead-form .privacy { font-size: 12.5px; color: var(--mute); text-align: center; margin-top: 0.8rem; }
+  .lead-success { max-width: 460px; margin: 2.2rem auto 0; background: var(--bg); border-radius: 16px; padding: 2.2rem 1.8rem; text-align: center; box-shadow: 0 24px 60px -24px #00000055; }
   .lead-success .ic { font-size: 2.2rem; }
-  .lead-success h4 { font-family: var(--font-display); font-weight: 700; font-size: 1.4rem; letter-spacing: -0.02em; margin-top: 0.5rem; color: var(--ink); }
+  .lead-success h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.4rem; letter-spacing: -0.02em; margin-top: 0.5rem; color: var(--ink); }
   .lead-success p { color: var(--mute); font-size: 14px; margin-top: 0.4rem; }
 
 
@@ -1305,39 +1307,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="faq-grid reveal">
       <div class="faq-item">
-        <h4>Sem fidelidade é sem fidelidade mesmo?</h4>
+        <h3>Sem fidelidade é sem fidelidade mesmo?</h3>
         <p>Sim. A recorrência é mensal e você sai quando quiser, sem multa. A aposta é que a automação se pague sozinha, não que o contrato te prenda.</p>
       </div>
       <div class="faq-item">
-        <h4>O que é "escopo fixo", na prática?</h4>
+        <h3>O que é "escopo fixo", na prática?</h3>
         <p>Antes de começar você recebe num documento o que entra, o que não entra, o prazo e o SLA. Se surgir algo fora dali, a gente conversa. Não aparece como surpresa na fatura nem como "isso não estava combinado".</p>
       </div>
       <div class="faq-item">
-        <h4>Preciso trocar as ferramentas que já uso?</h4>
+        <h3>Preciso trocar as ferramentas que já uso?</h3>
         <p>Não. A automação é feita pra conectar no que existe: seu WhatsApp, seu CRM, seu ERP, sua ferramenta de e-mail, suas planilhas. Se alguma realmente não der conta, a gente aponta no diagnóstico, em vez de você descobrir no meio do caminho.</p>
       </div>
       <div class="faq-item">
-        <h4>Vocês integram com a ferramenta X?</h4>
+        <h3>Vocês integram com a ferramenta X?</h3>
         <p>Se ela tem API ou webhook, sim, e é o caso da grande maioria: RD Station, ActiveCampaign, Hotmart, Eduzz, Kiwify, ERPs, gateways de pagamento. Se ela não expõe nada, às vezes há caminho alternativo e às vezes não há solução limpa. A gente confere a sua lista no diagnóstico antes de prometer.</p>
       </div>
       <div class="faq-item">
-        <h4>Preciso já ter um CRM?</h4>
+        <h3>Preciso já ter um CRM?</h3>
         <p>Não necessariamente. A automação de atendimento registra contatos e conversas por conta própria. Se você já tem CRM, ele continua sendo o dono do dado e a integração faz a ponte.</p>
       </div>
       <div class="faq-item">
-        <h4>Quanto custa?</h4>
+        <h3>Quanto custa?</h3>
         <p>Sob diagnóstico. Como cada automação tem escopo fixo, o preço só sai depois de conhecer o tamanho da sua operação: volume de atendimento, quantos sistemas, qual o desenho. Tabela genérica serviria pra um dos dois sair perdendo.</p>
       </div>
       <div class="faq-item">
-        <h4>Posso começar com um e adicionar depois?</h4>
+        <h3>Posso começar com um e adicionar depois?</h3>
         <p>Sim, e é o caminho mais comum. Você resolve a dor mais cara primeiro e adiciona a próxima quando fizer sentido. Nada do que já foi configurado se perde.</p>
       </div>
       <div class="faq-item">
-        <h4>E se eu precisar da operação inteira estruturada?</h4>
+        <h3>E se eu precisar da operação inteira estruturada?</h3>
         <p>Aí o caminho é estruturar a operação numa plataforma só, em vez de automatizar pedaço por pedaço. Cinco automações soltas não substituem uma operação integrada, e a gente prefere dizer isso na primeira conversa do que te vender automação demais.</p>
       </div>
       <div class="faq-item">
-        <h4>Meus dados ficam misturados com os de outros clientes?</h4>
+        <h3>Meus dados ficam misturados com os de outros clientes?</h3>
         <p>Não. Cada cliente roda em ambiente isolado. E se você sair, a gente te entrega a sua base; os dados sempre foram seus.</p>
       </div>
     </div>
@@ -1375,7 +1377,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </form>
     <div class="lead-success reveal" id="leadSuccess" hidden>
       <div class="ic">💚</div>
-      <h4>Recebemos suas informações.</h4>
+      <h3>Recebemos suas informações.</h3>
       <p>Vamos revisar seu contexto e entrar em contato em até 24 horas úteis para combinar o próximo passo.</p>
     </div>
   </div>
