@@ -370,18 +370,24 @@
     /* ---------- SOBRE / O ESTRATEGISTA ---------- */
     .about-grid {
       display: grid;
-      grid-template-columns: 380px 1fr;
+      grid-template-columns: 360px 1fr;
       gap: 3.5rem;
       align-items: start;
     }
     .about-photo-wrap {
       position: relative;
+      max-width: 360px;
     }
     .about-photo {
       width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      object-position: center;
       border-radius: 16px;
       border: 1px solid var(--line-strong);
       filter: contrast(1.03);
+      display: block;
     }
     .about-badge {
       margin-top: 1.2rem;
@@ -461,78 +467,100 @@
       .pillars-grid { grid-template-columns: 1fr; }
     }
 
-    /* ---------- ECOSSISTEMA ---------- */
-    .eco-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-    .eco-card {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 2rem 1.6rem;
+    /* ---------- DRYOS SECTION ---------- */
+    .dryos-showcase {
       display: flex;
       flex-direction: column;
-      transition: all 0.2s ease;
+      gap: 1.8rem;
     }
-    .eco-card:hover {
-      border-color: var(--line-strong);
-      transform: translateY(-2px);
-      background: var(--surface-lift);
+    .dryos-main-card {
+      background: var(--surface);
+      border: 1px solid var(--line-strong);
+      border-radius: 16px;
+      padding: 3rem 2rem;
     }
-    .eco-head {
+    .dryos-brand-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 1.4rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
     }
-    .eco-logo-box {
-      height: 38px;
-      display: flex;
-      align-items: center;
-    }
-    .eco-logo-box img {
-      max-height: 32px;
+    .dryos-logo-box img {
+      max-height: 30px;
       width: auto;
-      object-fit: contain;
     }
-    .eco-sector-tag {
+    .dryos-badge {
       font-family: var(--font-mono);
       font-size: 11.5px;
-      color: var(--mute);
-      background: rgba(255, 255, 255, 0.04);
-      padding: 0.25rem 0.6rem;
-      border-radius: 6px;
-      border: 1px solid var(--line);
+      color: var(--oak-glow);
+      background: var(--oak-tint);
+      border: 1px solid var(--line-strong);
+      padding: 0.35rem 0.75rem;
+      border-radius: 100px;
+      letter-spacing: 0.04em;
     }
-    .eco-name {
+    .dryos-card-title {
       font-family: var(--font-display);
       font-weight: 700;
-      font-size: 1.35rem;
+      font-size: clamp(1.4rem, 2.8vw, 1.95rem);
       color: var(--ink);
+      line-height: 1.25;
+      margin-bottom: 0.85rem;
+    }
+    .dryos-card-desc {
+      font-size: 15.5px;
+      color: var(--ink-soft);
+      line-height: 1.7;
+      max-width: 840px;
+      margin-bottom: 2rem;
+    }
+    .dryos-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+    }
+    .dryos-services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.4rem;
+    }
+    .service-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1.8rem 1.5rem;
+      transition: all 0.2s ease;
+    }
+    .service-card:hover {
+      border-color: var(--line-strong);
+      background: var(--surface-lift);
+      transform: translateY(-2px);
+    }
+    .service-card .s-tag {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--oak-glow);
       margin-bottom: 0.6rem;
     }
-    .eco-desc {
-      font-size: 14px;
+    .service-card .s-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--ink);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .service-card .s-desc {
+      font-size: 13.5px;
       color: var(--mute);
       line-height: 1.6;
-      margin-bottom: 1.6rem;
-      flex: 1;
     }
-    .eco-link {
-      font-family: var(--font-mono);
-      font-size: 12.5px;
-      color: var(--oak-glow);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      transition: gap 0.15s ease;
-    }
-    .eco-link:hover { gap: 0.6rem; }
 
-    @media (max-width: 860px) {
-      .eco-grid { grid-template-columns: 1fr; }
+    @media (max-width: 900px) {
+      .dryos-services-grid { grid-template-columns: 1fr; }
     }
 
     /* ---------- METODOLOGIA ---------- */
@@ -655,7 +683,7 @@
 
     /* ---------- MARCAS ATENDIDAS ---------- */
     .marcas-wrap {
-      padding: 4rem 1.5rem;
+      padding: 5rem 1.5rem;
       border-bottom: 1px solid var(--line);
       text-align: center;
     }
@@ -664,41 +692,44 @@
       font-size: 12px;
       letter-spacing: 0.04em;
       color: var(--mute);
-      margin-bottom: 2.5rem;
+      margin-bottom: 2.8rem;
     }
     .marcas-grid {
       display: grid;
-      grid-template-columns: repeat(8, 1fr);
-      gap: 1.5rem;
-      align-items: center;
-      max-width: 1100px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      max-width: 1040px;
       margin: 0 auto;
     }
     .marca-box {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--line);
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0.8rem;
-      height: 60px;
-      filter: grayscale(1) brightness(1.2) opacity(0.7);
-      transition: filter 0.2s ease, transform 0.2s ease;
+      padding: 1.2rem 1.6rem;
+      height: 92px;
+      filter: grayscale(1) brightness(1.5) opacity(0.85);
+      transition: all 0.25s ease;
     }
     .marca-box:hover {
-      filter: grayscale(0) brightness(1.4) opacity(1);
-      transform: scale(1.05);
+      filter: grayscale(0) brightness(1.8) opacity(1);
+      border-color: var(--line-strong);
+      background: var(--surface-lift);
+      transform: translateY(-2px);
     }
     .marca-box img, .marca-box svg {
-      max-height: 28px;
-      max-width: 100%;
+      max-height: 48px;
+      max-width: 165px;
       width: auto;
       object-fit: contain;
     }
 
-    @media (max-width: 900px) {
-      .marcas-grid { grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
-    }
-    @media (max-width: 500px) {
-      .marcas-grid { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 860px) {
+      .marcas-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+      .marca-box { height: 82px; padding: 1rem; }
+      .marca-box img, .marca-box svg { max-height: 40px; max-width: 140px; }
     }
 
     /* ---------- ARTIGOS ---------- */
@@ -880,7 +911,7 @@
       </a>
       <nav class="nav-links" aria-label="Navegação Principal">
         <a href="#sobre">Sobre</a>
-        <a href="#ecossistema">Ecossistema</a>
+        <a href="#dryos">A DRYOS</a>
         <a href="#metodologia">Metodologia</a>
         <a href="#cases">Cases</a>
         <a href="#marcas">Clientes</a>
@@ -922,16 +953,16 @@
 
         <div class="hero-stats">
           <div class="stat-item">
-            <div class="stat-val">3</div>
-            <div class="stat-label">Empresas no Ecossistema</div>
-          </div>
-          <div class="stat-item">
             <div class="stat-val">15+</div>
             <div class="stat-label">Anos de Experiência</div>
           </div>
           <div class="stat-item">
             <div class="stat-val">100+</div>
-            <div class="stat-label">Projetos Entregues</div>
+            <div class="stat-label">Projetos de Automação &amp; Dados</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val">60h+</div>
+            <div class="stat-label">Economizadas / Mês por Time</div>
           </div>
           <div class="stat-item">
             <div class="stat-val gold">3.2x</div>
@@ -950,7 +981,7 @@
         </div>
         <div class="about-grid">
           <div class="about-photo-wrap">
-            <img src="images/rafael/rafael.jpg" alt="Foto profissional de Rafael Carvalho" class="about-photo" width="380" height="475" loading="lazy">
+            <img src="images/rafael/rafael.jpg" alt="Foto profissional de Rafael Carvalho" class="about-photo" width="360" height="360" loading="lazy">
             <div class="about-badge">
               <div class="role">Rafael Carvalho</div>
               <div class="meta">Fundador da DRYOS · Estrategista de Operações</div>
@@ -997,67 +1028,67 @@
       </div>
     </section>
 
-    <!-- ECOSSISTEMA -->
-    <section class="sec-pad" id="ecossistema">
+    <!-- DRYOS / A OPERAÇÃO -->
+    <section class="sec-pad" id="dryos">
       <div class="wrap">
         <div class="sec-eyebrow">
-          <span class="label">Ecossistema de Negócios</span>
+          <span class="label">A Operação Executiva · DRYOS</span>
           <span class="num">02 / 06</span>
         </div>
         <div class="sec-head">
-          <h2 class="sec-title">Empresas dedicadas à transformação de operações.</h2>
+          <h2 class="sec-title">Engenharia de receita, automação de processos e IA.</h2>
           <p class="sec-intro">
-            Três braços complementares que cobrem estratégia de receita, desenvolvimento de software de alta complexidade e educação corporativa.
+            Como fundador da DRYOS Studio, lidero a criação de esteiras operacionais sob medida para empresas que precisam eliminar gargalos de margem, integrar sistemas e escalar sem inchaço de equipe.
           </p>
         </div>
 
-        <div class="eco-grid">
-          <div class="eco-card">
-            <div class="eco-head">
-              <div class="eco-logo-box">
-                <img src="images/brand/dryos-logo.png" alt="DRYOS Studio" width="116" height="24">
+        <div class="dryos-showcase">
+          <div class="dryos-main-card">
+            <div class="dryos-brand-row">
+              <div class="dryos-logo-box">
+                <img src="images/brand/dryos-logo.png" alt="DRYOS Studio" width="130" height="27">
               </div>
-              <span class="eco-sector-tag">Consultoria Estratégica</span>
+              <span class="dryos-badge">Revenue Operations &amp; IA Sob Medida</span>
             </div>
-            <h3 class="eco-name">DRYOS</h3>
-            <p class="eco-desc">
-              Consultoria executiva em Revenue Operations, arquitetura de dados e esteiras de automação sob medida para destravar a margem operacional de empresas em crescimento.
+            <h3 class="dryos-card-title">Eliminamos os vilões operacionais que drenam o seu crescimento.</h3>
+            <p class="dryos-card-desc">
+              Não vendemos ferramentas isoladas nem automações superficiais. Nós auditamos a sua operação, desenhamos a arquitetura de receita e implementamos esteiras completas conectando CRM, pipelines de dados e agentes inteligentes para transformar receita em um processo auditável, contínuo e mensurável.
             </p>
-            <a href="https://dryos.com.br" target="_blank" rel="noopener noreferrer" class="eco-link">
-              Conhecer a DRYOS <span aria-hidden="true">→</span>
-            </a>
+            <div class="dryos-actions">
+              <a href="https://dryos.com.br" target="_blank" rel="noopener noreferrer" class="btn-main">
+                Conhecer a DRYOS
+                <span aria-hidden="true">→</span>
+              </a>
+              <a href="https://dryos.com.br/automacoes" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                Ver Catálogo de Automações
+              </a>
+            </div>
           </div>
 
-          <div class="eco-card">
-            <div class="eco-head">
-              <div class="eco-logo-box">
-                <img src="images/rafael/dnia.svg" alt="DNIA Tecnologia" width="90" height="30">
-              </div>
-              <span class="eco-sector-tag">Tecnologia &amp; Software</span>
+          <div class="dryos-services-grid">
+            <div class="service-card">
+              <div class="s-tag">Alinhamento de Receita</div>
+              <h3 class="s-title">Revenue Operations (RevOps)</h3>
+              <p class="s-desc">
+                Auditoria e unificação dos times de marketing, vendas e sucesso do cliente em um único fluxo contínuo. Estruturação avançada de CRM (HubSpot, RD Station, Pipedrive) com SLA claro entre etapas e eliminação de vazamentos de funil.
+              </p>
             </div>
-            <h3 class="eco-name">DNIA</h3>
-            <p class="eco-desc">
-              Desenvolvimento de plataformas tecnológicas proprietárias, produtos digitais de alta escala e soluções de engenharia sob medida para demandas complexas.
-            </p>
-            <a href="https://dnia.pro" target="_blank" rel="noopener noreferrer" class="eco-link">
-              Visitar DNIA <span aria-hidden="true">→</span>
-            </a>
-          </div>
 
-          <div class="eco-card">
-            <div class="eco-head">
-              <div class="eco-logo-box">
-                <img src="images/rafael/kratos.png" alt="KRATOS Academy" width="110" height="30">
-              </div>
-              <span class="eco-sector-tag">Educação Corporativa</span>
+            <div class="service-card">
+              <div class="s-tag">Escala Operacional</div>
+              <h3 class="s-title">Automação Inteligente &amp; Agentes de IA</h3>
+              <p class="s-desc">
+                Criação de esteiras automatizadas e agentes sob medida para qualificação imediata de leads, onboarding de clientes, integração profunda de sistemas e eliminação de tarefas manuais que drenam a margem do negócio.
+              </p>
             </div>
-            <h3 class="eco-name">KRATOS Academy</h3>
-            <p class="eco-desc">
-              Programas de treinamento corporativo e imersões práticas sobre cultura, produtividade, inteligência artificial e processos de gestão orientados a resultados.
-            </p>
-            <span class="eco-link" style="color: var(--mute);">
-              Educação Executiva
-            </span>
+
+            <div class="service-card">
+              <div class="s-tag">Decisão Executiva</div>
+              <h3 class="s-title">Engenharia de Dados &amp; BI em Tempo Real</h3>
+              <p class="s-desc">
+                Construção de Data Warehouse e dashboards executivos unificados. Saia do achismo e tenha visibilidade em tempo real sobre CAC, LTV, velocidade de fechamento e margem por canal ou unidade de negócio.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -1195,28 +1226,28 @@
         <h2 class="marcas-title">EXPERIÊNCIA E CONFIANÇA DE GRANDES MARCAS</h2>
         <div class="marcas-grid">
           <div class="marca-box" title="Arezzo &amp; Co">
-            <img src="images/rafael/arezzo.svg" alt="Arezzo &amp; Co" width="120" height="28" loading="lazy">
+            <img src="images/rafael/arezzo.svg" alt="Arezzo &amp; Co" width="180" height="48" loading="lazy">
           </div>
           <div class="marca-box" title="Dom Casero">
-            <img src="images/rafael/domcasero.png" alt="Dom Casero" width="110" height="28" loading="lazy">
+            <img src="images/rafael/domcasero.png" alt="Dom Casero" width="170" height="48" loading="lazy">
           </div>
           <div class="marca-box" title="Zoom">
-            <img src="images/rafael/zoom.png" alt="Zoom" width="100" height="26" loading="lazy">
+            <img src="images/rafael/zoom.png" alt="Zoom" width="160" height="44" loading="lazy">
           </div>
           <div class="marca-box" title="California Coffee">
-            <img src="images/rafael/california.png" alt="California Coffee" width="110" height="28" loading="lazy">
+            <img src="images/rafael/california.png" alt="California Coffee" width="170" height="48" loading="lazy">
           </div>
           <div class="marca-box" title="eCartório">
-            <img src="images/rafael/ecartorio.svg" alt="eCartório" width="110" height="28" loading="lazy">
+            <img src="images/rafael/ecartorio.svg" alt="eCartório" width="170" height="48" loading="lazy">
           </div>
           <div class="marca-box" title="Adsun">
-            <img src="images/rafael/adsun.png" alt="Adsun" width="95" height="26" loading="lazy">
+            <img src="images/rafael/adsun.png" alt="Adsun" width="160" height="44" loading="lazy">
           </div>
           <div class="marca-box" title="Grupo DC">
-            <img src="images/rafael/grupodc.png" alt="Grupo DC" width="100" height="28" loading="lazy">
+            <img src="images/rafael/grupodc.png" alt="Grupo DC" width="160" height="46" loading="lazy">
           </div>
           <div class="marca-box" title="Altis">
-            <img src="images/rafael/altis.svg" alt="Altis" width="90" height="26" loading="lazy">
+            <img src="images/rafael/altis.svg" alt="Altis" width="140" height="44" loading="lazy">
           </div>
         </div>
       </div>
