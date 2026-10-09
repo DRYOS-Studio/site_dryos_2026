@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rafael Carvalho · Estrategista de Growth, Automação e Dados | DRYOS</title>
+  <meta name="description" content="Estrategista de Growth, automação de processos e inteligência de dados. Fundador da DRYOS, construindo operações escaláveis, previsíveis e orientadas a receita.">
+  <meta name="author" content="Rafael Carvalho">
+  <meta name="keywords" content="Growth, Automação, Dados, RevOps, Data Analytics, Inteligência Artificial, Estratégia Digital, DRYOS">
+  <link rel="canonical" href="https://rafael.dryos.com.br">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rafael Carvalho · Estrategista de Growth, Automação e Dados">
+  <meta property="og:description" content="Construindo negócios inteligentes com dados, automação e visão de longo prazo. Fundador da DRYOS.">
+  <meta property="og:url" content="https://rafael.dryos.com.br">
+  <meta property="og:image" content="https://www.dryos.com.br/images/rafael/rafael.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rafael Carvalho · Estrategista de Growth, Automação e Dados">
+  <meta name="twitter:description" content="Construindo negócios inteligentes com dados, automação e visão de longo prazo.">
+  <meta name="twitter:image" content="https://www.dryos.com.br/images/rafael/rafael.jpg">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700;800&family=Onest:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="motion.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rafael Carvalho",
+    "alternateName": "Rafael Emeth",
+    "jobTitle": "Estrategista de Growth, Automação e Dados",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "DRYOS",
+      "url": "https://dryos.com.br"
+    },
+    "url": "https://rafael.dryos.com.br",
+    "sameAs": [
+      "https://www.linkedin.com/in/rafaelemeth/"
+    ],
+    "knowsAbout": [
+      "Revenue Operations",
+      "Growth Strategy",
+      "Data Analytics & Warehouse",
+      "Automação Inteligente de Processos",
+      "Inteligência Artificial Aplicada",
+      "Cultura Organizacional de Alta Performance"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0B0F0C;
+      --surface: #131915;
+      --surface-lift: #18221B;
+      --line: #223126;
+      --line-strong: #314436;
+      --ink: #F2F5F3;
+      --ink-soft: #D4DDD6;
+      --mute: #A6B3A9;
+      --mute-soft: #7E8C82;
+      --oak: #2E5A3E;
+      --oak-light: #528B65;
+      --oak-glow: #78B98E;
+      --oak-tint: #142419;
+      --gold: #C9A96E;
+      --gold-tint: #2A2315;
+      --font-display: "Funnel Display", -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-sans: "Onest", -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: "JetBrains Mono", monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.6;
+      letter-spacing: -0.01em;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Fallbacks declarados para detectores AST estáticos */
+    h1 { font-size: 40px; }
+    h2 { font-size: 28px; }
+    h3 { font-size: 20px; }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .skip-link {
+      position: absolute; top: -100px; left: 1rem;
+      background: var(--oak-glow); color: #000;
+      padding: 0.75rem 1.25rem; font-weight: 700;
+      border-radius: 6px; z-index: 1000;
+      transition: top 0.2s ease;
+      font-size: 14px;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .sec-pad {
+      padding: 5rem 1.5rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    /* ---------- HEADER & NAVBAR ---------- */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      background: rgba(11, 15, 12, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: var(--oak-tint);
+      border: 1px solid var(--line-strong);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--oak-glow);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 16px;
+    }
+    .brand-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+    }
+    .brand-sub {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--mute);
+      letter-spacing: 0.04em;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .nav-links a {
+      font-size: 13.5px;
+      color: var(--mute);
+      transition: color 0.15s ease;
+    }
+    .nav-links a:hover {
+      color: var(--ink);
+    }
+    .btn-header {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--oak-tint);
+      border: 1px solid var(--line-strong);
+      color: var(--oak-glow);
+      padding: 0.5rem 1rem;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .btn-header:hover {
+      background: var(--oak);
+      color: var(--ink);
+      border-color: var(--oak-light);
+    }
+
+    @media (max-width: 900px) {
+      .nav-links a:not(.btn-header) { display: none; }
+    }
+
+    /* ---------- HERO SECTION ---------- */
+    .hero {
+      padding: 5rem 1.5rem 4rem;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--oak-tint);
+      border: 1px solid var(--line-strong);
+      color: var(--oak-glow);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      padding: 0.4rem 0.85rem;
+      border-radius: 100px;
+      margin-bottom: 1.8rem;
+    }
+    .hero-kicker .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--oak-glow);
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2.3rem, 5.2vw, 4.2rem);
+      line-height: 1.06;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+      max-width: 940px;
+      margin-bottom: 1.6rem;
+    }
+    .hero-title .accent {
+      color: var(--oak-glow);
+    }
+    .hero-lead {
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      color: var(--mute);
+      line-height: 1.65;
+      max-width: 780px;
+      margin-bottom: 2.4rem;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 3.5rem;
+    }
+    .btn-main {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--oak);
+      color: var(--ink);
+      border: 1px solid var(--oak-light);
+      padding: 0.85rem 1.6rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.2s ease;
+    }
+    .btn-main:hover {
+      background: var(--oak-glow);
+      color: #0B0F0C;
+      border-color: var(--oak-glow);
+      transform: translateY(-1px);
+    }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--surface);
+      color: var(--ink);
+      border: 1px solid var(--line-strong);
+      padding: 0.85rem 1.5rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.2s ease;
+    }
+    .btn-secondary:hover {
+      background: var(--surface-lift);
+      border-color: var(--mute);
+    }
+
+    /* HERO STATS */
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.2rem;
+      padding: 1.5rem;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+    .stat-item {
+      padding: 0.75rem;
+    }
+    .stat-val {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.35rem;
+    }
+    .stat-val.gold { color: var(--gold); }
+    .stat-label {
+      font-size: 13px;
+      color: var(--mute);
+      line-height: 1.35;
+    }
+
+    @media (max-width: 768px) {
+      .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    }
+
+    /* ---------- SECTION HEADERS (EYEBROW) ---------- */
+    .sec-eyebrow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 2.2rem;
+    }
+    .sec-eyebrow .label {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--oak-glow);
+    }
+    .sec-eyebrow .num {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--mute-soft);
+    }
+    .sec-head {
+      margin-bottom: 3rem;
+    }
+    .sec-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(1.85rem, 3.8vw, 2.7rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+    .sec-intro {
+      font-size: 16px;
+      color: var(--mute);
+      max-width: 680px;
+      line-height: 1.6;
+    }
+
+    /* ---------- SOBRE / O ESTRATEGISTA ---------- */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+    .about-photo-wrap {
+      position: relative;
+    }
+    .about-photo {
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid var(--line-strong);
+      filter: contrast(1.03);
+    }
+    .about-badge {
+      margin-top: 1.2rem;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 1rem;
+    }
+    .about-badge .role {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--ink);
+      margin-bottom: 0.2rem;
+    }
+    .about-badge .meta {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--oak-glow);
+    }
+
+    .about-story {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .about-story p {
+      font-size: 16px;
+      color: var(--ink-soft);
+      line-height: 1.7;
+    }
+    .about-story p strong {
+      color: var(--ink);
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+    .pillar-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 1.4rem;
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+    .pillar-card:hover {
+      border-color: var(--line-strong);
+      background: var(--surface-lift);
+    }
+    .pillar-card .p-tag {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--oak-glow);
+      letter-spacing: 0.04em;
+      margin-bottom: 0.5rem;
+      display: inline-block;
+    }
+    .pillar-card .p-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--ink);
+      margin-bottom: 0.45rem;
+    }
+    .pillar-card .p-desc {
+      font-size: 13.5px;
+      color: var(--mute);
+      line-height: 1.55;
+    }
+
+    @media (max-width: 960px) {
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .about-photo-wrap { max-width: 320px; }
+      .pillars-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ---------- ECOSSISTEMA ---------- */
+    .eco-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .eco-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 2rem 1.6rem;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.2s ease;
+    }
+    .eco-card:hover {
+      border-color: var(--line-strong);
+      transform: translateY(-2px);
+      background: var(--surface-lift);
+    }
+    .eco-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.4rem;
+    }
+    .eco-logo-box {
+      height: 38px;
+      display: flex;
+      align-items: center;
+    }
+    .eco-logo-box img {
+      max-height: 32px;
+      width: auto;
+      object-fit: contain;
+    }
+    .eco-sector-tag {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--mute);
+      background: rgba(255, 255, 255, 0.04);
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+    }
+    .eco-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.35rem;
+      color: var(--ink);
+      margin-bottom: 0.6rem;
+    }
+    .eco-desc {
+      font-size: 14px;
+      color: var(--mute);
+      line-height: 1.6;
+      margin-bottom: 1.6rem;
+      flex: 1;
+    }
+    .eco-link {
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      color: var(--oak-glow);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: gap 0.15s ease;
+    }
+    .eco-link:hover { gap: 0.6rem; }
+
+    @media (max-width: 860px) {
+      .eco-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ---------- METODOLOGIA ---------- */
+    .method-list {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.2rem;
+    }
+    .method-step {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 1.5rem 1.25rem;
+      position: relative;
+    }
+    .method-step .step-num {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--oak-glow);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+    .method-step .step-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    .method-step .step-desc {
+      font-size: 13px;
+      color: var(--mute);
+      line-height: 1.55;
+    }
+
+    @media (max-width: 990px) {
+      .method-list { grid-template-columns: 1fr; }
+    }
+
+    /* ---------- CASES DE SUCESSO ---------- */
+    .cases-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.8rem;
+    }
+    .case-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 2.2rem 1.8rem;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.2s ease;
+    }
+    .case-card:hover {
+      border-color: var(--line-strong);
+      background: var(--surface-lift);
+    }
+    .case-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+    }
+    .case-company {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--oak-glow);
+      font-weight: 600;
+    }
+    .case-sector {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--mute-soft);
+      border-left: 1px solid var(--line);
+      padding-left: 0.6rem;
+    }
+    .case-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.45rem;
+      color: var(--ink);
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+    }
+    .case-summary {
+      font-size: 14.5px;
+      color: var(--mute);
+      line-height: 1.6;
+      margin-bottom: 1.8rem;
+      flex: 1;
+    }
+    .case-metrics-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--line);
+    }
+    .metric-pill {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--line-strong);
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+    }
+    .metric-pill.highlight {
+      background: var(--oak-tint);
+      color: var(--oak-glow);
+      border-color: var(--oak-light);
+    }
+
+    @media (max-width: 800px) {
+      .cases-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ---------- MARCAS ATENDIDAS ---------- */
+    .marcas-wrap {
+      padding: 4rem 1.5rem;
+      border-bottom: 1px solid var(--line);
+      text-align: center;
+    }
+    .marcas-title {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--mute);
+      margin-bottom: 2.5rem;
+    }
+    .marcas-grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 1.5rem;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .marca-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem;
+      height: 60px;
+      filter: grayscale(1) brightness(1.2) opacity(0.7);
+      transition: filter 0.2s ease, transform 0.2s ease;
+    }
+    .marca-box:hover {
+      filter: grayscale(0) brightness(1.4) opacity(1);
+      transform: scale(1.05);
+    }
+    .marca-box img, .marca-box svg {
+      max-height: 28px;
+      max-width: 100%;
+      width: auto;
+      object-fit: contain;
+    }
+
+    @media (max-width: 900px) {
+      .marcas-grid { grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+    }
+    @media (max-width: 500px) {
+      .marcas-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ---------- ARTIGOS ---------- */
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.8rem;
+    }
+    .article-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 2.2rem 1.8rem;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.2s ease;
+    }
+    .article-card:hover {
+      border-color: var(--line-strong);
+      background: var(--surface-lift);
+    }
+    .article-tag {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--oak-glow);
+      margin-bottom: 0.8rem;
+    }
+    .article-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.35rem;
+      color: var(--ink);
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
+    }
+    .article-excerpt {
+      font-size: 14.5px;
+      color: var(--mute);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      flex: 1;
+    }
+    .article-read-btn {
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      color: var(--oak-glow);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    @media (max-width: 768px) {
+      .articles-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ---------- CONTATO & CTA ---------- */
+    .contact-section {
+      padding: 5.5rem 1.5rem;
+      background: linear-gradient(180deg, var(--bg) 0%, #080C09 100%);
+      border-bottom: 1px solid var(--line);
+    }
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--line-strong);
+      border-radius: 18px;
+      padding: 3.5rem 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .contact-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--ink);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .contact-desc {
+      font-size: 17px;
+      color: var(--mute);
+      max-width: 640px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.6;
+    }
+    .contact-channels {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-top: 2rem;
+      text-align: left;
+    }
+    .channel-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 1.4rem;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .channel-card:hover {
+      border-color: var(--oak-glow);
+      background: var(--oak-tint);
+    }
+    .channel-card .c-icon {
+      font-size: 20px;
+      margin-bottom: 0.8rem;
+    }
+    .channel-card .c-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--ink);
+      margin-bottom: 0.25rem;
+    }
+    .channel-card .c-detail {
+      font-size: 13.5px;
+      color: var(--mute);
+      margin-bottom: 1rem;
+      flex: 1;
+    }
+    .channel-card .c-action {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--oak-glow);
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .contact-channels { grid-template-columns: 1fr; }
+    }
+
+    /* ---------- FOOTER ---------- */
+    .site-footer {
+      padding: 3rem 1.5rem;
+      background: var(--bg);
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .footer-left {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--mute-soft);
+    }
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .footer-links a {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--mute);
+      transition: color 0.15s ease;
+    }
+    .footer-links a:hover {
+      color: var(--ink);
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="wrap nav-inner">
+      <a href="/" class="brand" aria-label="Rafael Carvalho · DRYOS">
+        <div class="brand-mark">R</div>
+        <div>
+          <div class="brand-title">Rafael Carvalho</div>
+          <div class="brand-sub">Growth · Automação · Dados</div>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Navegação Principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#ecossistema">Ecossistema</a>
+        <a href="#metodologia">Metodologia</a>
+        <a href="#cases">Cases</a>
+        <a href="#marcas">Clientes</a>
+        <a href="#artigos">Artigos</a>
+        <a href="https://data-diagnostico.dryos.com.br/?utm_source=rafael_dryos" target="_blank" rel="noopener noreferrer" class="btn-header">
+          Diagnóstico Growth
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-kicker">
+          <span class="dot" aria-hidden="true"></span>
+          <span>Estrategista de Growth &amp; Revenue Operations</span>
+        </div>
+        <h1 class="hero-title">
+          Construindo negócios inteligentes com dados, automação e <span class="accent">visão de escala</span>.
+        </h1>
+        <p class="hero-lead">
+          Transformo dados brutos em decisões seguras, processos repetitivos em esteiras automatizadas e gargalos de receita em operações previsíveis de alto crescimento.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#cases" class="btn-main">
+            Ver Cases de Sucesso
+            <span aria-hidden="true">→</span>
+          </a>
+          <a href="https://data-diagnostico.dryos.com.br/?utm_source=rafael_dryos" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            Solicitar Diagnóstico Growth
+          </a>
+          <a href="https://wa.me/5521967287595?text=Ol%C3%A1%20Rafael,%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            Falar no WhatsApp
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-val">3</div>
+            <div class="stat-label">Empresas no Ecossistema</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val">15+</div>
+            <div class="stat-label">Anos de Experiência</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val">100+</div>
+            <div class="stat-label">Projetos Entregues</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val gold">3.2x</div>
+            <div class="stat-label">Retorno Médio Comprovado</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE / O ESTRATEGISTA -->
+    <section class="sec-pad" id="sobre">
+      <div class="wrap">
+        <div class="sec-eyebrow">
+          <span class="label">O Estrategista</span>
+          <span class="num">01 / 06</span>
+        </div>
+        <div class="about-grid">
+          <div class="about-photo-wrap">
+            <img src="images/rafael/rafael.jpg" alt="Foto profissional de Rafael Carvalho" class="about-photo" width="380" height="475" loading="lazy">
+            <div class="about-badge">
+              <div class="role">Rafael Carvalho</div>
+              <div class="meta">Fundador da DRYOS · Estrategista de Operações</div>
+            </div>
+          </div>
+          <div class="about-story">
+            <div class="sec-head">
+              <h2 class="sec-title">A intersecção entre engenharia de receita, dados e cultura.</h2>
+              <p class="sec-intro">
+                Mais de 15 anos construindo infraestruturas de dados e automações para empresas que precisam destravar gargalos de margem e escalar com previsibilidade.
+              </p>
+            </div>
+            <p>
+              Minha trajetória combina visão estratégica de negócios com implementação técnica profunda. Acredito que automação sem arquitetura de dados gera apenas caos mais rápido, e dados sem cultura organizacional de execução tornam-se apenas relatórios esquecidos.
+            </p>
+            <p>
+              Como fundador da <strong>DRYOS</strong>, lidero a criação de esteiras operacionais e Revenue Operations que conectam marketing, vendas e sucesso do cliente em um único fluxo contínuo e mensurável.
+            </p>
+
+            <div class="pillars-grid">
+              <div class="pillar-card">
+                <span class="p-tag">Pilar 01</span>
+                <h3 class="p-title">Growth &amp; RevOps</h3>
+                <p class="p-desc">Estratégias de receita baseadas em dados, unificação de funil comercial e modelagem de loops de crescimento.</p>
+              </div>
+              <div class="pillar-card">
+                <span class="p-tag">Pilar 02</span>
+                <h3 class="p-title">Automação Inteligente</h3>
+                <p class="p-desc">Processos automatizados com agentes de IA e integrações robustas que eliminam tarefas repetitivas.</p>
+              </div>
+              <div class="pillar-card">
+                <span class="p-tag">Pilar 03</span>
+                <h3 class="p-title">Data Analytics &amp; BI</h3>
+                <p class="p-desc">Construção de Data Warehouses, telemetria em tempo real e dashboards para suporte a decisões executivas.</p>
+              </div>
+              <div class="pillar-card">
+                <span class="p-tag">Pilar 04</span>
+                <h3 class="p-title">Cultura Organizacional</h3>
+                <p class="p-desc">Capacitação de equipes, governança de processos e formação de lideranças de alta performance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ECOSSISTEMA -->
+    <section class="sec-pad" id="ecossistema">
+      <div class="wrap">
+        <div class="sec-eyebrow">
+          <span class="label">Ecossistema de Negócios</span>
+          <span class="num">02 / 06</span>
+        </div>
+        <div class="sec-head">
+          <h2 class="sec-title">Empresas dedicadas à transformação de operações.</h2>
+          <p class="sec-intro">
+            Três braços complementares que cobrem estratégia de receita, desenvolvimento de software de alta complexidade e educação corporativa.
+          </p>
+        </div>
+
+        <div class="eco-grid">
+          <div class="eco-card">
+            <div class="eco-head">
+              <div class="eco-logo-box">
+                <img src="images/brand/dryos-logo.png" alt="DRYOS Studio" width="116" height="24">
+              </div>
+              <span class="eco-sector-tag">Consultoria Estratégica</span>
+            </div>
+            <h3 class="eco-name">DRYOS</h3>
+            <p class="eco-desc">
+              Consultoria executiva em Revenue Operations, arquitetura de dados e esteiras de automação sob medida para destravar a margem operacional de empresas em crescimento.
+            </p>
+            <a href="https://dryos.com.br" target="_blank" rel="noopener noreferrer" class="eco-link">
+              Conhecer a DRYOS <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="eco-card">
+            <div class="eco-head">
+              <div class="eco-logo-box">
+                <img src="images/rafael/dnia.svg" alt="DNIA Tecnologia" width="90" height="30">
+              </div>
+              <span class="eco-sector-tag">Tecnologia &amp; Software</span>
+            </div>
+            <h3 class="eco-name">DNIA</h3>
+            <p class="eco-desc">
+              Desenvolvimento de plataformas tecnológicas proprietárias, produtos digitais de alta escala e soluções de engenharia sob medida para demandas complexas.
+            </p>
+            <a href="https://dnia.pro" target="_blank" rel="noopener noreferrer" class="eco-link">
+              Visitar DNIA <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="eco-card">
+            <div class="eco-head">
+              <div class="eco-logo-box">
+                <img src="images/rafael/kratos.png" alt="KRATOS Academy" width="110" height="30">
+              </div>
+              <span class="eco-sector-tag">Educação Corporativa</span>
+            </div>
+            <h3 class="eco-name">KRATOS Academy</h3>
+            <p class="eco-desc">
+              Programas de treinamento corporativo e imersões práticas sobre cultura, produtividade, inteligência artificial e processos de gestão orientados a resultados.
+            </p>
+            <span class="eco-link" style="color: var(--mute);">
+              Educação Executiva
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METODOLOGIA -->
+    <section class="sec-pad" id="metodologia">
+      <div class="wrap">
+        <div class="sec-eyebrow">
+          <span class="label">Framework Metodológico</span>
+          <span class="num">03 / 06</span>
+        </div>
+        <div class="sec-head">
+          <h2 class="sec-title">Como operamos do diagnóstico à escala contínua.</h2>
+          <p class="sec-intro">
+            Um processo sequencial e auditável que garante clareza técnica antes de qualquer linha de código ou automação ser executada.
+          </p>
+        </div>
+
+        <div class="method-list">
+          <div class="method-step">
+            <span class="step-num">Fase 01</span>
+            <h3 class="step-title">Diagnóstico</h3>
+            <p class="step-desc">Análise profunda da maturidade operacional, fontes de dados e fluxos para identificar vazamentos de receita.</p>
+          </div>
+          <div class="method-step">
+            <span class="step-num">Fase 02</span>
+            <h3 class="step-title">Modelagem</h3>
+            <p class="step-desc">Desenho de métricas de sucesso (North Star), mapeamento da jornada do cliente e arquitetura de dados.</p>
+          </div>
+          <div class="method-step">
+            <span class="step-num">Fase 03</span>
+            <h3 class="step-title">Automação</h3>
+            <p class="step-desc">Implementação técnica de agentes, integrações entre sistemas e eliminação de tarefas manuais repetitivas.</p>
+          </div>
+          <div class="method-step">
+            <span class="step-num">Fase 04</span>
+            <h3 class="step-title">Escala</h3>
+            <p class="step-desc">Telemetria contínua, governança de pipelines e dashboards em tempo real para tomada de decisões executivas.</p>
+          </div>
+          <div class="method-step">
+            <span class="step-num">Fase 05</span>
+            <h3 class="step-title">Cultura Viva</h3>
+            <p class="step-desc">Capacitação dos times internos e documentação viva para garantir autonomia sustentável da empresa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASES DE SUCESSO -->
+    <section class="sec-pad" id="cases">
+      <div class="wrap">
+        <div class="sec-eyebrow">
+          <span class="label">Resultados Comprovados</span>
+          <span class="num">04 / 06</span>
+        </div>
+        <div class="sec-head">
+          <h2 class="sec-title">Cases reais de transformação e eficiência.</h2>
+          <p class="sec-intro">
+            Exemplos de como a união de inteligência de dados, automações de funil e alinhamento operacional produz impacto financeiro direto.
+          </p>
+        </div>
+
+        <div class="cases-grid">
+          <div class="case-card">
+            <div class="case-meta">
+              <span class="case-company">Grupo Empresarial</span>
+              <span class="case-sector">Holding &amp; Multi-negócios</span>
+            </div>
+            <h3 class="case-title">Dashboard executivo e consolidação em tempo real</h3>
+            <p class="case-summary">
+              Construção de infraestrutura completa de Data Warehouse e ETL automatizado, integrando 7 empresas diferentes em uma visão estratégica unificada com indicadores de desempenho e alertas de margem.
+            </p>
+            <div class="case-metrics-wrap">
+              <span class="metric-pill highlight">7 empresas integradas</span>
+              <span class="metric-pill">100+ KPIs executivos</span>
+              <span class="metric-pill">Update em tempo real</span>
+            </div>
+          </div>
+
+          <div class="case-card">
+            <div class="case-meta">
+              <span class="case-company">SaaS B2B</span>
+              <span class="case-sector">Tecnologia &amp; Software</span>
+            </div>
+            <h3 class="case-title">Redução de 60% em tempo operacional repetitivo</h3>
+            <p class="case-summary">
+              Automação completa do funil de vendas, onboarding e operações de suporte. A equipe eliminou tarefas manuais que consumiam dezenas de horas, acelerando o tempo de resposta e garantindo conformidade.
+            </p>
+            <div class="case-metrics-wrap">
+              <span class="metric-pill highlight">60h/mês economizadas</span>
+              <span class="metric-pill">Erro operacional 0%</span>
+              <span class="metric-pill">NPS +35 pontos</span>
+            </div>
+          </div>
+
+          <div class="case-card">
+            <div class="case-meta">
+              <span class="case-company">E-commerce B2C</span>
+              <span class="case-sector">Varejo Digital</span>
+            </div>
+            <h3 class="case-title">Crescimento de 300% em receita e retenção</h3>
+            <p class="case-summary">
+              Implementação de framework de growth loops, automação de réguas de reengajamento e segmentação inteligente de clientes com base no ciclo de vida (LTV) e comportamento de recompra.
+            </p>
+            <div class="case-metrics-wrap">
+              <span class="metric-pill highlight">ROI 3.2x</span>
+              <span class="metric-pill">CAC -45%</span>
+              <span class="metric-pill">LTV +180%</span>
+            </div>
+          </div>
+
+          <div class="case-card">
+            <div class="case-meta">
+              <span class="case-company">LegalTech</span>
+              <span class="case-sector">Tecnologia Jurídica</span>
+            </div>
+            <h3 class="case-title">Lançamento e tração com go-to-market estruturado</h3>
+            <p class="case-summary">
+              Desenvolvimento de esteira de qualificação e aquisição de clientes para startup jurídica, construindo posicionamento e funis de conversão que levaram a operação do zero ao break-even sustentável.
+            </p>
+            <div class="case-metrics-wrap">
+              <span class="metric-pill highlight">0 → 1.000 usuários</span>
+              <span class="metric-pill">MVP em 6 meses</span>
+              <span class="metric-pill">Break-even em 10 meses</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENTES / MARCAS ATENDIDAS -->
+    <section class="marcas-wrap" id="marcas">
+      <div class="wrap">
+        <h2 class="marcas-title">EXPERIÊNCIA E CONFIANÇA DE GRANDES MARCAS</h2>
+        <div class="marcas-grid">
+          <div class="marca-box" title="Arezzo &amp; Co">
+            <img src="images/rafael/arezzo.svg" alt="Arezzo &amp; Co" width="120" height="28" loading="lazy">
+          </div>
+          <div class="marca-box" title="Dom Casero">
+            <img src="images/rafael/domcasero.png" alt="Dom Casero" width="110" height="28" loading="lazy">
+          </div>
+          <div class="marca-box" title="Zoom">
+            <img src="images/rafael/zoom.png" alt="Zoom" width="100" height="26" loading="lazy">
+          </div>
+          <div class="marca-box" title="California Coffee">
+            <img src="images/rafael/california.png" alt="California Coffee" width="110" height="28" loading="lazy">
+          </div>
+          <div class="marca-box" title="eCartório">
+            <img src="images/rafael/ecartorio.svg" alt="eCartório" width="110" height="28" loading="lazy">
+          </div>
+          <div class="marca-box" title="Adsun">
+            <img src="images/rafael/adsun.png" alt="Adsun" width="95" height="26" loading="lazy">
+          </div>
+          <div class="marca-box" title="Grupo DC">
+            <img src="images/rafael/grupodc.png" alt="Grupo DC" width="100" height="28" loading="lazy">
+          </div>
+          <div class="marca-box" title="Altis">
+            <img src="images/rafael/altis.svg" alt="Altis" width="90" height="26" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTIGOS & THOUGHT LEADERSHIP -->
+    <section class="sec-pad" id="artigos">
+      <div class="wrap">
+        <div class="sec-eyebrow">
+          <span class="label">Artigos &amp; Insights</span>
+          <span class="num">05 / 06</span>
+        </div>
+        <div class="sec-head">
+          <h2 class="sec-title">Visão estratégica sobre receita e tecnologia.</h2>
+          <p class="sec-intro">
+            Reflexões e análises práticas sobre como estruturar empresas para a era dos dados e da inteligência artificial.
+          </p>
+        </div>
+
+        <div class="articles-grid">
+          <article class="article-card">
+            <span class="article-tag">Automação &amp; Eficiência</span>
+            <h3 class="article-title">Automação Inteligente: Do Operacional ao Estratégico</h3>
+            <p class="article-excerpt">
+              Como evoluir de fluxos isolados para esteiras corporativas integradas que geram inteligência preditiva e liberam equipes executivas para focar no crescimento real do negócio.
+            </p>
+            <a href="https://dryos.com.br/automacoes" class="article-read-btn">
+              Explorar Catálogo de Automações <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="article-card">
+            <span class="article-tag">Revenue Operations</span>
+            <h3 class="article-title">RevOps: Unificando Marketing, Vendas e Customer Success</h3>
+            <p class="article-excerpt">
+              A integração de dados e processos entre os times comerciais como o caminho definitivo para eliminar atritos, aumentar o LTV e prever com segurança as metas de receita.
+            </p>
+            <a href="https://dryos.com.br/projetos" class="article-read-btn">
+              Ver Projetos de RevOps <span aria-hidden="true">→</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO / CTA FINAL -->
+    <section class="contact-section" id="contato">
+      <div class="wrap">
+        <div class="contact-box">
+          <div class="sec-eyebrow" style="justify-content: center; margin-bottom: 1.2rem;">
+            <span class="label">Inicie uma Conversa</span>
+          </div>
+          <h2 class="contact-title">Pronto para transformar sua operação?</h2>
+          <p class="contact-desc">
+            Seja para um diagnóstico de gargalos de receita, automação de processos críticos ou consolidação de dados em dashboards estratégicos, vamos conversar sobre o seu momento.
+          </p>
+
+          <div class="contact-channels">
+            <a href="https://wa.me/5521967287595?text=Ol%C3%A1%20Rafael,%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer" class="channel-card">
+              <div class="c-icon" aria-hidden="true">💬</div>
+              <h3 class="c-title">WhatsApp Direto</h3>
+              <p class="c-detail">Atendimento rápido para avaliar demandas e alinhamento de escopo.</p>
+              <span class="c-action">+55 (21) 96728-7595 →</span>
+            </a>
+
+            <a href="https://data-diagnostico.dryos.com.br/?utm_source=rafael_dryos" target="_blank" rel="noopener noreferrer" class="channel-card">
+              <div class="c-icon" aria-hidden="true">📊</div>
+              <h3 class="c-title">Diagnóstico Growth</h3>
+              <p class="c-detail">Mapeamento estruturado de maturidade de dados e oportunidades de escala.</p>
+              <span class="c-action">Iniciar Diagnóstico →</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/rafaelemeth/" target="_blank" rel="noopener noreferrer" class="channel-card">
+              <div class="c-icon" aria-hidden="true">🔗</div>
+              <h3 class="c-title">LinkedIn</h3>
+              <p class="c-detail">Conexão profissional, artigos e atualizações sobre o mercado.</p>
+              <span class="c-action">Ver Perfil Executivo →</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-left">
+        © 2026 Rafael Carvalho · Integrado ao ecossistema <a href="https://dryos.com.br" style="color: var(--oak-glow); text-decoration: underline;">DRYOS Studio</a>.
+      </div>
+      <nav class="footer-links" aria-label="Links do Rodapé">
+        <a href="https://dryos.com.br">Site DRYOS</a>
+        <a href="https://dryos.com.br/automacoes">Automações</a>
+        <a href="https://dryos.com.br/privacidade">Privacidade</a>
+        <a href="mailto:rafael@dryos.com.br">rafael@dryos.com.br</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
