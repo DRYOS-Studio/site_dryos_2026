@@ -23,6 +23,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500;600;700;800&family=Onest:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/motion.css">
+<link rel="preload" as="image" href="/images/funcionarios/iris.jpg">
 
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -398,6 +399,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     position: relative;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     flex-shrink: 0;
+  }
+  .avatar-img-hero {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    border-radius: 17px;
+    display: block;
   }
   .avatar-monogram {
     font-family: var(--font-mono);
@@ -804,59 +813,106 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background: var(--night-card);
     border: 1px solid var(--night-border);
     border-radius: var(--radius-lg);
-    padding: 2.2rem 1.8rem;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
   }
   .func-card:hover {
     background: var(--night-card-hover);
-    border-color: rgba(74, 222, 128, 0.35);
-    transform: translateY(-5px);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+    border-color: rgba(74, 222, 128, 0.45);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(16, 185, 129, 0.12);
+  }
+  .func-card-media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3.4;
+    overflow: hidden;
+    background: #080C09;
+  }
+  .func-card-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 18%;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    display: block;
+  }
+  .func-card:hover .func-card-photo {
+    transform: scale(1.05);
+  }
+  .func-card-media-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(8, 12, 9, 0.2) 0%, rgba(8, 12, 9, 0) 35%, rgba(14, 23, 17, 0.98) 100%);
+    pointer-events: none;
+  }
+  .func-badge-protocol {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 0.32rem 0.65rem;
+    border-radius: 999px;
+    background: rgba(8, 12, 9, 0.78);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: var(--mute-dark);
+    z-index: 2;
+  }
+  .func-badge-status {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 0.32rem 0.65rem;
+    border-radius: 999px;
+    background: rgba(8, 12, 9, 0.78);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(74, 222, 128, 0.35);
+    color: var(--emerald-light);
+    z-index: 2;
+  }
+  .func-status-dot-pulse {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--emerald);
+    box-shadow: 0 0 8px var(--emerald);
+    display: inline-block;
+  }
+  .func-card-body {
+    padding: 1.8rem 1.8rem 2rem 1.8rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
   }
   .func-header {
-    display: flex;
-    align-items: center;
-    gap: 1.2rem;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.1rem;
   }
-  .func-avatar {
-    width: 54px;
-    height: 54px;
-    border-radius: 14px;
-    background: #0E1711;
-    border: 1px solid var(--night-border-strong);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    transition: all 0.25s;
-  }
-  .func-avatar .monogram {
-    font-family: var(--font-mono);
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-  }
-  .func-avatar-iris { border-color: rgba(74, 222, 128, 0.4); color: var(--emerald-light); }
-  .func-avatar-theo { border-color: rgba(245, 158, 11, 0.4); color: #FBBF24; }
-  .func-avatar-nero { border-color: rgba(96, 165, 250, 0.4); color: #93C5FD; }
-  .func-avatar-atlas { border-color: rgba(192, 132, 252, 0.4); color: #D8B4FE; }
-
   .func-title h3 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 1.55rem;
     font-weight: 700;
-    line-height: 1.3;
+    line-height: 1.25;
     color: #fff;
+    letter-spacing: -0.01em;
   }
-  .func-title p {
+  .func-title .func-role {
     font-family: var(--font-mono);
-    font-size: 12px;
+    font-size: 12.5px;
     color: var(--emerald-light);
-    margin-top: 0.2rem;
+    margin-top: 0.35rem;
   }
   .func-bio {
     font-size: 14.5px;
@@ -1017,6 +1073,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-size: 12px;
     font-weight: 700;
     color: var(--emerald-light);
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .wa-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
   }
   .wa-info h4 {
     font-size: 14.5px;
@@ -1642,6 +1707,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .comp-table th, .comp-table td {
       padding: 0.9rem 1rem;
     }
+    .func-card-body {
+      padding: 1.4rem 1.2rem 1.6rem 1.2rem;
+    }
   }
 </style>
 </head>
@@ -1752,7 +1820,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           <div class="employee-avatar-strip">
             <div class="avatar-frame">
-              <span class="avatar-monogram">ÍR</span>
+              <img src="/images/funcionarios/iris.jpg" alt="Íris Carvalho" class="avatar-img-hero" width="72" height="72">
               <span class="avatar-verified">
                 <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2.5 6L5 8.5L9.5 3.5" stroke="#051A0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
@@ -1968,111 +2036,131 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <div class="equipe-cards-grid">
         
-        <!-- Íris -->
+        <!-- Íris Carvalho -->
         <article class="func-card reveal">
-          <div class="func-header">
-            <div class="func-avatar func-avatar-iris">
-              <span class="monogram">ÍR</span>
-            </div>
-            <div class="func-title">
-              <h3>Íris</h3>
-              <p>Atendimento & Triagem Comercial</p>
-            </div>
+          <div class="func-card-media">
+            <img src="/images/funcionarios/iris.jpg" alt="Íris Carvalho — Atendimento e Triagem Comercial" class="func-card-photo" width="400" height="340" loading="lazy">
+            <div class="func-card-media-overlay"></div>
+            <span class="func-badge-protocol">#DRY-014</span>
+            <span class="func-badge-status"><span class="func-status-dot-pulse"></span> 24/7 Ativa</span>
           </div>
-          <p class="func-bio">
-            Assume o atendimento receptivo no canal da sua empresa. Esclarece dúvidas técnicas e comerciais, filtra o perfil do cliente e agenda reuniões diretamente no calendário dos responsáveis.
-          </p>
-          <span class="func-skills-title">Especialidades</span>
-          <div class="func-tags">
-            <span class="func-tag">WhatsApp Oficial API</span>
-            <span class="func-tag">Sincronização Google</span>
-            <span class="func-tag">Qualificação BANT</span>
-            <span class="func-tag">Disponibilidade 24/7</span>
-          </div>
-          <div class="func-footer">
-            <span class="func-sla">SLA: <strong>&lt; 3s</strong></span>
-            <a href="#contato" class="btn btn-ghost-dark" style="padding:0.5rem 0.9rem;font-size:12px;">Contratar Íris</a>
+          <div class="func-card-body">
+            <div class="func-header">
+              <div class="func-title">
+                <h3>Íris Carvalho</h3>
+                <p class="func-role">Atendimento &amp; Triagem Comercial</p>
+              </div>
+            </div>
+            <p class="func-bio">
+              Assume o atendimento receptivo no canal da sua empresa. Esclarece dúvidas técnicas e comerciais, filtra o perfil do cliente e agenda reuniões diretamente no calendário dos responsáveis.
+            </p>
+            <span class="func-skills-title">Especialidades</span>
+            <div class="func-tags">
+              <span class="func-tag">WhatsApp Oficial API</span>
+              <span class="func-tag">Sincronização Google</span>
+              <span class="func-tag">Qualificação BANT</span>
+              <span class="func-tag">Disponibilidade 24/7</span>
+            </div>
+            <div class="func-footer">
+              <span class="func-sla">SLA: <strong>&lt; 3s</strong></span>
+              <a href="#contato" class="btn btn-ghost-dark" style="padding:0.5rem 0.9rem;font-size:12px;">Contratar Íris</a>
+            </div>
           </div>
         </article>
 
-        <!-- Theo -->
+        <!-- Theo Alencar -->
         <article class="func-card reveal">
-          <div class="func-header">
-            <div class="func-avatar func-avatar-theo">
-              <span class="monogram">TH</span>
-            </div>
-            <div class="func-title">
-              <h3>Theo</h3>
-              <p>Cobrança & Gestão Financeira</p>
-            </div>
+          <div class="func-card-media">
+            <img src="/images/funcionarios/theo.jpg" alt="Theo Alencar — Cobrança e Gestão Financeira" class="func-card-photo" width="400" height="340" loading="lazy">
+            <div class="func-card-media-overlay"></div>
+            <span class="func-badge-protocol">#DRY-027</span>
+            <span class="func-badge-status"><span class="func-status-dot-pulse"></span> 24/7 Ativo</span>
           </div>
-          <p class="func-bio">
-            Executa a régua financeira da sua operação. Notifica vencimentos com chave Pix e código de barras, registra confirmações de pagamento e renegocia atrasos com protocolo pré-definido.
-          </p>
-          <span class="func-skills-title">Especialidades</span>
-          <div class="func-tags">
-            <span class="func-tag">Régua Preventiva</span>
-            <span class="func-tag">Emissão de Boletos e Pix</span>
-            <span class="func-tag">Reconciliação Bancária</span>
-            <span class="func-tag">Prevenção de Inadimplência</span>
-          </div>
-          <div class="func-footer">
-            <span class="func-sla">Recuperação: <strong>+38%</strong></span>
-            <a href="#contato" class="btn btn-ghost-dark" style="padding:0.5rem 0.9rem;font-size:12px;">Contratar Theo</a>
+          <div class="func-card-body">
+            <div class="func-header">
+              <div class="func-title">
+                <h3>Theo Alencar</h3>
+                <p class="func-role">Cobrança &amp; Gestão Financeira</p>
+              </div>
+            </div>
+            <p class="func-bio">
+              Executa a régua financeira da sua operação. Notifica vencimentos com chave Pix e código de barras, registra confirmações de pagamento e renegocia atrasos com protocolo pré-definido.
+            </p>
+            <span class="func-skills-title">Especialidades</span>
+            <div class="func-tags">
+              <span class="func-tag">Régua Preventiva</span>
+              <span class="func-tag">Emissão de Boletos e Pix</span>
+              <span class="func-tag">Reconciliação Bancária</span>
+              <span class="func-tag">Prevenção de Inadimplência</span>
+            </div>
+            <div class="func-footer">
+              <span class="func-sla">Recuperação: <strong>+38%</strong></span>
+              <a href="#contato" class="btn btn-ghost-dark" style="padding:0.5rem 0.9rem;font-size:12px;">Contratar Theo</a>
+            </div>
           </div>
         </article>
 
-        <!-- Nero -->
+        <!-- Nero Vasconcelos -->
         <article class="func-card reveal">
-          <div class="func-header">
-            <div class="func-avatar func-avatar-nero">
-              <span class="monogram">NR</span>
-            </div>
-            <div class="func-title">
-              <h3>Nero</h3>
-              <p>Inteligência de Dados & RevOps</p>
-            </div>
+          <div class="func-card-media">
+            <img src="/images/funcionarios/nero.jpg" alt="Nero Vasconcelos — Inteligência de Dados e RevOps" class="func-card-photo" width="400" height="340" loading="lazy">
+            <div class="func-card-media-overlay"></div>
+            <span class="func-badge-protocol">#DRY-042</span>
+            <span class="func-badge-status"><span class="func-status-dot-pulse"></span> Auditoria Contínua</span>
           </div>
-          <p class="func-bio">
-            Cruza os dados de atendimento, funil comercial e faturamento durante a noite. Às 08h da manhã, entrega aos sócios um diagnóstico conciso dos indicadores críticos e desvios operacionais.
-          </p>
-          <span class="func-skills-title">Especialidades</span>
-          <div class="func-tags">
-            <span class="func-tag">Auditoria de Funil</span>
-            <span class="func-tag">Relatório Executivo Matinal</span>
-            <span class="func-tag">Monitoramento de CAC</span>
-            <span class="func-tag">Telemetria de Processos</span>
-          </div>
-          <div class="func-footer">
-            <span class="func-sla">Briefing: <strong>Todo dia às 8h</strong></span>
-            <a href="#contato" class="btn btn-ghost-dark" style="padding:0.5rem 0.9rem;font-size:12px;">Contratar Nero</a>
+          <div class="func-card-body">
+            <div class="func-header">
+              <div class="func-title">
+                <h3>Nero Vasconcelos</h3>
+                <p class="func-role">Inteligência de Dados &amp; RevOps</p>
+              </div>
+            </div>
+            <p class="func-bio">
+              Cruza os dados de atendimento, funil comercial e faturamento durante a noite. Às 08h da manhã, entrega aos sócios um diagnóstico conciso dos indicadores críticos e desvios operacionais.
+            </p>
+            <span class="func-skills-title">Especialidades</span>
+            <div class="func-tags">
+              <span class="func-tag">Auditoria de Funil</span>
+              <span class="func-tag">Relatório Executivo Matinal</span>
+              <span class="func-tag">Monitoramento de CAC</span>
+              <span class="func-tag">Telemetria de Processos</span>
+            </div>
+            <div class="func-footer">
+              <span class="func-sla">Briefing: <strong>Todo dia às 8h</strong></span>
+              <a href="#contato" class="btn btn-ghost-dark" style="padding:0.5rem 0.9rem;font-size:12px;">Contratar Nero</a>
+            </div>
           </div>
         </article>
 
-        <!-- Atlas -->
+        <!-- Atlas Brandão -->
         <article class="func-card reveal">
-          <div class="func-header">
-            <div class="func-avatar func-avatar-atlas">
-              <span class="monogram">AT</span>
-            </div>
-            <div class="func-title">
-              <h3>Atlas</h3>
-              <p>Onboarding & Operações</p>
-            </div>
+          <div class="func-card-media">
+            <img src="/images/funcionarios/atlas.jpg" alt="Atlas Brandão — Onboarding e Operações" class="func-card-photo" width="400" height="340" loading="lazy">
+            <div class="func-card-media-overlay"></div>
+            <span class="func-badge-protocol">#DRY-058</span>
+            <span class="func-badge-status"><span class="func-status-dot-pulse"></span> 24/7 Ativo</span>
           </div>
-          <p class="func-bio">
-            Coordena a entrada de novos clientes na operação. Coleta documentação obrigatória, provisiona acessos, organiza repositórios em nuvem e responde a dúvidas sobre etapas do projeto.
-          </p>
-          <span class="func-skills-title">Especialidades</span>
-          <div class="func-tags">
-            <span class="func-tag">Onboarding de Contratos</span>
-            <span class="func-tag">Gestão de Documentos</span>
-            <span class="func-tag">Base de Conhecimento Interna</span>
-            <span class="func-tag">Checklist Operacional</span>
-          </div>
-          <div class="func-footer">
-            <span class="func-sla">Setup: <strong>Imediato</strong></span>
-            <a href="#contato" class="btn btn-ghost-dark" style="padding:0.5rem 0.9rem;font-size:12px;">Contratar Atlas</a>
+          <div class="func-card-body">
+            <div class="func-header">
+              <div class="func-title">
+                <h3>Atlas Brandão</h3>
+                <p class="func-role">Onboarding &amp; Operações</p>
+              </div>
+            </div>
+            <p class="func-bio">
+              Coordena a entrada de novos clientes na operação. Coleta documentação obrigatória, provisiona acessos, organiza repositórios em nuvem e responde a dúvidas sobre etapas do projeto.
+            </p>
+            <span class="func-skills-title">Especialidades</span>
+            <div class="func-tags">
+              <span class="func-tag">Onboarding de Contratos</span>
+              <span class="func-tag">Gestão de Documentos</span>
+              <span class="func-tag">Base de Conhecimento Interna</span>
+              <span class="func-tag">Checklist Operacional</span>
+            </div>
+            <div class="func-footer">
+              <span class="func-sla">Setup: <strong>Imediato</strong></span>
+              <a href="#contato" class="btn btn-ghost-dark" style="padding:0.5rem 0.9rem;font-size:12px;">Contratar Atlas</a>
+            </div>
           </div>
         </article>
 
@@ -2125,9 +2213,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
 
         <div class="wa-header">
-          <div class="wa-avatar">ÍR</div>
+          <div class="wa-avatar">
+            <img src="/images/funcionarios/iris.jpg" alt="Íris Carvalho" id="waAvatarImg" width="40" height="40">
+          </div>
           <div class="wa-info">
-            <h4 id="waBotName">Íris · Atendimento DRYOS</h4>
+            <h4 id="waBotName">Íris Carvalho · Atendimento DRYOS</h4>
             <p>online agora (resposta média 2s)</p>
           </div>
         </div>
@@ -2556,10 +2646,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="form-group" id="group-funcionario">
             <label for="f-funcionario" id="lbl-funcionario">Posto prioritário de admissão</label>
             <select id="f-funcionario" name="funcionario">
-              <option value="iris">Íris (Atendimento Receptivo, Qualificação & Agendamento)</option>
-              <option value="theo">Theo (Gestão Financeira, Boletos, Pix & Cobrança)</option>
-              <option value="nero">Nero (Telemetria de Funil, Dados & Relatórios Matinais)</option>
-              <option value="atlas">Atlas (Onboarding de Clientes & Gestão Documental)</option>
+              <option value="iris">Íris Carvalho (Atendimento Receptivo, Qualificação & Agendamento)</option>
+              <option value="theo">Theo Alencar (Gestão Financeira, Boletos, Pix & Cobrança)</option>
+              <option value="nero">Nero Vasconcelos (Telemetria de Funil, Dados & Relatórios Matinais)</option>
+              <option value="atlas">Atlas Brandão (Onboarding de Clientes & Gestão Documental)</option>
               <option value="todos">Estruturação de time híbrido completo</option>
             </select>
           </div>
@@ -2677,8 +2767,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   // WhatsApp Simulation Switcher
   const scenarios = {
     clinica: {
-      botName: 'Íris · Atendimento DRYOS',
-      avatarText: 'ÍR',
+      botName: 'Íris Carvalho · Atendimento DRYOS',
+      avatarImg: '/images/funcionarios/iris.jpg',
       messages: [
         { type: 'in', text: 'Boa noite. Vi a publicação sobre avaliação para harmonização facial. Vocês atendem aos sábados ou apenas durante a semana?', time: '22:45' },
         { type: 'out', text: 'Boa noite! Atendemos de segunda a sexta das 8h às 19h e aos sábados das 8h às 13h. Me chamo Íris, da equipe da Dra. Camila. Você já realizou alguma avaliação prévia desse procedimento ou seria a sua primeira consulta?', time: '22:45' },
@@ -2690,8 +2780,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       ]
     },
     advocacia: {
-      botName: 'Atlas · Triagem Jurídica DRYOS',
-      avatarText: 'AT',
+      botName: 'Atlas Brandão · Triagem Jurídica DRYOS',
+      avatarImg: '/images/funcionarios/atlas.jpg',
       messages: [
         { type: 'in', text: 'Boa tarde. Preciso de assessoria jurídica para dissolução parcial de sociedade e apuração de haveres de sócio minoritário. O escritório atua nessa frente?', time: '14:12' },
         { type: 'out', text: 'Boa tarde. Sim, atuamos diretamente em litígios societários e apuração de haveres. Me chamo Atlas, do escritório. Para direcionar ao sócio da área: a empresa já possui balanço de determinação levantado ou a negociação ainda está na fase de notificação extrajudicial?', time: '14:12' },
@@ -2703,8 +2793,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       ]
     },
     servicos: {
-      botName: 'Nero · Qualificação B2B DRYOS',
-      avatarText: 'NR',
+      botName: 'Nero Vasconcelos · Qualificação B2B DRYOS',
+      avatarImg: '/images/funcionarios/nero.jpg',
       messages: [
         { type: 'in', text: 'Olá. Temos uma distribuidora com 20 representantes externos. Precisamos integrar o envio de pedidos do WhatsApp diretamente com o ERP Protheus. Vocês atendem essa camada?', time: '10:02' },
         { type: 'out', text: 'Olá. Atendemos sim. Construímos essa camada via webhook e API com autenticação direta no ERP, sem planilhas manuais intermediárias. Qual é o volume médio de pedidos emitidos por dia pela sua equipe?', time: '10:02' },
@@ -2725,9 +2815,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     if (!sc) return;
 
     document.getElementById('waBotName').textContent = sc.botName;
-    const avatarEl = document.querySelector('.wa-avatar');
-    if (avatarEl && sc.avatarText) {
-      avatarEl.textContent = sc.avatarText;
+    const avatarImgEl = document.getElementById('waAvatarImg');
+    if (avatarImgEl && sc.avatarImg) {
+      avatarImgEl.src = sc.avatarImg;
+      avatarImgEl.alt = sc.botName;
     }
 
     const body = document.getElementById('waChatBody');
