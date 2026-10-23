@@ -21,6 +21,8 @@ const RD_IDENTIFIERS = {
   'site-apresentacao-core': 'apresentacao-core',
   'site-automacoes': 'automacoes',
   'site-agentes-juridicos': 'agents_escritorio_adv',
+  'site-funcionarios-digitais': 'funcionarios-digitais',
+  'site-parceiros': 'parceiros',
 };
 
 // Landing agentes-juridicos: qualification form. Enum-validated here; the

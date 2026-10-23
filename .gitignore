@@ -13,3 +13,5 @@ Thumbs.db
 # Worktrees e estado local de agente (nunca versionar — já entraram como gitlink por acidente)
 .claude/worktrees/
 standalone-rafael/
+.env*
+.impeccable/

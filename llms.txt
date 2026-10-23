@@ -68,6 +68,10 @@ de dados.
 
 - [Home](https://www.dryos.com.br/): os sete vilões da ineficiência operacional, as três
   linhas de atuação e o formulário de diagnóstico.
+- [Funcionários Digitais](https://www.dryos.com.br/funcionarios-digitais): força de
+  trabalho digital especializada da DRYOS. Agentes de IA com nome e função (Íris para
+  atendimento e vendas no WhatsApp, Theo para cobrança e reconciliação, Nero para métricas e
+  RevOps diário, Atlas para onboarding e operações) que assumem tarefas repetitivas 24/7.
 - [Automações](https://www.dryos.com.br/automacoes): as cinco automações com escopo item a
   item, prazo e SLA, mais um catálogo de automações concretas por área (lançamento e
   marketing, vendas, financeiro, dados e operação) e perguntas frequentes.
