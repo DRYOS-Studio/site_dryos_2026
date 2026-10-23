@@ -96,13 +96,14 @@
   }
 
   section[class*="-sec"] {
-    padding-left: var(--gutter);
-    padding-right: var(--gutter);
+    padding-left: var(--gutter) !important;
+    padding-right: var(--gutter) !important;
   }
 
   .wrap {
     max-width: var(--max);
     margin: 0 auto;
+    padding: 0 var(--gutter);
     position: relative;
   }
 
@@ -211,7 +212,6 @@
   .brand-logo img {
     height: 24px;
     width: auto;
-    filter: brightness(100);
   }
   .brand-badge {
     font-family: var(--font-mono);
@@ -332,7 +332,6 @@
   }
   .panel-header-title img {
     height: 18px;
-    filter: brightness(100);
   }
   .panel-badge-status {
     display: inline-flex;
@@ -1100,7 +1099,7 @@
     <div class="wrap nav-bar">
       <div class="brand-group">
         <a href="/" class="brand-logo" aria-label="Página Inicial DRYOS">
-          <img src="/images/brand/dryos-logo.png" alt="DRYOS" width="110" height="24">
+          <img src="/images/brand/dryos-logo-white.png" alt="DRYOS" width="110" height="24">
         </a>
         <span class="brand-badge">PARCEIROS</span>
       </div>
@@ -1164,7 +1163,7 @@
             
             <div class="panel-header">
               <div class="panel-header-title">
-                <img src="/images/brand/dryos-logo.png" alt="DRYOS">
+                <img src="/images/brand/dryos-logo-white.png" alt="DRYOS">
                 <span class="mono" style="color:var(--mute-dark);">// PORTAL-DO-PARCEIRO</span>
               </div>
               <div class="panel-badge-status">
@@ -1669,7 +1668,7 @@
       <div class="footer-grid">
         <div>
           <a href="/" class="brand-logo" style="margin-bottom:0.8rem;">
-            <img src="/images/brand/dryos-logo.png" alt="DRYOS" width="110" height="24">
+            <img src="/images/brand/dryos-logo-white.png" alt="DRYOS" width="110" height="24">
           </a>
           <p style="font-size:12px;color:var(--mute-dark);">Crescimento com raiz · Infraestrutura e Sistemas Autônomos de RevOps</p>
         </div>

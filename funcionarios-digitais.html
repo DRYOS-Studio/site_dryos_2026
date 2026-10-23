@@ -105,13 +105,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 
   section[class*="-sec"] {
-    padding-left: var(--gutter);
-    padding-right: var(--gutter);
+    padding-left: var(--gutter) !important;
+    padding-right: var(--gutter) !important;
   }
 
   .wrap {
     max-width: var(--max);
     margin: 0 auto;
+    padding: 0 var(--gutter);
     position: relative;
   }
 
@@ -228,7 +229,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .brand-logo img {
     height: 24px;
     width: auto;
-    filter: brightness(100);
   }
   .brand-badge {
     font-family: var(--font-mono);
@@ -360,7 +360,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .badge-company img {
     height: 18px;
-    filter: brightness(100);
   }
   .badge-status {
     display: flex;
@@ -528,16 +527,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     opacity: 0.78;
   }
   .marcas-grid img {
-    height: 26px;
+    height: 30px;
+    max-width: 140px;
     width: auto;
     object-fit: contain;
-    filter: grayscale(1) invert(1) brightness(1.2);
-    opacity: 0.7;
-    transition: opacity 0.2s;
+    opacity: 0.75;
+    transition: opacity 0.25s ease;
   }
   .marcas-grid img:hover {
     opacity: 1;
-    filter: grayscale(0) invert(0);
   }
 
   /* ------------------- A IDEIA (EDITORIAL) ------------------- */
@@ -1657,7 +1655,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div class="wrap nav-bar">
     <div class="brand-group">
       <a href="/" class="brand-logo" aria-label="Página Inicial DRYOS">
-        <img src="/images/brand/dryos-logo.png" alt="DRYOS">
+        <img src="/images/brand/dryos-logo-white.png" alt="DRYOS" width="110" height="24">
       </a>
       <span class="brand-badge">Funcionários Digitais</span>
     </div>
@@ -1743,7 +1741,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           
           <div class="badge-header">
             <div class="badge-company">
-              <img src="/images/brand/dryos-logo.png" alt="DRYOS">
+              <img src="/images/brand/dryos-logo-white.png" alt="DRYOS" width="110" height="24">
               <span class="mono" style="font-size:12px;color:var(--mute-dark)">// PROTOCOLO-FD</span>
             </div>
             <div class="badge-status">
@@ -1802,16 +1800,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <p>Empresas que escalaram a operação com a tecnologia e infraestrutura da DRYOS</p>
       </div>
       <div class="marcas-grid">
-        <img src="/images/rafael/adsun.png" alt="Adsun">
-        <img src="/images/rafael/arezzo.svg" alt="Arezzo">
-        <img src="/images/rafael/altis.svg" alt="Altis">
-        <img src="/images/rafael/california.png" alt="Califórnia">
-        <img src="/images/rafael/dnia.svg" alt="DNIA">
-        <img src="/images/rafael/domcasero.png" alt="Dom Casero">
-        <img src="/images/rafael/ecartorio.svg" alt="e-Cartório">
-        <img src="/images/rafael/grupodc.png" alt="Grupo DC">
-        <img src="/images/rafael/kratos.png" alt="Kratos">
-        <img src="/images/rafael/zoom.png" alt="Zoom">
+        <img src="/images/rafael/arezzo.svg" alt="Arezzo &amp; Co" width="160" height="40" loading="lazy">
+        <img src="/images/rafael/domcasero.png" alt="Dom Casero" width="150" height="40" loading="lazy">
+        <img src="/images/rafael/zoom.png" alt="Zoom" width="140" height="38" loading="lazy">
+        <img src="/images/rafael/california.png" alt="Califórnia Coffee" width="150" height="40" loading="lazy">
+        <img src="/images/rafael/ecartorio.svg" alt="e-Cartório" width="150" height="40" loading="lazy">
+        <img src="/images/rafael/adsun.png" alt="Adsun" width="140" height="38" loading="lazy">
+        <img src="/images/rafael/grupodc.png" alt="Grupo DC" width="140" height="40" loading="lazy">
+        <img src="/images/rafael/altis.svg" alt="Altis" width="130" height="38" loading="lazy">
       </div>
     </div>
   </section>
@@ -2595,7 +2591,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div class="wrap footer-inner">
     <div>
       <a href="/" style="display:inline-block;margin-bottom:0.4rem;">
-        <img src="/images/brand/dryos-logo.png" alt="DRYOS" style="height:20px;filter:brightness(100);">
+        <img src="/images/brand/dryos-logo-white.png" alt="DRYOS" style="height:20px;width:auto;">
       </a>
       <p style="font-size:12px;color:var(--mute-dark);">Crescimento com raiz · Infraestrutura e Sistemas Autônomos desde 2020</p>
     </div>
