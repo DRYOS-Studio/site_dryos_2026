@@ -642,27 +642,8 @@ footer.dark{padding:4.5rem 0 2rem}
   </svg>
 </a>
 
+<script src="/js/dryos-site.js"></script>
 <script>
-(function captureTracking() {
-  const TRACKING_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid', 'fbclid'];
-  const params = new URLSearchParams(window.location.search);
-  TRACKING_KEYS.forEach(key => {
-    const val = params.get(key);
-    if (val) sessionStorage.setItem('dryos_' + key, val);
-  });
-  if (!sessionStorage.getItem('dryos_referrer_origin') && document.referrer) {
-    try {
-      const refHost = new URL(document.referrer).hostname;
-      if (refHost && refHost !== window.location.hostname) {
-        sessionStorage.setItem('dryos_referrer_origin', document.referrer);
-      }
-    } catch (e) { /* referrer inválido */ }
-  }
-  if (!sessionStorage.getItem('dryos_landing_page')) {
-    sessionStorage.setItem('dryos_landing_page', window.location.href);
-  }
-})();
-
 (function initFdInterest() {
   const FD_NAMES = { iris: 'Íris', theo: 'Theo', nero: 'Nero', atlas: 'Atlas' };
   const params = new URLSearchParams(window.location.search);
@@ -744,6 +725,11 @@ document.addEventListener('DOMContentLoaded', () => {
           body: JSON.stringify(data)
         });
         if (!res.ok) throw new Error('rd-error');
+        try {
+          if (typeof window.dryosTrackDiagnosticoFormSubmit === 'function') {
+            window.dryosTrackDiagnosticoFormSubmit();
+          }
+        } catch (trackErr) { /* GTM */ }
         submitText.textContent = 'Enviado';
         form.hidden = true;
         successBox.hidden = false;
