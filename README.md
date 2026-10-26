@@ -1,12 +1,12 @@
 # DRYOS — Site Institucional
 
-Site institucional da DRYOS Growth Systems. HTML estático, sem build step, sem dependências.
+Site institucional da DRYOS. HTML estático, sem build step, sem dependências.
 
 ## Estrutura
 
 ```
 dryos-deploy/
-├── index.html       # Home — hero, vilões, Core, Spark, Studio, projetos, clientes, contato
+├── index.html       # Home — hero, vilões, DRYOS OS, Spark, Studio, projetos, clientes, contato
 ├── projetos.html    # Portfolio detalhado (5 projetos)
 ├── vercel.json      # Config básica de headers de segurança
 └── README.md        # Este arquivo
@@ -55,4 +55,4 @@ Se quiser adicionar uma 3ª página depois (ex: `/sobre.html`, `/blog.html`), é
 
 ---
 
-DRYOS Growth Systems — Crescimento com raiz.
+DRYOS — Crescimento com raiz.

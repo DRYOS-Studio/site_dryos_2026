@@ -9,270 +9,541 @@ Contato: contato@dryos.com.br · WhatsApp +55 21 96728-7595
 
 # Home — https://www.dryos.com.br/
 
-Pular para o conteúdo
-DRYOS · Sistema operacional contra a ineficiência · Em produção
-Tem
-7 vilões
-consumindo
-sua
-margem,
-seu
-tempo
-e
-seu
-time.
-Capitão Manualis, Senhor dos Silos, Dama do Retrabalho — toda empresa enfrenta os mesmos inimigos invisíveis. A DRYOS constrói sistemas que derrotam cada um, com IA, automação, processos organizados e dados.
-— Manifesto
-Toda empresa nasce no improviso. Crescer no improviso é arte. Mas sustentar o crescimento no improviso é uma sentença.
-Tem hora que a planilha já não basta. Tem hora que o WhatsApp deixa de ser sistema. Tem hora que "tá na minha cabeça" trava o time inteiro. A gente chama esse momento de teto operacional.
-— Os inimigos
-## Os vilões da ineficiência operacional.
-Sete inimigos. Cada um com nome, frase preferida e modus operandi próprio. Juntos, comem 15-30% da margem, drenam o tempo do time e travam o crescimento. A DRYOS existe pra derrotá-los — uma operação por vez.
-— 01
-### Capitão Manualis
-"Sempre foi assim. Pra quê mudar?"
-Tudo manual: WhatsApp, planilha, caderno. Cada cliente é um esforço repetido. Cada processo, um ritual no braço. O time inteiro escravo da burocracia.
-— 02
-### Senhor dos Silos
-"Esse dado é do nosso setor."
-Dados isolados em cada ferramenta. Cada filial faz do seu jeito. Ninguém vê o todo. Decisão vira achismo coletivo, e a empresa cresce em ilhas.
-— 03
-### Dama do Retrabalho
-"Pode refazer, não era isso."
-Sem padrão, toda entrega começa do zero. Sai funcionário, vai junto o conhecimento. O time refaz, refaz, refaz — e a margem evapora no caminho.
-— 04
-### General Lento
-"Não há pressa, amanhã a gente vê."
-Tudo passa pelo dono. Aprovação, decisão, resposta. A operação acumula porque ele é o único caminho. O negócio não anda quando ele para.
-— 05
-### Oráculo do Achismo
-"Eu acho que tá vendendo bem..."
-Decisão por feeling. Relatório que nunca sai. Não sabe quanto custa cada cliente, qual canal funciona, nem o que está perdendo. Apenas sente.
-— 06
-### Drenador de Margem
-"Essa perda é pequena... deixa pra lá."
-Pequenas falhas que somam grandes prejuízos. CAC alto sem perceber, churn não medido, ticket caindo aos poucos. A empresa fatura, mas a margem evapora.
-— 07
-### Enganador do Crescimento
-"É só crescer, depois a gente organiza."
-Vende a ilusão de que escalar no caos é sucesso. Cresce em receita, cresce em gente, cresce em ferramenta — e cresce o caos junto. A conta chega depois.
-— E os específicos da sua operação
-Os vilões que estão te custando mais aparecem no diagnóstico.
-Agendar agora
-— Três caminhos
-01 / 04
-## Para cada empresa, a porta certa.
-Nem toda operação precisa começar pela tecnologia. Primeiro entendemos como o trabalho acontece, onde trava e o que precisa ser organizado. A partir daí, definimos o próximo passo.
-— I —
-Estruturação de Processos
-Mapa operacional
-Antes de automatizar ou trocar ferramentas, a gente mapeia sua operação: fluxos, gargalos, responsabilidades e indicadores. Você sai com prioridades claras e um plano de execução.
-Entrada
-Mapa + plano
-Próximo passo
-Sob medida
-— II —
+Funcionários Digitais · construídos e operados pela DRYOS
+Sua próxima contratação
+não ocupa uma cadeira.
+Um agente de IA com nome e função, que trabalha nos canais e sistemas que você já usa. A DRYOS constrói e opera esse time para a sua empresa.
+Diagnóstico gratuito de 30 min
+→
+Sem compromisso. Se nenhuma frente resolver, a gente diz.
+FD · 01
+Atendimento
+### Íris
+Responde no WhatsApp, tira as dúvidas, entende quem está pronto pra comprar e marca a reunião direto na agenda de quem vai atender.
+Enfrenta: Capitão Manualis · General Lento
+FD · 02
+Cobrança
+### Theo
+Avisa o vencimento com Pix e boleto, confirma quando o pagamento entra e conduz a renegociação do jeito que você definiu.
+Enfrenta: Drenador de Margem
+FD · 03
+Números do negócio
+### Nero
+Cruza atendimento, vendas e faturamento durante a noite e entrega aos sócios, de manhã, um resumo do que está fora do lugar.
+Enfrenta: Oráculo do Achismo
+FD · 04
+Entrada de clientes
+### Atlas
+Recolhe documentos, libera acessos, organiza as pastas e responde dúvidas sobre as próximas etapas.
+Enfrenta: Dama do Retrabalho
+Testado aqui dentro primeiro
+Antes de chegar a qualquer cliente, tudo rodou na operação da DRYOS. Quem atende o nosso WhatsApp, por exemplo, é a Íris.
+— 01 · O problema
+Tem hora que o WhatsApp
+deixa de ser sistema.
+Nada disso é trabalho ruim. Mas quase nada disso precisa de uma pessoa. E enquanto alguém faz isso, o cliente que chegou pronto para comprar fica esperando.
+Vilão · 01
+#### Capitão Manualis
+Sempre foi assim. Pra quê mudar?
+Quem enfrenta: Íris
+Vilão · 02
+#### Senhor dos Silos
+Esse dado é do nosso setor.
+Quem enfrenta: DRYOS OS
+Vilão · 03
+#### Dama do Retrabalho
+Pode refazer, não era isso.
+Quem enfrenta: Atlas
+Vilão · 04
+#### General Lento
+Não há pressa, amanhã a gente vê.
+Quem enfrenta: Íris
+Vilão · 05
+#### Oráculo do Achismo
+Eu acho que tá vendendo bem...
+Quem enfrenta: Nero
+Vilão · 06
+#### Drenador de Margem
+Essa perda é pequena... deixa pra lá.
+Quem enfrenta: Theo
+Vilão · 07
+#### Enganador do Crescimento
+É só crescer, depois a gente organiza.
+Quem enfrenta: Estruturação de Processos
+— 02 · DRYOS OS
+O lugar onde
+eles trabalham.
+O Sistema Operacional de Crescimento Dryos (DRYOS OS) unifica WhatsApp, Instagram, CRM, automações e agentes de IA num só lugar. Cada conversa vira dado, cada dado vira ação.
+Entrada · canais que você já usa
+WhatsApp
+Instagram
+E-mail
+Sistemas da empresa
+DRYOS OS
+Funcionários Digitais
+Íris
+Atendimento
+Theo
+Cobrança
+Nero
+Números do negócio
+Atlas
+Entrada de clientes
+Inbox
+·
+CRM
+·
 Automações
-5 soluções pontuais
-Cinco soluções pontuais com IA, prontas pra conectar no que você já usa. Atendimento, integração, agentes especializados, dashboards e cobrança. Resolve uma dor específica.
-Modelo
-Recorrente
-Setup
-7-14 dias
+·
+Agentes de IA
+Saída · para quem atende e decide
+Reunião na agenda de quem vai atender
+Pagamento confirmado
+Resumo da manhã para os sócios
+Pastas e acessos organizados
+Por baixo: a base técnica DRYOS
+Infraestrutura · Desenvolvimento · Automações · Estruturação de Processos
+E a sua equipe?
+Fica com o que
+precisa de gente.
+- Conversar
+- Negociar
+- Atender presencialmente
+- Decidir
+E o time digital
+Fica com
+o repetitivo.
+- Responder e qualificar no WhatsApp
+- Avisar vencimento e confirmar pagamento
+- Cruzar os números durante a noite
+- Recolher documentos e liberar acessos
+— 03 · Base técnica
+A base técnica
+que sustenta.
+Por baixo dos Funcionários Digitais existe engenharia. A DRYOS constrói e opera essa base para quem precisa dela inteira ou só de uma parte, com ou sem Funcionário Digital.
+— I —
+#### Infraestrutura
+Gestão de infraestrutura
+Mantemos no ar os servidores, bancos de dados e integrações da sua operação, incluindo os ambientes onde os seus Funcionários Digitais trabalham.
+Quando faz sentidoSistema crítico sem dono técnico
+— II —
+Desenvolvimento
+DRYOS Studio
+Entendemos como o trabalho precisa funcionar e construímos o software, as integrações e as automações que fazem aquela operação avançar.
+Quando faz sentidoProblema que não cabe em produto
 — III —
-Studio
-Projetos sob medida
-Para problemas únicos que não cabem em produto. Sistemas e operações sob medida — incluindo Studio Launch, especialidade em infra técnica de lançamentos digitais. Linha sob demanda.
-Modelo
-Por projeto
-Demanda
-Sob demanda
-— Estruturação de Processos
-02 / 04
-## Antes de automatizar. Entenda o que trava.
-Antes de escolher uma ferramenta, a gente entende como sua operação funciona de verdade: o caminho do cliente, os pontos de decisão, os gargalos e o que hoje depende de memória ou esforço manual. O resultado é um mapa operacional que mostra onde agir primeiro.
-01
-#### Mapa da operação
-Desenhamos os fluxos críticos, as ferramentas envolvidas, os handoffs e os pontos onde o trabalho para.
-02
-#### Gargalos prioritários
-Separamos o que realmente custa tempo, margem e crescimento do que pode esperar.
-03
-#### Plano de execução
-Organizamos a sequência das mudanças: o que padronizar, o que automatizar e o que precisa de uma solução própria.
-— O que você leva
-01
-Fluxos críticos
-Como o trabalho acontece hoje, do primeiro contato à entrega.
-02
-Gargalos mapeados
-Onde a operação perde tempo, informação ou margem.
-03
-Responsabilidades claras
-Quem decide, executa, aprova e precisa receber cada informação.
-04
-Plano priorizado
-Uma sequência prática para organizar a operação sem começar pela ferramenta.
-Começar pelo mapa
-— Automações
-03 / 04
-## Cinco automações. Uma dor de cada vez.
-Recorrência mensal · Sem fidelidade Cada automação tem escopo fixo, setup definido e SLA documentado. Implementação em 7-14 dias.
-01
-Automação de atendimento
-WhatsApp e e-mail com IA na primeira camada
-Um agente de IA atende WhatsApp e e-mail em primeira camada. Ele qualifica, responde as dúvidas frequentes, encaminha pro humano certo e registra tudo no CRM.
-Implementação
-10 dias úteis
-02
-Integração entre sistemas
-CRM, ERP, e-mail marketing, checkout, planilhas
-Conecta automaticamente os sistemas que você já usa: CRM, ERP, planilhas, WhatsApp. Os dados fluem sozinhos, sem redigitação e sem silos.
-Implementação
-14 dias úteis
-03
-Agente de IA especializado
-FAQ extensiva, suporte técnico, qualificação avançada
-Agente treinado num domínio específico do seu negócio, para FAQ extensiva, suporte técnico ou qualificação avançada. Aprende com seus documentos e processos.
-Implementação
-14 dias úteis
-04
-Automação de relatórios
-Dashboard de KPIs + relatório semanal no WhatsApp
-Dashboard executivo com KPIs em tempo real. Relatório semanal por WhatsApp escrito por IA, com 3 insights e 3 ações sugeridas. Nunca mais decisão no feeling.
-Implementação
-14 dias úteis
-05
-Automação de cobrança
-Régua no WhatsApp, nota fiscal e conciliação
-Régua inteligente de cobrança via WhatsApp, emissão automática de NF, geração de boleto e conciliação bancária. Reduz inadimplência sem o constrangimento de cobrar no braço.
-Implementação
-10 dias úteis
-— Todas as automações
-O escopo de cada uma, o prazo e as combinações que mais entregamos.
-Saiba mais
-— DRYOS Studio
-04 / 04
-## Quando a operação exige um desenho próprio.
-Nem toda operação cabe numa automação pronta. No Studio, a gente primeiro entende como o trabalho precisa funcionar e depois constrói o que falta: um processo, uma integração, uma infraestrutura ou uma camada de inteligência. A tecnologia entra para dar suporte à operação, não para obrigar a empresa a trabalhar de um jeito novo.
-— 01
-Lançamentos coordenados
-Especialidade
-Infraestrutura e operação técnica de lançamentos digitais
-Cuidamos da infraestrutura técnica completa do seu lançamento: gestão de plataformas, disparos de mensagens, automações de campanha, dashboards em tempo real e o Cockpit do Lançamento, nosso painel exclusivo que integra todos os dados em um só lugar. Trabalhamos junto com a sua agência ou o seu time de marketing. Copy e design ficam com eles.
-— 02
-Operações próprias
-Fluxos internos e sistemas de gestão desenhados para o seu contexto
-— 03
-Decisão com clareza
-Indicadores, inteligência e painéis para operações que precisam enxergar o todo
-— 04
-Sistemas que precisam conversar
-Integrações complexas entre ferramentas, legados e processos
-— 05
-Atendimento especializado
-Agentes de IA para contextos específicos, multimodais ou regulados
-— Como funciona
-01
-Contexto
-Briefing e diagnóstico do problema e da operação
-02
-Desenho da operação
-Fluxos, responsabilidades, escopo e critérios de aceitação
-03
-Construção e validação
-Sprints semanais com entregas validadas pelo cliente
-04
-Operação
-Colocamos para rodar e, se fizer sentido, continuamos evoluindo depois da entrega
-Projetos especiais, com critérios claros de aceitação para manter a qualidade.
-— Projetos
-## Projetos personalizados em produção. Operações reais.
-Cada projeto nasce de uma operação específica. Entendemos como o trabalho precisa funcionar e construímos o software, as integrações e as automações que fazem aquela operação avançar.
-— 01
-Eventmetrics
-Sistema personalizado · Studio
-Plataforma de inteligência e analytics para gestão de eventos. Painel executivo, métricas em tempo real e relatórios automatizados pra organizadores.
-Status
-Em produção
-— 02
-Core
-Sistema operacional sob medida · Studio
-Sistema operacional personalizado para uma empresa de educação, conectando CRM, atendimento, automações e agentes de IA via WhatsApp.
-Status
-Em produção
-— 03
-DeMarchi Automotive
-Sistema sob medida · Studio
-Catálogo digital de produtos automotivos com busca inteligente, integração com estoque e jornada de cotação automatizada.
-Status
-Em produção
-— Portfolio completo
-Veja todos os projetos que já construímos.
-Ver portfolio
-— Clientes
-## Operações reais. Resultados em produção.
+Automações
+Soluções pontuais com IA
+Prontas pra conectar no que você já usa. Resolvem uma dor específica, sem trocar o resto da operação.
+Quando faz sentidoUma dor clara e isolada
+— IV —
+#### Estruturação de Processos
+Mapa operacional
+Antes de automatizar ou trocar ferramentas, a gente mapeia sua operação: fluxos, gargalos, responsabilidades e indicadores.
+Quando faz sentidoNinguém sabe onde o trabalho trava
+— 04 · Prova social
+Quem já trabalha
+com a DRYOS.
+Nas palavras de quem já trabalhou com a gente.
 Em destaque
-Cliente Segmento de Educação
-Em produção
 Antes a gente crescia na força bruta. Hoje, crescemos com inteligência. A equipe da DRYOS não veio com palestras — eles vieram e instalaram os processos. Hoje tenho clareza total dos dados e nossa infraestrutura roda sem que eu precise vigiar cada detalhe.
 CEO · Cliente Segmento de Educação
-Cliente
-Academia Tio Sam
-Em produção
+Depoimento
 Antes do trabalho com a DRYOS, a Academia Tio Sam tinha resultados, mas os processos eram muito intuitivos e a gestão acontecia mais no automático do que de forma estratégica. Ao longo do projeto, estruturamos rotinas, indicadores e fluxos claros, o que aumentou muito a consciência sobre cada etapa da operação. Hoje conseguimos enxergar com clareza onde estamos crescendo e quais decisões precisam ser tomadas.
 Suellen Monnerat · Gestora Administrativa, Academia Tio Sam
-Cliente
-Gois Fit
-Em produção
+Depoimento
 O trabalho com a DRYOS foi um divisor de águas para a Gois Fit. Saímos de uma atuação muito operacional, reagindo ao dia a dia, para uma implantação clara de processos que organizaram a casa e deram previsibilidade ao negócio. Ganhamos muito mais consciência de mercado: entendemos melhor nossos números, nossos canais de aquisição e o comportamento dos clientes, o que nos permitiu planejar e buscar crescimento de forma intencional, e não por tentativa e erro.
 Bárbara Gois · CEO, Gois Fit
-Cliente
-Acorp Eventos
-Em produção
+Depoimento
 A expertise técnica e a capacidade de compreensão das nossas necessidades específicas foram fundamentais para o sucesso do projeto. A DRYOS não apenas atendeu às nossas expectativas, mas as superou, proporcionando soluções inovadoras e personalizadas que otimizaram nossos processos e aumentaram significativamente nossa eficiência operacional.
 Jane Araujo · Sócia Diretora, Acorp Eventos
+— 05 · Diagnóstico
+Diagnóstico gratuito
+de 30 min.
+30 minutos pra mapear os vilões da sua operação e propor o caminho certo. Sem compromisso.
+Se nenhuma frente resolver, a gente diz.
+Seus dados são processados conforme a LGPD. Não enviamos spam.
+
+---
+
+# Funcionários Digitais — https://www.dryos.com.br/funcionarios-digitais
+
+Pular para o conteúdo principal
+O que faz
+Os Funcionários
+Simulação Real
+Comparativo
+Quem Faz
+Franquia & Parceria
+Inteligência Operacional DRYOS · Força de Trabalho Digital
+# Sua próxima contratação não
+ocupa uma cadeira.
+Ocupa o gargalo operacional que trava o faturamento da sua empresa. Atendem o WhatsApp em menos de 3 segundos, separam quem tem orçamento de quem apenas pesquisa, agendam reuniões com tomadas de decisão e cobram no prazo. 24 horas por dia, 7 dias por semana, cobrindo exatamente o horário em que a sua equipe física não está.
+Instância dedicada e isolada
+No ar em até 10 dias úteis
+Sem fidelidade contratual
+// PROTOCOLO-FD
+Em operação · 24/7
+MATRÍCULA #DRY-014
+## Íris
+Especialista Digital · Atendimento & Triagem Comercial
+Boa noite. Vi a apresentação de vocês sobre estruturação de processos. É possível marcar uma reunião técnica para esta semana?
+22:41
+Olá. Me chamo Íris, da equipe técnica da DRYOS. É possível sim. Temos disponibilidade na quinta-feira às 14h30 ou na sexta às 10h. Algum desses horários atende a sua agenda?
+22:41 · resposta em 2s
+Primeira Resposta
+< 3 segundos
+Aderência ao Protocolo
+99.8% auditado
+Empresas que escalaram a operação com a tecnologia e infraestrutura da DRYOS
+A Realidade da sua Operação
+## Assumem o que não precisa de uma pessoa. Para a sua equipe fazer
+o que só uma pessoa faz.
+Na maior parte das empresas, profissionais seniores passam metade do dia absorvidos por tarefas mecânicas: respondendo à mesma dúvida sobre valores, solicitando comprovantes de pagamento ou checando se o cliente prefere quarta de manhã ou quinta à tarde.
+Além disso, quem responde o canal da empresa quase nunca tem preparo de fechamento: apenas repassa o valor e encerra o contato. O cliente diz "vou avaliar internamente" e a oportunidade é perdida.
+O gargalo da sua empresa não é falta de demanda ou anúncio ruim. É a fricção operacional do trabalho manual que faz o contato qualificado esfriar enquanto aguarda retorno.
+Que trabalho dentro da sua empresa realmente exige a presença de uma pessoa de carne e osso?
+### O custo real de uma contratação convencional
+Contratar mais uma pessoa para a recepção ou pré-vendas envolve salário, encargos sociais, benefícios, curva de treinamento de 60 dias e limita a cobertura a 44 horas semanais.
+Quando o cliente entra em contato no sábado à noite ou no domingo de manhã, a sua operação está fechada. O concorrente que responde no ato assume o negócio.
+Dado de Mercado · Pesquisa Harvard Business Review
+78% dos clientes fecham negócio com o primeiro fornecedor que responde de forma qualificada. No canal de mensagens, o lead esfria drasticamente após 10 minutos de espera.
+Como Funciona na Prática
+## Tem trabalhos que só uma pessoa faz. Para todos os outros, existe o
+funcionário digital.
+Diferente de sistemas de menus numéricos engessados, o funcionário digital compreende contexto, vocabulário técnico e histórico do cliente. Opera com acesso seguro às bases da sua empresa.
+Registro de Admissão
+DRY-FD-2026
+### Funcionário Digital Operacional
+Função Atendimento receptivo, qualificação de demanda, agendamento e régua financeira Canal WhatsApp Oficial API, CRM, E-mail e Sistemas Internos Turno 24 horas por dia, 365 dias por ano Formato Equipe híbrida: especialistas humanos e funcionários digitais integrados Quem cuida A DRYOS parametriza, homologa, treina e audita continuamente
+HOMOLOGADO · DRYOS OS
+01 →
+#### Atendimento receptivo imediato
+Responde no canal em menos de 3 segundos, inclusive aos finais de semana e madrugadas. Com as diretrizes da sua empresa, linguagem alinhada à sua marca e sem tempo de espera.
+02 →
+#### Qualificação técnica de demanda
+Realiza as perguntas necessárias de enquadramento antes de envolver seu time sênior. Avalia necessidade, urgência e orçamento, entregando o histórico estruturado.
+03 →
+#### Agendamento sincronizado em tempo real
+Conecta diretamente ao Google Calendar ou CRM, identifica janelas disponíveis e reserva o horário na própria conversa, com disparo de confirmação.
+04 →
+#### Condução ativa até o fechamento
+Não abandona o diálogo após passar o valor. Apresenta opções de pagamento, esclarece escopo e faz perguntas de avanço para consolidar o compromisso.
+05 →
+#### Atualização contínua de CRM e dados
+Registra tags precisas, preenche anotações de perfil e avança a etapa do funil. O consultor que assume o caso visualiza exatamente todo o histórico prévio.
+06 →
+#### Régua de cobrança preventiva
+Emite lembretes antes do vencimento com chave Pix e código de barras, identifica pagamentos e renegocia pendências com protocolo pré-estabelecido, sem atrito.
+A Força de Trabalho
+## Conheça as funções disponíveis para
+a sua operação.
+Você pode admitir um posto prioritário ou integrar múltiplas funções no mesmo ecossistema.
+#DRY-014
+24/7 Ativa
+### Íris
+Atendimento & Triagem Comercial
+Assume o atendimento receptivo no canal da sua empresa. Esclarece dúvidas técnicas e comerciais, filtra o perfil do cliente e agenda reuniões diretamente no calendário dos responsáveis.
+Especialidades
+WhatsApp Oficial API
+Sincronização Google
+Qualificação BANT
+Disponibilidade 24/7
+SLA: < 3s
+#DRY-027
+24/7 Ativo
+### Theo
+Cobrança & Gestão Financeira
+Executa a régua financeira da sua operação. Notifica vencimentos com chave Pix e código de barras, registra confirmações de pagamento e renegocia atrasos com protocolo pré-definido.
+Especialidades
+Régua Preventiva
+Emissão de Boletos e Pix
+Reconciliação Bancária
+Prevenção de Inadimplência
+Recuperação: +38%
+#DRY-042
+Auditoria Contínua
+### Nero
+Inteligência de Dados e Indicadores
+Cruza os dados de atendimento, funil comercial e faturamento durante a noite. Às 08h da manhã, entrega aos sócios um diagnóstico conciso dos indicadores críticos e desvios operacionais.
+Especialidades
+Auditoria de Funil
+Relatório Executivo Matinal
+Monitoramento de CAC
+Telemetria de Processos
+Briefing: Todo dia às 8h
+#DRY-058
+24/7 Ativo
+### Atlas
+Onboarding & Operações
+Coordena a entrada de novos clientes na operação. Coleta documentação obrigatória, provisiona acessos, organiza repositórios em nuvem e responde a dúvidas sobre etapas do projeto.
+Especialidades
+Onboarding de Contratos
+Gestão de Documentos
+Base de Conhecimento Interna
+Checklist Operacional
+Setup: Imediato
+Simulação em Ambiente de Produção
+## Observe a condução de um diálogo em
+tempo real.
+O atendimento compreende nuances de linguagem, mensagens de áudio e hesitações do lead, conduzindo a conversa até o agendamento sem atrito.
+"O paciente agendou o procedimento no domingo à noite e só soube na consulta presencial que havia sido atendido por um agente digital."
+09:41
+●●● 5G
+#### Íris · Atendimento DRYOS
+online agora (resposta média 2s)
+Boa noite. Vi a publicação sobre avaliação para harmonização facial. Vocês atendem aos sábados ou apenas durante a semana?
+22:45
+Boa noite! Atendemos de segunda a sexta das 8h às 19h e aos sábados das 8h às 13h. Me chamo Íris, da equipe da Dra. Camila. Você já realizou alguma avaliação prévia desse procedimento ou seria a sua primeira consulta?
+22:45
+Seria a primeira vez.
+22:46
+Perfeito. O primeiro passo é uma consulta clínica de 40 minutos para planejar os pontos de aplicação e definir o plano de tratamento. Para esta semana, temos quinta-feira às 17h30 ou sábado às 10h. Algum desses horários funciona para você?
+22:46
+Quinta às 17h30 fica ótimo.
+22:47
+Excelente. Reservei a quinta, 17h30, com a Dra. Camila. Qual é o seu nome completo para formalizarmos a confirmação da agenda?
+22:47
+[SISTEMA] Agendamento sincronizado no Google Calendar · Lead atualizado no CRM
+A Decisão Estratégica
+## Compare antes de
+tomar uma decisão.
+Por que operações consolidadas preferem um funcionário digital dedicado em vez de inflar a folha de pagamento ou contratar softwares isolados.
+Critério de Avaliação
+Contratação CLT Tradicional
+Ferramenta / Software SaaS
+Funcionário Digital DRYOS
+Disponibilidade e Turno
+8 horas por dia (dias úteis)
+24 horas (menus pré-fixados)
+24 horas por dia, 365 dias por ano
+Tempo Médio de Resposta
+20 a 50 minutos em média
+Imediato (respostas engessadas)
+Menos de 3 segundos
+Custo e Encargos
+Salário, FGTS, INSS e passivo trabalhista
+Licença de software + horas da sua equipe
+Mensalidade de serviço sem encargos
+Curva de Implementação
+30 a 90 dias de treinamento e adaptação
+Configuração manual sob sua responsabilidade
+Pronto em 10 dias úteis pela DRYOS
+Continuidade Operacional
+Sujeito a faltas, atestados e férias
+Quedas de servidor sem sustentação ativa
+Operação ininterrupta com auditoria técnica
+Segurança e Dados
+Risco de vazamento em aparelho pessoal
+Dados compartilhados em nuvem pública
+Instância dedicada e isolada (LGPD)
+Resultados Mensurados
+## Impacto verificado em
+operações ativas.
+Indicadores reais consolidados nas empresas que utilizam a infraestrutura da DRYOS.
+3 seg Tempo médio de resposta para 100% dos contatos recebidos
++44% Aumento no aproveitamento de oportunidades que já chamavam no canal
+Zero Contatos sem atendimento em períodos noturnos ou finais de semana
+10 dias Prazo formal em contrato para homologação e entrada em produção
+“
+"Conseguimos triplicar a capacidade de triagem sem inflar a folha de pagamento da recepção. Hoje o paciente recebe retorno no WhatsApp em segundos, mesmo fora do expediente comercial, e já chega para a consulta com os dados alinhados."
+VM
+### Dra. Vanessa Mendes
+Sócia-Diretora de Clínica Médica
+“
+"No segundo mês já dobramos as reuniões qualificadas no nosso CRM. O mais expressivo foi não ter precisado elevar o investimento em mídia paga: paramos de desperdiçar os contatos que aguardavam retorno por mais de meia hora."
+MR
+### Marcos Rezende
+Sócio de Consultoria Empresarial
+“
+"A régua de cobrança conduzida pelo Theo eliminou o atrito que existia com o financeiro. O lembrete é educado, chega com a chave Pix pronta e reduziu a nossa taxa de inadimplência em 38% já no primeiro ciclo."
+FL
+### Felipe Lourenço
+Diretor de Operações de Serviços B2B
+Parceiro Platinum RD Station 2026
+Arquitetura Técnica e Engenharia
+## A DRYOS não vende experimentos.
+Entrega operação rodando.
+Desde 2020, a DRYOS projeta e sustenta ecossistemas de dados, automação e inteligência artificial para médias e grandes empresas em todo o Brasil.
+Fundada por Rafael Carvalho — estrategista de operações e crescimento e arquiteto de sistemas com mais de uma década de vivência em operações de alta complexidade —, a DRYOS constrói cada funcionário digital dentro da plataforma proprietária DRYOS OS (Sistema Operacional de Crescimento Dryos), assegurando redundância, tolerância a falhas e estabilidade contínua.
+Método e SLA definidos: Escopo técnico detalhado por escrito antes de qualquer implementação.
+Sustentação contínua: Calibração periódica de regras de negócio, integrações e telemetria operacional.
+Soberania dos seus dados: Bases de contatos, históricos e regras pertencem 100% à sua empresa.
+Segurança e Governança
+## Privacidade estrutural.
+Seus dados são seus.
+Nenhuma informação corporativa ou histórico de clientes é utilizado para treinamento de modelos públicos.
+### Instância Dedicada e Isolada
+Cada operação é executada em container exclusivo, com banco de dados próprio e chaves de criptografia separadas. Sem infraestrutura compartilhada.
+### Conformidade LGPD
+Aderência estrita à Lei Geral de Proteção de Dados (Lei nº 13.709/2018), com gestão de consentimento e possibilidade de expurgo quando solicitado.
+### Portabilidade Total
+Caso opte por descontinuar o serviço, você tem acesso irrestrito a toda a sua base de dados, logs e fluxos. Sem retenção de dados ou fidelização forçada.
+Aplicações Práticas
+## Para quem é a
+tecnologia DRYOS.
+Desenhado para empresas que precisam destravar a capacidade operacional interna e acelerar o fechamento de vendas.
+Volume de Atendimento & Agendamentos
+### Clínicas, Consultórios
+& Escritórios.
+Recomendado para operações onde novos contatos e pacientes chegam predominantemente pelo canal de mensagens e precisam de triagem em menos de 3 segundos, esclarecimento de dúvidas e agendamento direto na grade.
+- Atendimento receptivo em menos de 3 segundos
+- Sincronização direta com Google Calendar e agendas
+- Cobertura ininterrupta em noites, fins de semana e feriados
+- Sem encargos trabalhistas ou cláusula de fidelidade
+Vendas B2B & Operações Comerciais
+### Distribuidoras, SaaS
+& Serviços B2B.
+Recomendado para equipes de vendas consultivas onde o vendedor perde tempo com curiosos. O funcionário digital filtra o perfil ideal, qualifica o orçamento e entrega reuniões prontas diretamente no CRM.
+- Pré-qualificação de porte, faturamento e urgência do lead
+- Integração nativa com HubSpot, RD Station, Pipedrive e Kommo
+- Régua de acompanhamento e recuperação de propostas paradas
+- Roteamento prioritário para o executivo de vendas certo
+Perguntas Frequentes
+## Esclarecimentos técnicos.
+Sem rodeios.
+Como o funcionário digital se adapta ao vocabulário da minha empresa?
+Durante a etapa de homologação, inserimos os manuais, regras de conduta, tabela de valores e histórico de atendimentos da sua empresa. O sistema opera baseado em diretrizes rigorosas do que pode e do que não pode ser comunicado, mantendo a autenticidade da sua marca.
+Qual papel caberá à minha equipe humana após a implantação?
+Sua equipe fica integralmente liberada da triagem repetitiva (responder a dúvidas básicas, consultar disponibilidade de agenda e solicitar comprovantes) para concentrar tempo em atividades de alto valor: condução de reuniões comerciais, fechamento de propostas complexas, atendimento presencial e gestão do negócio.
+É necessário trocar o número de WhatsApp ou os softwares já em uso?
+Não. A tecnologia conecta-se diretamente ao número oficial da sua empresa e aos sistemas já existentes (Google Calendar, CRM, ERP e gateways). A integração ocorre sem descontinuidade ou necessidade de migração forçada de plataforma.
+Quem é responsável pela sustentação e atualizações do sistema?
+A equipe de engenharia da DRYOS. Qualquer atualização em tabelas de preços, horários de atendimento ou introdução de novos serviços é implementada diretamente pelo nosso time técnico, sem demandar contratação de profissionais de TI pela sua empresa.
+Como funciona a parceria comercial comissionada?
+Consultores, agências e profissionais com carteira comercial prospectam e introduzem as empresas. A DRYOS assume a implementação técnica, o suporte e a operação. O parceiro recebe 30% de comissão recorrente todos os meses enquanto o cliente permanecer na base ativa.
+Qual o prazo para início da operação em produção?
+Em até 10 dias úteis após a conclusão do diagnóstico e o fornecimento das diretrizes operacionais do negócio.
+Diagnóstico Técnico
+## Pronto para destravar
+sua operação?
+Use o formulário de diagnóstico da home para registrar o lead na DRYOS com o Funcionário Digital já indicado. Se preferir, inicie a conversa diretamente pelo canal oficial.
+Canal Oficial WhatsApp
++55 21 96728-7595
+Diagnóstico Inicial
+30 minutos sem custo · Com escopo e SLA formalizados
+Atuação
+Atendimento e cobertura em todo o território nacional
+Você será direcionado ao formulário oficial na home, com Funcionários Digitais pré-selecionado e o posto (Íris, Theo, Nero ou Atlas) conforme o link de origem.
+Seus dados são protegidos sob conformidade estrita com a LGPD (Lei nº 13.709/2018).
+
+---
+
+# Parceiros — https://www.dryos.com.br/parceiros
+
+Pular para o conteúdo principal
+Programa de Parceiros Comerciais DRYOS · 30% Rev-Share
+# Leve Funcionários Digitais para os clientes da sua agência ou consultoria.
+Ganhe 30% todo mês.
+Adicione Funcionários Digitais ao portfólio dos seus clientes. Nós cuidamos de 100% da engenharia de dados, integrações de CRM e sustentação 24/7. Você fica com 30% de cada mensalidade, para sempre.
+30% de comissão mensal recorrente (MRR)
+Suporte de Co-Selling: call técnica de fechamento
+Zero custo de adesão ou cota mínima punitiva
+A Realidade do Mercado
+## Por que agências comuns sofrem churn e consultorias têm teto de escala.
+Você vende tráfego, SEO ou consultoria de vendas. Constrói a campanha, atrai os leads e entrega no WhatsApp do cliente.
+Mas a recepção do cliente demora 4 horas para responder. O lead esfria, compra do concorrente e, no final do mês, o cliente cancela o seu contrato dizendo que o tráfego não gerou vendas.
+Com os Funcionários Digitais da DRYOS, você estanca esse gargalo no ato da captação. O lead é atendido em 3 segundos, qualificado e agendado no CRM. O cliente vende mais, você se torna insubstituível e fatura 30% de comissão todo mês.
+// O MODELO TRADICIONAL DE AGÊNCIA
+### Venda de Horas e Churn Acelerado
+Receita dependente de fee mensal volátil. A agência se esforça para gerar demanda, mas perde o contrato porque o time comercial do cliente falha no atendimento. Sem receita passiva, cada novo cliente exige contratar mais pessoas.
+// O MODELO DE PARCERIA DRYOS
+### Funcionários Digitais e 30% recorrente, para sempre
+Você entrega a infraestrutura de atendimento e qualificação mais avançada do mercado. A DRYOS garante o funcionamento da tecnologia 24 horas por dia. O cliente retém com facilidade e a sua empresa acumula patrimônio em receita recorrente.
+Simulador de Comissões Recorrentes
+## Veja quanto sua agência ou consultoria pode faturar em receita passiva.
+Selecione a quantidade estimada de clientes da sua carteira e informe o ticket médio mensal que você cobra deles.
+Clientes Ativos com Funcionário Digital
+10 clientes
+Ticket médio mensal por cliente (R$)
+R$ 5.000
+SUA COMISSÃO RECORRENTE MENSAL (30% DE MRR)
+R$
+15.000
+/mês
+Projeção Anual de Ganhos
+R$ 180.000/ano
+Custo de Infraestrutura
+R$ 0,00 (pela DRYOS)
+Matriz Operacional
+## Divisão transparente de papéis. Você não precisa programar nada.
+Entenda exatamente o que fica com o parceiro e o que a engenharia da DRYOS executa.
+Etapa do Projeto
+Papel do Parceiro (Sua Empresa)
+Responsabilidade da DRYOS
+1. Prospecção & Diagnóstico
+Identificação da dor operacional
+Identifica o gargalo de atendimento ou qualificação na carteira existente.
+Fornece roteiros de diagnóstico e calculadoras de ROI para apoiar a reunião.
+2. Demonstração Técnica
+Apresentação ao decisor final
+Apresenta a oportunidade de negócio e agenda a conferência técnica.
+Engenheiro de soluções da DRYOS participa da chamada para demonstrar o agente ao vivo.
+3. Implantação e Integração
+Configuração de CRM e WhatsApp
+Valida o fluxo com o cliente e alinha o tom de voz comercial.
+Executa toda a engenharia de prompts, webhooks, credenciais de API oficial e testes de carga.
+4. Sustentação e Suporte
+Operação diária 24/7/365
+Acompanha os relatórios de conversão e mantém o relacionamento estratégico.
+Garante 99.8% de uptime, atualização para os LLMs mais rápidos e monitoramento contínuo de bugs.
+5. Repasse Financeiro
+Comissão mensal vitalícia
+Emite a nota fiscal de intermediação de negócios no início do mês.
+Realiza o pagamento pontual no dia 10 de cada mês com extrato detalhado por cliente.
+Apoio Comercial Completo
+## Você não vende sozinho. Vendemos lado a lado com você.
+A DRYOS oferece todo o arsenal de apoio para você fechar clientes de alto ticket sem travas técnicas.
 01
-/
-04
-— Empresas que confiam na DRYOS
-— Setores que atendemos
-Distribuição & Atacado
-Indústria
-Serviços B2B
-Saúde & Clínicas
-Escritórios profissionais
-Educação & Treinamentos
-Construção & Engenharia
-Comércio & Varejo
-— Diagnóstico gratuito
-## Chega de operar no escuro.
-30 minutos pra mapear os vilões da sua operação, estimar o que está te custando hoje e propor o produto certo. Sem compromisso.
-Sem compromisso
-30 min
-Mapa de oportunidades
-Proposta personalizada
-— Falar com a DRYOS
-### Prefere conversar direto?
-Escolha o canal que funciona melhor para você.
-WhatsApp
-Conversar no WhatsApp
-E-mail
-contato@dryos.com.br
-LinkedIn
-Conhecer a DRYOS no LinkedIn
-Respondemos em horário comercial.
-— Crescimento com raiz
-### Sobre
-Desde 2020, a DRYOS constrói sistemas e operações lucrativas para empresas que precisam crescer com fundação, não no improviso.
-Combinamos estratégia de operações, engenharia de software e inteligência artificial para transformar processos manuais em sistemas que rodam 24/7. Cada cliente recebe uma operação desenhada pra escalar, não uma ferramenta de prateleira.
-Somos Construtores.
-2020
-Operando desde
-8+
-Setores atendidos
-100%
-Em produção real
+### Engenheiro na Mesa de Pitch
+Quando o seu cliente fizer perguntas profundas sobre segurança, LGPD, latência de resposta ou regras de integração com o ERP dele, nosso arquiteto responde e resolve as objeções na hora.
+Co-Selling Ativo
+02
+### Simulador Real no WhatsApp
+Nada vende mais rápido do que o cliente ver a IA funcionando no próprio celular. Liberamos instâncias de demonstração personalizadas para o segmento do seu prospect (médico, jurídico, varejo).
+Demonstração Interativa
+03
+### Materiais Co-Branded
+Tenha acesso a decks de apresentação executiva, matrizes de cálculo de ROI, modelos de proposta comercial e contratos jurídicos de prestação de serviços validados para agilizar o fechamento.
+Arsenal de Vendas
+Critérios de Credenciamento
+## Para quem este programa foi desenhado.
+Buscamos operadores sérios com relacionamento B2B estabelecido para manter o padrão institucional.
+### Quem Estamos Credenciando
+Agências de Marketing e Performance: Que já geram tráfego para PMEs e querem resolver o gargalo de atendimento de vendas dos clientes.
+Consultores comerciais e de operações: Profissionais que desenham processos de vendas e precisam de uma ferramenta executora automatizada.
+Integradores de CRM e Automação: Especialistas em HubSpot, RD Station, Pipedrive ou Kommo buscando monetizar o pós-implantação.
+BPOs Financeiros e Contabilidades Estratégicas: Que têm carteira ativa de clientes empresariais precisando de eficiência de folha.
+### Quem Não Tem Perfil
+Afiliados de Infoproduto ou Tráfego Direto: Não atuamos com vendas massivas de cursos ou produtos de ticket baixo.
+Operadores de Disparos em Massa (Spam): Nossos funcionários digitais operam exclusivamente com APIs oficiais em conformidade com as regras da Meta.
+Pessoas Sem Experiência B2B: O modelo exige capacidade de diagnosticar problemas empresariais reais com decisores.
+Dúvidas Frequentes
+## Perguntas comuns sobre o modelo de parceria.
+Quando e como recebo o pagamento da comissão de 30%?
+O repasse é realizado todo dia 10 de cada mês, diretamente na conta bancária da sua pessoa jurídica (PJ), via Pix ou TED. O valor corresponde a 30% da receita líquida recorrente gerada por todos os clientes ativos indicados pela sua empresa no mês anterior.
+A comissão é vitalícia ou só vale para a primeira mensalidade?
+É vitalícia. Enquanto o cliente que você indicou permanecer pagando a mensalidade dos Funcionários Digitais DRYOS, você recebe os 30% todos os meses. Como a taxa de retenção desses sistemas é historicamente altíssima (antichurn comprovado), isso constrói um patrimônio de receita recorrente para o seu negócio.
+Quem assina o contrato e emite a nota fiscal para o cliente final?
+No modelo de Rev-Share padrão, a DRYOS faz o contrato de prestação de serviços de tecnologia diretamente com o cliente final e cuida da cobrança e suporte. Sua empresa emite mensalmente para a DRYOS uma nota fiscal de intermediação de negócios ou comissionamento.
+Existe meta mínima mensal para se manter credenciado?
+Não aplicamos cotas mínimas punitivas ou perda de credenciamento forçada. Valorizamos parceiros que prezam pela qualidade do diagnóstico e retenção a longo prazo, e não apenas pelo volume desordenado de indicações.
+Posso aplicar minha própria margem de lucro (White-Label)?
+Sim. Além do modelo de Rev-Share direto de 30%, oferecemos a modalidade de atacado estruturado para agências consolidadas que preferem faturar diretamente o cliente final com marca própria (White-Label), comprando as licenças da DRYOS com desconto de volume. Detalhamos essa opção na entrevista de credenciamento.
+Credenciamento Oficial
+## Candidate a sua agência ou consultoria para a rede DRYOS.
+Analisamos cada aplicação manualmente para garantir alinhamento de qualidade e exclusividade de atendimento por praça e nicho.
+1
+### Preencha a Ficha ao Lado
+Leva menos de 2 minutos e informa o perfil da sua carteira de clientes.
+2
+### Entrevista Técnica de 20 Minutos
+Alinhamento de modelo de comissão, acesso ao portal do parceiro e demonstração ao vivo.
+3
+### Início de Co-Selling
+Receba os materiais de vendas e agende as primeiras chamadas de fechamento com nosso time.
+### Ficha de Credenciamento
+Preencha os dados da sua empresa para iniciar a avaliação.
 
 ---
 
@@ -329,12 +600,12 @@ Enganador do Crescimento
 "É só crescer, depois a gente organiza."
 Mais volume entrando no mesmo processo improvisado. A conta chega depois.
 → Automação de relatórios
-— As cinco frentes
+— As sete frentes
 Pra cada sintoma, uma automação de escopo fechado.
 Ver as automações
 — As automações
 02 / 08
-## Cinco frentes. Uma dor de cada vez.
+## Sete frentes. Uma dor de cada vez.
 Cada automação tem escopo fixo, prazo definido e SLA documentado. O que está listado em "o que entra" é o que a gente entrega. Não tem "e muito mais".
 — 01
 Automação de atendimento
@@ -456,6 +727,54 @@ Implementação
 10 dias úteis
 Modelo
 Recorrente
+— 06
+WhatsApp com API oficial
+WhatsApp Business Platform · notificações e atendimento
+A operação conversa com clientes pelo canal oficial do WhatsApp, com templates aprovados, regras de atendimento e integração ao CRM. Serve para iniciar conversas permitidas, avisar etapas e distribuir o atendimento sem depender de gambiarra.
+✕ Canal sem controle
+✕ Dado espalhado
+O que entra
+- Conexão com a API oficial do WhatsApp Business
+- Configuração de templates e regras de disparo
+- Notificações transacionais e atualizações de status
+- Integração com CRM e sistemas do escopo
+- Distribuição e escalonamento para o time
+- Registro, logs e alerta de falha
+Evento no sistema
+→
+Regra + template
+→
+API oficial
+→
+Cliente notificado
+Implementação
+14 dias úteis
+Modelo
+Recorrente
+— 07
+Automação de grupos
+Grupos de WhatsApp · comunidade e operação
+Estrutura rotinas para grupos de WhatsApp: avisos, segmentação, entrada de participantes e encaminhamento para o time. O escopo depende do tipo de grupo e da elegibilidade da conta; a automação respeita os limites do canal e deixa claro o que é grupo, atendimento individual e comunicação oficial.
+✕ Grupo sem regra
+✕ Aviso manual
+O que entra
+- Desenho dos grupos, públicos e objetivos
+- Validação de elegibilidade, entrada e segmentação
+- Calendário de avisos e mensagens operacionais
+- Integração de inscrições e eventos com CRM
+- Regras de moderação e encaminhamento ao humano
+- Relatório de entregas e ocorrências
+Evento ou inscrição
+→
+Segmenta
+→
+Grupo certo
+→
+Aviso + registro
+Implementação
+14 dias úteis
+Modelo
+Recorrente
 — O que automatizamos
 03 / 08
 ## Concretamente, o que a gente monta.
@@ -496,6 +815,14 @@ Isso não é lista de capacidade genérica. São as automações que já saem da
 - Alerta quando um indicador sai da faixa
 - Log de execução e alerta quando uma integração falha
 - Deduplicação de contatos entre bases
+— 05
+### WhatsApp & grupos
+- Atendimento e notificações pela API oficial
+- Templates aprovados e regras de disparo
+- Distribuição de conversas para o time
+- Entrada, segmentação e avisos em grupos
+- Grupo conectado a inscrição, evento ou CRM
+- Logs, alertas e encaminhamento ao humano
 Não achou a sua? Traz no diagnóstico. A resposta vai ser uma de três: já fazemos, cabe no mesmo padrão, ou não é caso de automação e sim de outra coisa. Qualquer uma das três você ouve na primeira conversa, não depois de assinar.
 — Na prática
 ## Operações reais. Resultados em produção.
@@ -584,23 +911,23 @@ Sob demanda
 — Perguntas frequentes
 07 / 08
 ## Antes de você perguntar.
-#### Sem fidelidade é sem fidelidade mesmo?
+### Sem fidelidade é sem fidelidade mesmo?
 Sim. A recorrência é mensal e você sai quando quiser, sem multa. A aposta é que a automação se pague sozinha, não que o contrato te prenda.
-#### O que é "escopo fixo", na prática?
+### O que é "escopo fixo", na prática?
 Antes de começar você recebe num documento o que entra, o que não entra, o prazo e o SLA. Se surgir algo fora dali, a gente conversa. Não aparece como surpresa na fatura nem como "isso não estava combinado".
-#### Preciso trocar as ferramentas que já uso?
+### Preciso trocar as ferramentas que já uso?
 Não. A automação é feita pra conectar no que existe: seu WhatsApp, seu CRM, seu ERP, sua ferramenta de e-mail, suas planilhas. Se alguma realmente não der conta, a gente aponta no diagnóstico, em vez de você descobrir no meio do caminho.
-#### Vocês integram com a ferramenta X?
+### Vocês integram com a ferramenta X?
 Se ela tem API ou webhook, sim, e é o caso da grande maioria: RD Station, ActiveCampaign, Hotmart, Eduzz, Kiwify, ERPs, gateways de pagamento. Se ela não expõe nada, às vezes há caminho alternativo e às vezes não há solução limpa. A gente confere a sua lista no diagnóstico antes de prometer.
-#### Preciso já ter um CRM?
+### Preciso já ter um CRM?
 Não necessariamente. A automação de atendimento registra contatos e conversas por conta própria. Se você já tem CRM, ele continua sendo o dono do dado e a integração faz a ponte.
-#### Quanto custa?
+### Quanto custa?
 Sob diagnóstico. Como cada automação tem escopo fixo, o preço só sai depois de conhecer o tamanho da sua operação: volume de atendimento, quantos sistemas, qual o desenho. Tabela genérica serviria pra um dos dois sair perdendo.
-#### Posso começar com um e adicionar depois?
+### Posso começar com um e adicionar depois?
 Sim, e é o caminho mais comum. Você resolve a dor mais cara primeiro e adiciona a próxima quando fizer sentido. Nada do que já foi configurado se perde.
-#### E se eu precisar da operação inteira estruturada?
+### E se eu precisar da operação inteira estruturada?
 Aí o caminho é estruturar a operação numa plataforma só, em vez de automatizar pedaço por pedaço. Cinco automações soltas não substituem uma operação integrada, e a gente prefere dizer isso na primeira conversa do que te vender automação demais.
-#### Meus dados ficam misturados com os de outros clientes?
+### Meus dados ficam misturados com os de outros clientes?
 Não. Cada cliente roda em ambiente isolado. E se você sair, a gente te entrega a sua base; os dados sempre foram seus.
 — Uma dor por vez · 08 / 08
 ## Qual processo você quer automatizar primeiro?
@@ -660,7 +987,7 @@ Categoria
 Sistema operacional sob medida
 Status
 Em produção
-## Core
+## DRYOS OS
 — Sistema operacional para educação · 2026
 Sistema operacional personalizado para uma empresa do segmento de educação, construído para conectar áreas que antes trabalhavam de forma fragmentada. Oito módulos integrados, atendimento comercial via WhatsApp, dashboard executivo e governança própria em uma operação única.
 — 01
@@ -715,12 +1042,12 @@ Diagnóstico gratuito de 30 minutos. A gente entende sua operação, identifica 
 
 ---
 
-# DRYOS Core — https://www.dryos.com.br/apresentacao-core
+# DRYOS OS — https://www.dryos.com.br/apresentacao-core
 
 Pular para o conteúdo
 O cérebro digital da sua operação
 # Um sistema que atende, decide e age — sozinho.
-DRYOS Core unifica WhatsApp, Instagram, CRM, automações e agentes de IA num só lugar. Cada conversa vira dado, cada dado vira ação. Sua operação para de depender de gente lembrando de fazer as coisas.
+O Sistema Operacional de Crescimento Dryos (DRYOS OS) unifica WhatsApp, Instagram, CRM, automações e agentes de IA num só lugar. Cada conversa vira dado, cada dado vira ação. Sua operação para de depender de gente lembrando de fazer as coisas.
 8
 canais e módulos integrados
 24/7
@@ -732,7 +1059,7 @@ tempo médio de 1ª resposta
 — Os inimigos
 01 / 06
 ## Os vilões da ineficiência operacional.
-Sete inimigos invisíveis. Cada um come margem, drena o tempo do time e trava o crescimento. O DRYOS Core existe pra derrotá-los, uma operação por vez.
+Sete inimigos invisíveis. Cada um come margem, drena o tempo do time e trava o crescimento. O DRYOS OS existe pra derrotá-los, uma operação por vez.
 — 01
 Capitão Manualis
 "Sempre foi assim. Pra quê mudar?"
@@ -874,7 +1201,7 @@ Enganador do Crescimento
 - Suporte via WhatsApp
 Começar no Max
 🛡️ Infraestrutura dedicada: o servidor é todo seu
-Num SaaS de prateleira você é inquilino. Seus dados moram no servidor de outra empresa, dividido com dezenas de estranhos, e se você cancela, perde tudo. No DRYOS Core funciona ao contrário. O setup provisiona uma instância isolada e exclusiva pra sua operação, com API, banco de dados e armazenamento próprios, sob o seu subdomínio. Seus dados nunca dividem banco com outro cliente. Se um dia você sair, leva tudo com você, porque sempre foi seu. Na prática você fica com a posse de quem mantém servidor próprio sem ter o trabalho de manter um, porque a operação fica na nossa mão. Isolamento total, LGPD by design.
+Num SaaS de prateleira você é inquilino. Seus dados moram no servidor de outra empresa, dividido com dezenas de estranhos, e se você cancela, perde tudo. No DRYOS OS funciona ao contrário. O setup provisiona uma instância isolada e exclusiva pra sua operação, com API, banco de dados e armazenamento próprios, sob o seu subdomínio. Seus dados nunca dividem banco com outro cliente. Se um dia você sair, leva tudo com você, porque sempre foi seu. Na prática você fica com a posse de quem mantém servidor próprio sem ter o trabalho de manter um, porque a operação fica na nossa mão. Isolamento total, LGPD by design.
 Dono, não inquilino
 Instância exclusiva
 Cancelou? Leva seus dados
@@ -943,10 +1270,10 @@ Suporte via WhatsApp
 ✓
 — O ecossistema
 04 / 06
-## O Core é a porta. O ecossistema é o caminho.
-Sua operação começa no Core. Conforme ela amadurece, a DRYOS cresce junto, sem que você troque de fornecedor ou recomece do zero.
+## O DRYOS OS é a porta. O ecossistema é o caminho.
+Sua operação começa no DRYOS OS. Conforme ela amadurece, a DRYOS cresce junto, sem que você troque de fornecedor ou recomece do zero.
 — I
-Core
+DRYOS OS
 você está aqui
 Plataforma premium
 O cérebro digital da sua operação, com 8 módulos integrados: CRM, Deals, Inbox, Reach, Flow, Insights, Guard e Heimdall. Para quem quer transformar a operação inteira.
@@ -967,19 +1294,19 @@ Sob demanda
 — Perguntas frequentes
 05 / 06
 ## Antes de você perguntar.
-#### Meus dados ficam misturados com os de outros clientes?
+### Meus dados ficam misturados com os de outros clientes?
 Não. Cada cliente roda numa instância dedicada e isolada, com banco de dados próprio. Seus dados nunca dividem espaço com outra empresa. Isolamento total, LGPD by design.
-#### E se eu cancelar? Perco meus dados?
+### E se eu cancelar? Perco meus dados?
 Nunca. Diferente de um SaaS de prateleira, aqui os dados sempre foram seus. Se você decidir sair, a gente te entrega a sua base: contatos, conversas, tudo. Você não fica refém.
-#### Preciso de um número novo de WhatsApp?
+### Preciso de um número novo de WhatsApp?
 Não necessariamente. Dá pra conectar o número que você já usa via QR Code (em minutos) ou subir pela API Oficial da Meta. A melhor opção a gente define no diagnóstico.
-#### Consigo migrar meus contatos e conversas?
+### Consigo migrar meus contatos e conversas?
 Sim. A importação dos seus contatos faz parte do setup, então você não recomeça do zero.
-#### E a inteligência artificial, como funciona o custo?
+### E a inteligência artificial, como funciona o custo?
 No Max você traz a sua própria chave de IA (BYOK), com failover automático entre provedores. Assim você controla o gasto direto na fonte. Os detalhes saem no diagnóstico.
-#### Posso trocar de plano depois?
+### Posso trocar de plano depois?
 Sim. Você sobe de plano quando a operação pedir, do Basic pro Pro e do Pro pro Max, sem recomeçar. Tudo que você já configurou é mantido.
-#### Quanto tempo leva pra subir?
+### Quanto tempo leva pra subir?
 O setup provisiona o seu ambiente dedicado. O cronograma exato depende do escopo e é definido no diagnóstico, junto com o plano de implantação.
 — Chega de operar no escuro · 06 / 06
 ## Descubra qual vilão está te custando mais.

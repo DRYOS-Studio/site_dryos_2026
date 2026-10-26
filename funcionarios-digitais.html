@@ -3,25 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Funcionários Digitais DRYOS · Força de Trabalho Especializada para Operações</title>
-<meta name="description" content="A DRYOS estrutura funcionários digitais dedicados para operar dentro da sua empresa: atendem o WhatsApp em segundos, qualificam a demanda, agendam na grade e executam a régua financeira. Sem necessidade de nova contratação CLT para trabalho mecânico.">
+<title>DRYOS — Funcionários Digitais construídos e operados pela DRYOS</title>
+<meta name="description" content="Íris, Theo, Nero e Atlas: agentes de IA com nome e função para atendimento, cobrança, indicadores e entrada de clientes. A DRYOS constrói e opera o time nos canais que você já usa. Diagnóstico gratuito de 30 min.">
 <link rel="canonical" href="https://www.dryos.com.br/funcionarios-digitais">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta name="theme-color" content="#080C09">
 
 <!-- Open Graph / Meta -->
-<meta property="og:title" content="Funcionários Digitais DRYOS · Força de Trabalho Especializada">
-<meta property="og:description" content="Sua próxima contratação não ocupa uma cadeira. Ocupa o gargalo operacional que trava o crescimento da sua empresa. Atendem, qualificam, agendam e cobram no WhatsApp.">
+<meta property="og:title" content="DRYOS — Funcionários Digitais construídos e operados pela DRYOS">
+<meta property="og:description" content="Íris, Theo, Nero e Atlas: agentes de IA com nome e função para atendimento, cobrança, indicadores e entrada de clientes. Diagnóstico gratuito de 30 min.">
 <meta property="og:url" content="https://www.dryos.com.br/funcionarios-digitais">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DRYOS">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:image" content="https://www.dryos.com.br/images/rafael/rafael.jpg">
+<meta property="og:image" content="https://www.dryos.com.br/images/og/og-home.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DRYOS — Funcionários Digitais construídos e operados pela DRYOS">
+<meta name="twitter:description" content="Íris, Theo, Nero e Atlas: agentes de IA com nome e função. Diagnóstico gratuito de 30 min.">
+<meta name="twitter:image" content="https://www.dryos.com.br/images/og/og-home.png">
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500;600;700;800&family=Onest:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site-footer.css">
 <link rel="stylesheet" href="/motion.css">
 <link rel="preload" as="image" href="/images/funcionarios/iris.jpg">
 
@@ -243,14 +250,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .nav-menu {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.15rem;
     list-style: none;
+    flex-wrap: nowrap;
   }
   .nav-menu a {
-    font-size: 13.5px;
+    font-size: 12.5px;
     color: var(--mute-dark);
     font-weight: 500;
     transition: color 0.2s;
+    white-space: nowrap;
+  }
+  @media (min-width: 981px) and (max-width: 1280px) {
+    .nav-menu { gap: 0.85rem; }
+    .nav-menu a { font-size: 11.5px; }
+    .brand-badge { display: none; }
+    .nav-actions .btn-emerald { font-size: 11px !important; padding: 0.5rem 0.7rem !important; }
   }
   .nav-menu a:hover {
     color: var(--paper);
@@ -277,6 +292,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     height: 2px;
     background: var(--paper);
     transition: transform 0.2s;
+  }
+  .fd-mobile-drawer {
+    display: none;
+    background: #0a0f0b;
+    border-bottom: 1px solid var(--night-border);
+    padding: 1.25rem var(--gutter);
+    box-sizing: border-box;
+  }
+  .fd-mobile-drawer.is-open {
+    display: block;
+  }
+  .fd-mobile-drawer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
   /* ------------------- HERO ------------------- */
@@ -648,8 +678,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* ------------------- O QUE FAZ (6 FUNÇÕES + FICHA) ------------------- */
   .o-que-faz-sec {
     padding: clamp(5rem, 9vw, 8rem) 0;
-    background: #0B110D;
-    border-top: 1px solid var(--night-border);
+    background: #FAFAF8;
+    color: var(--ink);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  .o-que-faz-sec .sec-header-center h2 {
+    color: var(--ink);
+  }
+  .o-que-faz-sec .sec-header-center p {
+    color: var(--mute-light);
+  }
+  .o-que-faz-sec .funcao-card {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  .o-que-faz-sec .funcao-card:hover {
+    background: #FFFFFF;
+    border-color: rgba(31, 58, 42, 0.35);
+    transform: translateX(4px);
+  }
+  .o-que-faz-sec .funcao-num {
+    color: var(--oak);
+  }
+  .o-que-faz-sec .funcao-content h4 {
+    color: var(--ink);
+  }
+  .o-que-faz-sec .funcao-content p {
+    color: var(--mute-light);
+  }
+  .o-que-faz-sec .eyebrow {
+    color: var(--oak);
+    background: var(--oak-tint);
+    border-color: rgba(31, 58, 42, 0.15);
+  }
+  .o-que-faz-sec .eyebrow b {
+    background: var(--oak);
+  }
+  .o-que-faz-sec .px-highlight {
+    color: var(--emerald-dark);
   }
   .sec-header-center {
     text-align: center;
@@ -1691,6 +1757,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .nav-menu {
       display: none;
     }
+    .nav-actions .btn-emerald {
+      display: none !important;
+    }
+    .brand-group,
+    .brand-logo,
+    .brand-logo img,
+    .menu-toggle,
+    #menuToggle {
+      flex-shrink: 0;
+    }
     .menu-toggle {
       display: flex;
     }
@@ -1714,6 +1790,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS9H2KN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- Skip Link -->
 <a href="#conteudo" class="mono" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" onfocus="this.style.position='static';this.style.width='auto';this.style.height='auto';">Pular para o conteúdo principal</a>
@@ -1738,7 +1817,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </ul>
 
     <div class="nav-actions">
-      <a href="#contato" class="btn btn-emerald" style="padding:0.6rem 1.1rem;font-size:13px;">Contratar Agora →</a>
+      <a href="/#diagnostico-form" class="btn btn-emerald" style="padding:0.6rem 1.1rem;font-size:13px;">Diagnóstico gratuito de 30 min</a>
       <button class="menu-toggle" aria-label="Abrir menu de navegação" id="menuToggle">
         <span></span>
         <span></span>
@@ -1749,15 +1828,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </nav>
 
 <!-- Mobile Menu Drawer -->
-<div id="mobileDrawer" style="display:none;background:#0A0F0B;border-bottom:1px solid var(--night-border);padding:1.5rem var(--gutter);">
+<div id="mobileDrawer" class="fd-mobile-drawer">
   <ul style="list-style:none;display:flex;flex-direction:column;gap:1.2rem;">
-    <li><a href="#o-que-faz" onclick="document.getElementById('mobileDrawer').style.display='none'">O que faz</a></li>
-    <li><a href="#equipe" onclick="document.getElementById('mobileDrawer').style.display='none'">Os Funcionários</a></li>
-    <li><a href="#simulacao" onclick="document.getElementById('mobileDrawer').style.display='none'">Simulação Real</a></li>
-    <li><a href="#comparativo" onclick="document.getElementById('mobileDrawer').style.display='none'">Comparativo</a></li>
-    <li><a href="#autoridade" onclick="document.getElementById('mobileDrawer').style.display='none'">Quem Faz</a></li>
-    <li><a href="#para-quem" onclick="document.getElementById('mobileDrawer').style.display='none'">Franquia & Parceria</a></li>
-    <li><a href="#contato" class="btn btn-emerald" style="width:100%;margin-top:0.5rem;" onclick="document.getElementById('mobileDrawer').style.display='none'">Falar com a Equipe</a></li>
+    <li><a href="#o-que-faz">O que faz</a></li>
+    <li><a href="#equipe">Os Funcionários</a></li>
+    <li><a href="#simulacao">Simulação Real</a></li>
+    <li><a href="#comparativo">Comparativo</a></li>
+    <li><a href="#autoridade">Quem Faz</a></li>
+    <li><a href="#para-quem">Franquia & Parceria</a></li>
+    <li><a href="/#diagnostico-form" class="btn btn-emerald" style="width:100%;margin-top:0.5rem;">Diagnóstico gratuito de 30 min</a></li>
   </ul>
 </div>
 
@@ -1779,10 +1858,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </p>
 
         <div class="hero-ctas">
-          <a href="#contato" class="btn btn-emerald" data-set-interest="empresa">
-            Contrate um Funcionário Digital <span aria-hidden="true">→</span>
+          <a href="/#diagnostico-form" class="btn btn-emerald" data-set-interest="empresa">
+            Diagnóstico gratuito de 30 min <span aria-hidden="true">→</span>
           </a>
-          <a href="#contato" class="btn btn-ghost-dark" data-set-interest="franqueado">
+          <a href="/parceiros" class="btn btn-ghost-dark" data-set-interest="franqueado">
             Seja um Parceiro / Canal Comercial <span aria-hidden="true">→</span>
           </a>
         </div>
@@ -1820,14 +1899,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           <div class="employee-avatar-strip">
             <div class="avatar-frame">
-              <img src="/images/funcionarios/iris.jpg" alt="Íris Carvalho" class="avatar-img-hero" width="72" height="72">
+              <img src="/images/funcionarios/iris.jpg" alt="Íris" class="avatar-img-hero" width="72" height="72">
               <span class="avatar-verified">
                 <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2.5 6L5 8.5L9.5 3.5" stroke="#051A0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
             </div>
             <div class="employee-meta">
               <span class="code-id">MATRÍCULA #DRY-014</span>
-              <h2 class="badge-title">Íris Carvalho</h2>
+              <h2 class="badge-title">Íris</h2>
               <p>Especialista Digital · Atendimento & Triagem Comercial</p>
             </div>
           </div>
@@ -1961,7 +2040,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </dl>
             <div class="ficha-stamp">
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="margin-right:6px;"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M4 6l1.5 1.5L8 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-              HOMOLOGADO · DRYOS CORE
+              HOMOLOGADO · DRYOS OS
             </div>
           </div>
         </div>
@@ -2036,10 +2115,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <div class="equipe-cards-grid">
         
-        <!-- Íris Carvalho -->
+        <!-- Íris -->
         <article class="func-card reveal">
           <div class="func-card-media">
-            <img src="/images/funcionarios/iris.jpg" alt="Íris Carvalho — Atendimento e Triagem Comercial" class="func-card-photo" width="400" height="340" loading="lazy">
+            <img src="/images/funcionarios/iris.jpg" alt="Íris — Atendimento e Triagem Comercial" class="func-card-photo" width="400" height="340" loading="lazy">
             <div class="func-card-media-overlay"></div>
             <span class="func-badge-protocol">#DRY-014</span>
             <span class="func-badge-status"><span class="func-status-dot-pulse"></span> 24/7 Ativa</span>
@@ -2047,7 +2126,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="func-card-body">
             <div class="func-header">
               <div class="func-title">
-                <h3>Íris Carvalho</h3>
+                <h3>Íris</h3>
                 <p class="func-role">Atendimento &amp; Triagem Comercial</p>
               </div>
             </div>
@@ -2063,15 +2142,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
             <div class="func-footer">
               <span class="func-sla">SLA: <strong>&lt; 3s</strong></span>
-              <a href="#contato" class="btn btn-ghost-dark" style="padding:0.5rem 0.9rem;font-size:12px;">Contratar Íris</a>
+              <a href="/?fd=iris#diagnostico-form" class="btn btn-ghost-dark" style="padding:0.5rem 0.9rem;font-size:12px;">Diagnóstico gratuito de 30 min</a>
             </div>
           </div>
         </article>
 
-        <!-- Theo Alencar -->
+        <!-- Theo -->
         <article class="func-card reveal">
           <div class="func-card-media">
-            <img src="/images/funcionarios/theo.jpg" alt="Theo Alencar — Cobrança e Gestão Financeira" class="func-card-photo" width="400" height="340" loading="lazy">
+            <img src="/images/funcionarios/theo.jpg" alt="Theo — Cobrança e Gestão Financeira" class="func-card-photo" width="400" height="340" loading="lazy">
             <div class="func-card-media-overlay"></div>
             <span class="func-badge-protocol">#DRY-027</span>
             <span class="func-badge-status"><span class="func-status-dot-pulse"></span> 24/7 Ativo</span>
@@ -2079,7 +2158,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="func-card-body">
             <div class="func-header">
               <div class="func-title">
-                <h3>Theo Alencar</h3>
+                <h3>Theo</h3>
                 <p class="func-role">Cobrança &amp; Gestão Financeira</p>
               </div>
             </div>
@@ -2095,15 +2174,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
             <div class="func-footer">
               <span class="func-sla">Recuperação: <strong>+38%</strong></span>
-              <a href="#contato" class="btn btn-ghost-dark" style="padding:0.5rem 0.9rem;font-size:12px;">Contratar Theo</a>
+              <a href="/?fd=theo#diagnostico-form" class="btn btn-ghost-dark" style="padding:0.5rem 0.9rem;font-size:12px;">Diagnóstico gratuito de 30 min</a>
             </div>
           </div>
         </article>
 
-        <!-- Nero Vasconcelos -->
+        <!-- Nero -->
         <article class="func-card reveal">
           <div class="func-card-media">
-            <img src="/images/funcionarios/nero.jpg" alt="Nero Vasconcelos — Inteligência de Dados e RevOps" class="func-card-photo" width="400" height="340" loading="lazy">
+            <img src="/images/funcionarios/nero.jpg" alt="Nero — Inteligência de Dados e Indicadores" class="func-card-photo" width="400" height="340" loading="lazy">
             <div class="func-card-media-overlay"></div>
             <span class="func-badge-protocol">#DRY-042</span>
             <span class="func-badge-status"><span class="func-status-dot-pulse"></span> Auditoria Contínua</span>
@@ -2111,8 +2190,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="func-card-body">
             <div class="func-header">
               <div class="func-title">
-                <h3>Nero Vasconcelos</h3>
-                <p class="func-role">Inteligência de Dados &amp; RevOps</p>
+                <h3>Nero</h3>
+                <p class="func-role">Inteligência de Dados e Indicadores</p>
               </div>
             </div>
             <p class="func-bio">
@@ -2127,15 +2206,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
             <div class="func-footer">
               <span class="func-sla">Briefing: <strong>Todo dia às 8h</strong></span>
-              <a href="#contato" class="btn btn-ghost-dark" style="padding:0.5rem 0.9rem;font-size:12px;">Contratar Nero</a>
+              <a href="/?fd=nero#diagnostico-form" class="btn btn-ghost-dark" style="padding:0.5rem 0.9rem;font-size:12px;">Diagnóstico gratuito de 30 min</a>
             </div>
           </div>
         </article>
 
-        <!-- Atlas Brandão -->
+        <!-- Atlas -->
         <article class="func-card reveal">
           <div class="func-card-media">
-            <img src="/images/funcionarios/atlas.jpg" alt="Atlas Brandão — Onboarding e Operações" class="func-card-photo" width="400" height="340" loading="lazy">
+            <img src="/images/funcionarios/atlas.jpg" alt="Atlas — Onboarding e Operações" class="func-card-photo" width="400" height="340" loading="lazy">
             <div class="func-card-media-overlay"></div>
             <span class="func-badge-protocol">#DRY-058</span>
             <span class="func-badge-status"><span class="func-status-dot-pulse"></span> 24/7 Ativo</span>
@@ -2143,7 +2222,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="func-card-body">
             <div class="func-header">
               <div class="func-title">
-                <h3>Atlas Brandão</h3>
+                <h3>Atlas</h3>
                 <p class="func-role">Onboarding &amp; Operações</p>
               </div>
             </div>
@@ -2159,7 +2238,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
             <div class="func-footer">
               <span class="func-sla">Setup: <strong>Imediato</strong></span>
-              <a href="#contato" class="btn btn-ghost-dark" style="padding:0.5rem 0.9rem;font-size:12px;">Contratar Atlas</a>
+              <a href="/?fd=atlas#diagnostico-form" class="btn btn-ghost-dark" style="padding:0.5rem 0.9rem;font-size:12px;">Diagnóstico gratuito de 30 min</a>
             </div>
           </div>
         </article>
@@ -2214,10 +2293,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <div class="wa-header">
           <div class="wa-avatar">
-            <img src="/images/funcionarios/iris.jpg" alt="Íris Carvalho" id="waAvatarImg" width="40" height="40">
+            <img src="/images/funcionarios/iris.jpg" alt="Íris" id="waAvatarImg" width="40" height="40">
           </div>
           <div class="wa-info">
-            <h4 id="waBotName">Íris Carvalho · Atendimento DRYOS</h4>
+            <h4 id="waBotName">Íris · Atendimento DRYOS</h4>
             <p>online agora (resposta média 2s)</p>
           </div>
         </div>
@@ -2425,7 +2504,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           Desde 2020, a DRYOS projeta e sustenta ecossistemas de dados, automação e inteligência artificial para médias e grandes empresas em todo o Brasil.
         </p>
         <p>
-          Fundada por Rafael Carvalho — estrategista de Growth, RevOps e arquiteto de sistemas com mais de uma década de vivência em operações de alta complexidade —, a DRYOS constrói cada funcionário digital dentro da plataforma proprietária <strong>DRYOS Core</strong>, assegurando redundância, tolerância a falhas e estabilidade contínua.
+          Fundada por Rafael Carvalho — estrategista de operações e crescimento e arquiteto de sistemas com mais de uma década de vivência em operações de alta complexidade —, a DRYOS constrói cada funcionário digital dentro da plataforma proprietária <strong>DRYOS OS</strong> (Sistema Operacional de Crescimento Dryos), assegurando redundância, tolerância a falhas e estabilidade contínua.
         </p>
         <ul class="aut-bullets">
           <li>
@@ -2506,8 +2585,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Sem encargos trabalhistas ou cláusula de fidelidade</li>
             </ul>
           </div>
-          <a href="#contato" class="btn btn-ghost-dark" style="width:100%;">
-            Quero para Minha Clínica ou Escritório →
+          <a href="/?fd=iris#diagnostico-form" class="btn btn-ghost-dark" style="width:100%;">
+            Diagnóstico gratuito de 30 min →
           </a>
         </article>
 
@@ -2526,8 +2605,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Roteamento prioritário para o executivo de vendas certo</li>
             </ul>
           </div>
-          <a href="#contato" class="btn btn-emerald" style="width:100%;">
-            Quero para Minha Operação Comercial →
+          <a href="/?fd=iris#diagnostico-form" class="btn btn-emerald" style="width:100%;">
+            Diagnóstico gratuito de 30 min →
           </a>
         </article>
 
@@ -2602,7 +2681,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="eyebrow">Diagnóstico Técnico</div>
         <h2>Pronto para destravar <span class="px-highlight">sua operação?</span></h2>
         <p class="lead">
-          Preencha os dados abaixo para direcionamento com a equipe técnica da DRYOS. Se preferir, inicie a conversa diretamente pelo canal oficial.
+          Use o formulário de diagnóstico da home para registrar o lead na DRYOS com o Funcionário Digital já indicado. Se preferir, inicie a conversa diretamente pelo canal oficial.
         </p>
 
         <ul class="contato-info-list">
@@ -2623,52 +2702,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </ul>
       </div>
 
-      <!-- Application Form -->
-      <div class="form-card reveal">
-        <form id="fdLeadForm" novalidate>
-          <input type="hidden" id="f-interesse" name="interesse" value="empresa">
-
-          <div class="form-group">
-            <label for="f-nome" id="lbl-nome">Nome Completo *</label>
-            <input type="text" id="f-nome" name="nome" placeholder="Ex: Rodrigo Albuquerque" required autocomplete="name">
-          </div>
-
-          <div class="form-group">
-            <label for="f-whatsapp">WhatsApp com DDD *</label>
-            <input type="tel" id="f-whatsapp" name="whatsapp" placeholder="(21) 99999-9999" required autocomplete="tel">
-          </div>
-
-          <div class="form-group">
-            <label for="f-empresa" id="lbl-empresa">Nome da Empresa & Segmento *</label>
-            <input type="text" id="f-empresa" name="empresa" placeholder="Ex: Clínica Odontológica, Escritório de Advocacia" required>
-          </div>
-
-          <div class="form-group" id="group-funcionario">
-            <label for="f-funcionario" id="lbl-funcionario">Posto prioritário de admissão</label>
-            <select id="f-funcionario" name="funcionario">
-              <option value="iris">Íris Carvalho (Atendimento Receptivo, Qualificação & Agendamento)</option>
-              <option value="theo">Theo Alencar (Gestão Financeira, Boletos, Pix & Cobrança)</option>
-              <option value="nero">Nero Vasconcelos (Telemetria de Funil, Dados & Relatórios Matinais)</option>
-              <option value="atlas">Atlas Brandão (Onboarding de Clientes & Gestão Documental)</option>
-              <option value="todos">Estruturação de time híbrido completo</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="f-mensagem" id="lbl-mensagem">Principal gargalo operacional hoje (opcional)</label>
-            <textarea id="f-mensagem" name="mensagem" rows="3" placeholder="Ex: Volume elevado de mensagens fora do horário comercial resultando em perda de leads..."></textarea>
-          </div>
-
-          <div id="formStatus" style="font-size:13.5px;margin-bottom:0.8rem;text-align:center;display:none;"></div>
-
-          <button type="submit" class="btn btn-emerald" id="btnSubmitForm" style="width:100%;font-size:15px;padding:1rem;">
-            Avançar para o Diagnóstico Técnico →
-          </button>
-
-          <p class="form-note">
-            Ao avançar, abriremos o canal técnico com as informações da sua solicitação. Seus dados são protegidos sob conformidade estrita com a LGPD (Lei nº 13.709/2018).
-          </p>
-        </form>
+      <div class="form-card reveal" style="display:flex;flex-direction:column;justify-content:center;gap:1rem;">
+        <p class="form-note" style="margin:0;text-align:center;">
+          Você será direcionado ao formulário oficial na home, com <strong>Funcionários Digitais</strong> pré-selecionado e o posto (Íris, Theo, Nero ou Atlas) conforme o link de origem.
+        </p>
+        <a href="/?fd=iris#diagnostico-form" class="btn btn-emerald" id="fdContatoDiagnostico" style="width:100%;font-size:15px;padding:1rem;justify-content:center;">
+          Diagnóstico gratuito de 30 min →
+        </a>
+        <p class="form-note" style="margin:0;text-align:center;">
+          Seus dados são protegidos sob conformidade estrita com a LGPD (Lei nº 13.709/2018).
+        </p>
       </div>
 
     </div>
@@ -2677,45 +2720,64 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </main>
 
 <!-- FOOTER -->
-<footer class="page-footer">
-  <div class="wrap footer-inner">
-    <div>
-      <a href="/" style="display:inline-block;margin-bottom:0.4rem;">
-        <img src="/images/brand/dryos-logo-white.png" alt="DRYOS" style="height:20px;width:auto;">
-      </a>
-      <p style="font-size:12px;color:var(--mute-dark);">Crescimento com raiz · Infraestrutura e Sistemas Autônomos desde 2020</p>
+<footer class="dark site-footer-unified" id="contato">
+  <div class="wrap">
+    <div class="f-top">
+      <div>
+        <a href="/"><img src="/images/brand/dryos-logo-white.png" alt="DRYOS" width="150" height="auto"></a>
+        <p class="sign">Crescimento <b>com raiz.</b></p>
+      </div>
+      <div class="f-cols">
+        <div>
+          <h6 class="mono">Funcionários Digitais</h6>
+          <ul>
+            <li><a href="/funcionarios-digitais">Íris · atendimento</a></li>
+            <li><a href="/funcionarios-digitais">Theo · cobrança</a></li>
+            <li><a href="/funcionarios-digitais">Nero · números do negócio</a></li>
+            <li><a href="/funcionarios-digitais">Atlas · entrada de clientes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="mono">Plataforma</h6>
+          <ul><li>DRYOS OS</li></ul>
+        </div>
+        <div>
+          <h6 class="mono">Base técnica</h6>
+          <ul>
+            <li>Infraestrutura</li>
+            <li><a href="/projetos">Desenvolvimento</a></li>
+            <li><a href="/automacoes">Automações</a></li>
+            <li>Estruturação de Processos</li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="mono">Empresa</h6>
+          <ul>
+            <li><a href="/parceiros">Parceiros</a></li>
+            <li><a href="/privacidade">Privacidade</a></li>
+            <li><a href="mailto:contato@dryos.com.br">contato@dryos.com.br</a></li>
+            <li><a href="tel:+5521967287595">+55 21 96728-7595</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-
-    <div class="footer-links">
-      <a href="/">Início</a>
-      <a href="/automacoes">Automações</a>
-      <a href="/projetos">Projetos</a>
-      <a href="/apresentacao-core">DRYOS Core</a>
+    <div class="f-bot mono">
+      <span>© 2026 DRYOS · Crescimento com raiz.</span>
       <a href="/privacidade">Privacidade</a>
-      <a href="https://wa.me/5521967287595" target="_blank" rel="noopener">WhatsApp Direto</a>
-    </div>
-
-    <div>
-      <span class="mono" style="font-size:12px;color:var(--mute-dark);">© 2026 DRYOS Studio. Todos os direitos reservados.</span>
     </div>
   </div>
 </footer>
 
 <!-- INTERACTIVE SCRIPTS -->
 <script>
-  // Mobile Menu Toggle & Keyboard Dismissal
-  const menuBtn = document.getElementById('menuToggle');
-  const drawer = document.getElementById('mobileDrawer');
-  if (menuBtn && drawer) {
-    menuBtn.addEventListener('click', () => {
-      drawer.style.display = drawer.style.display === 'block' ? 'none' : 'block';
-    });
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && drawer.style.display === 'block') {
-        drawer.style.display = 'none';
-      }
-    });
-  }
+  (function setFdContatoDiagnosticoHref() {
+    const FD_KEYS = ['iris', 'theo', 'nero', 'atlas'];
+    const params = new URLSearchParams(window.location.search);
+    const raw = params.get('fd');
+    const key = raw && FD_KEYS.includes(raw.toLowerCase()) ? raw.toLowerCase() : 'iris';
+    const link = document.getElementById('fdContatoDiagnostico');
+    if (link) link.href = '/?fd=' + encodeURIComponent(key) + '#diagnostico-form';
+  })();
 
   // Interactive Pasta de Arquivo Tabs
   const pastaContents = {
@@ -2736,7 +2798,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     contratacao: {
       title: 'Roteiro de Homologação em 10 Dias Úteis',
       text1: 'Dia 1 ao 3: Mapeamento de diretrizes, manuais técnicos, tabela de preços e definição do tom de voz institucional.',
-      text2: 'Dia 4 ao 7: Parametrização dos agentes na plataforma DRYOS Core, integração com WhatsApp API oficial, CRM e Google Calendar. Dia 8 ao 10: Auditoria assistida e início da operação assistida em produção.',
+      text2: 'Dia 4 ao 7: Parametrização dos agentes na plataforma DRYOS OS, integração com WhatsApp API oficial, CRM e Google Calendar. Dia 8 ao 10: Auditoria assistida e início da operação assistida em produção.',
       alertTitle: 'Garantia de Entrega por Contrato',
       alertText: 'Prazo formalizado com SLA e escopo fixos. A sustentação e calibração contínua de regras ficam a cargo da engenharia da DRYOS.'
     }
@@ -2767,7 +2829,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   // WhatsApp Simulation Switcher
   const scenarios = {
     clinica: {
-      botName: 'Íris Carvalho · Atendimento DRYOS',
+      botName: 'Íris · Atendimento DRYOS',
       avatarImg: '/images/funcionarios/iris.jpg',
       messages: [
         { type: 'in', text: 'Boa noite. Vi a publicação sobre avaliação para harmonização facial. Vocês atendem aos sábados ou apenas durante a semana?', time: '22:45' },
@@ -2780,7 +2842,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       ]
     },
     advocacia: {
-      botName: 'Atlas Brandão · Triagem Jurídica DRYOS',
+      botName: 'Atlas · Onboarding e Operações DRYOS',
       avatarImg: '/images/funcionarios/atlas.jpg',
       messages: [
         { type: 'in', text: 'Boa tarde. Preciso de assessoria jurídica para dissolução parcial de sociedade e apuração de haveres de sócio minoritário. O escritório atua nessa frente?', time: '14:12' },
@@ -2793,7 +2855,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       ]
     },
     servicos: {
-      botName: 'Nero Vasconcelos · Qualificação B2B DRYOS',
+      botName: 'Nero · Dados e Indicadores DRYOS',
       avatarImg: '/images/funcionarios/nero.jpg',
       messages: [
         { type: 'in', text: 'Olá. Temos uma distribuidora com 20 representantes externos. Precisamos integrar o envio de pedidos do WhatsApp diretamente com o ERP Protheus. Vocês atendem essa camada?', time: '10:02' },
@@ -2840,133 +2902,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     });
   }
 
-  // Form Phone Mask (XX) XXXXX-XXXX
-  const phoneInput = document.getElementById('f-whatsapp');
-  if (phoneInput) {
-    phoneInput.addEventListener('input', function(e) {
-      let v = e.target.value.replace(/\D/g, '');
-      if (v.length > 11) v = v.slice(0, 11);
-      if (v.length > 6) {
-        e.target.value = `(${v.slice(0,2)}) ${v.slice(2,7)}-${v.slice(7)}`;
-      } else if (v.length > 2) {
-        e.target.value = `(${v.slice(0,2)}) ${v.slice(2)}`;
-      } else if (v.length > 0) {
-        e.target.value = `(${v}`;
-      } else {
-        e.target.value = '';
-      }
-    });
-  }
-
-  // Clear validation styling on typing
-  ['f-nome', 'f-whatsapp', 'f-empresa'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.addEventListener('input', () => {
-        el.removeAttribute('aria-invalid');
-        const st = document.getElementById('formStatus');
-        if (st) st.style.display = 'none';
-      });
-    }
-  });
-
-  // Lead Form Submission with Accessible Field Highlighting
-  const leadForm = document.getElementById('fdLeadForm');
-  if (leadForm) {
-    leadForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const statusEl = document.getElementById('formStatus');
-      const submitBtn = document.getElementById('btnSubmitForm');
-
-      const elNome = document.getElementById('f-nome');
-      const elTel = document.getElementById('f-whatsapp');
-      const elEmpresa = document.getElementById('f-empresa');
-
-      const nome = elNome.value.trim();
-      const rawTel = elTel.value.trim();
-      const telDigits = rawTel.replace(/\D/g, '');
-      const empresa = elEmpresa.value.trim();
-      const funcionario = document.getElementById('f-funcionario').value;
-      const interesse = document.getElementById('f-interesse').value;
-      const mensagem = document.getElementById('f-mensagem').value.trim();
-
-      let hasError = false;
-      let firstErrorEl = null;
-
-      if (!nome) {
-        elNome.setAttribute('aria-invalid', 'true');
-        hasError = true;
-        if (!firstErrorEl) firstErrorEl = elNome;
-      }
-      if (telDigits.length < 10) {
-        elTel.setAttribute('aria-invalid', 'true');
-        hasError = true;
-        if (!firstErrorEl) firstErrorEl = elTel;
-      }
-      if (!empresa) {
-        elEmpresa.setAttribute('aria-invalid', 'true');
-        hasError = true;
-        if (!firstErrorEl) firstErrorEl = elEmpresa;
-      }
-
-      if (hasError) {
-        statusEl.style.display = 'block';
-        statusEl.style.color = '#F87171';
-        statusEl.textContent = 'Por favor, confira os campos destacados em vermelho.';
-        if (firstErrorEl) firstErrorEl.focus();
-        return;
-      }
-
-      statusEl.style.display = 'block';
-      statusEl.style.color = '#34D399';
-      statusEl.textContent = 'Registrando dados e direcionando ao canal oficial...';
-      submitBtn.disabled = true;
-
-      // Track GTM conversion event
-      try {
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          event: 'generate_lead',
-          form_id: 'funcionarios-digitais',
-          interesse: interesse
-        });
-      } catch (err) {}
-
-      // Async post to DRYOS lead capture API
-      try {
-        const payload = {
-          name: nome,
-          phone: telDigits,
-          company: empresa,
-          source: 'site-funcionarios-digitais',
-          spark: `Interesse: ${interesse} | Selecao: ${funcionario} | Detalhes: ${mensagem}`
-        };
-        fetch('/api/lead', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        }).catch(() => {});
-      } catch(err) {}
-
-      // Compose WhatsApp Message
-      const textMsg = encodeURIComponent(
-        `Olá, equipe DRYOS.\n\n` +
-        `Solicitação de Alinhamento Técnico:\n` +
-        `• Nome: ${nome}\n` +
-        `• Empresa: ${empresa}\n` +
-        `• Posto de Interesse: ${funcionario}\n` +
-        (mensagem ? `• Gargalo Operacional: "${mensagem}"\n\n` : `\n`) +
-        `Gostaria de agendar a sessão inicial de 30 minutos.`
-      );
-
-      const targetWaUrl = `https://wa.me/5521967287595?text=${textMsg}`;
-
-      setTimeout(() => {
-        window.location.href = targetWaUrl;
-      }, 600);
-    });
-  }
-
   // Scroll Reveal Animations
   (function () {
     const reveals = document.querySelectorAll('.reveal');
@@ -2986,6 +2921,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   })();
 </script>
 
+<script src="/js/dryos-site.js"></script>
 <script src="/motion.js"></script>
 </body>
 </html>

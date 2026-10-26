@@ -44,14 +44,14 @@
 - preconnect to `https://fonts.gstatic.com`
 - stylesheet for `Funnel Display`, `Onest`, and `JetBrains Mono`
 
-## Captura de lead: `api/lead.js` (RD Station + DRYOS Core)
+## Captura de lead: `api/lead.js` (RD Station + DRYOS OS)
 
 **Location:** `api/lead.js` (Vercel function), chamada por `index.html`, `automacoes.html`,
 `apresentacao-core.html` e `agentes-juridicos.html` via `POST /api/lead`.
 
 **Destinos (em paralelo, `Promise.allSettled`):**
 
-- DRYOS Core: `POST {CORE_API_BASE}/api/v1/webhooks/automation/{CORE_WEBHOOK_TOKEN}`.
+- DRYOS OS (webhook Core): `POST {CORE_API_BASE}/api/v1/webhooks/automation/{CORE_WEBHOOK_TOKEN}`.
 - RD Station Marketing: `POST https://api.rd.services/platform/conversions?api_key={RD_TOKEN}`.
 
 Os tokens ficam só em env na Vercel; o browser não vê nenhum.

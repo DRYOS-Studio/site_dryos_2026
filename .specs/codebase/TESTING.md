@@ -64,7 +64,7 @@ Current project workflow in `README.md` implies manual verification after editin
 Recommended manual smoke checklist for the current codebase:
 
 1. Open `index.html`.
-2. Check hero, navigation, villain cards, Core/Spark/Studio sections, testimonials, form, footer, and floating WhatsApp CTA.
+2. Check hero, navigation, villain cards, DRYOS OS/Spark/Studio sections, testimonials, form, footer, and floating WhatsApp CTA.
 3. Open `projetos.html`.
 4. Check each project section and anchors from home cards.
 5. Test at desktop and mobile widths.
