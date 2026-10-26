@@ -72,9 +72,19 @@
   }
 
   function bindConversionListeners() {
+    var diagnosticFormStarted = false;
+    document.addEventListener('focusin', function (ev) {
+      var form = ev.target && ev.target.closest ? ev.target.closest('#dryos-diagnostico-form') : null;
+      if (!form || diagnosticFormStarted) return;
+      diagnosticFormStarted = true;
+      pushDataLayer({ event: 'form_start', form_id: 'diagnostico-site' });
+    }, true);
+
     document.addEventListener('click', function (ev) {
       var link = ev.target && ev.target.closest ? ev.target.closest('a') : null;
       if (!link) return;
+      var route = link.getAttribute('data-route');
+      if (route) pushDataLayer({ event: 'route_select', route: route, link_url: link.href });
       if (isWhatsappLink(link)) {
         trackWhatsappClick({ link_url: link.href });
         return;
