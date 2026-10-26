@@ -1224,9 +1224,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .comp-table-wrap {
     overflow-x: auto;
+    max-width: 100%;
+    min-width: 0;
     border-radius: var(--radius-lg);
     border: 1px solid var(--night-border);
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+    -webkit-overflow-scrolling: touch;
   }
   .comp-table {
     width: 100%;
