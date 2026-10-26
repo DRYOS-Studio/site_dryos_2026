@@ -18,7 +18,15 @@ const ROUTES = [
   ['/projetos', 'projetos.html'],
   ['/parceiros', 'parceiros.html'],
   ['/privacidade', 'privacidade.html'],
+  ['/agentes-juridicos', 'agentes-juridicos.html'],
+  ['/agentes-juridicos-obrigado', 'agentes-juridicos-obrigado.html'],
+  ['/apresentacao-core', 'apresentacao-core.html'],
+  ['/apresentacao-revops', 'apresentacao-revops.html'],
 ];
+const STANDALONE_ROUTES = new Set([
+  '/agentes-juridicos', '/agentes-juridicos-obrigado',
+  '/apresentacao-core', '/apresentacao-revops',
+]);
 
 function extractHrefs(html) {
   const hrefs = [];
@@ -41,7 +49,7 @@ function visibleParceirosLinks(html) {
 
 function resolveInternal(href) {
   const base = href.split('#')[0];
-  if (!base || base.startsWith('mailto:') || base.startsWith('tel:') || base.startsWith('javascript:')) return null;
+  if (!base || /^[a-z][a-z0-9+.-]*:/i.test(base) || base.startsWith('//')) return null;
   if (/\.(css|svg|png|jpg|jpeg|webp|js|woff2?)$/i.test(base)) return null;
   if (base.startsWith('http')) {
     if (!base.includes('dryos.com.br')) return null;
@@ -81,12 +89,14 @@ for (const [route, file] of ROUTES) {
     const norm = normNav(navBlock[0]);
     if (!navRef) navRef = norm;
     else if (norm !== navRef) report.violations.push({ path: route, type: 'nav_mismatch' });
-  } else if (route !== '/parceiros') {
+  } else if (route !== '/parceiros' && !STANDALONE_ROUTES.has(route)) {
     report.violations.push({ path: route, type: 'missing_nav_markers' });
   }
   if (footBlock) {
     if (!footRef) footRef = footBlock[0];
     else if (footBlock[0] !== footRef) report.violations.push({ path: route, type: 'footer_mismatch' });
+  } else if (!STANDALONE_ROUTES.has(route)) {
+    report.violations.push({ path: route, type: 'missing_footer_markers' });
   }
 
   if (route !== '/parceiros') {

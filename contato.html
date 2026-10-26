@@ -62,14 +62,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <ul class="mono nav-desktop">
       <li><a href="/sobre">Sobre</a></li>
       <li class="has-dropdown">
-        <button type="button" class="nav-services-btn" id="servicesMenuBtn" aria-expanded="false" aria-haspopup="true" aria-controls="servicesDropdown">Serviços</button>
+        <button type="button" class="nav-services-btn" id="servicesMenuBtn" aria-expanded="false" aria-haspopup="true" aria-controls="servicesDropdown">Soluções</button>
         <div class="nav-dropdown" id="servicesDropdown" role="menu" hidden>
-          <a href="/dryos-os" class="nav-dd nav-os" role="menuitem"><span class="name">DRYOS OS</span><span class="desc">O sistema onde a operação roda e onde os Funcionários Digitais trabalham.</span></a>
           <a href="/estruturacao-de-processos" role="menuitem"><span class="name">Estruturação de Processos</span><span class="desc">Mapa operacional: fluxos, gargalos e responsabilidades antes de automatizar.</span></a>
+          <a href="/funcionarios-digitais" class="nav-dd nav-fd" role="menuitem"><span class="name">Funcionários Digitais</span><span class="desc">Agentes construídos e operados pela DRYOS para assumir tarefas repetitivas.</span></a>
+          <a href="/dryos-os" class="nav-dd nav-os" role="menuitem"><span class="name">DRYOS OS</span><span class="desc">A base operacional onde os Funcionários Digitais trabalham.</span></a>
           <a href="/automacoes" role="menuitem"><span class="name">Automações</span><span class="desc">Soluções pontuais com IA, prontas pra conectar no que você já usa.</span></a>
-          <a href="/infraestrutura" role="menuitem"><span class="name">Infraestrutura</span><span class="desc">Servidores, bancos e integrações — inclusive os ambientes da operação.</span></a>
-          <a href="/funcionarios-digitais" class="nav-dd nav-fd" role="menuitem"><span class="name">Funcionários Digitais</span><span class="desc">Íris, Theo, Nero e Atlas — construídos e operados pela DRYOS.</span></a>
           <a href="/studio" role="menuitem"><span class="name">DRYOS Studio</span><span class="desc">Software, integrações e automações quando a operação exige um desenho próprio.</span></a>
+          <a href="/infraestrutura" role="menuitem"><span class="name">Infraestrutura</span><span class="desc">Servidores, bancos e integrações que sustentam a operação.</span></a>
         </div>
       </li>
       <li><a href="/projetos">Projetos</a></li>
@@ -88,14 +88,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <ul>
     <li><a href="/sobre">Sobre</a></li>
     <li class="drawer-accordion">
-      <button type="button" class="drawer-services-btn" id="drawerServicesBtn" aria-expanded="false" aria-controls="drawerServicesPanel">Serviços</button>
+      <button type="button" class="drawer-services-btn" id="drawerServicesBtn" aria-expanded="false" aria-controls="drawerServicesPanel">Soluções</button>
       <div class="drawer-accordion-panel" id="drawerServicesPanel" hidden>
-        <a href="/dryos-os" class="nav-dd nav-os"><span class="name">DRYOS OS</span><span class="desc">O sistema onde a operação roda e onde os Funcionários Digitais trabalham.</span></a>
         <a href="/estruturacao-de-processos"><span class="name">Estruturação de Processos</span><span class="desc">Mapa operacional antes de automatizar.</span></a>
+        <a href="/funcionarios-digitais" class="nav-dd nav-fd"><span class="name">Funcionários Digitais</span><span class="desc">Agentes construídos e operados pela DRYOS.</span></a>
+        <a href="/dryos-os" class="nav-dd nav-os"><span class="name">DRYOS OS</span><span class="desc">A base operacional dos Funcionários Digitais.</span></a>
         <a href="/automacoes"><span class="name">Automações</span><span class="desc">Soluções pontuais com IA.</span></a>
-        <a href="/infraestrutura"><span class="name">Infraestrutura</span><span class="desc">Servidores, bancos e integrações.</span></a>
-        <a href="/funcionarios-digitais" class="nav-dd nav-fd"><span class="name">Funcionários Digitais</span><span class="desc">Íris, Theo, Nero e Atlas.</span></a>
         <a href="/studio"><span class="name">DRYOS Studio</span><span class="desc">Desenvolvimento sob medida.</span></a>
+        <a href="/infraestrutura"><span class="name">Infraestrutura</span><span class="desc">Servidores, bancos e integrações.</span></a>
       </div>
     </li>
     <li><a href="/projetos">Projetos</a></li>
@@ -115,8 +115,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="diag-wrap">
         <div>
           <h1 class="t h2" style="font-size:clamp(2.25rem,4vw,3.75rem)"><span class="l">Diagnóstico gratuito</span><br><span class="k" style="white-space:nowrap">de 30 min.</span></h1>
-          <p class="lead">30 minutos pra mapear os vilões da sua operação e propor o caminho certo. <strong>Sem compromisso.</strong></p>
-          <p class="micro">Se nenhuma frente resolver, a gente diz.</p>
+          <p class="lead">Em 30 minutos, entendemos o gargalo mais urgente e indicamos por onde começar: processos, Funcionários Digitais ou outra solução. <strong>Sem compromisso.</strong></p>
+          <p class="micro">Se a melhor solução não for da DRYOS, vamos dizer.</p>
           <div class="contact-links">
             <a href="https://wa.me/5521967287595" id="whatsapp-site" target="_blank" rel="noopener">WhatsApp</a>
             <a href="mailto:contato@dryos.com.br">contato@dryos.com.br</a>
@@ -139,25 +139,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
             </div>
             <div class="contact-form-field">
-              <label for="cf-cargo">Cargo *</label>
-              <input type="text" id="cf-cargo" name="cargo" required autocomplete="organization-title">
+              <label for="cf-cargo">Seu cargo (opcional)</label>
+              <input type="text" id="cf-cargo" name="cargo" autocomplete="organization-title">
             </div>
             <div class="contact-form-row">
               <div class="contact-form-field">
-                <label for="cf-produto">O que você precisa? *</label>
-                <select id="cf-produto" name="produto_interesse" required>
-                  <option value="" disabled selected>Selecione</option>
+                <label for="cf-produto">O que você precisa? (opcional)</label>
+                <select id="cf-produto" name="produto_interesse">
+                  <option value="Não sei ainda" selected>Não sei ainda, quero o diagnóstico</option>
                   <option value="Funcionários Digitais">Funcionários Digitais</option>
-                  <option value="DRYOS OS">DRYOS OS</option>
                   <option value="Estruturação de Processos">Estruturação de Processos</option>
                   <option value="Automações">Automações</option>
+                  <option value="Infraestrutura">Infraestrutura</option>
                   <option value="Studio">DRYOS Studio</option>
-                  <option value="Não sei ainda">Não sei ainda, quero o diagnóstico</option>
                 </select>
               </div>
               <div class="contact-form-field">
-                <label for="cf-faturamento">Faturamento mensal *</label>
-                <select id="cf-faturamento" name="faturamento_mensal" required>
+                <label for="cf-faturamento">Faturamento mensal (opcional)</label>
+                <select id="cf-faturamento" name="faturamento_mensal">
                   <option value="" disabled selected>Selecione</option>
                   <option value="Até R$ 100k">Até R$ 100k</option>
                   <option value="R$ 100k a R$ 500k">R$ 100k a R$ 500k</option>
@@ -181,7 +180,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </form>
           <div class="contact-form-success" id="dryos-diagnostico-success" hidden>
             <strong>Recebemos suas informações.</strong>
-            <p>Vamos revisar seu contexto e entrar em contato em até 24 horas úteis para combinar o próximo passo.</p>
+            <p>Vamos revisar seu contexto e entrar em contato em até 24 horas úteis para combinar o diagnóstico.</p>
           </div>
           <p class="form-note">Seus dados são processados conforme a LGPD. Não enviamos spam.</p>
         </div>
@@ -207,14 +206,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </ul>
         </div>
         <div>
-          <h6 class="mono">Serviços</h6>
+          <h6 class="mono">Soluções</h6>
           <ul>
-            <li><a href="/dryos-os">DRYOS OS</a></li>
             <li><a href="/estruturacao-de-processos">Estruturação de Processos</a></li>
-            <li><a href="/automacoes">Automações</a></li>
-            <li><a href="/infraestrutura">Infraestrutura</a></li>
             <li><a href="/funcionarios-digitais">Funcionários Digitais</a></li>
+            <li><a href="/dryos-os">DRYOS OS</a></li>
+            <li><a href="/automacoes">Automações</a></li>
             <li><a href="/studio">DRYOS Studio</a></li>
+            <li><a href="/infraestrutura">Infraestrutura</a></li>
           </ul>
         </div>
         <div>
@@ -257,6 +256,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const submitBtn = form.querySelector('.contact-form-submit');
   const submitText = form.querySelector('.contact-form-submit-text');
   const FD_NAMES = { iris: 'Íris', theo: 'Theo', nero: 'Nero', atlas: 'Atlas' };
+  const routeInterests = {
+    processos: 'Estruturação de Processos',
+    'funcionarios-digitais': 'Funcionários Digitais',
+    automacoes: 'Automações',
+    infraestrutura: 'Infraestrutura',
+    studio: 'Studio'
+  };
+  const routeInterest = new URLSearchParams(window.location.search).get('interesse');
+  if (routeInterests[routeInterest]) {
+    form.querySelector('#cf-produto').value = routeInterests[routeInterest];
+  }
 
   const TRACKING_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid', 'fbclid', 'referrer_origin', 'landing_page'];
   TRACKING_KEYS.forEach(key => {
@@ -283,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let produtoInteresse = form.querySelector('#cf-produto').value;
     const fdKey = sessionStorage.getItem('dryos_fd_interesse');
-    if (fdKey && FD_NAMES[fdKey]) {
+    if (produtoInteresse === 'Funcionários Digitais' && fdKey && FD_NAMES[fdKey]) {
       produtoInteresse = produtoInteresse + ' (' + FD_NAMES[fdKey] + ')';
     }
 
@@ -309,7 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!res.ok) throw new Error('rd-error');
       try {
         if (typeof window.dryosTrackDiagnosticoFormSubmit === 'function') {
-          window.dryosTrackDiagnosticoFormSubmit();
+          window.dryosTrackDiagnosticoFormSubmit({ product_interest: produtoInteresse });
         }
       } catch (trackErr) { /* GTM */ }
       submitText.textContent = 'Enviado';
