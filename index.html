@@ -251,7 +251,11 @@ footer.dark{padding:4.5rem 0 2rem}
 .f-bot a:hover{color:var(--papel)}
 @media (max-width:1180px){
   .nav ul.nav-desktop{display:none}
-  .menu-toggle{display:block}
+  .nav-actions .cta-sm{display:none}
+  .menu-toggle{display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .nav .logo{flex-shrink:0}
+  .nav .wrap{min-height:64px}
+  .mobile-drawer.is-open{display:block}
   .team{grid-template-columns:repeat(2,1fr)}
   .villains{grid-template-columns:repeat(6,1fr)}
   .v{grid-column:span 3}
@@ -491,7 +495,7 @@ footer.dark{padding:4.5rem 0 2rem}
   </div>
 </section>
 
-<section class="sec surf on-light">
+<section class="sec surf on-light" id="prova-social">
   <div class="wrap grid12">
     <p class="mono label">— 04 · Prova social</p>
     <div class="content">
