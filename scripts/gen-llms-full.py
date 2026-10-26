@@ -23,11 +23,18 @@ BASE = "https://www.dryos.com.br"
 
 PAGES = [
     ("index.html", "/", "Home"),
-    ("funcionarios-digitais.html", "/funcionarios-digitais", "Funcionários Digitais"),
-    ("parceiros.html", "/parceiros", "Parceiros"),
+    ("sobre.html", "/sobre", "Sobre"),
+    ("dryos-os.html", "/dryos-os", "DRYOS OS"),
+    ("estruturacao-de-processos.html", "/estruturacao-de-processos", "Estruturação de Processos"),
     ("automacoes.html", "/automacoes", "Automações"),
+    ("infraestrutura.html", "/infraestrutura", "Infraestrutura"),
+    ("studio.html", "/studio", "DRYOS Studio"),
+    ("funcionarios-digitais.html", "/funcionarios-digitais", "Funcionários Digitais"),
+    ("clientes.html", "/clientes", "Clientes"),
+    ("contato.html", "/contato", "Contato"),
+    ("parceiros.html", "/parceiros", "Parceiros"),
     ("projetos.html", "/projetos", "Projetos"),
-    ("apresentacao-core.html", "/apresentacao-core", "DRYOS OS"),
+    ("apresentacao-core.html", "/apresentacao-core", "DRYOS OS (apresentação legada)"),
 ]
 
 SKIP_TAGS = {"script", "style", "svg", "noscript", "nav", "footer",

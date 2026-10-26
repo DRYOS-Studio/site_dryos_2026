@@ -101,10 +101,51 @@
     });
   }
 
+  function bindServicesMenu() {
+    var servicesBtn = document.getElementById('servicesMenuBtn');
+    var dropdown = document.getElementById('servicesDropdown');
+    if (servicesBtn && dropdown) {
+      servicesBtn.addEventListener('click', function (ev) {
+        ev.stopPropagation();
+        var open = dropdown.hasAttribute('hidden');
+        if (open) {
+          dropdown.removeAttribute('hidden');
+          servicesBtn.setAttribute('aria-expanded', 'true');
+        } else {
+          dropdown.setAttribute('hidden', '');
+          servicesBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+      document.addEventListener('click', function () {
+        dropdown.setAttribute('hidden', '');
+        servicesBtn.setAttribute('aria-expanded', 'false');
+      });
+      dropdown.addEventListener('click', function (ev) {
+        ev.stopPropagation();
+      });
+    }
+
+    var drawerBtn = document.getElementById('drawerServicesBtn');
+    var drawerPanel = document.getElementById('drawerServicesPanel');
+    if (drawerBtn && drawerPanel) {
+      drawerBtn.addEventListener('click', function () {
+        var open = drawerPanel.hasAttribute('hidden');
+        if (open) {
+          drawerPanel.removeAttribute('hidden');
+          drawerBtn.setAttribute('aria-expanded', 'true');
+        } else {
+          drawerPanel.setAttribute('hidden', '');
+          drawerBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  }
+
   captureTracking();
   function onReady() {
     bindConversionListeners();
     bindMobileMenu();
+    bindServicesMenu();
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', onReady);
