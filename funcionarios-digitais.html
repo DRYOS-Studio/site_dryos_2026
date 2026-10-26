@@ -295,9 +295,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .fd-mobile-drawer {
     display: none;
+    background: #0a0f0b;
+    border-bottom: 1px solid var(--night-border);
+    padding: 1.25rem var(--gutter);
+    box-sizing: border-box;
   }
   .fd-mobile-drawer.is-open {
     display: block;
+  }
+  .fd-mobile-drawer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
   /* ------------------- HERO ------------------- */
@@ -1819,7 +1828,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </nav>
 
 <!-- Mobile Menu Drawer -->
-<div id="mobileDrawer" class="fd-mobile-drawer" style="background:#0A0F0B;border-bottom:1px solid var(--night-border);padding:1.5rem var(--gutter);">
+<div id="mobileDrawer" class="fd-mobile-drawer">
   <ul style="list-style:none;display:flex;flex-direction:column;gap:1.2rem;">
     <li><a href="#o-que-faz">O que faz</a></li>
     <li><a href="#equipe">Os Funcionários</a></li>

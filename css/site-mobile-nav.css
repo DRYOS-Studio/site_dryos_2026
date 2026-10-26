@@ -1,11 +1,13 @@
 /* Nav global (home + parceiros) — menu mobile compartilhado */
-.site-global-nav.nav {
+:root {
   --nav-noite: #080c09;
   --nav-linha-noite: rgba(250, 250, 248, 0.14);
   --nav-papel: #fafaf8;
   --nav-cinza-noite: #8f9a92;
   --nav-gutter: clamp(1.25rem, 4vw, 4rem);
   --nav-max: 1320px;
+}
+.site-global-nav.nav {
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -83,6 +85,7 @@
   max-width: var(--nav-max);
   margin-left: auto;
   margin-right: auto;
+  box-sizing: border-box;
 }
 .mobile-drawer.site-mobile-drawer a {
   color: var(--nav-cinza-noite);
