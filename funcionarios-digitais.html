@@ -1298,8 +1298,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   .depo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.8rem;
+  }
+  @media (max-width: 768px) {
+    .depo-grid {
+      grid-template-columns: 1fr;
+    }
   }
   .depo-card {
     background: var(--night-card);
@@ -1308,7 +1313,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     padding: 2.2rem 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
   .depo-aspas {
     font-family: var(--font-display);
@@ -1323,12 +1328,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     line-height: 1.65;
     margin-bottom: 1.8rem;
   }
+  .depo-card p.quote strong {
+    font-weight: 600;
+    color: var(--paper);
+  }
+  .depo-tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--emerald-light);
+    margin-bottom: 0.75rem;
+    display: block;
+  }
   .depo-author {
     display: flex;
     align-items: center;
     gap: 1rem;
     padding-top: 1.2rem;
     border-top: 1px solid var(--night-border);
+    margin-top: auto;
   }
   .author-avatar {
     width: 44px;
@@ -1860,9 +1879,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="hero-ctas">
           <a href="/#diagnostico-form" class="btn btn-emerald" data-set-interest="empresa">
             Diagnóstico gratuito de 30 min <span aria-hidden="true">→</span>
-          </a>
-          <a href="/parceiros" class="btn btn-ghost-dark" data-set-interest="franqueado">
-            Seja um Parceiro / Canal Comercial <span aria-hidden="true">→</span>
           </a>
         </div>
 
@@ -2412,9 +2428,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="wrap">
       
       <div class="sec-header-center reveal">
-        <div class="eyebrow">Resultados Mensurados</div>
-        <h2>Impacto verificado em <span class="px-highlight">operações ativas.</span></h2>
-        <p>Indicadores reais consolidados nas empresas que utilizam a infraestrutura da DRYOS.</p>
+        <div class="eyebrow">Depoimentos</div>
+        <h2>O que dizem os clientes <span class="px-highlight">da DRYOS.</span></h2>
+        <p>Nas palavras de quem já trabalhou com a gente.</p>
       </div>
 
       <dl class="prova-numeros-grid reveal">
@@ -2433,45 +2449,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </dl>
 
       <div class="depo-grid">
-        
+
         <div class="depo-card reveal">
           <div class="depo-aspas">“</div>
-          <p class="quote">
-            "Conseguimos triplicar a capacidade de triagem sem inflar a folha de pagamento da recepção. Hoje o paciente recebe retorno no WhatsApp em segundos, mesmo fora do expediente comercial, e já chega para a consulta com os dados alinhados."
-          </p>
+          <span class="depo-tag">Em destaque</span>
+          <p class="quote">Antes a gente crescia na <strong>força bruta.</strong> Hoje, crescemos com inteligência. A equipe da DRYOS não veio com palestras — eles vieram e <strong>instalaram os processos.</strong> Hoje tenho clareza total dos dados e nossa infraestrutura roda sem que eu precise vigiar cada detalhe.</p>
           <div class="depo-author">
-            <div class="author-avatar">VM</div>
             <div class="author-info">
-              <h3>Dra. Vanessa Mendes</h3>
-              <p>Sócia-Diretora de Clínica Médica</p>
+              <h3><strong>CEO</strong> · Cliente Segmento de Educação</h3>
             </div>
           </div>
         </div>
 
         <div class="depo-card reveal">
           <div class="depo-aspas">“</div>
-          <p class="quote">
-            "No segundo mês já dobramos as reuniões qualificadas no nosso CRM. O mais expressivo foi não ter precisado elevar o investimento em mídia paga: paramos de desperdiçar os contatos que aguardavam retorno por mais de meia hora."
-          </p>
+          <span class="depo-tag">Depoimento</span>
+          <p class="quote">Antes do trabalho com a DRYOS, a Academia Tio Sam tinha resultados, mas os processos eram <strong>muito intuitivos</strong> e a gestão acontecia mais no automático do que de forma estratégica. Ao longo do projeto, estruturamos <strong>rotinas, indicadores e fluxos claros</strong>, o que aumentou muito a consciência sobre cada etapa da operação. Hoje conseguimos enxergar com clareza onde estamos crescendo e quais decisões precisam ser tomadas.</p>
           <div class="depo-author">
-            <div class="author-avatar">MR</div>
+            <div class="author-avatar">SM</div>
             <div class="author-info">
-              <h3>Marcos Rezende</h3>
-              <p>Sócio de Consultoria Empresarial</p>
+              <h3><strong>Suellen Monnerat</strong> · Gestora Administrativa, Academia Tio Sam</h3>
             </div>
           </div>
         </div>
 
         <div class="depo-card reveal">
           <div class="depo-aspas">“</div>
-          <p class="quote">
-            "A régua de cobrança conduzida pelo Theo eliminou o atrito que existia com o financeiro. O lembrete é educado, chega com a chave Pix pronta e reduziu a nossa taxa de inadimplência em 38% já no primeiro ciclo."
-          </p>
+          <span class="depo-tag">Depoimento</span>
+          <p class="quote">O trabalho com a DRYOS foi um <strong>divisor de águas</strong> para a Gois Fit. Saímos de uma atuação muito operacional, reagindo ao dia a dia, para uma <strong>implantação clara de processos</strong> que organizaram a casa e deram previsibilidade ao negócio. Ganhamos muito mais consciência de mercado: entendemos melhor nossos números, nossos canais de aquisição e o comportamento dos clientes, o que nos permitiu planejar e buscar crescimento de forma intencional, e não por tentativa e erro.</p>
           <div class="depo-author">
-            <div class="author-avatar">FL</div>
+            <div class="author-avatar">BG</div>
             <div class="author-info">
-              <h3>Felipe Lourenço</h3>
-              <p>Diretor de Operações de Serviços B2B</p>
+              <h3><strong>Bárbara Gois</strong> · CEO, Gois Fit</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="depo-card reveal">
+          <div class="depo-aspas">“</div>
+          <span class="depo-tag">Depoimento</span>
+          <p class="quote">A <strong>expertise técnica</strong> e a capacidade de compreensão das nossas necessidades específicas foram fundamentais para o sucesso do projeto. A DRYOS não apenas atendeu às nossas expectativas, mas as superou, proporcionando <strong>soluções inovadoras e personalizadas</strong> que otimizaram nossos processos e aumentaram significativamente nossa eficiência operacional.</p>
+          <div class="depo-author">
+            <div class="author-avatar">JA</div>
+            <div class="author-info">
+              <h3><strong>Jane Araujo</strong> · Sócia Diretora, Acorp Eventos</h3>
             </div>
           </div>
         </div>
@@ -2735,22 +2756,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
         <div>
           <h6 class="mono">Plataforma</h6>
-          <ul><li>DRYOS OS</li></ul>
+          <ul><li><a href="/#dryos-os">DRYOS OS</a></li></ul>
         </div>
         <div>
           <h6 class="mono">Base técnica</h6>
           <ul>
-            <li>Infraestrutura</li>
+            <li><a href="/#base">Infraestrutura</a></li>
             <li><a href="/projetos">Desenvolvimento</a></li>
             <li><a href="/automacoes">Automações</a></li>
-            <li>Estruturação de Processos</li>
+            <li><a href="/#base">Estruturação de Processos</a></li>
           </ul>
         </div>
         <div>
           <h6 class="mono">Empresa</h6>
           <ul>
-            <li><a href="/parceiros">Parceiros</a></li>
             <li><a href="/privacidade">Privacidade</a></li>
+            <li><a href="https://www.linkedin.com/company/dryos-studio" target="_blank" rel="noopener">LinkedIn</a></li>
             <li><a href="mailto:contato@dryos.com.br">contato@dryos.com.br</a></li>
             <li><a href="tel:+5521967287595">+55 21 96728-7595</a></li>
           </ul>
