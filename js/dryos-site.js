@@ -1,6 +1,5 @@
 /**
- * Atribuição (UTM) + eventos de conversão no dataLayer (GTM-KS9H2KN).
- * Mesmos nomes de evento em home, /funcionarios-digitais e /parceiros.
+ * Atribuição (UTM) + eventos no dataLayer (GTM-KS9H2KN).
  */
 (function () {
   var TRACKING_KEYS = [
@@ -34,15 +33,13 @@
     } catch (e) { /* GTM indisponível */ }
   }
 
-  /** CTA “Diagnóstico gratuito de 30 min” (clique). */
   function trackDiagnosticoCta(extra) {
     pushDataLayer(Object.assign({
-      event: 'generate_lead',
+      event: 'cta_click',
       form_id: 'diagnostico-cta'
     }, extra || {}));
   }
 
-  /** Envio ok do formulário de diagnóstico na home (RD: diagnostico-site). */
   function trackDiagnosticoFormSubmit(extra) {
     pushDataLayer(Object.assign({
       event: 'generate_lead',
@@ -50,10 +47,9 @@
     }, extra || {}));
   }
 
-  /** Clique no WhatsApp flutuante ou link wa.me/5521967287595. */
   function trackWhatsappClick(extra) {
     pushDataLayer(Object.assign({
-      event: 'generate_lead',
+      event: 'whatsapp_click',
       form_id: 'whatsapp-site'
     }, extra || {}));
   }
@@ -64,7 +60,6 @@
     if (href.indexOf('diagnostico-form') !== -1 || href.indexOf('#diagnostico') !== -1) {
       return true;
     }
-    if (href.indexOf('data-diagnostico') !== -1) return true;
     var text = (el.textContent || '').toLowerCase();
     return text.indexOf('diagnóstico gratuito') !== -1;
   }
@@ -90,11 +85,31 @@
     }, true);
   }
 
+  function bindMobileMenu() {
+    var menuBtn = document.getElementById('menuToggle');
+    var drawer = document.getElementById('mobileDrawer');
+    if (!menuBtn || !drawer) return;
+    menuBtn.addEventListener('click', function () {
+      var open = drawer.classList.toggle('is-open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    drawer.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        drawer.classList.remove('is-open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
   captureTracking();
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', bindConversionListeners);
-  } else {
+  function onReady() {
     bindConversionListeners();
+    bindMobileMenu();
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', onReady);
+  } else {
+    onReady();
   }
 
   window.dryosTrackDiagnosticoFormSubmit = trackDiagnosticoFormSubmit;

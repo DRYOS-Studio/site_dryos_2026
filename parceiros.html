@@ -24,6 +24,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Onest:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/site-footer.css">
+  <link rel="stylesheet" href="/css/site-mobile-nav.css">
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -1102,6 +1103,31 @@
     .res-sub-grid {
       grid-template-columns: 1fr;
     }
+    .eyebrow {
+      max-width: 100%;
+      white-space: normal;
+      line-height: 1.45;
+    }
+    .hero-copy h1,
+    .hero-copy p.lead {
+      overflow-wrap: anywhere;
+    }
+    .calc-box,
+    .calc-panel,
+    .tier-selector,
+    .form-card {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    #resMonthly {
+      font-size: clamp(1.35rem, 7vw, 2rem);
+      overflow-wrap: anywhere;
+    }
+  }
+  @media (max-width: 390px) {
+    body {
+      overflow-x: hidden;
+    }
   }
   </style>
 </head>
@@ -1113,29 +1139,32 @@
   <!-- Accessible Skip Link -->
   <a href="#conteudo" class="mono" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" onfocus="this.style.position='static';this.style.width='auto';this.style.height='auto';">Pular para o conteúdo principal</a>
 
-  <!-- ==================== HEADER ==================== -->
-  <nav class="header-nav" aria-label="Navegação Principal">
-    <div class="wrap nav-bar">
-      <div class="brand-group">
-        <a href="/" class="brand-logo" aria-label="Página Inicial DRYOS">
-          <img src="/images/brand/dryos-logo-white.png" alt="DRYOS" width="110" height="24">
-        </a>
-        <span class="brand-badge">PARCEIROS</span>
-      </div>
-
-      <ul class="nav-menu">
-        <li><a href="#modelo">Modelo</a></li>
-        <li><a href="#calculadora">Calculadora MRR</a></li>
-        <li><a href="#divisao">Entregas</a></li>
-        <li><a href="#co-selling">Co-Selling</a></li>
-        <li><a href="#faq">Dúvidas</a></li>
+  <header class="nav site-global-nav" aria-label="Navegação Principal">
+    <div class="wrap">
+      <a href="/"><img class="logo" src="/images/brand/dryos-logo-white.png" alt="DRYOS" width="118" height="32"></a>
+      <ul class="mono nav-desktop">
+        <li><a href="/funcionarios-digitais">Funcionários Digitais</a></li>
+        <li><a href="/parceiros">Parceiros</a></li>
+        <li><a href="/automacoes">Automações</a></li>
+        <li><a href="/projetos">Projetos</a></li>
       </ul>
-
       <div class="nav-actions">
-        <a href="/funcionarios-digitais" class="nav-link-subtle mono">Contratar para Empresa →</a>
-        <a href="#aplicacao" class="btn btn-emerald" style="padding:0.6rem 1.1rem;font-size:13px;">Seja um Parceiro</a>
+        <a class="cta cta-sm mono" href="/#diagnostico-form" style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:.55rem 1rem;border-radius:6px;background:var(--emerald);color:#051A0B;font-weight:600;">Diagnóstico gratuito de 30 min</a>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobileDrawer">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
       </div>
     </div>
+  </header>
+  <nav class="mobile-drawer mono site-mobile-drawer" id="mobileDrawer" aria-label="Menu mobile">
+    <ul>
+      <li><a href="/funcionarios-digitais">Funcionários Digitais</a></li>
+      <li><a href="/parceiros">Parceiros</a></li>
+      <li><a href="/automacoes">Automações</a></li>
+      <li><a href="/projetos">Projetos</a></li>
+      <li><a href="/privacidade">Privacidade</a></li>
+      <li><a href="/#diagnostico-form">Diagnóstico gratuito de 30 min</a></li>
+    </ul>
   </nav>
 
   <main id="conteudo">
@@ -1851,35 +1880,20 @@
         return;
       }
 
+      submitBtn.disabled = true;
       statusEl.style.display = 'block';
       statusEl.style.color = '#34D399';
-      statusEl.textContent = 'Registrando credenciamento e direcionando ao canal oficial...';
-      submitBtn.disabled = true;
+      statusEl.textContent = 'Registrando credenciamento…';
 
-      try {
-        if (typeof window.dryosTrackGenerateLead === 'function') {
-          window.dryosTrackGenerateLead('parceiros', { tipo: tipo, clientes: clientes });
-        }
-      } catch (err) {}
+      const payload = {
+        name: nome,
+        email: email,
+        phone: telDigits,
+        company: empresa,
+        source: 'site-parceiros',
+        spark: `Tipo: ${tipo} | Clientes: ${clientes} | Nicho: ${nicho} | Mensagem: ${mensagem}`
+      };
 
-      // Post to DRYOS lead capture endpoint
-      try {
-        const payload = {
-          name: nome,
-          email: email,
-          phone: telDigits,
-          company: empresa,
-          source: 'site-parceiros',
-          spark: `Tipo: ${tipo} | Clientes: ${clientes} | Nicho: ${nicho} | Mensagem: ${mensagem}`
-        };
-        fetch('/api/lead', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        }).catch(() => {});
-      } catch(err) {}
-
-      // WhatsApp direct follow-up
       const textMsg = encodeURIComponent(
         `Olá! Acabei de enviar minha candidatura para o Programa de Parceiros DRYOS.\n\n` +
         `*Nome:* ${nome}\n` +
@@ -1890,9 +1904,28 @@
       );
       const waUrl = `https://wa.me/5521967287595?text=${textMsg}`;
 
-      setTimeout(() => {
-        window.location.href = waUrl;
-      }, 900);
+      fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error('lead-failed');
+          try {
+            if (typeof window.dryosTrackGenerateLead === 'function') {
+              window.dryosTrackGenerateLead('parceiros', { tipo: tipo, clientes: clientes });
+            }
+          } catch (trackErr) { /* GTM */ }
+          statusEl.textContent = 'Registrando credenciamento e direcionando ao canal oficial...';
+          setTimeout(function () {
+            window.location.href = waUrl;
+          }, 900);
+        })
+        .catch(function () {
+          submitBtn.disabled = false;
+          statusEl.style.color = '#F87171';
+          statusEl.textContent = 'Não foi possível registrar agora. Tente novamente ou fale conosco pelo WhatsApp.';
+        });
     });
   }
   </script>

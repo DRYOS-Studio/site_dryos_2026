@@ -293,6 +293,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background: var(--paper);
     transition: transform 0.2s;
   }
+  .fd-mobile-drawer {
+    display: none;
+  }
+  .fd-mobile-drawer.is-open {
+    display: block;
+  }
 
   /* ------------------- HERO ------------------- */
   .hero-sec {
@@ -1742,6 +1748,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .nav-menu {
       display: none;
     }
+    .nav-actions .btn-emerald {
+      display: none !important;
+    }
+    .brand-group,
+    .brand-logo,
+    .brand-logo img,
+    .menu-toggle,
+    #menuToggle {
+      flex-shrink: 0;
+    }
     .menu-toggle {
       display: flex;
     }
@@ -1803,15 +1819,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </nav>
 
 <!-- Mobile Menu Drawer -->
-<div id="mobileDrawer" style="display:none;background:#0A0F0B;border-bottom:1px solid var(--night-border);padding:1.5rem var(--gutter);">
+<div id="mobileDrawer" class="fd-mobile-drawer" style="background:#0A0F0B;border-bottom:1px solid var(--night-border);padding:1.5rem var(--gutter);">
   <ul style="list-style:none;display:flex;flex-direction:column;gap:1.2rem;">
-    <li><a href="#o-que-faz" onclick="document.getElementById('mobileDrawer').style.display='none'">O que faz</a></li>
-    <li><a href="#equipe" onclick="document.getElementById('mobileDrawer').style.display='none'">Os Funcionários</a></li>
-    <li><a href="#simulacao" onclick="document.getElementById('mobileDrawer').style.display='none'">Simulação Real</a></li>
-    <li><a href="#comparativo" onclick="document.getElementById('mobileDrawer').style.display='none'">Comparativo</a></li>
-    <li><a href="#autoridade" onclick="document.getElementById('mobileDrawer').style.display='none'">Quem Faz</a></li>
-    <li><a href="#para-quem" onclick="document.getElementById('mobileDrawer').style.display='none'">Franquia & Parceria</a></li>
-    <li><a href="/#diagnostico-form" class="btn btn-emerald" style="width:100%;margin-top:0.5rem;" onclick="document.getElementById('mobileDrawer').style.display='none'">Diagnóstico gratuito de 30 min</a></li>
+    <li><a href="#o-que-faz">O que faz</a></li>
+    <li><a href="#equipe">Os Funcionários</a></li>
+    <li><a href="#simulacao">Simulação Real</a></li>
+    <li><a href="#comparativo">Comparativo</a></li>
+    <li><a href="#autoridade">Quem Faz</a></li>
+    <li><a href="#para-quem">Franquia & Parceria</a></li>
+    <li><a href="/#diagnostico-form" class="btn btn-emerald" style="width:100%;margin-top:0.5rem;">Diagnóstico gratuito de 30 min</a></li>
   </ul>
 </div>
 
@@ -1836,7 +1852,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <a href="/#diagnostico-form" class="btn btn-emerald" data-set-interest="empresa">
             Diagnóstico gratuito de 30 min <span aria-hidden="true">→</span>
           </a>
-          <a href="#contato" class="btn btn-ghost-dark" data-set-interest="franqueado">
+          <a href="/parceiros" class="btn btn-ghost-dark" data-set-interest="franqueado">
             Seja um Parceiro / Canal Comercial <span aria-hidden="true">→</span>
           </a>
         </div>
@@ -2656,7 +2672,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="eyebrow">Diagnóstico Técnico</div>
         <h2>Pronto para destravar <span class="px-highlight">sua operação?</span></h2>
         <p class="lead">
-          Preencha os dados abaixo para direcionamento com a equipe técnica da DRYOS. Se preferir, inicie a conversa diretamente pelo canal oficial.
+          Use o formulário de diagnóstico da home para registrar o lead na DRYOS com o Funcionário Digital já indicado. Se preferir, inicie a conversa diretamente pelo canal oficial.
         </p>
 
         <ul class="contato-info-list">
@@ -2677,52 +2693,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </ul>
       </div>
 
-      <!-- Application Form -->
-      <div class="form-card reveal">
-        <form id="fdLeadForm" novalidate>
-          <input type="hidden" id="f-interesse" name="interesse" value="empresa">
-
-          <div class="form-group">
-            <label for="f-nome" id="lbl-nome">Nome Completo *</label>
-            <input type="text" id="f-nome" name="nome" placeholder="Ex: Rodrigo Albuquerque" required autocomplete="name">
-          </div>
-
-          <div class="form-group">
-            <label for="f-whatsapp">WhatsApp com DDD *</label>
-            <input type="tel" id="f-whatsapp" name="whatsapp" placeholder="(21) 99999-9999" required autocomplete="tel">
-          </div>
-
-          <div class="form-group">
-            <label for="f-empresa" id="lbl-empresa">Nome da Empresa & Segmento *</label>
-            <input type="text" id="f-empresa" name="empresa" placeholder="Ex: Clínica Odontológica, Escritório de Advocacia" required>
-          </div>
-
-          <div class="form-group" id="group-funcionario">
-            <label for="f-funcionario" id="lbl-funcionario">Posto prioritário de admissão</label>
-            <select id="f-funcionario" name="funcionario">
-              <option value="iris">Íris (Atendimento Receptivo, Qualificação & Agendamento)</option>
-              <option value="theo">Theo (Gestão Financeira, Boletos, Pix & Cobrança)</option>
-              <option value="nero">Nero (Telemetria de Funil, Dados & Relatórios Matinais)</option>
-              <option value="atlas">Atlas (Onboarding de Clientes & Gestão Documental)</option>
-              <option value="todos">Estruturação de time híbrido completo</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="f-mensagem" id="lbl-mensagem">Principal gargalo operacional hoje (opcional)</label>
-            <textarea id="f-mensagem" name="mensagem" rows="3" placeholder="Ex: Volume elevado de mensagens fora do horário comercial resultando em perda de leads..."></textarea>
-          </div>
-
-          <div id="formStatus" style="font-size:13.5px;margin-bottom:0.8rem;text-align:center;display:none;"></div>
-
-          <button type="submit" class="btn btn-emerald" id="btnSubmitForm" style="width:100%;font-size:15px;padding:1rem;">
-            Diagnóstico gratuito de 30 min →
-          </button>
-
-          <p class="form-note">
-            Ao avançar, abriremos o canal técnico com as informações da sua solicitação. Seus dados são protegidos sob conformidade estrita com a LGPD (Lei nº 13.709/2018).
-          </p>
-        </form>
+      <div class="form-card reveal" style="display:flex;flex-direction:column;justify-content:center;gap:1rem;">
+        <p class="form-note" style="margin:0;text-align:center;">
+          Você será direcionado ao formulário oficial na home, com <strong>Funcionários Digitais</strong> pré-selecionado e o posto (Íris, Theo, Nero ou Atlas) conforme o link de origem.
+        </p>
+        <a href="/?fd=iris#diagnostico-form" class="btn btn-emerald" id="fdContatoDiagnostico" style="width:100%;font-size:15px;padding:1rem;justify-content:center;">
+          Diagnóstico gratuito de 30 min →
+        </a>
+        <p class="form-note" style="margin:0;text-align:center;">
+          Seus dados são protegidos sob conformidade estrita com a LGPD (Lei nº 13.709/2018).
+        </p>
       </div>
 
     </div>
@@ -2781,19 +2761,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- INTERACTIVE SCRIPTS -->
 <script>
-  // Mobile Menu Toggle & Keyboard Dismissal
-  const menuBtn = document.getElementById('menuToggle');
-  const drawer = document.getElementById('mobileDrawer');
-  if (menuBtn && drawer) {
-    menuBtn.addEventListener('click', () => {
-      drawer.style.display = drawer.style.display === 'block' ? 'none' : 'block';
-    });
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && drawer.style.display === 'block') {
-        drawer.style.display = 'none';
-      }
-    });
-  }
+  (function setFdContatoDiagnosticoHref() {
+    const FD_KEYS = ['iris', 'theo', 'nero', 'atlas'];
+    const params = new URLSearchParams(window.location.search);
+    const raw = params.get('fd');
+    const key = raw && FD_KEYS.includes(raw.toLowerCase()) ? raw.toLowerCase() : 'iris';
+    const link = document.getElementById('fdContatoDiagnostico');
+    if (link) link.href = '/?fd=' + encodeURIComponent(key) + '#diagnostico-form';
+  })();
 
   // Interactive Pasta de Arquivo Tabs
   const pastaContents = {
@@ -2915,102 +2890,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         msgDiv.innerHTML = `${m.text} <span class="wa-meta">${m.time} ${ticks}</span>`;
         body.appendChild(msgDiv);
       }
-    });
-  }
-
-  // Form Phone Mask (XX) XXXXX-XXXX
-  const phoneInput = document.getElementById('f-whatsapp');
-  if (phoneInput) {
-    phoneInput.addEventListener('input', function(e) {
-      let v = e.target.value.replace(/\D/g, '');
-      if (v.length > 11) v = v.slice(0, 11);
-      if (v.length > 6) {
-        e.target.value = `(${v.slice(0,2)}) ${v.slice(2,7)}-${v.slice(7)}`;
-      } else if (v.length > 2) {
-        e.target.value = `(${v.slice(0,2)}) ${v.slice(2)}`;
-      } else if (v.length > 0) {
-        e.target.value = `(${v}`;
-      } else {
-        e.target.value = '';
-      }
-    });
-  }
-
-  // Clear validation styling on typing
-  ['f-nome', 'f-whatsapp', 'f-empresa'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.addEventListener('input', () => {
-        el.removeAttribute('aria-invalid');
-        const st = document.getElementById('formStatus');
-        if (st) st.style.display = 'none';
-      });
-    }
-  });
-
-  // Lead Form Submission with Accessible Field Highlighting
-  const leadForm = document.getElementById('fdLeadForm');
-  if (leadForm) {
-    leadForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const statusEl = document.getElementById('formStatus');
-      const submitBtn = document.getElementById('btnSubmitForm');
-
-      const elNome = document.getElementById('f-nome');
-      const elTel = document.getElementById('f-whatsapp');
-      const elEmpresa = document.getElementById('f-empresa');
-
-      const nome = elNome.value.trim();
-      const rawTel = elTel.value.trim();
-      const telDigits = rawTel.replace(/\D/g, '');
-      const empresa = elEmpresa.value.trim();
-      const funcionario = document.getElementById('f-funcionario').value;
-      const interesse = document.getElementById('f-interesse').value;
-      const mensagem = document.getElementById('f-mensagem').value.trim();
-
-      let hasError = false;
-      let firstErrorEl = null;
-
-      if (!nome) {
-        elNome.setAttribute('aria-invalid', 'true');
-        hasError = true;
-        if (!firstErrorEl) firstErrorEl = elNome;
-      }
-      if (telDigits.length < 10) {
-        elTel.setAttribute('aria-invalid', 'true');
-        hasError = true;
-        if (!firstErrorEl) firstErrorEl = elTel;
-      }
-      if (!empresa) {
-        elEmpresa.setAttribute('aria-invalid', 'true');
-        hasError = true;
-        if (!firstErrorEl) firstErrorEl = elEmpresa;
-      }
-
-      if (hasError) {
-        statusEl.style.display = 'block';
-        statusEl.style.color = '#F87171';
-        statusEl.textContent = 'Por favor, confira os campos destacados em vermelho.';
-        if (firstErrorEl) firstErrorEl.focus();
-        return;
-      }
-
-      submitBtn.disabled = true;
-      statusEl.style.display = 'block';
-      statusEl.style.color = '#34D399';
-      statusEl.textContent = 'Abrindo o formulário de diagnóstico…';
-
-      const fdKeys = ['iris', 'theo', 'nero', 'atlas'];
-      const fdParam = fdKeys.includes(funcionario) ? funcionario : '';
-      try {
-        sessionStorage.setItem('dryos_fd_interesse', fdParam || '');
-        if (interesse) sessionStorage.setItem('dryos_fd_interesse_context', interesse);
-      } catch (err) {}
-
-      const targetUrl = fdParam
-        ? `/?fd=${encodeURIComponent(fdParam)}#diagnostico-form`
-        : '/#diagnostico-form';
-      window.location.href = targetUrl;
     });
   }
 

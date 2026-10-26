@@ -1,0 +1,115 @@
+/* Nav global (home + parceiros) — menu mobile compartilhado */
+.site-global-nav.nav {
+  --nav-noite: #080c09;
+  --nav-linha-noite: rgba(250, 250, 248, 0.14);
+  --nav-papel: #fafaf8;
+  --nav-cinza-noite: #8f9a92;
+  --nav-gutter: clamp(1.25rem, 4vw, 4rem);
+  --nav-max: 1320px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--nav-noite);
+  border-bottom: 1px solid var(--nav-linha-noite);
+  color: var(--nav-papel);
+}
+.site-global-nav .wrap {
+  max-width: var(--nav-max);
+  margin: 0 auto;
+  padding: 0 var(--nav-gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1rem;
+}
+.site-global-nav .logo {
+  width: 118px;
+  height: auto;
+  flex-shrink: 0;
+  display: block;
+}
+.site-global-nav ul.nav-desktop {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  color: var(--nav-cinza-noite);
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.site-global-nav ul.nav-desktop a {
+  color: inherit;
+  text-decoration: none;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.site-global-nav ul.nav-desktop a:hover {
+  color: var(--nav-papel);
+}
+.site-global-nav .nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.site-global-nav .menu-toggle {
+  display: none;
+  color: var(--nav-papel);
+  padding: 0.35rem;
+  flex-shrink: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.site-global-nav .menu-toggle svg {
+  display: block;
+}
+.mobile-drawer.site-mobile-drawer {
+  display: none;
+  background: var(--nav-noite);
+  border-bottom: 1px solid var(--nav-linha-noite);
+  padding: 1.25rem var(--nav-gutter);
+}
+.mobile-drawer.site-mobile-drawer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  max-width: var(--nav-max);
+  margin-left: auto;
+  margin-right: auto;
+}
+.mobile-drawer.site-mobile-drawer a {
+  color: var(--nav-cinza-noite);
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.mobile-drawer.site-mobile-drawer a:hover {
+  color: var(--nav-papel);
+}
+.mobile-drawer.site-mobile-drawer.is-open {
+  display: block;
+}
+@media (max-width: 1180px) {
+  .site-global-nav ul.nav-desktop {
+    display: none;
+  }
+  .site-global-nav .nav-actions .cta-sm,
+  .site-global-nav .nav-actions .btn-emerald,
+  .site-global-nav .nav-actions .nav-link-subtle {
+    display: none;
+  }
+  .site-global-nav .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -15,10 +15,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta name="theme-color" content="#1F3A2A">
 <link rel="canonical" href="https://www.dryos.com.br/">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=JetBrains+Mono:wght@400..700&family=Onest:wght@400..700&display=swap" rel="stylesheet">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="DRYOS">
+<meta property="og:locale" content="pt_BR">
 <meta property="og:url" content="https://www.dryos.com.br/">
 <meta property="og:title" content="DRYOS — Funcionários Digitais construídos e operados pela DRYOS">
 <meta property="og:description" content="Funcionários Digitais com nome e função para atendimento, cobrança e operação. A DRYOS constrói e opera o time de IA nos canais que você já usa. Diagnóstico gratuito de 30 min.">
@@ -627,6 +630,7 @@ footer.dark{padding:4.5rem 0 2rem}
           <ul>
             <li><a href="/parceiros">Parceiros</a></li>
             <li><a href="/privacidade">Privacidade</a></li>
+            <li><a href="https://linkedin.com/company/dryos" target="_blank" rel="noopener">LinkedIn</a></li>
             <li><a href="mailto:contato@dryos.com.br">contato@dryos.com.br</a></li>
             <li><a href="tel:+5521967287595">+55 21 96728-7595</a></li>
           </ul>
@@ -659,25 +663,14 @@ footer.dark{padding:4.5rem 0 2rem}
   document.addEventListener('DOMContentLoaded', () => {
     const sel = document.getElementById('cf-produto');
     if (sel) sel.value = 'Funcionários Digitais';
+    if (window.location.hash === '#diagnostico-form' || window.location.hash === '#diagnostico') {
+      const target = document.getElementById('diagnostico-form');
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   });
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
-  const menuBtn = document.getElementById('menuToggle');
-  const drawer = document.getElementById('mobileDrawer');
-  if (menuBtn && drawer) {
-    menuBtn.addEventListener('click', () => {
-      const open = drawer.classList.toggle('is-open');
-      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-    drawer.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        drawer.classList.remove('is-open');
-        menuBtn.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
-
   const form = document.getElementById('dryos-diagnostico-form');
   if (form) {
     const successBox = document.getElementById('dryos-diagnostico-success');

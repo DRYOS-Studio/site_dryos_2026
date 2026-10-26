@@ -417,13 +417,15 @@ Em até 10 dias úteis após a conclusão do diagnóstico e o fornecimento das d
 Diagnóstico Técnico
 ## Pronto para destravar
 sua operação?
-Preencha os dados abaixo para direcionamento com a equipe técnica da DRYOS. Se preferir, inicie a conversa diretamente pelo canal oficial.
+Use o formulário de diagnóstico da home para registrar o lead na DRYOS com o Funcionário Digital já indicado. Se preferir, inicie a conversa diretamente pelo canal oficial.
 Canal Oficial WhatsApp
 +55 21 96728-7595
 Diagnóstico Inicial
 30 minutos sem custo · Com escopo e SLA formalizados
 Atuação
 Atendimento e cobertura em todo o território nacional
+Você será direcionado ao formulário oficial na home, com Funcionários Digitais pré-selecionado e o posto (Íris, Theo, Nero ou Atlas) conforme o link de origem.
+Seus dados são protegidos sob conformidade estrita com a LGPD (Lei nº 13.709/2018).
 
 ---
 
@@ -1268,10 +1270,10 @@ Suporte via WhatsApp
 ✓
 — O ecossistema
 04 / 06
-## O Core é a porta. O ecossistema é o caminho.
-Sua operação começa no Core. Conforme ela amadurece, a DRYOS cresce junto, sem que você troque de fornecedor ou recomece do zero.
+## O DRYOS OS é a porta. O ecossistema é o caminho.
+Sua operação começa no DRYOS OS. Conforme ela amadurece, a DRYOS cresce junto, sem que você troque de fornecedor ou recomece do zero.
 — I
-Core
+DRYOS OS
 você está aqui
 Plataforma premium
 O cérebro digital da sua operação, com 8 módulos integrados: CRM, Deals, Inbox, Reach, Flow, Insights, Guard e Heimdall. Para quem quer transformar a operação inteira.
