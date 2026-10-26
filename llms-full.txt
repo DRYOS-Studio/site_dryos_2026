@@ -21,13 +21,13 @@ tempo
 e
 seu
 time.
-Capitão Manualis, Senhor dos Silos, Dama do Retrabalho — toda empresa enfrenta os mesmos inimigos invisíveis. A DRYOS constrói sistemas que derrotam cada um, com IA, automação, processos organizados e dados.
+Toda empresa enfrenta os mesmos inimigos invisíveis. A DRYOS constrói sistemas que derrotam cada um, com IA, automação, processos organizados e dados.
 — Manifesto
 Toda empresa nasce no improviso. Crescer no improviso é arte. Mas sustentar o crescimento no improviso é uma sentença.
 Tem hora que a planilha já não basta. Tem hora que o WhatsApp deixa de ser sistema. Tem hora que "tá na minha cabeça" trava o time inteiro. A gente chama esse momento de teto operacional.
 — Os inimigos
 ## Os vilões da ineficiência operacional.
-Sete inimigos. Cada um com nome, frase preferida e modus operandi próprio. Juntos, comem 15-30% da margem, drenam o tempo do time e travam o crescimento. A DRYOS existe pra derrotá-los — uma operação por vez.
+Sete inimigos. Cada um com nome, frase preferida e modus operandi próprio. Juntos, comem margem, drenam o tempo do time e travam o crescimento. A DRYOS existe pra derrotá-los — uma operação por vez.
 — 01
 ### Capitão Manualis
 "Sempre foi assim. Pra quê mudar?"
@@ -92,13 +92,13 @@ Sob demanda
 ## Antes de automatizar. Entenda o que trava.
 Antes de escolher uma ferramenta, a gente entende como sua operação funciona de verdade: o caminho do cliente, os pontos de decisão, os gargalos e o que hoje depende de memória ou esforço manual. O resultado é um mapa operacional que mostra onde agir primeiro.
 01
-#### Mapa da operação
+### Mapa da operação
 Desenhamos os fluxos críticos, as ferramentas envolvidas, os handoffs e os pontos onde o trabalho para.
 02
-#### Gargalos prioritários
+### Gargalos prioritários
 Separamos o que realmente custa tempo, margem e crescimento do que pode esperar.
 03
-#### Plano de execução
+### Plano de execução
 Organizamos a sequência das mudanças: o que padronizar, o que automatizar e o que precisa de uma solução própria.
 — O que você leva
 01
@@ -159,7 +159,7 @@ Nem toda operação cabe numa automação pronta. No Studio, a gente primeiro en
 Lançamentos coordenados
 Especialidade
 Infraestrutura e operação técnica de lançamentos digitais
-Cuidamos da infraestrutura técnica completa do seu lançamento: gestão de plataformas, disparos de mensagens, automações de campanha, dashboards em tempo real e o Cockpit do Lançamento, nosso painel exclusivo que integra todos os dados em um só lugar. Trabalhamos junto com a sua agência ou o seu time de marketing. Copy e design ficam com eles.
+Cuidamos da infraestrutura técnica completa do seu lançamento: gestão de plataformas, disparos de mensagens, automações de campanha, dashboards em tempo real e o Cockpit do Lançamento, nosso painel exclusivo que integra todos os dados em um só lugar. Trabalhamos junto com o seu time ou parceiro de marketing. Copy e design ficam com eles.
 — 02
 Operações próprias
 Fluxos internos e sistemas de gestão desenhados para o seu contexto
@@ -196,7 +196,7 @@ Plataforma de inteligência e analytics para gestão de eventos. Painel executiv
 Status
 Em produção
 — 02
-Core
+DRYOS OS
 Sistema operacional sob medida · Studio
 Sistema operacional personalizado para uma empresa de educação, conectando CRM, atendimento, automações e agentes de IA via WhatsApp.
 Status
@@ -329,12 +329,12 @@ Enganador do Crescimento
 "É só crescer, depois a gente organiza."
 Mais volume entrando no mesmo processo improvisado. A conta chega depois.
 → Automação de relatórios
-— As cinco frentes
+— As sete frentes
 Pra cada sintoma, uma automação de escopo fechado.
 Ver as automações
 — As automações
 02 / 08
-## Cinco frentes. Uma dor de cada vez.
+## Sete frentes. Uma dor de cada vez.
 Cada automação tem escopo fixo, prazo definido e SLA documentado. O que está listado em "o que entra" é o que a gente entrega. Não tem "e muito mais".
 — 01
 Automação de atendimento
@@ -456,6 +456,54 @@ Implementação
 10 dias úteis
 Modelo
 Recorrente
+— 06
+WhatsApp com API oficial
+WhatsApp Business Platform · notificações e atendimento
+A operação conversa com clientes pelo canal oficial do WhatsApp, com templates aprovados, regras de atendimento e integração ao CRM. Serve para iniciar conversas permitidas, avisar etapas e distribuir o atendimento sem depender de gambiarra.
+✕ Canal sem controle
+✕ Dado espalhado
+O que entra
+- Conexão com a API oficial do WhatsApp Business
+- Configuração de templates e regras de disparo
+- Notificações transacionais e atualizações de status
+- Integração com CRM e sistemas do escopo
+- Distribuição e escalonamento para o time
+- Registro, logs e alerta de falha
+Evento no sistema
+→
+Regra + template
+→
+API oficial
+→
+Cliente notificado
+Implementação
+14 dias úteis
+Modelo
+Recorrente
+— 07
+Automação de grupos
+Grupos de WhatsApp · comunidade e operação
+Estrutura rotinas para grupos de WhatsApp: avisos, segmentação, entrada de participantes e encaminhamento para o time. O escopo depende do tipo de grupo e da elegibilidade da conta; a automação respeita os limites do canal e deixa claro o que é grupo, atendimento individual e comunicação oficial.
+✕ Grupo sem regra
+✕ Aviso manual
+O que entra
+- Desenho dos grupos, públicos e objetivos
+- Validação de elegibilidade, entrada e segmentação
+- Calendário de avisos e mensagens operacionais
+- Integração de inscrições e eventos com CRM
+- Regras de moderação e encaminhamento ao humano
+- Relatório de entregas e ocorrências
+Evento ou inscrição
+→
+Segmenta
+→
+Grupo certo
+→
+Aviso + registro
+Implementação
+14 dias úteis
+Modelo
+Recorrente
 — O que automatizamos
 03 / 08
 ## Concretamente, o que a gente monta.
@@ -496,6 +544,14 @@ Isso não é lista de capacidade genérica. São as automações que já saem da
 - Alerta quando um indicador sai da faixa
 - Log de execução e alerta quando uma integração falha
 - Deduplicação de contatos entre bases
+— 05
+### WhatsApp & grupos
+- Atendimento e notificações pela API oficial
+- Templates aprovados e regras de disparo
+- Distribuição de conversas para o time
+- Entrada, segmentação e avisos em grupos
+- Grupo conectado a inscrição, evento ou CRM
+- Logs, alertas e encaminhamento ao humano
 Não achou a sua? Traz no diagnóstico. A resposta vai ser uma de três: já fazemos, cabe no mesmo padrão, ou não é caso de automação e sim de outra coisa. Qualquer uma das três você ouve na primeira conversa, não depois de assinar.
 — Na prática
 ## Operações reais. Resultados em produção.
@@ -584,23 +640,23 @@ Sob demanda
 — Perguntas frequentes
 07 / 08
 ## Antes de você perguntar.
-#### Sem fidelidade é sem fidelidade mesmo?
+### Sem fidelidade é sem fidelidade mesmo?
 Sim. A recorrência é mensal e você sai quando quiser, sem multa. A aposta é que a automação se pague sozinha, não que o contrato te prenda.
-#### O que é "escopo fixo", na prática?
+### O que é "escopo fixo", na prática?
 Antes de começar você recebe num documento o que entra, o que não entra, o prazo e o SLA. Se surgir algo fora dali, a gente conversa. Não aparece como surpresa na fatura nem como "isso não estava combinado".
-#### Preciso trocar as ferramentas que já uso?
+### Preciso trocar as ferramentas que já uso?
 Não. A automação é feita pra conectar no que existe: seu WhatsApp, seu CRM, seu ERP, sua ferramenta de e-mail, suas planilhas. Se alguma realmente não der conta, a gente aponta no diagnóstico, em vez de você descobrir no meio do caminho.
-#### Vocês integram com a ferramenta X?
+### Vocês integram com a ferramenta X?
 Se ela tem API ou webhook, sim, e é o caso da grande maioria: RD Station, ActiveCampaign, Hotmart, Eduzz, Kiwify, ERPs, gateways de pagamento. Se ela não expõe nada, às vezes há caminho alternativo e às vezes não há solução limpa. A gente confere a sua lista no diagnóstico antes de prometer.
-#### Preciso já ter um CRM?
+### Preciso já ter um CRM?
 Não necessariamente. A automação de atendimento registra contatos e conversas por conta própria. Se você já tem CRM, ele continua sendo o dono do dado e a integração faz a ponte.
-#### Quanto custa?
+### Quanto custa?
 Sob diagnóstico. Como cada automação tem escopo fixo, o preço só sai depois de conhecer o tamanho da sua operação: volume de atendimento, quantos sistemas, qual o desenho. Tabela genérica serviria pra um dos dois sair perdendo.
-#### Posso começar com um e adicionar depois?
+### Posso começar com um e adicionar depois?
 Sim, e é o caminho mais comum. Você resolve a dor mais cara primeiro e adiciona a próxima quando fizer sentido. Nada do que já foi configurado se perde.
-#### E se eu precisar da operação inteira estruturada?
+### E se eu precisar da operação inteira estruturada?
 Aí o caminho é estruturar a operação numa plataforma só, em vez de automatizar pedaço por pedaço. Cinco automações soltas não substituem uma operação integrada, e a gente prefere dizer isso na primeira conversa do que te vender automação demais.
-#### Meus dados ficam misturados com os de outros clientes?
+### Meus dados ficam misturados com os de outros clientes?
 Não. Cada cliente roda em ambiente isolado. E se você sair, a gente te entrega a sua base; os dados sempre foram seus.
 — Uma dor por vez · 08 / 08
 ## Qual processo você quer automatizar primeiro?
@@ -660,7 +716,7 @@ Categoria
 Sistema operacional sob medida
 Status
 Em produção
-## Core
+## DRYOS OS
 — Sistema operacional para educação · 2026
 Sistema operacional personalizado para uma empresa do segmento de educação, construído para conectar áreas que antes trabalhavam de forma fragmentada. Oito módulos integrados, atendimento comercial via WhatsApp, dashboard executivo e governança própria em uma operação única.
 — 01
@@ -715,12 +771,12 @@ Diagnóstico gratuito de 30 minutos. A gente entende sua operação, identifica 
 
 ---
 
-# DRYOS Core — https://www.dryos.com.br/apresentacao-core
+# DRYOS OS — https://www.dryos.com.br/apresentacao-core
 
 Pular para o conteúdo
 O cérebro digital da sua operação
 # Um sistema que atende, decide e age — sozinho.
-DRYOS Core unifica WhatsApp, Instagram, CRM, automações e agentes de IA num só lugar. Cada conversa vira dado, cada dado vira ação. Sua operação para de depender de gente lembrando de fazer as coisas.
+O Sistema Operacional de Crescimento Dryos (DRYOS OS) unifica WhatsApp, Instagram, CRM, automações e agentes de IA num só lugar. Cada conversa vira dado, cada dado vira ação. Sua operação para de depender de gente lembrando de fazer as coisas.
 8
 canais e módulos integrados
 24/7
@@ -732,7 +788,7 @@ tempo médio de 1ª resposta
 — Os inimigos
 01 / 06
 ## Os vilões da ineficiência operacional.
-Sete inimigos invisíveis. Cada um come margem, drena o tempo do time e trava o crescimento. O DRYOS Core existe pra derrotá-los, uma operação por vez.
+Sete inimigos invisíveis. Cada um come margem, drena o tempo do time e trava o crescimento. O DRYOS OS existe pra derrotá-los, uma operação por vez.
 — 01
 Capitão Manualis
 "Sempre foi assim. Pra quê mudar?"
@@ -874,7 +930,7 @@ Enganador do Crescimento
 - Suporte via WhatsApp
 Começar no Max
 🛡️ Infraestrutura dedicada: o servidor é todo seu
-Num SaaS de prateleira você é inquilino. Seus dados moram no servidor de outra empresa, dividido com dezenas de estranhos, e se você cancela, perde tudo. No DRYOS Core funciona ao contrário. O setup provisiona uma instância isolada e exclusiva pra sua operação, com API, banco de dados e armazenamento próprios, sob o seu subdomínio. Seus dados nunca dividem banco com outro cliente. Se um dia você sair, leva tudo com você, porque sempre foi seu. Na prática você fica com a posse de quem mantém servidor próprio sem ter o trabalho de manter um, porque a operação fica na nossa mão. Isolamento total, LGPD by design.
+Num SaaS de prateleira você é inquilino. Seus dados moram no servidor de outra empresa, dividido com dezenas de estranhos, e se você cancela, perde tudo. No DRYOS OS funciona ao contrário. O setup provisiona uma instância isolada e exclusiva pra sua operação, com API, banco de dados e armazenamento próprios, sob o seu subdomínio. Seus dados nunca dividem banco com outro cliente. Se um dia você sair, leva tudo com você, porque sempre foi seu. Na prática você fica com a posse de quem mantém servidor próprio sem ter o trabalho de manter um, porque a operação fica na nossa mão. Isolamento total, LGPD by design.
 Dono, não inquilino
 Instância exclusiva
 Cancelou? Leva seus dados
@@ -967,19 +1023,19 @@ Sob demanda
 — Perguntas frequentes
 05 / 06
 ## Antes de você perguntar.
-#### Meus dados ficam misturados com os de outros clientes?
+### Meus dados ficam misturados com os de outros clientes?
 Não. Cada cliente roda numa instância dedicada e isolada, com banco de dados próprio. Seus dados nunca dividem espaço com outra empresa. Isolamento total, LGPD by design.
-#### E se eu cancelar? Perco meus dados?
+### E se eu cancelar? Perco meus dados?
 Nunca. Diferente de um SaaS de prateleira, aqui os dados sempre foram seus. Se você decidir sair, a gente te entrega a sua base: contatos, conversas, tudo. Você não fica refém.
-#### Preciso de um número novo de WhatsApp?
+### Preciso de um número novo de WhatsApp?
 Não necessariamente. Dá pra conectar o número que você já usa via QR Code (em minutos) ou subir pela API Oficial da Meta. A melhor opção a gente define no diagnóstico.
-#### Consigo migrar meus contatos e conversas?
+### Consigo migrar meus contatos e conversas?
 Sim. A importação dos seus contatos faz parte do setup, então você não recomeça do zero.
-#### E a inteligência artificial, como funciona o custo?
+### E a inteligência artificial, como funciona o custo?
 No Max você traz a sua própria chave de IA (BYOK), com failover automático entre provedores. Assim você controla o gasto direto na fonte. Os detalhes saem no diagnóstico.
-#### Posso trocar de plano depois?
+### Posso trocar de plano depois?
 Sim. Você sobe de plano quando a operação pedir, do Basic pro Pro e do Pro pro Max, sem recomeçar. Tudo que você já configurou é mantido.
-#### Quanto tempo leva pra subir?
+### Quanto tempo leva pra subir?
 O setup provisiona o seu ambiente dedicado. O cronograma exato depende do escopo e é definido no diagnóstico, junto com o plano de implantação.
 — Chega de operar no escuro · 06 / 06
 ## Descubra qual vilão está te custando mais.

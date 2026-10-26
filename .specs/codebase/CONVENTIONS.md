@@ -34,7 +34,7 @@
 - External dependencies are included directly in markup:
   - Google Tag Manager script in `<head>` plus `<noscript>` iframe in `<body>`;
   - Google Fonts links in `<head>`;
-  - lead forms `fetch('/api/lead')` from inline JS; RD Station and Core are called server-side.
+  - lead forms `fetch('/api/lead')` from inline JS; RD Station and DRYOS OS (webhook Core) are called server-side.
 
 **File Structure:**
 

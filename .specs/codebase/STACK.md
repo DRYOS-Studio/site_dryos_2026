@@ -36,7 +36,7 @@
 
 - Hosting: Vercel, configured by `vercel.json`.
 - Analytics/Tags: Google Tag Manager container `GTM-KS9H2KN`.
-- Lead capture/CRM: `api/lead.js` → RD Station + DRYOS Core (server-side; see INTEGRATIONS.md).
+- Lead capture/CRM: `api/lead.js` → RD Station + DRYOS OS (server-side; see INTEGRATIONS.md).
 - Contact: WhatsApp `wa.me`, `mailto:contato@dryos.com.br`, LinkedIn company link.
 - Fonts: Google Fonts and `fonts.gstatic.com`.
 

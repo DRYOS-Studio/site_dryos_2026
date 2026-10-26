@@ -65,7 +65,7 @@ Vercel serves static files, runs `api/lead.js`, and applies headers from vercel.
 
 **Purpose:** convert traffic into diagnostic requests and preserve attribution data.
 
-**Implementation:** the form `#dryos-diagnostico-form` uses native required fields and hidden inputs for UTM/referrer fields. On submit, JavaScript posts JSON to `/api/lead` (server-side: RD Station + DRYOS Core, see INTEGRATIONS.md), then hides the form and shows `#dryos-diagnostico-success`.
+**Implementation:** the form `#dryos-diagnostico-form` uses native required fields and hidden inputs for UTM/referrer fields. On submit, JavaScript posts JSON to `/api/lead` (server-side: RD Station + DRYOS OS, see INTEGRATIONS.md), then hides the form and shows `#dryos-diagnostico-success`.
 
 ### Static Portfolio Linking
 

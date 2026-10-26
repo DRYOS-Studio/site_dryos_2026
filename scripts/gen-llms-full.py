@@ -7,7 +7,7 @@ Sem dependências externas — só stdlib, pra rodar em qualquer máquina.
 Rodar sempre que a copy do site mudar. llms-full.txt desatualizado é pior que
 nenhum: faz um modelo citar preço, prazo ou nome de produto que já mudou.
 
-O que ele deliberadamente NÃO extrai: os mockups de interface da página Core.
+O que ele deliberadamente NÃO extrai: os mockups de interface da página DRYOS OS.
 Eles contêm dados fictícios de uma cliente inventada ("Aurora Cosméticos",
 sérum de niacinamida, valores de negócio). Se entrassem aqui, um LLM concluiria
 que a DRYOS vende cosmético.
@@ -25,7 +25,7 @@ PAGES = [
     ("index.html", "/", "Home"),
     ("automacoes.html", "/automacoes", "Automações"),
     ("projetos.html", "/projetos", "Projetos"),
-    ("apresentacao-core.html", "/apresentacao-core", "DRYOS Core"),
+    ("apresentacao-core.html", "/apresentacao-core", "DRYOS OS"),
 ]
 
 SKIP_TAGS = {"script", "style", "svg", "noscript", "nav", "footer",

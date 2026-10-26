@@ -25,7 +25,7 @@ Três portas de entrada:
    trabalhar e constrói o que falta: processo, integração, infraestrutura ou inteligência.
    Inclui infraestrutura técnica de lançamentos digitais. Escopo desenhado do zero, por projeto.
 
-O **DRYOS Core** entra quando a operação já foi entendida e precisa de uma base contínua para
+O **DRYOS OS** (Sistema Operacional de Crescimento Dryos) entra quando a operação já foi entendida e precisa de uma base contínua para
 fazer processos, dados, atendimento e automações rodarem juntos. São oito módulos integrados:
 CRM, Deals, Inbox, Reach, Flow, Insights, Guard e Heimdall. Cada cliente roda em instância
 dedicada e isolada, com banco de dados próprio.
@@ -61,7 +61,7 @@ de dados.
 - Não promete percentual de resultado em prazo determinado. Garante escopo e prazo;
   resultado depende também da operação do cliente.
 - Não faz copy nem design de lançamento. Cuida da infraestrutura técnica e trabalha junto
-  com a agência ou o time de marketing do cliente.
+  com o time ou parceiro de marketing do cliente.
 - Não vende ferramenta para o cliente configurar sozinho.
 
 ## Páginas
@@ -71,12 +71,12 @@ de dados.
 - [Funcionários Digitais](https://www.dryos.com.br/funcionarios-digitais): força de
   trabalho digital especializada da DRYOS. Agentes de IA com nome e função (Íris para
   atendimento e vendas no WhatsApp, Theo para cobrança e reconciliação, Nero para métricas e
-  RevOps diário, Atlas para onboarding e operações) que assumem tarefas repetitivas 24/7.
+  indicadores diários, Atlas para onboarding e operações) que assumem tarefas repetitivas 24/7.
 - [Automações](https://www.dryos.com.br/automacoes): as cinco automações com escopo item a
   item, prazo e SLA, mais um catálogo de automações concretas por área (lançamento e
   marketing, vendas, financeiro, dados e operação) e perguntas frequentes.
 - [Projetos](https://www.dryos.com.br/projetos): soluções personalizadas em produção, entre
   elas analytics para organizadores de eventos, gestão financeira para casais que empreendem
   juntos, sistemas operacionais sob medida e produção de conteúdo com agentes de IA.
-- [DRYOS Core](https://www.dryos.com.br/apresentacao-core): apresentação da plataforma, com
+- [DRYOS OS](https://www.dryos.com.br/apresentacao-core): apresentação da plataforma, com
   os módulos por dentro, os três planos e perguntas frequentes sobre dados e migração.

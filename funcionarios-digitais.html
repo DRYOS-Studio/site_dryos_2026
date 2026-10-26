@@ -648,8 +648,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* ------------------- O QUE FAZ (6 FUNÇÕES + FICHA) ------------------- */
   .o-que-faz-sec {
     padding: clamp(5rem, 9vw, 8rem) 0;
-    background: #0B110D;
-    border-top: 1px solid var(--night-border);
+    background: #FAFAF8;
+    color: var(--ink);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  .o-que-faz-sec .sec-header-center h2 {
+    color: var(--ink);
+  }
+  .o-que-faz-sec .sec-header-center p {
+    color: var(--mute-light);
+  }
+  .o-que-faz-sec .funcao-card {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  .o-que-faz-sec .funcao-card:hover {
+    background: #FFFFFF;
+    border-color: rgba(31, 58, 42, 0.35);
+    transform: translateX(4px);
+  }
+  .o-que-faz-sec .funcao-num {
+    color: var(--oak);
+  }
+  .o-que-faz-sec .funcao-content h4 {
+    color: var(--ink);
+  }
+  .o-que-faz-sec .funcao-content p {
+    color: var(--mute-light);
   }
   .sec-header-center {
     text-align: center;
@@ -1820,14 +1845,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           <div class="employee-avatar-strip">
             <div class="avatar-frame">
-              <img src="/images/funcionarios/iris.jpg" alt="Íris Carvalho" class="avatar-img-hero" width="72" height="72">
+              <img src="/images/funcionarios/iris.jpg" alt="Íris" class="avatar-img-hero" width="72" height="72">
               <span class="avatar-verified">
                 <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2.5 6L5 8.5L9.5 3.5" stroke="#051A0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
             </div>
             <div class="employee-meta">
               <span class="code-id">MATRÍCULA #DRY-014</span>
-              <h2 class="badge-title">Íris Carvalho</h2>
+              <h2 class="badge-title">Íris</h2>
               <p>Especialista Digital · Atendimento & Triagem Comercial</p>
             </div>
           </div>
@@ -1961,7 +1986,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </dl>
             <div class="ficha-stamp">
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="margin-right:6px;"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M4 6l1.5 1.5L8 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-              HOMOLOGADO · DRYOS CORE
+              HOMOLOGADO · DRYOS OS
             </div>
           </div>
         </div>
@@ -2036,10 +2061,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <div class="equipe-cards-grid">
         
-        <!-- Íris Carvalho -->
+        <!-- Íris -->
         <article class="func-card reveal">
           <div class="func-card-media">
-            <img src="/images/funcionarios/iris.jpg" alt="Íris Carvalho — Atendimento e Triagem Comercial" class="func-card-photo" width="400" height="340" loading="lazy">
+            <img src="/images/funcionarios/iris.jpg" alt="Íris — Atendimento e Triagem Comercial" class="func-card-photo" width="400" height="340" loading="lazy">
             <div class="func-card-media-overlay"></div>
             <span class="func-badge-protocol">#DRY-014</span>
             <span class="func-badge-status"><span class="func-status-dot-pulse"></span> 24/7 Ativa</span>
@@ -2047,7 +2072,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="func-card-body">
             <div class="func-header">
               <div class="func-title">
-                <h3>Íris Carvalho</h3>
+                <h3>Íris</h3>
                 <p class="func-role">Atendimento &amp; Triagem Comercial</p>
               </div>
             </div>
@@ -2068,10 +2093,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </article>
 
-        <!-- Theo Alencar -->
+        <!-- Theo -->
         <article class="func-card reveal">
           <div class="func-card-media">
-            <img src="/images/funcionarios/theo.jpg" alt="Theo Alencar — Cobrança e Gestão Financeira" class="func-card-photo" width="400" height="340" loading="lazy">
+            <img src="/images/funcionarios/theo.jpg" alt="Theo — Cobrança e Gestão Financeira" class="func-card-photo" width="400" height="340" loading="lazy">
             <div class="func-card-media-overlay"></div>
             <span class="func-badge-protocol">#DRY-027</span>
             <span class="func-badge-status"><span class="func-status-dot-pulse"></span> 24/7 Ativo</span>
@@ -2079,7 +2104,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="func-card-body">
             <div class="func-header">
               <div class="func-title">
-                <h3>Theo Alencar</h3>
+                <h3>Theo</h3>
                 <p class="func-role">Cobrança &amp; Gestão Financeira</p>
               </div>
             </div>
@@ -2100,10 +2125,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </article>
 
-        <!-- Nero Vasconcelos -->
+        <!-- Nero -->
         <article class="func-card reveal">
           <div class="func-card-media">
-            <img src="/images/funcionarios/nero.jpg" alt="Nero Vasconcelos — Inteligência de Dados e RevOps" class="func-card-photo" width="400" height="340" loading="lazy">
+            <img src="/images/funcionarios/nero.jpg" alt="Nero — Inteligência de Dados e Indicadores" class="func-card-photo" width="400" height="340" loading="lazy">
             <div class="func-card-media-overlay"></div>
             <span class="func-badge-protocol">#DRY-042</span>
             <span class="func-badge-status"><span class="func-status-dot-pulse"></span> Auditoria Contínua</span>
@@ -2111,8 +2136,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="func-card-body">
             <div class="func-header">
               <div class="func-title">
-                <h3>Nero Vasconcelos</h3>
-                <p class="func-role">Inteligência de Dados &amp; RevOps</p>
+                <h3>Nero</h3>
+                <p class="func-role">Inteligência de Dados e Indicadores</p>
               </div>
             </div>
             <p class="func-bio">
@@ -2132,10 +2157,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </article>
 
-        <!-- Atlas Brandão -->
+        <!-- Atlas -->
         <article class="func-card reveal">
           <div class="func-card-media">
-            <img src="/images/funcionarios/atlas.jpg" alt="Atlas Brandão — Onboarding e Operações" class="func-card-photo" width="400" height="340" loading="lazy">
+            <img src="/images/funcionarios/atlas.jpg" alt="Atlas — Onboarding e Operações" class="func-card-photo" width="400" height="340" loading="lazy">
             <div class="func-card-media-overlay"></div>
             <span class="func-badge-protocol">#DRY-058</span>
             <span class="func-badge-status"><span class="func-status-dot-pulse"></span> 24/7 Ativo</span>
@@ -2143,7 +2168,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="func-card-body">
             <div class="func-header">
               <div class="func-title">
-                <h3>Atlas Brandão</h3>
+                <h3>Atlas</h3>
                 <p class="func-role">Onboarding &amp; Operações</p>
               </div>
             </div>
@@ -2214,10 +2239,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <div class="wa-header">
           <div class="wa-avatar">
-            <img src="/images/funcionarios/iris.jpg" alt="Íris Carvalho" id="waAvatarImg" width="40" height="40">
+            <img src="/images/funcionarios/iris.jpg" alt="Íris" id="waAvatarImg" width="40" height="40">
           </div>
           <div class="wa-info">
-            <h4 id="waBotName">Íris Carvalho · Atendimento DRYOS</h4>
+            <h4 id="waBotName">Íris · Atendimento DRYOS</h4>
             <p>online agora (resposta média 2s)</p>
           </div>
         </div>
@@ -2425,7 +2450,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           Desde 2020, a DRYOS projeta e sustenta ecossistemas de dados, automação e inteligência artificial para médias e grandes empresas em todo o Brasil.
         </p>
         <p>
-          Fundada por Rafael Carvalho — estrategista de Growth, RevOps e arquiteto de sistemas com mais de uma década de vivência em operações de alta complexidade —, a DRYOS constrói cada funcionário digital dentro da plataforma proprietária <strong>DRYOS Core</strong>, assegurando redundância, tolerância a falhas e estabilidade contínua.
+          Fundada por Rafael Carvalho — estrategista de operações e crescimento e arquiteto de sistemas com mais de uma década de vivência em operações de alta complexidade —, a DRYOS constrói cada funcionário digital dentro da plataforma proprietária <strong>DRYOS OS</strong> (Sistema Operacional de Crescimento Dryos), assegurando redundância, tolerância a falhas e estabilidade contínua.
         </p>
         <ul class="aut-bullets">
           <li>
@@ -2646,10 +2671,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="form-group" id="group-funcionario">
             <label for="f-funcionario" id="lbl-funcionario">Posto prioritário de admissão</label>
             <select id="f-funcionario" name="funcionario">
-              <option value="iris">Íris Carvalho (Atendimento Receptivo, Qualificação & Agendamento)</option>
-              <option value="theo">Theo Alencar (Gestão Financeira, Boletos, Pix & Cobrança)</option>
-              <option value="nero">Nero Vasconcelos (Telemetria de Funil, Dados & Relatórios Matinais)</option>
-              <option value="atlas">Atlas Brandão (Onboarding de Clientes & Gestão Documental)</option>
+              <option value="iris">Íris (Atendimento Receptivo, Qualificação & Agendamento)</option>
+              <option value="theo">Theo (Gestão Financeira, Boletos, Pix & Cobrança)</option>
+              <option value="nero">Nero (Telemetria de Funil, Dados & Relatórios Matinais)</option>
+              <option value="atlas">Atlas (Onboarding de Clientes & Gestão Documental)</option>
               <option value="todos">Estruturação de time híbrido completo</option>
             </select>
           </div>
@@ -2690,7 +2715,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <a href="/">Início</a>
       <a href="/automacoes">Automações</a>
       <a href="/projetos">Projetos</a>
-      <a href="/apresentacao-core">DRYOS Core</a>
+      <a href="/apresentacao-core">DRYOS OS</a>
       <a href="/privacidade">Privacidade</a>
       <a href="https://wa.me/5521967287595" target="_blank" rel="noopener">WhatsApp Direto</a>
     </div>
@@ -2736,7 +2761,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     contratacao: {
       title: 'Roteiro de Homologação em 10 Dias Úteis',
       text1: 'Dia 1 ao 3: Mapeamento de diretrizes, manuais técnicos, tabela de preços e definição do tom de voz institucional.',
-      text2: 'Dia 4 ao 7: Parametrização dos agentes na plataforma DRYOS Core, integração com WhatsApp API oficial, CRM e Google Calendar. Dia 8 ao 10: Auditoria assistida e início da operação assistida em produção.',
+      text2: 'Dia 4 ao 7: Parametrização dos agentes na plataforma DRYOS OS, integração com WhatsApp API oficial, CRM e Google Calendar. Dia 8 ao 10: Auditoria assistida e início da operação assistida em produção.',
       alertTitle: 'Garantia de Entrega por Contrato',
       alertText: 'Prazo formalizado com SLA e escopo fixos. A sustentação e calibração contínua de regras ficam a cargo da engenharia da DRYOS.'
     }
@@ -2767,7 +2792,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   // WhatsApp Simulation Switcher
   const scenarios = {
     clinica: {
-      botName: 'Íris Carvalho · Atendimento DRYOS',
+      botName: 'Íris · Atendimento DRYOS',
       avatarImg: '/images/funcionarios/iris.jpg',
       messages: [
         { type: 'in', text: 'Boa noite. Vi a publicação sobre avaliação para harmonização facial. Vocês atendem aos sábados ou apenas durante a semana?', time: '22:45' },
@@ -2780,7 +2805,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       ]
     },
     advocacia: {
-      botName: 'Atlas Brandão · Triagem Jurídica DRYOS',
+      botName: 'Atlas · Onboarding e Operações DRYOS',
       avatarImg: '/images/funcionarios/atlas.jpg',
       messages: [
         { type: 'in', text: 'Boa tarde. Preciso de assessoria jurídica para dissolução parcial de sociedade e apuração de haveres de sócio minoritário. O escritório atua nessa frente?', time: '14:12' },
@@ -2793,7 +2818,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       ]
     },
     servicos: {
-      botName: 'Nero Vasconcelos · Qualificação B2B DRYOS',
+      botName: 'Nero · Dados e Indicadores DRYOS',
       avatarImg: '/images/funcionarios/nero.jpg',
       messages: [
         { type: 'in', text: 'Olá. Temos uma distribuidora com 20 representantes externos. Precisamos integrar o envio de pedidos do WhatsApp diretamente com o ERP Protheus. Vocês atendem essa camada?', time: '10:02' },

@@ -41,7 +41,7 @@
 
 - Navigation and hero.
 - Manifesto and operational villain framing.
-- Product paths: Core, Spark, Studio.
+- Product paths: DRYOS OS, Spark, Studio.
 - Project cards and client proof.
 - Diagnostic form posting to `/api/lead`.
 - Footer and floating WhatsApp CTA.
