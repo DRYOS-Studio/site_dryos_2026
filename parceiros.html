@@ -23,6 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Onest:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/site-footer.css">
 
   <style>
   :root {
@@ -1658,25 +1659,50 @@
   </main>
 
   <!-- ==================== FOOTER ==================== -->
-  <footer class="page-footer">
+  <footer class="dark site-footer-unified" id="contato">
     <div class="wrap">
-      <div class="footer-grid">
+      <div class="f-top">
         <div>
-          <a href="/" class="brand-logo" style="margin-bottom:0.8rem;">
-            <img src="/images/brand/dryos-logo-white.png" alt="DRYOS" width="110" height="24">
-          </a>
-          <p style="font-size:12px;color:var(--mute-dark);">Crescimento com raiz · Infraestrutura e Sistemas Autônomos</p>
+          <a href="/"><img src="/images/brand/dryos-logo-white.png" alt="DRYOS" width="150" height="auto"></a>
+          <p class="sign">Crescimento <b>com raiz.</b></p>
         </div>
-        <div style="display:flex;gap:2rem;flex-wrap:wrap;">
-          <a href="/funcionarios-digitais" style="font-size:13.5px;color:var(--mute-dark);transition:color 0.2s;">Funcionários Digitais</a>
-          <a href="/automacoes" style="font-size:13.5px;color:var(--mute-dark);transition:color 0.2s;">Automações</a>
-          <a href="/agentes-juridicos" style="font-size:13.5px;color:var(--mute-dark);transition:color 0.2s;">Agentes Jurídicos</a>
-          <a href="/#contato" style="font-size:13.5px;color:var(--mute-dark);transition:color 0.2s;">Fale Conosco</a>
+        <div class="f-cols">
+          <div>
+            <h6 class="mono">Funcionários Digitais</h6>
+            <ul>
+              <li><a href="/funcionarios-digitais">Íris · atendimento</a></li>
+              <li><a href="/funcionarios-digitais">Theo · cobrança</a></li>
+              <li><a href="/funcionarios-digitais">Nero · números do negócio</a></li>
+              <li><a href="/funcionarios-digitais">Atlas · entrada de clientes</a></li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="mono">Plataforma</h6>
+            <ul><li>DRYOS OS</li></ul>
+          </div>
+          <div>
+            <h6 class="mono">Base técnica</h6>
+            <ul>
+              <li>Infraestrutura</li>
+              <li><a href="/projetos">Desenvolvimento</a></li>
+              <li><a href="/automacoes">Automações</a></li>
+              <li>Estruturação de Processos</li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="mono">Empresa</h6>
+            <ul>
+              <li><a href="/parceiros">Parceiros</a></li>
+              <li><a href="/privacidade">Privacidade</a></li>
+              <li><a href="mailto:contato@dryos.com.br">contato@dryos.com.br</a></li>
+              <li><a href="tel:+5521967287595">+55 21 96728-7595</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <span class="mono" style="font-size:12px;color:var(--mute-dark);">© 2026 DRYOS Studio. Todos os direitos reservados.</span>
-        <span class="mono" style="font-size:12px;color:var(--mute-dark);">Rio de Janeiro · Operação Nacional</span>
+      <div class="f-bot mono">
+        <span>© 2026 DRYOS · Crescimento com raiz.</span>
+        <a href="/privacidade">Privacidade</a>
       </div>
     </div>
   </footer>
@@ -1855,7 +1881,7 @@
         `*Carteira Atual:* ${clientes}\n` +
         `*Principal Nicho:* ${nicho}`
       );
-      const waUrl = `https://wa.me/5521992080340?text=${textMsg}`;
+      const waUrl = `https://wa.me/5521967287595?text=${textMsg}`;
 
       setTimeout(() => {
         window.location.href = waUrl;

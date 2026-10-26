@@ -1,0 +1,102 @@
+/* Rodapé unificado (home R2, parceiros, funcionários digitais) */
+footer.site-footer-unified.dark {
+  --sf-noite: #080c09;
+  --sf-papel: #fafaf8;
+  --sf-salvia: #93b596;
+  --sf-cinza-noite: #8f9a92;
+  --sf-linha-noite: rgba(250, 250, 248, 0.14);
+  --sf-max: 1320px;
+  --sf-gutter: clamp(1.25rem, 4vw, 4rem);
+  --sf-display: "Funnel Display", system-ui, sans-serif;
+  --sf-mono: "JetBrains Mono", ui-monospace, monospace;
+  background: var(--sf-noite);
+  color: var(--sf-papel);
+  padding: 4.5rem 0 2rem;
+  border-top: 1px solid var(--sf-linha-noite);
+}
+footer.site-footer-unified .wrap {
+  max-width: var(--sf-max);
+  margin: 0 auto;
+  padding: 0 var(--sf-gutter);
+}
+footer.site-footer-unified .f-top {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--sf-linha-noite);
+}
+footer.site-footer-unified .f-top img {
+  width: 150px;
+  height: auto;
+  display: block;
+}
+footer.site-footer-unified .sign {
+  font-family: var(--sf-display);
+  font-weight: 300;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-top: 2rem;
+  color: var(--sf-cinza-noite);
+}
+footer.site-footer-unified .sign b {
+  font-weight: 800;
+  color: var(--sf-salvia);
+}
+footer.site-footer-unified .f-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+footer.site-footer-unified .f-cols h6 {
+  font-family: var(--sf-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--sf-cinza-noite);
+  margin-bottom: 0.9rem;
+}
+footer.site-footer-unified .f-cols li {
+  list-style: none;
+  font-size: 14px;
+  padding: 0.25rem 0;
+  color: var(--sf-papel);
+}
+footer.site-footer-unified .f-cols a {
+  color: inherit;
+  text-decoration: none;
+}
+footer.site-footer-unified .f-cols a:hover {
+  color: var(--sf-salvia);
+}
+footer.site-footer-unified .f-bot {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  color: var(--sf-cinza-noite);
+  font-family: var(--sf-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  flex-wrap: wrap;
+}
+footer.site-footer-unified .f-bot a {
+  color: inherit;
+  text-decoration: none;
+}
+footer.site-footer-unified .f-bot a:hover {
+  color: var(--sf-papel);
+}
+@media (max-width: 860px) {
+  footer.site-footer-unified .f-top {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  footer.site-footer-unified .f-cols {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1.5rem;
+  }
+}

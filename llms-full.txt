@@ -9,270 +9,160 @@ Contato: contato@dryos.com.br · WhatsApp +55 21 96728-7595
 
 # Home — https://www.dryos.com.br/
 
-Pular para o conteúdo
-DRYOS · Sistema operacional contra a ineficiência · Em produção
-Tem
-7 vilões
-consumindo
-sua
-margem,
-seu
-tempo
-e
-seu
-time.
-Toda empresa enfrenta os mesmos inimigos invisíveis. A DRYOS constrói sistemas que derrotam cada um, com IA, automação, processos organizados e dados.
-— Manifesto
-Toda empresa nasce no improviso. Crescer no improviso é arte. Mas sustentar o crescimento no improviso é uma sentença.
-Tem hora que a planilha já não basta. Tem hora que o WhatsApp deixa de ser sistema. Tem hora que "tá na minha cabeça" trava o time inteiro. A gente chama esse momento de teto operacional.
-— Os inimigos
-## Os vilões da ineficiência operacional.
-Sete inimigos. Cada um com nome, frase preferida e modus operandi próprio. Juntos, comem margem, drenam o tempo do time e travam o crescimento. A DRYOS existe pra derrotá-los — uma operação por vez.
-— 01
-### Capitão Manualis
-"Sempre foi assim. Pra quê mudar?"
-Tudo manual: WhatsApp, planilha, caderno. Cada cliente é um esforço repetido. Cada processo, um ritual no braço. O time inteiro escravo da burocracia.
-— 02
-### Senhor dos Silos
-"Esse dado é do nosso setor."
-Dados isolados em cada ferramenta. Cada filial faz do seu jeito. Ninguém vê o todo. Decisão vira achismo coletivo, e a empresa cresce em ilhas.
-— 03
-### Dama do Retrabalho
-"Pode refazer, não era isso."
-Sem padrão, toda entrega começa do zero. Sai funcionário, vai junto o conhecimento. O time refaz, refaz, refaz — e a margem evapora no caminho.
-— 04
-### General Lento
-"Não há pressa, amanhã a gente vê."
-Tudo passa pelo dono. Aprovação, decisão, resposta. A operação acumula porque ele é o único caminho. O negócio não anda quando ele para.
-— 05
-### Oráculo do Achismo
-"Eu acho que tá vendendo bem..."
-Decisão por feeling. Relatório que nunca sai. Não sabe quanto custa cada cliente, qual canal funciona, nem o que está perdendo. Apenas sente.
-— 06
-### Drenador de Margem
-"Essa perda é pequena... deixa pra lá."
-Pequenas falhas que somam grandes prejuízos. CAC alto sem perceber, churn não medido, ticket caindo aos poucos. A empresa fatura, mas a margem evapora.
-— 07
-### Enganador do Crescimento
-"É só crescer, depois a gente organiza."
-Vende a ilusão de que escalar no caos é sucesso. Cresce em receita, cresce em gente, cresce em ferramenta — e cresce o caos junto. A conta chega depois.
-— E os específicos da sua operação
-Os vilões que estão te custando mais aparecem no diagnóstico.
-Agendar agora
-— Três caminhos
-01 / 04
-## Para cada empresa, a porta certa.
-Nem toda operação precisa começar pela tecnologia. Primeiro entendemos como o trabalho acontece, onde trava e o que precisa ser organizado. A partir daí, definimos o próximo passo.
-— I —
-Estruturação de Processos
-Mapa operacional
-Antes de automatizar ou trocar ferramentas, a gente mapeia sua operação: fluxos, gargalos, responsabilidades e indicadores. Você sai com prioridades claras e um plano de execução.
-Entrada
-Mapa + plano
-Próximo passo
-Sob medida
-— II —
-Automações
-5 soluções pontuais
-Cinco soluções pontuais com IA, prontas pra conectar no que você já usa. Atendimento, integração, agentes especializados, dashboards e cobrança. Resolve uma dor específica.
-Modelo
-Recorrente
-Setup
-7-14 dias
-— III —
-Studio
-Projetos sob medida
-Para problemas únicos que não cabem em produto. Sistemas e operações sob medida — incluindo Studio Launch, especialidade em infra técnica de lançamentos digitais. Linha sob demanda.
-Modelo
-Por projeto
-Demanda
-Sob demanda
-— Estruturação de Processos
-02 / 04
-## Antes de automatizar. Entenda o que trava.
-Antes de escolher uma ferramenta, a gente entende como sua operação funciona de verdade: o caminho do cliente, os pontos de decisão, os gargalos e o que hoje depende de memória ou esforço manual. O resultado é um mapa operacional que mostra onde agir primeiro.
-01
-### Mapa da operação
-Desenhamos os fluxos críticos, as ferramentas envolvidas, os handoffs e os pontos onde o trabalho para.
-02
-### Gargalos prioritários
-Separamos o que realmente custa tempo, margem e crescimento do que pode esperar.
-03
-### Plano de execução
-Organizamos a sequência das mudanças: o que padronizar, o que automatizar e o que precisa de uma solução própria.
-— O que você leva
-01
-Fluxos críticos
-Como o trabalho acontece hoje, do primeiro contato à entrega.
-02
-Gargalos mapeados
-Onde a operação perde tempo, informação ou margem.
-03
-Responsabilidades claras
-Quem decide, executa, aprova e precisa receber cada informação.
-04
-Plano priorizado
-Uma sequência prática para organizar a operação sem começar pela ferramenta.
-Começar pelo mapa
-— Automações
-03 / 04
-## Cinco automações. Uma dor de cada vez.
-Recorrência mensal · Sem fidelidade Cada automação tem escopo fixo, setup definido e SLA documentado. Implementação em 7-14 dias.
-01
-Automação de atendimento
-WhatsApp e e-mail com IA na primeira camada
-Um agente de IA atende WhatsApp e e-mail em primeira camada. Ele qualifica, responde as dúvidas frequentes, encaminha pro humano certo e registra tudo no CRM.
-Implementação
-10 dias úteis
-02
-Integração entre sistemas
-CRM, ERP, e-mail marketing, checkout, planilhas
-Conecta automaticamente os sistemas que você já usa: CRM, ERP, planilhas, WhatsApp. Os dados fluem sozinhos, sem redigitação e sem silos.
-Implementação
-14 dias úteis
-03
-Agente de IA especializado
-FAQ extensiva, suporte técnico, qualificação avançada
-Agente treinado num domínio específico do seu negócio, para FAQ extensiva, suporte técnico ou qualificação avançada. Aprende com seus documentos e processos.
-Implementação
-14 dias úteis
-04
-Automação de relatórios
-Dashboard de KPIs + relatório semanal no WhatsApp
-Dashboard executivo com KPIs em tempo real. Relatório semanal por WhatsApp escrito por IA, com 3 insights e 3 ações sugeridas. Nunca mais decisão no feeling.
-Implementação
-14 dias úteis
-05
-Automação de cobrança
-Régua no WhatsApp, nota fiscal e conciliação
-Régua inteligente de cobrança via WhatsApp, emissão automática de NF, geração de boleto e conciliação bancária. Reduz inadimplência sem o constrangimento de cobrar no braço.
-Implementação
-10 dias úteis
-— Todas as automações
-O escopo de cada uma, o prazo e as combinações que mais entregamos.
-Saiba mais
-— DRYOS Studio
-04 / 04
-## Quando a operação exige um desenho próprio.
-Nem toda operação cabe numa automação pronta. No Studio, a gente primeiro entende como o trabalho precisa funcionar e depois constrói o que falta: um processo, uma integração, uma infraestrutura ou uma camada de inteligência. A tecnologia entra para dar suporte à operação, não para obrigar a empresa a trabalhar de um jeito novo.
-— 01
-Lançamentos coordenados
-Especialidade
-Infraestrutura e operação técnica de lançamentos digitais
-Cuidamos da infraestrutura técnica completa do seu lançamento: gestão de plataformas, disparos de mensagens, automações de campanha, dashboards em tempo real e o Cockpit do Lançamento, nosso painel exclusivo que integra todos os dados em um só lugar. Trabalhamos junto com o seu time ou parceiro de marketing. Copy e design ficam com eles.
-— 02
-Operações próprias
-Fluxos internos e sistemas de gestão desenhados para o seu contexto
-— 03
-Decisão com clareza
-Indicadores, inteligência e painéis para operações que precisam enxergar o todo
-— 04
-Sistemas que precisam conversar
-Integrações complexas entre ferramentas, legados e processos
-— 05
-Atendimento especializado
-Agentes de IA para contextos específicos, multimodais ou regulados
-— Como funciona
-01
-Contexto
-Briefing e diagnóstico do problema e da operação
-02
-Desenho da operação
-Fluxos, responsabilidades, escopo e critérios de aceitação
-03
-Construção e validação
-Sprints semanais com entregas validadas pelo cliente
-04
-Operação
-Colocamos para rodar e, se fizer sentido, continuamos evoluindo depois da entrega
-Projetos especiais, com critérios claros de aceitação para manter a qualidade.
-— Projetos
-## Projetos personalizados em produção. Operações reais.
-Cada projeto nasce de uma operação específica. Entendemos como o trabalho precisa funcionar e construímos o software, as integrações e as automações que fazem aquela operação avançar.
-— 01
-Eventmetrics
-Sistema personalizado · Studio
-Plataforma de inteligência e analytics para gestão de eventos. Painel executivo, métricas em tempo real e relatórios automatizados pra organizadores.
-Status
-Em produção
-— 02
+Funcionários Digitais · construídos e operados pela DRYOS
+Sua próxima contratação
+não ocupa uma cadeira.
+Um agente de IA com nome e função, que trabalha nos canais e sistemas que você já usa. A DRYOS constrói e opera esse time para a sua empresa.
+Diagnóstico gratuito de 30 min
+→
+Sem compromisso. Se nenhuma frente resolver, a gente diz.
+FD · 01
+Atendimento
+### Íris
+Responde no WhatsApp, tira as dúvidas, entende quem está pronto pra comprar e marca a reunião direto na agenda de quem vai atender.
+Enfrenta: Capitão Manualis · General Lento
+FD · 02
+Cobrança
+### Theo
+Avisa o vencimento com Pix e boleto, confirma quando o pagamento entra e conduz a renegociação do jeito que você definiu.
+Enfrenta: Drenador de Margem
+FD · 03
+Números do negócio
+### Nero
+Cruza atendimento, vendas e faturamento durante a noite e entrega aos sócios, de manhã, um resumo do que está fora do lugar.
+Enfrenta: Oráculo do Achismo
+FD · 04
+Entrada de clientes
+### Atlas
+Recolhe documentos, libera acessos, organiza as pastas e responde dúvidas sobre as próximas etapas.
+Enfrenta: Dama do Retrabalho
+Testado aqui dentro primeiro
+Antes de chegar a qualquer cliente, tudo rodou na operação da DRYOS. Quem atende o nosso WhatsApp, por exemplo, é a Íris.
+— 01 · O problema
+Tem hora que o WhatsApp
+deixa de ser sistema.
+Nada disso é trabalho ruim. Mas quase nada disso precisa de uma pessoa. E enquanto alguém faz isso, o cliente que chegou pronto para comprar fica esperando.
+Vilão · 01
+#### Capitão Manualis
+Sempre foi assim. Pra quê mudar?
+Quem enfrenta: Íris
+Vilão · 02
+#### Senhor dos Silos
+Esse dado é do nosso setor.
+Quem enfrenta: DRYOS OS
+Vilão · 03
+#### Dama do Retrabalho
+Pode refazer, não era isso.
+Quem enfrenta: Atlas
+Vilão · 04
+#### General Lento
+Não há pressa, amanhã a gente vê.
+Quem enfrenta: Íris
+Vilão · 05
+#### Oráculo do Achismo
+Eu acho que tá vendendo bem...
+Quem enfrenta: Nero
+Vilão · 06
+#### Drenador de Margem
+Essa perda é pequena... deixa pra lá.
+Quem enfrenta: Theo
+Vilão · 07
+#### Enganador do Crescimento
+É só crescer, depois a gente organiza.
+Quem enfrenta: Estruturação de Processos
+— 02 · DRYOS OS
+O lugar onde
+eles trabalham.
+O Sistema Operacional de Crescimento Dryos (DRYOS OS) unifica WhatsApp, Instagram, CRM, automações e agentes de IA num só lugar. Cada conversa vira dado, cada dado vira ação.
+Entrada · canais que você já usa
+WhatsApp
+Instagram
+E-mail
+Sistemas da empresa
 DRYOS OS
-Sistema operacional sob medida · Studio
-Sistema operacional personalizado para uma empresa de educação, conectando CRM, atendimento, automações e agentes de IA via WhatsApp.
-Status
-Em produção
-— 03
-DeMarchi Automotive
-Sistema sob medida · Studio
-Catálogo digital de produtos automotivos com busca inteligente, integração com estoque e jornada de cotação automatizada.
-Status
-Em produção
-— Portfolio completo
-Veja todos os projetos que já construímos.
-Ver portfolio
-— Clientes
-## Operações reais. Resultados em produção.
+Funcionários Digitais
+Íris
+Atendimento
+Theo
+Cobrança
+Nero
+Números do negócio
+Atlas
+Entrada de clientes
+Inbox
+·
+CRM
+·
+Automações
+·
+Agentes de IA
+Saída · para quem atende e decide
+Reunião na agenda de quem vai atender
+Pagamento confirmado
+Resumo da manhã para os sócios
+Pastas e acessos organizados
+Por baixo: a base técnica DRYOS
+Infraestrutura · Desenvolvimento · Automações · Estruturação de Processos
+E a sua equipe?
+Fica com o que
+precisa de gente.
+- Conversar
+- Negociar
+- Atender presencialmente
+- Decidir
+E o time digital
+Fica com
+o repetitivo.
+- Responder e qualificar no WhatsApp
+- Avisar vencimento e confirmar pagamento
+- Cruzar os números durante a noite
+- Recolher documentos e liberar acessos
+— 03 · Base técnica
+A base técnica
+que sustenta.
+Por baixo dos Funcionários Digitais existe engenharia. A DRYOS constrói e opera essa base para quem precisa dela inteira ou só de uma parte, com ou sem Funcionário Digital.
+— I —
+#### Infraestrutura
+Gestão de infraestrutura
+Mantemos no ar os servidores, bancos de dados e integrações da sua operação, incluindo os ambientes onde os seus Funcionários Digitais trabalham.
+Quando faz sentidoSistema crítico sem dono técnico
+— II —
+Desenvolvimento
+DRYOS Studio
+Entendemos como o trabalho precisa funcionar e construímos o software, as integrações e as automações que fazem aquela operação avançar.
+Quando faz sentidoProblema que não cabe em produto
+— III —
+Automações
+Soluções pontuais com IA
+Prontas pra conectar no que você já usa. Resolvem uma dor específica, sem trocar o resto da operação.
+Quando faz sentidoUma dor clara e isolada
+— IV —
+#### Estruturação de Processos
+Mapa operacional
+Antes de automatizar ou trocar ferramentas, a gente mapeia sua operação: fluxos, gargalos, responsabilidades e indicadores.
+Quando faz sentidoNinguém sabe onde o trabalho trava
+— 04 · Prova social
+Quem já trabalha
+com a DRYOS.
+Nas palavras de quem já trabalhou com a gente.
 Em destaque
-Cliente Segmento de Educação
-Em produção
 Antes a gente crescia na força bruta. Hoje, crescemos com inteligência. A equipe da DRYOS não veio com palestras — eles vieram e instalaram os processos. Hoje tenho clareza total dos dados e nossa infraestrutura roda sem que eu precise vigiar cada detalhe.
 CEO · Cliente Segmento de Educação
-Cliente
-Academia Tio Sam
-Em produção
+Depoimento
 Antes do trabalho com a DRYOS, a Academia Tio Sam tinha resultados, mas os processos eram muito intuitivos e a gestão acontecia mais no automático do que de forma estratégica. Ao longo do projeto, estruturamos rotinas, indicadores e fluxos claros, o que aumentou muito a consciência sobre cada etapa da operação. Hoje conseguimos enxergar com clareza onde estamos crescendo e quais decisões precisam ser tomadas.
 Suellen Monnerat · Gestora Administrativa, Academia Tio Sam
-Cliente
-Gois Fit
-Em produção
+Depoimento
 O trabalho com a DRYOS foi um divisor de águas para a Gois Fit. Saímos de uma atuação muito operacional, reagindo ao dia a dia, para uma implantação clara de processos que organizaram a casa e deram previsibilidade ao negócio. Ganhamos muito mais consciência de mercado: entendemos melhor nossos números, nossos canais de aquisição e o comportamento dos clientes, o que nos permitiu planejar e buscar crescimento de forma intencional, e não por tentativa e erro.
 Bárbara Gois · CEO, Gois Fit
-Cliente
-Acorp Eventos
-Em produção
+Depoimento
 A expertise técnica e a capacidade de compreensão das nossas necessidades específicas foram fundamentais para o sucesso do projeto. A DRYOS não apenas atendeu às nossas expectativas, mas as superou, proporcionando soluções inovadoras e personalizadas que otimizaram nossos processos e aumentaram significativamente nossa eficiência operacional.
 Jane Araujo · Sócia Diretora, Acorp Eventos
-01
-/
-04
-— Empresas que confiam na DRYOS
-— Setores que atendemos
-Distribuição & Atacado
-Indústria
-Serviços B2B
-Saúde & Clínicas
-Escritórios profissionais
-Educação & Treinamentos
-Construção & Engenharia
-Comércio & Varejo
-— Diagnóstico gratuito
-## Chega de operar no escuro.
-30 minutos pra mapear os vilões da sua operação, estimar o que está te custando hoje e propor o produto certo. Sem compromisso.
-Sem compromisso
-30 min
-Mapa de oportunidades
-Proposta personalizada
-— Falar com a DRYOS
-### Prefere conversar direto?
-Escolha o canal que funciona melhor para você.
-WhatsApp
-Conversar no WhatsApp
-E-mail
-contato@dryos.com.br
-LinkedIn
-Conhecer a DRYOS no LinkedIn
-Respondemos em horário comercial.
-— Crescimento com raiz
-### Sobre
-Desde 2020, a DRYOS constrói sistemas e operações lucrativas para empresas que precisam crescer com fundação, não no improviso.
-Combinamos estratégia de operações, engenharia de software e inteligência artificial para transformar processos manuais em sistemas que rodam 24/7. Cada cliente recebe uma operação desenhada pra escalar, não uma ferramenta de prateleira.
-Somos Construtores.
-2020
-Operando desde
-8+
-Setores atendidos
-100%
-Em produção real
+— 05 · Diagnóstico
+Diagnóstico gratuito
+de 30 min.
+30 minutos pra mapear os vilões da sua operação e propor o caminho certo. Sem compromisso.
+Se nenhuma frente resolver, a gente diz.
+Seus dados são processados conforme a LGPD. Não enviamos spam.
 
 ---
 
