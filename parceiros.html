@@ -116,6 +116,13 @@
     padding: 0 var(--gutter);
     position: relative;
   }
+  /* Evita gutter duplo: a seção já aplica --gutter nas laterais */
+  section[class*="-sec"] > .wrap {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: min(var(--max), 100%);
+    min-width: 0;
+  }
 
   ::placeholder {
     color: #9EABA1;
@@ -269,11 +276,17 @@
   }
   .hero-layout {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
     gap: clamp(2.5rem, 5vw, 4.5rem);
     align-items: center;
     position: relative;
     z-index: 2;
+    min-width: 0;
+  }
+  .hero-layout > .hero-copy,
+  .hero-layout > .hero-stage {
+    min-width: 0;
+    max-width: 100%;
   }
   .hero-copy h1 {
     font-family: var(--font-display);
@@ -695,9 +708,11 @@
   }
   .divisao-table-wrap {
     overflow-x: auto;
+    max-width: 100%;
     border-radius: var(--radius-lg);
     border: 1px solid var(--night-border);
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+    -webkit-overflow-scrolling: touch;
   }
   .divisao-table {
     width: 100%;
@@ -1085,8 +1100,17 @@
     .calc-box,
     .aplicacao-layout,
     .elegivel-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: 3rem;
+    }
+    .calc-box,
+    .calc-controls,
+    .ctrl-group,
+    .ctrl-group label,
+    .range-slider,
+    .calc-results-card {
+      min-width: 0;
+      max-width: 100%;
     }
     .cosell-grid {
       grid-template-columns: 1fr;
@@ -1144,14 +1168,17 @@
     }
   }
   @media (max-width: 390px) {
-    body {
-      overflow-x: hidden;
-    }
     .hero-copy > .eyebrow {
       font-size: 11px;
       padding: 0.3rem 0.5rem;
       letter-spacing: 0.02em;
     }
+  }
+
+  main#conteudo {
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: clip;
   }
   </style>
 </head>
