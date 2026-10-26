@@ -40,7 +40,7 @@ Antes de mandar o link pra prospect, troque os placeholders:
 
 - [ ] **WhatsApp** — `index.html` linha do `wa.me/5500000000000` → trocar pelo seu número real (formato: 55 + DDD + número, sem espaços)
 - [ ] **Email** — confirmar/trocar `hello@dryos.com.br`
-- [ ] **LinkedIn** — trocar `/company/dryos` pela URL real (ou remover o link se ainda não criou a página)
+- [x] **LinkedIn** — `https://www.linkedin.com/company/dryos-studio` no rodapé unificado
 - [ ] **Form RD Station** — substituir o bloco `<div class="contact-form-placeholder">...</div>` pelo embed do RD Station Marketing
 - [ ] **Anos** — todos os projetos estão como 2024; ajustar onde for necessário
 - [ ] **Descrições dos projetos** — refinar com os textos reais (Eventmetrics, Casa Financeira, DeMarchi, Kratos Content)
