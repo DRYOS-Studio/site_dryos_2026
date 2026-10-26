@@ -21,7 +21,7 @@ Nero · números do negócio; Atlas · entrada de clientes. Trabalham nos canais
 que o cliente já usa, construídos e operados pela DRYOS.
 
 **DRYOS OS** (Sistema Operacional de Crescimento Dryos): plataforma com CRM, inbox,
-funil, automações e agentes de IA integrados — quando a operação precisa de base contínua.
+funil, automações e agentes de IA integrados — onde os Funcionários Digitais trabalham.
 
 **Base técnica** (com ou sem Funcionário Digital):
 
@@ -33,8 +33,7 @@ funil, automações e agentes de IA integrados — quando a operação precisa d
 ## Automações (catálogo resumido)
 
 Atendimento, integração entre sistemas, agente de IA especializado, relatórios e cobrança.
-Detalhes, escopos e SLAs na página Automações. Preço sob diagnóstico, sem tabela pública
-de Funcionários Digitais.
+Detalhes e escopos na página Automações. Sem tabela pública de preços.
 
 ## O que a DRYOS não faz
 
@@ -46,10 +45,14 @@ de Funcionários Digitais.
 
 - [Home](https://www.dryos.com.br/): Funcionários Digitais, vilões da operação, DRYOS OS,
   base técnica, prova social e formulário de diagnóstico.
-- [Funcionários Digitais](https://www.dryos.com.br/funcionarios-digitais): Íris, Theo, Nero
-  e Atlas — papéis, comparativo e diagnóstico gratuito de 30 min.
-- [Parceiros](https://www.dryos.com.br/parceiros): programa comercial para revenda de
-  Funcionários Digitais (página noindex; candidatura via formulário).
-- [Automações](https://www.dryos.com.br/automacoes): cinco automações e catálogo por área.
+- [Sobre](https://www.dryos.com.br/sobre): história e o que a DRYOS faz.
+- [DRYOS OS](https://www.dryos.com.br/dryos-os): plataforma unificada da operação.
+- [Estruturação de Processos](https://www.dryos.com.br/estruturacao-de-processos)
+- [Automações](https://www.dryos.com.br/automacoes)
+- [Infraestrutura](https://www.dryos.com.br/infraestrutura)
+- [DRYOS Studio](https://www.dryos.com.br/studio)
+- [Funcionários Digitais](https://www.dryos.com.br/funcionarios-digitais): Íris, Theo, Nero e Atlas.
 - [Projetos](https://www.dryos.com.br/projetos): soluções personalizadas em produção.
-- [DRYOS OS](https://www.dryos.com.br/apresentacao-core): módulos da plataforma e planos.
+- [Clientes](https://www.dryos.com.br/clientes): depoimentos.
+- [Contato](https://www.dryos.com.br/contato): diagnóstico, WhatsApp e e-mail.
+- [Parceiros](https://www.dryos.com.br/parceiros): programa comercial (sem link no menu público).

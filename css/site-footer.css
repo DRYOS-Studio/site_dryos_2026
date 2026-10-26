@@ -46,7 +46,7 @@ footer.site-footer-unified .sign b {
 }
 footer.site-footer-unified .f-cols {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 1.5rem;
 }
 footer.site-footer-unified .f-cols h6 {
