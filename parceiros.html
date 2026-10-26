@@ -1103,6 +1103,25 @@
     .res-sub-grid {
       grid-template-columns: 1fr;
     }
+    .hero-copy {
+      min-width: 0;
+    }
+    .hero-copy > .eyebrow {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      max-width: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      white-space: normal;
+      line-height: 1.45;
+      padding: 0.35rem 0.65rem;
+      border-radius: 14px;
+    }
+    .hero-copy > .eyebrow b {
+      flex-shrink: 0;
+      margin-top: 0.35em;
+    }
     .eyebrow {
       max-width: 100%;
       white-space: normal;
@@ -1127,6 +1146,11 @@
   @media (max-width: 390px) {
     body {
       overflow-x: hidden;
+    }
+    .hero-copy > .eyebrow {
+      font-size: 11px;
+      padding: 0.3rem 0.5rem;
+      letter-spacing: 0.02em;
     }
   }
   </style>
