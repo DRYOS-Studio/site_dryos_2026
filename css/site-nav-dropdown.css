@@ -44,9 +44,17 @@
   text-decoration: none;
   border-bottom: 1px solid rgba(250, 250, 248, 0.14);
   color: rgba(250, 250, 248, 0.72);
+  background: transparent;
+  border-left: none;
+  border-right: none;
+  border-top: none;
 }
 .site-global-nav .nav-dropdown a:last-child {
   border-bottom: none;
+}
+.site-global-nav .nav-dropdown a:hover,
+.site-global-nav .nav-dropdown a:focus-visible {
+  background: rgba(250, 250, 248, 0.06);
 }
 .site-global-nav .nav-dropdown .name {
   color: #fafaf8;
@@ -67,15 +75,18 @@
   font-family: "Onest", system-ui, sans-serif;
   display: block;
 }
-.site-global-nav .nav-dropdown a.nav-dd.fd .name,
-.site-global-nav .nav-dropdown a.nav-dd.os .name {
+.site-global-nav .nav-dropdown a.nav-dd.nav-fd .name,
+.site-global-nav .nav-dropdown a.nav-dd.nav-os .name {
   color: #4ade80;
 }
-.site-global-nav .nav-dropdown a:hover .name {
+.site-global-nav .nav-dropdown a:hover .name,
+.site-global-nav .nav-dropdown a:focus-visible .name {
   color: #fafaf8;
 }
-.site-global-nav .nav-dropdown a.nav-dd.fd:hover .name,
-.site-global-nav .nav-dropdown a.nav-dd.os:hover .name {
+.site-global-nav .nav-dropdown a.nav-dd.nav-fd:hover .name,
+.site-global-nav .nav-dropdown a.nav-dd.nav-fd:focus-visible .name,
+.site-global-nav .nav-dropdown a.nav-dd.nav-os:hover .name,
+.site-global-nav .nav-dropdown a.nav-dd.nav-os:focus-visible .name {
   color: #4ade80;
 }
 
@@ -123,6 +134,11 @@
   border-bottom: 1px solid rgba(250, 250, 248, 0.14);
   text-transform: none;
   letter-spacing: 0;
+  background: transparent;
+}
+.mobile-drawer.site-mobile-drawer .drawer-accordion-panel a:hover,
+.mobile-drawer.site-mobile-drawer .drawer-accordion-panel a:focus-visible {
+  background: rgba(250, 250, 248, 0.06);
 }
 .mobile-drawer.site-mobile-drawer .drawer-accordion-panel .name {
   color: #fafaf8;
@@ -137,8 +153,8 @@
   margin-top: 0.2rem;
   display: block;
 }
-.mobile-drawer.site-mobile-drawer .drawer-accordion-panel a.nav-dd.fd .name,
-.mobile-drawer.site-mobile-drawer .drawer-accordion-panel a.nav-dd.os .name {
+.mobile-drawer.site-mobile-drawer .drawer-accordion-panel a.nav-dd.nav-fd .name,
+.mobile-drawer.site-mobile-drawer .drawer-accordion-panel a.nav-dd.nav-os .name {
   color: #4ade80;
 }
 .mobile-drawer.site-mobile-drawer .drawer-cta {
