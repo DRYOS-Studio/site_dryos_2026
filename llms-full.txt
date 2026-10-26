@@ -337,28 +337,32 @@ Segurança e Dados
 Risco de vazamento em aparelho pessoal
 Dados compartilhados em nuvem pública
 Instância dedicada e isolada (LGPD)
-Resultados Mensurados
-## Impacto verificado em
-operações ativas.
-Indicadores reais consolidados nas empresas que utilizam a infraestrutura da DRYOS.
+Depoimentos
+## O que dizem os clientes
+da DRYOS.
+Nas palavras de quem já trabalhou com a gente.
 3 seg Tempo médio de resposta para 100% dos contatos recebidos
 Zero Contatos sem atendimento em períodos noturnos ou finais de semana
 10 dias Prazo formal em contrato para homologação e entrada em produção
 “
-"Conseguimos triplicar a capacidade de triagem sem inflar a folha de pagamento da recepção. Hoje o paciente recebe retorno no WhatsApp em segundos, mesmo fora do expediente comercial, e já chega para a consulta com os dados alinhados."
-VM
-### Dra. Vanessa Mendes
-Sócia-Diretora de Clínica Médica
+Em destaque
+Antes a gente crescia na força bruta. Hoje, crescemos com inteligência. A equipe da DRYOS não veio com palestras — eles vieram e instalaram os processos. Hoje tenho clareza total dos dados e nossa infraestrutura roda sem que eu precise vigiar cada detalhe.
+### CEO · Cliente Segmento de Educação
 “
-"No segundo mês já dobramos as reuniões qualificadas no nosso CRM. O mais expressivo foi não ter precisado elevar o investimento em mídia paga: paramos de desperdiçar os contatos que aguardavam retorno por mais de meia hora."
-MR
-### Marcos Rezende
-Sócio de Consultoria Empresarial
+Depoimento
+Antes do trabalho com a DRYOS, a Academia Tio Sam tinha resultados, mas os processos eram muito intuitivos e a gestão acontecia mais no automático do que de forma estratégica. Ao longo do projeto, estruturamos rotinas, indicadores e fluxos claros, o que aumentou muito a consciência sobre cada etapa da operação. Hoje conseguimos enxergar com clareza onde estamos crescendo e quais decisões precisam ser tomadas.
+SM
+### Suellen Monnerat · Gestora Administrativa, Academia Tio Sam
 “
-"A régua de cobrança conduzida pelo Theo eliminou o atrito que existia com o financeiro. O lembrete é educado, chega com a chave Pix pronta e reduziu a nossa taxa de inadimplência em 38% já no primeiro ciclo."
-FL
-### Felipe Lourenço
-Diretor de Operações de Serviços B2B
+Depoimento
+O trabalho com a DRYOS foi um divisor de águas para a Gois Fit. Saímos de uma atuação muito operacional, reagindo ao dia a dia, para uma implantação clara de processos que organizaram a casa e deram previsibilidade ao negócio. Ganhamos muito mais consciência de mercado: entendemos melhor nossos números, nossos canais de aquisição e o comportamento dos clientes, o que nos permitiu planejar e buscar crescimento de forma intencional, e não por tentativa e erro.
+BG
+### Bárbara Gois · CEO, Gois Fit
+“
+Depoimento
+A expertise técnica e a capacidade de compreensão das nossas necessidades específicas foram fundamentais para o sucesso do projeto. A DRYOS não apenas atendeu às nossas expectativas, mas as superou, proporcionando soluções inovadoras e personalizadas que otimizaram nossos processos e aumentaram significativamente nossa eficiência operacional.
+JA
+### Jane Araujo · Sócia Diretora, Acorp Eventos
 Parceiro Platinum RD Station 2026
 Arquitetura Técnica e Engenharia
 ## A DRYOS não vende experimentos.
