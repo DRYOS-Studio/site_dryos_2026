@@ -342,7 +342,6 @@ Resultados Mensurados
 operações ativas.
 Indicadores reais consolidados nas empresas que utilizam a infraestrutura da DRYOS.
 3 seg Tempo médio de resposta para 100% dos contatos recebidos
-+44% Aumento no aproveitamento de oportunidades que já chamavam no canal
 Zero Contatos sem atendimento em períodos noturnos ou finais de semana
 10 dias Prazo formal em contrato para homologação e entrada em produção
 “
