@@ -1268,6 +1268,51 @@ Operação contínua
 Recebe 10% de comissão todo dia 10 com extrato.
 Mantém relacionamento e recebe 30% todo dia 10.
 Sustentação técnica contínua 24/7 e pagamento pontual via Pix/PJ.
+ETAPA 01
+#### 1. Prospecção & Qualificação
+Identificação da dor na carteira
+Indicação (10%)
+Apenas passa o contato e introduz o decisor ao time DRYOS.
+Franquia (30%)
+Identifica o gargalo na carteira e agenda a demonstração com o cliente.
+DRYOS Engenharia
+Fornece scripts de abordagem, roteiros de diagnóstico e calculadoras de ROI.
+ETAPA 02
+#### 2. Demonstração Técnica
+Apresentação ao decisor
+Indicação (10%)
+Não participa da reunião (a DRYOS conduz 100%).
+Franquia (30%)
+Conduz a abertura comercial e participa da chamada.
+DRYOS Engenharia
+Engenheiro de soluções da DRYOS entra ao vivo para demonstrar a IA e tirar objeções.
+ETAPA 03
+#### 3. Fechamento & Contrato
+Formalização jurídica
+Indicação (10%)
+Nenhum envolvimento burocrático.
+Franquia (30%)
+Apoia no alinhamento das condições comerciais.
+DRYOS Engenharia
+Emite a proposta executiva e o contrato de prestação de serviços de tecnologia.
+ETAPA 04
+#### 4. Implantação e Integração
+WhatsApp Oficial e CRM
+Indicação (10%)
+Nenhum envolvimento técnico.
+Franquia (30%)
+Acompanha a validação de tom de voz com o cliente.
+DRYOS Engenharia
+Executa toda a engenharia de prompts, homologação de API oficial da Meta e webhooks.
+ETAPA 05
+#### 5. Suporte e Repasse
+Operação contínua
+Indicação (10%)
+Recebe 10% de comissão todo dia 10 com extrato discriminado.
+Franquia (30%)
+Mantém relacionamento e recebe 30% todo dia 10 via Pix/PJ.
+DRYOS Engenharia
+Sustentação técnica contínua 24/7 e pagamento pontual via Pix/PJ.
 Apoio Comercial Completo
 ## Você não vende sozinho. Vendemos lado a lado com você.
 A DRYOS oferece todo o arsenal de apoio para você fechar contratos de alto ticket sem travas técnicas.
@@ -1313,7 +1358,7 @@ Credenciamento Oficial
 ## Candidate a sua empresa para a rede de parceiros DRYOS.
 Analisamos cada inscrição manualmente para garantir alinhamento de perfil, qualidade de atendimento e exclusividade regional e de nicho.
 1
-### Preencha a Ficha ao Lado
+### Preencha a Ficha de Credenciamento
 Conte sobre a sua empresa, nicho atendido e o modelo de parceria desejado.
 2
 ### Entrevista de Alinhamento de 20 Minutos
