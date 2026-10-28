@@ -1130,6 +1130,54 @@ WhatsApp 24/7
 Qualificação imediata de cotações para rastreamento veicular e telemetria de frotas comerciais, com envio de orçamentos rápidos e conexão direta ao CRM de vendas.
 Integração
 CRM em tempo real
+O Portfólio de Soluções DRYOS
+## Os Funcionários Digitais que você vai oferecer aos seus clientes.
+Agentes inteligentes construídos e mantidos pela DRYOS para assumir as tarefas operacionais mais caras e repetitivas de qualquer empresa.
+#DRY-014
+Atendimento 24/7
+### Íris
+Atendimento & Triagem Comercial
+Assume o WhatsApp da empresa em tempo real. Responde em 5 segundos, filtra curiosos de compradores prontos, contorna objeções frequentes e agenda reuniões no Google Calendar da equipe.
+API Oficial Meta
+Qualificação BANT
+Google Calendar
+Atendimento 24/7
+Comissão por cliente
+30% ou 10% MRR
+#DRY-027
+Gestão Financeira
+### Theo
+Cobrança & Recuperação Financeira
+Executa a régua de cobrança preventiva e ativa no WhatsApp. Notifica vencimentos com chave Pix e código de barras, confirma pagamentos e renegocia atrasos sem constrangimento na equipe.
+Régua Preventiva
+Pix & Boletos
+Reconciliação
+Anti-inadimplência
+Comissão por cliente
+30% ou 10% MRR
+#DRY-042
+Auditoria Contínua
+### Nero
+Inteligência de Dados & Indicadores
+Cruza dados de atendimento, funil comercial e faturamento durante a noite. Às 08h da manhã, entrega no WhatsApp dos sócios um resumo conciso com indicadores críticos, vendas e gargalos.
+Auditoria de Funil
+Briefing Matinal
+Métricas de Vendas
+Alertas de Queda
+Comissão por cliente
+30% ou 10% MRR
+#DRY-058
+Operações
+### Atlas
+Onboarding & Entrada de Clientes
+Conduz o fluxo de entrada de novos clientes. Coleta documentos obrigatórios, preenche cadastros no ERP/CRM, envia checklists de boas-vindas e responde a dúvidas de onboarding sem filas.
+Coleta de Documentos
+Sincronização CRM
+Checklists
+Onboarding 24/7
+Comissão por cliente
+30% ou 10% MRR
+Você não precisa programar nem manter nada: Toda a configuração de prompts, conexão com APIs oficiais da Meta, integrações de CRM e suporte técnico aos agentes são executados pela engenharia da DRYOS.
 A Realidade do Mercado
 ## Por que as empresas perdem clientes no WhatsApp — e por que isso é a sua maior oportunidade.
 Toda empresa hoje tenta vender pelo WhatsApp. Investem em anúncios, tráfego pago, redes sociais e indicação. O lead chega interessado querendo comprar ou agendar uma consulta. Mas o que acontece na prática?

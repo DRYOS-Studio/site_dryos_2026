@@ -468,6 +468,178 @@
     color: var(--mute-light, #525252);
   }
 
+  
+  /* ------------------- CATÁLOGO DE FUNCIONÁRIOS DIGITAIS ------------------- */
+  .funcs-sec {
+    padding: clamp(5rem, 9vw, 8rem) 0;
+    background: #080C09;
+    border-bottom: 1px solid var(--night-border);
+    position: relative;
+  }
+  .funcs-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  .func-card {
+    background: var(--night-card);
+    border: 1px solid var(--night-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, box-shadow 0.3s;
+    position: relative;
+  }
+  .func-card:hover {
+    background: var(--night-card-hover);
+    border-color: rgba(74, 222, 128, 0.45);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.7), 0 0 20px rgba(34, 197, 94, 0.1);
+  }
+  .func-card-media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3.4;
+    overflow: hidden;
+    background: #040605;
+  }
+  .func-card-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 18%;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    display: block;
+  }
+  .func-card:hover .func-card-photo {
+    transform: scale(1.05);
+  }
+  .func-badge-protocol {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    background: rgba(8, 12, 9, 0.82);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: var(--mute-dark);
+    z-index: 2;
+  }
+  .func-badge-status {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    background: rgba(8, 12, 9, 0.82);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(74, 222, 128, 0.35);
+    color: var(--emerald-light);
+    z-index: 2;
+  }
+  .func-badge-status b {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--emerald);
+    box-shadow: 0 0 6px rgba(74, 222, 128, 0.8);
+    display: inline-block;
+  }
+  .func-card-body {
+    padding: 1.5rem 1.4rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+  .func-title h3 {
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #fff;
+    letter-spacing: -0.015em;
+  }
+  .func-title .func-role {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--emerald-light);
+    margin-top: 0.3rem;
+    margin-bottom: 0.9rem;
+  }
+  .func-bio {
+    font-size: 13.5px;
+    color: #C2CDC5;
+    line-height: 1.55;
+    margin-bottom: 1.2rem;
+  }
+  .func-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.2rem;
+  }
+  .func-tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--night-border);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    color: #D6DED7;
+  }
+  .func-card-footer {
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--night-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: var(--mute-dark);
+  }
+  .func-card-footer span.comm-badge {
+    color: var(--emerald-light);
+    font-weight: 600;
+  }
+  .funcs-callout {
+    margin-top: 3rem;
+    background: rgba(31, 58, 42, 0.25);
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    border-radius: var(--radius-md);
+    padding: 1.4rem 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .funcs-callout p {
+    font-size: 14.5px;
+    color: #E2E8E4;
+    line-height: 1.5;
+    max-width: 68ch;
+  }
+  .funcs-callout p strong {
+    color: #fff;
+  }
+
   /* ------------------- DOIS MODELOS DE PARCERIA (NOVO) ------------------- */
   .modelos-sec {
     padding: clamp(5.5rem, 9.5vw, 8.5rem) 0;
@@ -1390,6 +1562,9 @@
 
   /* ------------------- RESPONSIVE ------------------- */
   @media (max-width: 1024px) {
+    .funcs-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
     .client-card {
       flex: 0 0 calc(50% - 0.75rem);
     }
@@ -1416,6 +1591,13 @@
     }
   }
   @media (max-width: 640px) {
+    .funcs-grid {
+      grid-template-columns: 1fr;
+    }
+    .funcs-callout {
+      flex-direction: column;
+      align-items: flex-start;
+    }
     .client-card {
       flex: 0 0 88%;
       min-width: 250px;
@@ -1748,6 +1930,154 @@
           <button type="button" class="carousel-dot" data-index="1" aria-label="Ir para Clínica Novos Sorrisos"></button>
           <button type="button" class="carousel-dot" data-index="2" aria-label="Ir para MedClinic"></button>
           <button type="button" class="carousel-dot" data-index="3" aria-label="Ir para Assis Sat"></button>
+        </div>
+
+      </div>
+    </section>
+
+    
+    <!-- ==================== CATÁLOGO DE FUNCIONÁRIOS DIGITAIS ==================== -->
+    <section class="funcs-sec" id="catalogo-funcionarios">
+      <div class="wrap">
+        
+        <div class="sec-header-center">
+          <div class="eyebrow">
+            <b></b> O Portfólio de Soluções DRYOS
+          </div>
+          <h2>Os Funcionários Digitais que você vai oferecer aos seus clientes.</h2>
+          <p>Agentes inteligentes construídos e mantidos pela DRYOS para assumir as tarefas operacionais mais caras e repetitivas de qualquer empresa.</p>
+        </div>
+
+        <div class="funcs-grid">
+          
+          <!-- Íris -->
+          <article class="func-card">
+            <div class="func-card-media">
+              <img src="/images/funcionarios/iris.jpg" alt="Íris — Atendimento e Triagem Comercial" class="func-card-photo" width="400" height="340" loading="lazy">
+              <span class="func-badge-protocol">#DRY-014</span>
+              <span class="func-badge-status"><b></b> Atendimento 24/7</span>
+            </div>
+            <div class="func-card-body">
+              <div>
+                <div class="func-title">
+                  <h3>Íris</h3>
+                  <p class="func-role">Atendimento &amp; Triagem Comercial</p>
+                </div>
+                <p class="func-bio">
+                  Assume o WhatsApp da empresa em tempo real. Responde em 5 segundos, filtra curiosos de compradores prontos, contorna objeções frequentes e agenda reuniões no Google Calendar da equipe.
+                </p>
+                <div class="func-tags">
+                  <span class="func-tag">API Oficial Meta</span>
+                  <span class="func-tag">Qualificação BANT</span>
+                  <span class="func-tag">Google Calendar</span>
+                  <span class="func-tag">Atendimento 24/7</span>
+                </div>
+              </div>
+              <div class="func-card-footer">
+                <span>Comissão por cliente</span>
+                <span class="comm-badge">30% ou 10% MRR</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Theo -->
+          <article class="func-card">
+            <div class="func-card-media">
+              <img src="/images/funcionarios/theo.jpg" alt="Theo — Cobrança e Gestão Financeira" class="func-card-photo" width="400" height="340" loading="lazy">
+              <span class="func-badge-protocol">#DRY-027</span>
+              <span class="func-badge-status"><b></b> Gestão Financeira</span>
+            </div>
+            <div class="func-card-body">
+              <div>
+                <div class="func-title">
+                  <h3>Theo</h3>
+                  <p class="func-role">Cobrança &amp; Recuperação Financeira</p>
+                </div>
+                <p class="func-bio">
+                  Executa a régua de cobrança preventiva e ativa no WhatsApp. Notifica vencimentos com chave Pix e código de barras, confirma pagamentos e renegocia atrasos sem constrangimento na equipe.
+                </p>
+                <div class="func-tags">
+                  <span class="func-tag">Régua Preventiva</span>
+                  <span class="func-tag">Pix &amp; Boletos</span>
+                  <span class="func-tag">Reconciliação</span>
+                  <span class="func-tag">Anti-inadimplência</span>
+                </div>
+              </div>
+              <div class="func-card-footer">
+                <span>Comissão por cliente</span>
+                <span class="comm-badge">30% ou 10% MRR</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Nero -->
+          <article class="func-card">
+            <div class="func-card-media">
+              <img src="/images/funcionarios/nero.jpg" alt="Nero — Inteligência de Dados e Indicadores" class="func-card-photo" width="400" height="340" loading="lazy">
+              <span class="func-badge-protocol">#DRY-042</span>
+              <span class="func-badge-status"><b></b> Auditoria Contínua</span>
+            </div>
+            <div class="func-card-body">
+              <div>
+                <div class="func-title">
+                  <h3>Nero</h3>
+                  <p class="func-role">Inteligência de Dados &amp; Indicadores</p>
+                </div>
+                <p class="func-bio">
+                  Cruza dados de atendimento, funil comercial e faturamento durante a noite. Às 08h da manhã, entrega no WhatsApp dos sócios um resumo conciso com indicadores críticos, vendas e gargalos.
+                </p>
+                <div class="func-tags">
+                  <span class="func-tag">Auditoria de Funil</span>
+                  <span class="func-tag">Briefing Matinal</span>
+                  <span class="func-tag">Métricas de Vendas</span>
+                  <span class="func-tag">Alertas de Queda</span>
+                </div>
+              </div>
+              <div class="func-card-footer">
+                <span>Comissão por cliente</span>
+                <span class="comm-badge">30% ou 10% MRR</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Atlas -->
+          <article class="func-card">
+            <div class="func-card-media">
+              <img src="/images/funcionarios/atlas.jpg" alt="Atlas — Onboarding e Operações" class="func-card-photo" width="400" height="340" loading="lazy">
+              <span class="func-badge-protocol">#DRY-058</span>
+              <span class="func-badge-status"><b></b> Operações</span>
+            </div>
+            <div class="func-card-body">
+              <div>
+                <div class="func-title">
+                  <h3>Atlas</h3>
+                  <p class="func-role">Onboarding &amp; Entrada de Clientes</p>
+                </div>
+                <p class="func-bio">
+                  Conduz o fluxo de entrada de novos clientes. Coleta documentos obrigatórios, preenche cadastros no ERP/CRM, envia checklists de boas-vindas e responde a dúvidas de onboarding sem filas.
+                </p>
+                <div class="func-tags">
+                  <span class="func-tag">Coleta de Documentos</span>
+                  <span class="func-tag">Sincronização CRM</span>
+                  <span class="func-tag">Checklists</span>
+                  <span class="func-tag">Onboarding 24/7</span>
+                </div>
+              </div>
+              <div class="func-card-footer">
+                <span>Comissão por cliente</span>
+                <span class="comm-badge">30% ou 10% MRR</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Callout Banner -->
+        <div class="funcs-callout">
+          <p>
+            <strong>Você não precisa programar nem manter nada:</strong> Toda a configuração de prompts, conexão com APIs oficiais da Meta, integrações de CRM e suporte técnico aos agentes são executados pela engenharia da DRYOS.
+          </p>
+          <a href="#aplicacao" class="btn btn-emerald">Quero Oferecer na Minha Carteira →</a>
         </div>
 
       </div>
