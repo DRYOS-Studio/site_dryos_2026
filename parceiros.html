@@ -1663,6 +1663,168 @@
     max-width: 100%;
     overflow-x: clip;
   }
+  
+  /* --- IMPECCABLE MOBILE & TOUCH OPTIMIZATIONS --- */
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  button, a, input, select, textarea {
+    touch-action: manipulation;
+  }
+
+  /* Form Inputs: 16px base font to prevent iOS Safari auto-zoom */
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px !important;
+    min-height: 48px;
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-sm);
+  }
+  .form-group textarea {
+    min-height: 90px;
+  }
+
+  /* Sticky First Column for Wide Responsibility Matrix */
+  .divisao-scroll-hint {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 11.5px;
+    color: var(--emerald-light);
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .divisao-scroll-hint svg {
+    flex-shrink: 0;
+    color: var(--emerald);
+    animation: hintSlide 1.5s ease-in-out infinite;
+  }
+  @keyframes hintSlide {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+  }
+
+  @media (max-width: 860px) {
+    .divisao-scroll-hint {
+      display: flex;
+    }
+    .divisao-table th:first-child,
+    .divisao-table td:first-child {
+      position: sticky;
+      left: 0;
+      z-index: 3;
+      background: #0D1610;
+      border-right: 1px solid var(--night-border-strong);
+      box-shadow: 4px 0 10px rgba(0, 0, 0, 0.4);
+    }
+    .divisao-table th:first-child {
+      background: #080D0A;
+    }
+  }
+
+  /* Enhanced Carousel Touch & Accessibility */
+  .carousel-wrapper {
+    touch-action: pan-y;
+  }
+  .carousel-track {
+    touch-action: pan-y;
+  }
+  .carousel-nav-btn {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .carousel-dot {
+    position: relative;
+    min-width: 8px;
+    min-height: 8px;
+  }
+  .carousel-dot::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    bottom: -12px;
+    left: -10px;
+    right: -10px;
+  }
+
+  /* Range Slider: Enhanced 30px thumb for fingers */
+  .range-slider {
+    height: 10px;
+  }
+  .range-slider::-webkit-slider-thumb {
+    width: 30px;
+    height: 30px;
+  }
+  .range-slider::-moz-range-thumb {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--emerald);
+    border: 2px solid #051A0B;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Hero Panel Responsiveness */
+  @media (max-width: 640px) {
+    .hero-sec {
+      padding-top: clamp(3rem, 7vw, 4.5rem);
+      padding-bottom: clamp(3rem, 6vw, 4rem);
+    }
+    .hero-ctas .btn {
+      width: 100%;
+      text-align: center;
+    }
+    .partner-panel {
+      padding: clamp(1.4rem, 4vw, 1.8rem);
+    }
+    .panel-header {
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+    .p-client-row {
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      padding: 0.85rem 0.9rem;
+    }
+    .panel-metric-val {
+      font-size: clamp(2rem, 7.5vw, 2.5rem);
+    }
+    .func-card-media {
+      aspect-ratio: 16 / 11;
+    }
+    .func-card-body {
+      padding: 1.4rem 1.2rem;
+    }
+    .m-card {
+      padding: clamp(1.8rem, 5vw, 2.4rem);
+    }
+    .calc-box {
+      padding: clamp(1.5rem, 4vw, 2rem);
+    }
+    .form-card {
+      padding: clamp(1.5rem, 4.5vw, 2.2rem);
+    }
+  }
+
+  @media (max-width: 400px) {
+    .func-badge-protocol,
+    .func-badge-status {
+      font-size: 10px;
+      padding: 0.2rem 0.5rem;
+    }
+    .panel-header-title span.mono {
+      font-size: 10.5px;
+    }
+    .client-card {
+      flex: 0 0 92%;
+    }
+  }
+
   </style>
 </head>
 <body>
@@ -1953,7 +2115,7 @@
           <!-- Íris -->
           <article class="func-card">
             <div class="func-card-media">
-              <img src="/images/funcionarios/iris.jpg" alt="Íris — Atendimento e Triagem Comercial" class="func-card-photo" width="400" height="340" loading="lazy">
+              <img src="/images/funcionarios/iris.jpg" alt="Íris — Atendimento e Triagem Comercial" class="func-card-photo" width="400" height="340" loading="lazy" decoding="async">
               <span class="func-badge-protocol">#DRY-014</span>
               <span class="func-badge-status"><b></b> Atendimento 24/7</span>
             </div>
@@ -1983,7 +2145,7 @@
           <!-- Theo -->
           <article class="func-card">
             <div class="func-card-media">
-              <img src="/images/funcionarios/theo.jpg" alt="Theo — Cobrança e Gestão Financeira" class="func-card-photo" width="400" height="340" loading="lazy">
+              <img src="/images/funcionarios/theo.jpg" alt="Theo — Cobrança e Gestão Financeira" class="func-card-photo" width="400" height="340" loading="lazy" decoding="async">
               <span class="func-badge-protocol">#DRY-027</span>
               <span class="func-badge-status"><b></b> Gestão Financeira</span>
             </div>
@@ -2013,7 +2175,7 @@
           <!-- Nero -->
           <article class="func-card">
             <div class="func-card-media">
-              <img src="/images/funcionarios/nero.jpg" alt="Nero — Inteligência de Dados e Indicadores" class="func-card-photo" width="400" height="340" loading="lazy">
+              <img src="/images/funcionarios/nero.jpg" alt="Nero — Inteligência de Dados e Indicadores" class="func-card-photo" width="400" height="340" loading="lazy" decoding="async">
               <span class="func-badge-protocol">#DRY-042</span>
               <span class="func-badge-status"><b></b> Auditoria Contínua</span>
             </div>
@@ -2043,7 +2205,7 @@
           <!-- Atlas -->
           <article class="func-card">
             <div class="func-card-media">
-              <img src="/images/funcionarios/atlas.jpg" alt="Atlas — Onboarding e Operações" class="func-card-photo" width="400" height="340" loading="lazy">
+              <img src="/images/funcionarios/atlas.jpg" alt="Atlas — Onboarding e Operações" class="func-card-photo" width="400" height="340" loading="lazy" decoding="async">
               <span class="func-badge-protocol">#DRY-058</span>
               <span class="func-badge-status"><b></b> Operações</span>
             </div>
@@ -2324,6 +2486,10 @@
           <p>Entenda exatamente o papel do indicador, do franqueado e da engenharia central da DRYOS.</p>
         </div>
 
+        <div class="divisao-scroll-hint mono">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <span>Arraste horizontalmente para comparar todos os modelos</span>
+        </div>
         <div class="divisao-table-wrap">
           <table class="divisao-table">
             <thead>
