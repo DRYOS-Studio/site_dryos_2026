@@ -101,6 +101,11 @@
     -moz-osx-font-smoothing: grayscale;
     background-color: var(--night);
     color: var(--paper);
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   body {
@@ -109,10 +114,15 @@
     line-height: 1.6;
     background: var(--night);
     color: var(--paper);
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
+    position: relative;
   }
 
   a { color: inherit; text-decoration: none; }
-  button { font-family: inherit; cursor: pointer; border: none; background: none; }
+  button { font-family: inherit; cursor: pointer; border: none; background: none; touch-action: manipulation; }
+  input, select, textarea { touch-action: manipulation; }
   img { max-width: 100%; height: auto; display: block; }
   h1, h2, h3, h4, h5, h6 { line-height: 1.3; }
 
@@ -128,6 +138,9 @@
   section[class*="-sec"] {
     padding-left: var(--gutter) !important;
     padding-right: var(--gutter) !important;
+    max-width: 100%;
+    overflow-x: clip;
+    box-sizing: border-box;
   }
 
   .wrap {
@@ -135,6 +148,8 @@
     margin: 0 auto;
     padding: 0 var(--gutter);
     position: relative;
+    width: 100%;
+    box-sizing: border-box;
   }
   section[class*="-sec"] > .wrap {
     padding-left: 0;
@@ -1445,20 +1460,30 @@
   .carousel-wrapper {
     position: relative;
     width: 100%;
-    overflow: hidden;
-    padding: 0.4rem 0.2rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 0.5rem 0.2rem;
+  }
+  .carousel-wrapper::-webkit-scrollbar {
+    display: none;
   }
   .carousel-track {
     display: flex;
     gap: 1.5rem;
-    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
-    will-change: transform;
+    width: max-content;
+    will-change: scroll-position;
     user-select: none;
     -webkit-user-select: none;
   }
   .client-card {
-    flex: 0 0 calc(25% - 1.15rem);
-    min-width: 275px;
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+    flex: 0 0 300px;
     background: linear-gradient(165deg, rgba(20, 30, 23, 0.9) 0%, rgba(12, 18, 14, 0.98) 100%);
     border: 1px solid var(--night-border-strong);
     border-radius: var(--radius-lg);
@@ -1560,13 +1585,107 @@
     background: var(--emerald);
   }
 
-  /* ------------------- RESPONSIVE ------------------- */
+  /* ------------------- RESPONSIVE & MOBILE MASTER ------------------- */
+  
+  /* Matrix Adaptive Mobile Cards (Default hidden on desktop) */
+  .divisao-mobile-cards {
+    display: none;
+  }
+  .div-m-card {
+    background: var(--night-card);
+    border: 1px solid var(--night-border-strong);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.15rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  }
+  .div-m-header {
+    margin-bottom: 0.9rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--night-border);
+  }
+  .div-m-step {
+    font-size: 11px;
+    color: var(--emerald-light);
+    letter-spacing: 0.08em;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  .div-m-header h4 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 0.2rem;
+  }
+  .div-m-sub {
+    font-size: 12px;
+    color: var(--mute-dark);
+  }
+  .div-m-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .div-m-row {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--night-border);
+    border-radius: var(--radius-sm);
+    padding: 0.75rem 0.85rem;
+  }
+  .div-m-row.highlight-franquia {
+    background: rgba(34, 197, 94, 0.05);
+    border-color: rgba(74, 222, 128, 0.35);
+  }
+  .div-m-row.row-dryos {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+  .div-m-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--mute-dark);
+    display: block;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+  }
+  .highlight-franquia .div-m-tag {
+    color: var(--emerald-light);
+  }
+  .row-dryos .div-m-tag {
+    color: #E2E8E4;
+  }
+  .div-m-row p {
+    font-size: 13px;
+    line-height: 1.45;
+    color: #D6DED7;
+    margin: 0;
+  }
+
+  /* Form Inputs Base (Touch & Accessibility) */
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px !important;
+    min-height: 48px;
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-sm);
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .form-group textarea {
+    min-height: 90px;
+  }
+
+  /* --- TABLET (max-width: 1024px) --- */
   @media (max-width: 1024px) {
     .funcs-grid {
       grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
     }
     .client-card {
-      flex: 0 0 calc(50% - 0.75rem);
+      flex: 0 0 280px;
     }
     .hero-layout,
     .tese-grid,
@@ -1575,7 +1694,7 @@
     .aplicacao-layout,
     .elegivel-grid {
       grid-template-columns: minmax(0, 1fr);
-      gap: 3rem;
+      gap: 2.5rem;
     }
     .calc-box,
     .calc-controls,
@@ -1590,71 +1709,351 @@
       grid-template-columns: 1fr;
     }
   }
+
+  /* --- MOBILE & TABLET PORTRAIT (max-width: 768px) --- */
+  @media (max-width: 768px) {
+    :root {
+      --gutter: clamp(1rem, 4.5vw, 1.5rem);
+    }
+    section[class*="-sec"] {
+      padding-top: clamp(2.5rem, 6.5vw, 3.5rem) !important;
+      padding-bottom: clamp(2.5rem, 6.5vw, 3.5rem) !important;
+    }
+    .hero-sec {
+      padding-top: clamp(2.5rem, 6.5vw, 3.5rem) !important;
+      padding-bottom: clamp(2.5rem, 6.5vw, 3.5rem) !important;
+    }
+    .hero-copy h1 {
+      font-size: clamp(1.85rem, 7.5vw, 2.35rem) !important;
+      line-height: 1.12 !important;
+      letter-spacing: -0.03em !important;
+      margin-bottom: 1.1rem !important;
+      text-wrap: balance;
+    }
+    .hero-copy p.lead {
+      font-size: 14.5px !important;
+      line-height: 1.55 !important;
+      margin-bottom: 1.6rem !important;
+    }
+    .sec-header-center h2,
+    .carousel-title-col h2 {
+      font-size: clamp(1.5rem, 6.5vw, 1.95rem) !important;
+      line-height: 1.18 !important;
+      letter-spacing: -0.025em !important;
+      margin-bottom: 0.6rem !important;
+      text-wrap: balance;
+    }
+    .sec-header-center p,
+    .carousel-title-col p {
+      font-size: 14px !important;
+      line-height: 1.5 !important;
+    }
+    .eyebrow {
+      font-size: 11px !important;
+      padding: 0.25rem 0.65rem !important;
+      margin-bottom: 0.9rem !important;
+      white-space: normal !important;
+      line-height: 1.35 !important;
+      display: inline-flex !important;
+      flex-wrap: wrap !important;
+    }
+
+    /* Switch from wide horizontal table to dedicated mobile step cards */
+    .divisao-table-wrap {
+      display: none !important;
+    }
+    .divisao-scroll-hint {
+      display: none !important;
+    }
+    .divisao-mobile-cards {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1rem !important;
+      width: 100% !important;
+    }
+  }
+
+  /* --- MOBILE PHONES (max-width: 640px) --- */
   @media (max-width: 640px) {
+    /* Hero Buttons & Trust */
+    .hero-ctas {
+      flex-direction: column;
+      gap: 0.65rem;
+      margin-bottom: 1.8rem;
+    }
+    .hero-ctas .btn {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+      padding: 0.85rem 1.2rem;
+    }
+    .hero-trust {
+      flex-direction: column;
+      gap: 0.85rem;
+      padding-top: 1.4rem;
+    }
+
+    /* Hero Partner Panel Preview */
+    .partner-panel {
+      padding: 1.35rem 1.15rem;
+      border-radius: var(--radius-lg);
+    }
+    .panel-header {
+      padding-bottom: 0.9rem;
+      margin-bottom: 1.1rem;
+      gap: 0.6rem;
+    }
+    .panel-header-title img {
+      height: 15px;
+    }
+    .panel-header-title span.mono {
+      font-size: 10px;
+    }
+    .panel-badge-status {
+      font-size: 11px;
+      padding: 0.2rem 0.5rem;
+    }
+    .panel-metric-highlight {
+      padding: 1.1rem;
+      margin-bottom: 1.1rem;
+    }
+    .panel-metric-label {
+      font-size: 10.5px;
+    }
+    .panel-metric-val {
+      font-size: clamp(1.85rem, 7vw, 2.3rem);
+    }
+    .panel-metric-sub {
+      font-size: 12px;
+    }
+    .p-client-row {
+      padding: 0.65rem 0.8rem;
+      font-size: 12px;
+      gap: 0.5rem;
+    }
+    .p-client-tag {
+      display: none; /* Hide label on mobile to keep 1 compact transaction row */
+    }
+
+    /* Client Carousel */
+    .carousel-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .carousel-controls {
+      display: none; /* Native touch swiping is primary on mobile */
+    }
+    .client-card {
+      flex: 0 0 calc(100vw - 3rem) !important;
+      max-width: 330px !important;
+      min-width: 260px !important;
+      padding: 1.4rem 1.2rem !important;
+      border-radius: var(--radius-md) !important;
+    }
+    .c-card-name {
+      font-size: 1.3rem !important;
+    }
+    .c-card-desc {
+      font-size: 13px !important;
+      line-height: 1.5 !important;
+      margin-bottom: 1rem !important;
+    }
+
+    /* Digital Employees Roster */
     .funcs-grid {
       grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+    .func-card {
+      border-radius: var(--radius-md);
+    }
+    .func-card-media {
+      aspect-ratio: 16 / 9;
+      max-height: 185px;
+    }
+    .func-card-body {
+      padding: 1.2rem 1.1rem;
+    }
+    .func-title h3 {
+      font-size: 1.3rem;
+    }
+    .func-role {
+      font-size: 12px;
+    }
+    .func-bio {
+      font-size: 13.5px;
+      line-height: 1.5;
+      margin-bottom: 0.85rem;
+    }
+    .func-tags {
+      gap: 0.4rem;
+    }
+    .func-tag {
+      font-size: 10.5px;
+      padding: 0.18rem 0.45rem;
     }
     .funcs-callout {
       flex-direction: column;
       align-items: flex-start;
+      margin-top: 1.8rem;
+      padding: 1.2rem 1.1rem;
+      gap: 0.75rem;
     }
-    .client-card {
-      flex: 0 0 88%;
-      min-width: 250px;
-    }
-    .carousel-header {
-      align-items: flex-start;
-    }
-    .calc-mode-toggle {
-      flex-direction: column;
+
+    /* Models Cards */
+    .m-card {
+      padding: 1.5rem 1.25rem;
       border-radius: var(--radius-md);
-      gap: 0.3rem;
+    }
+    .m-card h3 {
+      font-size: 1.55rem;
+    }
+    .m-card p.m-desc {
+      font-size: 13.5px;
+      margin-bottom: 1.2rem;
+    }
+    .m-stat-box {
+      padding: 1.1rem 1rem;
+      margin-bottom: 1.3rem;
+    }
+    .m-stat-val {
+      font-size: 1.75rem;
+    }
+    .m-stat-sub {
+      font-size: 12px;
+    }
+    .m-list li {
+      font-size: 13px;
+      margin-bottom: 0.75rem;
+    }
+
+    /* Interactive Calculator Segmented Pill Control */
+    .calc-mode-toggle {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      border-radius: 10px !important;
+      padding: 3px !important;
+      gap: 3px !important;
+      margin-bottom: 1.5rem !important;
+      box-sizing: border-box !important;
     }
     .mode-btn {
-      width: 100%;
-      border-radius: var(--radius-sm);
+      width: 100% !important;
+      padding: 0.6rem 0.2rem !important;
+      font-size: 11px !important;
+      border-radius: 7px !important;
+      letter-spacing: 0.01em !important;
+      text-align: center !important;
+      white-space: nowrap !important;
     }
-    .form-row,
-    .cmp-res-grid,
+    .calc-box {
+      padding: 1.35rem 1.15rem !important;
+      gap: 1.75rem !important;
+      border-radius: var(--radius-md) !important;
+    }
+    .ctrl-group label {
+      font-size: 12.5px !important;
+      flex-wrap: wrap !important;
+      gap: 0.3rem !important;
+    }
+    .ctrl-group label .val {
+      font-size: 12px !important;
+      padding: 0.2rem 0.5rem !important;
+    }
+    .range-slider {
+      height: 10px;
+    }
+    .range-slider::-webkit-slider-thumb {
+      width: 28px;
+      height: 28px;
+    }
+    .range-slider::-moz-range-thumb {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--emerald);
+      border: 2px solid #051A0B;
+    }
+    .res-block .label {
+      font-size: 10.5px !important;
+      line-height: 1.35 !important;
+    }
+    .res-block .big-num {
+      font-size: clamp(1.6rem, 7vw, 2.1rem) !important;
+    }
     .res-sub-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr !important;
+      gap: 0.65rem !important;
     }
-    .hero-copy {
-      min-width: 0;
+    .res-mini {
+      padding: 0.75rem 0.85rem !important;
     }
-    .hero-copy > .eyebrow {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      max-width: 100%;
-      width: 100%;
-      box-sizing: border-box;
-      white-space: normal;
-      line-height: 1.45;
-      padding: 0.35rem 0.65rem;
-      border-radius: 14px;
+    .res-mini span {
+      font-size: 11px !important;
     }
-    .hero-copy > .eyebrow b {
-      flex-shrink: 0;
-      margin-top: 0.35em;
+    .res-mini strong {
+      font-size: 13px !important;
     }
-    .eyebrow {
-      max-width: 100%;
-      white-space: normal;
-      line-height: 1.45;
+    .cmp-res-grid {
+      grid-template-columns: 1fr !important;
+      gap: 0.8rem !important;
     }
-    .hero-copy h1,
-    .hero-copy p.lead {
-      overflow-wrap: anywhere;
+    .cmp-card {
+      padding: 1.1rem !important;
     }
-    .calc-box,
+    .cmp-card-tag {
+      font-size: 10.5px !important;
+    }
+    .cmp-card-val {
+      font-size: 1.4rem !important;
+    }
+
+    /* Co-selling & Application Form */
+    .cosell-card {
+      padding: 1.35rem 1.15rem !important;
+      border-radius: var(--radius-md) !important;
+    }
     .form-card {
-      max-width: 100%;
-      overflow-x: hidden;
+      padding: 1.35rem 1.15rem !important;
+      border-radius: var(--radius-md) !important;
     }
-    #resMonthly {
-      font-size: clamp(1.35rem, 7vw, 2rem);
-      overflow-wrap: anywhere;
+    .form-row {
+      grid-template-columns: 1fr !important;
+      gap: 0 !important;
+    }
+    .ap-step {
+      gap: 0.85rem !important;
+    }
+    .ap-step-num {
+      width: 28px !important;
+      height: 28px !important;
+      font-size: 12px !important;
+    }
+    .ap-step-info h3 {
+      font-size: 14.5px !important;
+    }
+    .ap-step-info p {
+      font-size: 13px !important;
+    }
+  }
+
+  /* --- COMPACT PHONES (max-width: 380px) --- */
+  @media (max-width: 380px) {
+    .mode-btn {
+      font-size: 10px !important;
+      padding: 0.55rem 0.15rem !important;
+    }
+    .func-badge-protocol,
+    .func-badge-status {
+      font-size: 9.5px !important;
+      padding: 0.15rem 0.4rem !important;
+    }
+    .client-card {
+      flex: 0 0 calc(100vw - 2.5rem) !important;
     }
   }
 
@@ -1663,168 +2062,6 @@
     max-width: 100%;
     overflow-x: clip;
   }
-  
-  /* --- IMPECCABLE MOBILE & TOUCH OPTIMIZATIONS --- */
-  html {
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-  }
-
-  button, a, input, select, textarea {
-    touch-action: manipulation;
-  }
-
-  /* Form Inputs: 16px base font to prevent iOS Safari auto-zoom */
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    font-size: 16px !important;
-    min-height: 48px;
-    padding: 0.85rem 1rem;
-    border-radius: var(--radius-sm);
-  }
-  .form-group textarea {
-    min-height: 90px;
-  }
-
-  /* Sticky First Column for Wide Responsibility Matrix */
-  .divisao-scroll-hint {
-    display: none;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 11.5px;
-    color: var(--emerald-light);
-    margin-bottom: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .divisao-scroll-hint svg {
-    flex-shrink: 0;
-    color: var(--emerald);
-    animation: hintSlide 1.5s ease-in-out infinite;
-  }
-  @keyframes hintSlide {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(5px); }
-  }
-
-  @media (max-width: 860px) {
-    .divisao-scroll-hint {
-      display: flex;
-    }
-    .divisao-table th:first-child,
-    .divisao-table td:first-child {
-      position: sticky;
-      left: 0;
-      z-index: 3;
-      background: #0D1610;
-      border-right: 1px solid var(--night-border-strong);
-      box-shadow: 4px 0 10px rgba(0, 0, 0, 0.4);
-    }
-    .divisao-table th:first-child {
-      background: #080D0A;
-    }
-  }
-
-  /* Enhanced Carousel Touch & Accessibility */
-  .carousel-wrapper {
-    touch-action: pan-y;
-  }
-  .carousel-track {
-    touch-action: pan-y;
-  }
-  .carousel-nav-btn {
-    min-width: 44px;
-    min-height: 44px;
-  }
-  .carousel-dot {
-    position: relative;
-    min-width: 8px;
-    min-height: 8px;
-  }
-  .carousel-dot::before {
-    content: '';
-    position: absolute;
-    top: -12px;
-    bottom: -12px;
-    left: -10px;
-    right: -10px;
-  }
-
-  /* Range Slider: Enhanced 30px thumb for fingers */
-  .range-slider {
-    height: 10px;
-  }
-  .range-slider::-webkit-slider-thumb {
-    width: 30px;
-    height: 30px;
-  }
-  .range-slider::-moz-range-thumb {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: var(--emerald);
-    border: 2px solid #051A0B;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-  }
-
-  /* Hero Panel Responsiveness */
-  @media (max-width: 640px) {
-    .hero-sec {
-      padding-top: clamp(3rem, 7vw, 4.5rem);
-      padding-bottom: clamp(3rem, 6vw, 4rem);
-    }
-    .hero-ctas .btn {
-      width: 100%;
-      text-align: center;
-    }
-    .partner-panel {
-      padding: clamp(1.4rem, 4vw, 1.8rem);
-    }
-    .panel-header {
-      flex-wrap: wrap;
-      gap: 0.8rem;
-    }
-    .p-client-row {
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      padding: 0.85rem 0.9rem;
-    }
-    .panel-metric-val {
-      font-size: clamp(2rem, 7.5vw, 2.5rem);
-    }
-    .func-card-media {
-      aspect-ratio: 16 / 11;
-    }
-    .func-card-body {
-      padding: 1.4rem 1.2rem;
-    }
-    .m-card {
-      padding: clamp(1.8rem, 5vw, 2.4rem);
-    }
-    .calc-box {
-      padding: clamp(1.5rem, 4vw, 2rem);
-    }
-    .form-card {
-      padding: clamp(1.5rem, 4.5vw, 2.2rem);
-    }
-  }
-
-  @media (max-width: 400px) {
-    .func-badge-protocol,
-    .func-badge-status {
-      font-size: 10px;
-      padding: 0.2rem 0.5rem;
-    }
-    .panel-header-title span.mono {
-      font-size: 10.5px;
-    }
-    .client-card {
-      flex: 0 0 92%;
-    }
-  }
-
   </style>
 </head>
 <body>
@@ -2550,6 +2787,121 @@
           </table>
         </div>
 
+        <!-- Mobile Step Cards (Replaces horizontal scrolling table on mobile) -->
+        <div class="divisao-mobile-cards" aria-label="Divisão de papéis por etapa">
+          
+          <div class="div-m-card">
+            <div class="div-m-header">
+              <span class="div-m-step mono">ETAPA 01</span>
+              <h4>1. Prospecção & Qualificação</h4>
+              <span class="div-m-sub">Identificação da dor na carteira</span>
+            </div>
+            <div class="div-m-body">
+              <div class="div-m-row">
+                <span class="div-m-tag mono">Indicação (10%)</span>
+                <p>Apenas passa o contato e introduz o decisor ao time DRYOS.</p>
+              </div>
+              <div class="div-m-row highlight-franquia">
+                <span class="div-m-tag mono">Franquia (30%)</span>
+                <p>Identifica o gargalo na carteira e agenda a demonstração com o cliente.</p>
+              </div>
+              <div class="div-m-row row-dryos">
+                <span class="div-m-tag mono">DRYOS Engenharia</span>
+                <p>Fornece scripts de abordagem, roteiros de diagnóstico e calculadoras de ROI.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="div-m-card">
+            <div class="div-m-header">
+              <span class="div-m-step mono">ETAPA 02</span>
+              <h4>2. Demonstração Técnica</h4>
+              <span class="div-m-sub">Apresentação ao decisor</span>
+            </div>
+            <div class="div-m-body">
+              <div class="div-m-row">
+                <span class="div-m-tag mono">Indicação (10%)</span>
+                <p>Não participa da reunião (a DRYOS conduz 100%).</p>
+              </div>
+              <div class="div-m-row highlight-franquia">
+                <span class="div-m-tag mono">Franquia (30%)</span>
+                <p>Conduz a abertura comercial e participa da chamada.</p>
+              </div>
+              <div class="div-m-row row-dryos">
+                <span class="div-m-tag mono">DRYOS Engenharia</span>
+                <p>Engenheiro de soluções da DRYOS entra ao vivo para demonstrar a IA e tirar objeções.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="div-m-card">
+            <div class="div-m-header">
+              <span class="div-m-step mono">ETAPA 03</span>
+              <h4>3. Fechamento & Contrato</h4>
+              <span class="div-m-sub">Formalização jurídica</span>
+            </div>
+            <div class="div-m-body">
+              <div class="div-m-row">
+                <span class="div-m-tag mono">Indicação (10%)</span>
+                <p>Nenhum envolvimento burocrático.</p>
+              </div>
+              <div class="div-m-row highlight-franquia">
+                <span class="div-m-tag mono">Franquia (30%)</span>
+                <p>Apoia no alinhamento das condições comerciais.</p>
+              </div>
+              <div class="div-m-row row-dryos">
+                <span class="div-m-tag mono">DRYOS Engenharia</span>
+                <p>Emite a proposta executiva e o contrato de prestação de serviços de tecnologia.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="div-m-card">
+            <div class="div-m-header">
+              <span class="div-m-step mono">ETAPA 04</span>
+              <h4>4. Implantação e Integração</h4>
+              <span class="div-m-sub">WhatsApp Oficial e CRM</span>
+            </div>
+            <div class="div-m-body">
+              <div class="div-m-row">
+                <span class="div-m-tag mono">Indicação (10%)</span>
+                <p>Nenhum envolvimento técnico.</p>
+              </div>
+              <div class="div-m-row highlight-franquia">
+                <span class="div-m-tag mono">Franquia (30%)</span>
+                <p>Acompanha a validação de tom de voz com o cliente.</p>
+              </div>
+              <div class="div-m-row row-dryos">
+                <span class="div-m-tag mono">DRYOS Engenharia</span>
+                <p>Executa toda a engenharia de prompts, homologação de API oficial da Meta e webhooks.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="div-m-card">
+            <div class="div-m-header">
+              <span class="div-m-step mono">ETAPA 05</span>
+              <h4>5. Suporte e Repasse</h4>
+              <span class="div-m-sub">Operação contínua</span>
+            </div>
+            <div class="div-m-body">
+              <div class="div-m-row">
+                <span class="div-m-tag mono">Indicação (10%)</span>
+                <p>Recebe 10% de comissão todo dia 10 com extrato discriminado.</p>
+              </div>
+              <div class="div-m-row highlight-franquia">
+                <span class="div-m-tag mono">Franquia (30%)</span>
+                <p>Mantém relacionamento e recebe 30% todo dia 10 via Pix/PJ.</p>
+              </div>
+              <div class="div-m-row row-dryos">
+                <span class="div-m-tag mono">DRYOS Engenharia</span>
+                <p>Sustentação técnica contínua 24/7 e pagamento pontual via Pix/PJ.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </section>
 
@@ -2733,7 +3085,7 @@
             <div class="ap-step">
               <div class="ap-step-num">1</div>
               <div class="ap-step-info">
-                <h3>Preencha a Ficha ao Lado</h3>
+                <h3>Preencha a Ficha de Credenciamento</h3>
                 <p>Conte sobre a sua empresa, nicho atendido e o modelo de parceria desejado.</p>
               </div>
             </div>
@@ -2915,7 +3267,7 @@
   <script src="/js/dryos-site.js"></script>
   <script>
   
-  // Clients Carousel Controller
+  // Clients Carousel Controller (Native Smooth Scroll + Touch Snap)
   (function () {
     const track = document.getElementById('clientCarouselTrack');
     const prevBtn = document.getElementById('prevClientBtn');
@@ -2927,46 +3279,43 @@
 
     const cards = track.querySelectorAll('.client-card');
     const totalCards = cards.length;
-    let currentIndex = 0;
     let autoplayTimer = null;
 
-    function getVisibleCardsCount() {
-      if (window.innerWidth <= 640) return 1;
-      if (window.innerWidth <= 1024) return 2;
-      return 4;
+    function getCardStep() {
+      if (!cards.length) return 300;
+      const rect = cards[0].getBoundingClientRect();
+      return rect.width + 24;
     }
 
-    function getMaxIndex() {
-      const visible = getVisibleCardsCount();
-      return Math.max(0, totalCards - visible);
-    }
-
-    function updateCarousel() {
-      if (!cards.length) return;
-      const cardWidth = cards[0].getBoundingClientRect().width;
-      const gap = 24; // 1.5rem
-      const maxIdx = getMaxIndex();
-      if (currentIndex > maxIdx) currentIndex = 0;
-      if (currentIndex < 0) currentIndex = maxIdx;
-
-      const offset = currentIndex * (cardWidth + gap);
-      track.style.transform = `translateX(-${offset}px)`;
-
-      dots.forEach((dot, idx) => {
-        dot.classList.toggle('active', idx === currentIndex);
-      });
+    function scrollToIndex(idx) {
+      if (idx < 0) idx = 0;
+      if (idx >= totalCards) idx = totalCards - 1;
+      const card = cards[idx];
+      if (card) {
+        wrapper.scrollTo({
+          left: card.offsetLeft - track.offsetLeft,
+          behavior: 'smooth'
+        });
+      }
     }
 
     function nextSlide() {
-      const maxIdx = getMaxIndex();
-      currentIndex = currentIndex >= maxIdx ? 0 : currentIndex + 1;
-      updateCarousel();
+      const step = getCardStep();
+      const maxScroll = wrapper.scrollWidth - wrapper.clientWidth;
+      if (wrapper.scrollLeft >= maxScroll - 10) {
+        wrapper.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        wrapper.scrollBy({ left: step, behavior: 'smooth' });
+      }
     }
 
     function prevSlide() {
-      const maxIdx = getMaxIndex();
-      currentIndex = currentIndex <= 0 ? maxIdx : currentIndex - 1;
-      updateCarousel();
+      const step = getCardStep();
+      if (wrapper.scrollLeft <= 10) {
+        wrapper.scrollTo({ left: wrapper.scrollWidth, behavior: 'smooth' });
+      } else {
+        wrapper.scrollBy({ left: -step, behavior: 'smooth' });
+      }
     }
 
     if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); resetAutoplay(); });
@@ -2974,33 +3323,31 @@
 
     dots.forEach((dot) => {
       dot.addEventListener('click', function () {
-        currentIndex = parseInt(this.getAttribute('data-index'), 10) || 0;
-        updateCarousel();
+        const idx = parseInt(this.getAttribute('data-index'), 10) || 0;
+        scrollToIndex(idx);
         resetAutoplay();
       });
     });
 
-    // Touch / Swipe support
-    let startX = 0;
-    let endX = 0;
-
-    wrapper.addEventListener('touchstart', (e) => {
-      startX = e.touches[0].clientX;
-    }, { passive: true });
-
-    wrapper.addEventListener('touchend', (e) => {
-      endX = e.changedTouches[0].clientX;
-      const diff = startX - endX;
-      if (Math.abs(diff) > 40) {
-        if (diff > 0) nextSlide();
-        else prevSlide();
-        resetAutoplay();
-      }
+    // Update active dot on scroll (native snap listener)
+    let scrollTimeout = null;
+    wrapper.addEventListener('scroll', () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        const step = getCardStep();
+        if (step <= 0) return;
+        const currentIdx = Math.min(totalCards - 1, Math.max(0, Math.round(wrapper.scrollLeft / step)));
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === currentIdx);
+        });
+      }, 50);
     }, { passive: true });
 
     function startAutoplay() {
       stopAutoplay();
-      autoplayTimer = setInterval(nextSlide, 4500);
+      autoplayTimer = setInterval(() => {
+        nextSlide();
+      }, 5000);
     }
 
     function stopAutoplay() {
@@ -3017,12 +3364,8 @@
 
     wrapper.addEventListener('mouseenter', stopAutoplay);
     wrapper.addEventListener('mouseleave', startAutoplay);
+    wrapper.addEventListener('touchstart', stopAutoplay, { passive: true });
 
-    window.addEventListener('resize', () => {
-      updateCarousel();
-    });
-
-    updateCarousel();
     startAutoplay();
   })();
 
