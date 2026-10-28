@@ -1203,8 +1203,196 @@
     line-height: 1.5;
   }
 
+  
+  /* ------------------- CARROSSEL DE CLIENTES ------------------- */
+  .carousel-sec {
+    padding: clamp(3.5rem, 6.5vw, 5.5rem) 0;
+    background: #060907;
+    border-top: 1px solid var(--night-border);
+    border-bottom: 1px solid var(--night-border);
+    position: relative;
+    overflow: hidden;
+  }
+  .carousel-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .carousel-title-col {
+    max-width: 680px;
+  }
+  .carousel-title-col .eyebrow {
+    margin-bottom: 0.8rem;
+  }
+  .carousel-title-col h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    text-wrap: balance;
+  }
+  .carousel-title-col p {
+    font-size: 14.5px;
+    color: var(--mute-dark);
+    line-height: 1.55;
+  }
+  .carousel-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .carousel-nav-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--night-border-strong);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .carousel-nav-btn:hover {
+    background: rgba(74, 222, 128, 0.15);
+    border-color: var(--emerald);
+    color: var(--emerald-light);
+    transform: translateY(-2px);
+  }
+  .carousel-nav-btn:focus-visible {
+    outline: 2px solid var(--emerald);
+  }
+
+  .carousel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 0.4rem 0.2rem;
+  }
+  .carousel-track {
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .client-card {
+    flex: 0 0 calc(25% - 1.15rem);
+    min-width: 275px;
+    background: linear-gradient(165deg, rgba(20, 30, 23, 0.9) 0%, rgba(12, 18, 14, 0.98) 100%);
+    border: 1px solid var(--night-border-strong);
+    border-radius: var(--radius-lg);
+    padding: 1.8rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 6px 18px -4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+    position: relative;
+  }
+  .client-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(74, 222, 128, 0.4);
+    box-shadow: 0 10px 24px -6px rgba(0, 0, 0, 0.7);
+  }
+  .c-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.1rem;
+  }
+  .c-card-nicho {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--emerald-light);
+    background: #0E2215;
+    border: 1px solid rgba(74, 222, 128, 0.35);
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+    text-transform: uppercase;
+  }
+  .c-card-live {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: var(--mute-dark);
+  }
+  .c-card-live b {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--emerald);
+    box-shadow: 0 0 8px rgba(74, 222, 128, 0.8);
+    display: inline-block;
+  }
+  .c-card-name {
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 0.65rem;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+  }
+  .c-card-desc {
+    font-size: 13.5px;
+    color: #C2CDC5;
+    line-height: 1.55;
+    margin-bottom: 1.4rem;
+  }
+  .c-card-bot {
+    padding-top: 1rem;
+    border-top: 1px solid var(--night-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: var(--mute-dark);
+  }
+  .c-card-bot span.highlight {
+    color: var(--paper);
+    font-weight: 600;
+  }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.8rem;
+  }
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.18);
+    transition: all 0.25s;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+  }
+  .carousel-dot.active {
+    width: 26px;
+    background: var(--emerald);
+  }
+
   /* ------------------- RESPONSIVE ------------------- */
   @media (max-width: 1024px) {
+    .client-card {
+      flex: 0 0 calc(50% - 0.75rem);
+    }
     .hero-layout,
     .tese-grid,
     .modelos-grid,
@@ -1228,6 +1416,13 @@
     }
   }
   @media (max-width: 640px) {
+    .client-card {
+      flex: 0 0 88%;
+      min-width: 250px;
+    }
+    .carousel-header {
+      align-items: flex-start;
+    }
     .calc-mode-toggle {
       flex-direction: column;
       border-radius: var(--radius-md);
@@ -1411,21 +1606,28 @@
             <div class="panel-clients-list">
               <div class="p-client-row">
                 <div class="p-client-name">
-                  <span>Clínica Odonto Prime</span>
+                  <span>Academia Tio Sam</span>
                   <span class="p-client-tag">· Modelo Franquia</span>
                 </div>
                 <div class="p-client-comm">+ 30% recorrente</div>
               </div>
               <div class="p-client-row">
                 <div class="p-client-name">
-                  <span>Albuquerque Advogados</span>
+                  <span>Clínica Novos Sorrisos</span>
                   <span class="p-client-tag">· Modelo Franquia</span>
                 </div>
                 <div class="p-client-comm">+ 30% recorrente</div>
               </div>
               <div class="p-client-row">
                 <div class="p-client-name">
-                  <span>Distribuidora Nova Era</span>
+                  <span>MedClinic</span>
+                  <span class="p-client-tag">· Modelo Franquia</span>
+                </div>
+                <div class="p-client-comm">+ 30% recorrente</div>
+              </div>
+              <div class="p-client-row">
+                <div class="p-client-name">
+                  <span>Assis Sat</span>
                   <span class="p-client-tag">· Modelo Indicação</span>
                 </div>
                 <div class="p-client-comm">+ 10% recorrente</div>
@@ -1433,6 +1635,119 @@
             </div>
 
           </div>
+        </div>
+
+      </div>
+    </section>
+
+    
+    <!-- ==================== CLIENTES QUE JÁ USAM (CARROSSEL) ==================== -->
+    <section class="carousel-sec" id="clientes-ativos">
+      <div class="wrap">
+        
+        <div class="carousel-header">
+          <div class="carousel-title-col">
+            <div class="eyebrow">
+              <b></b> Casos Reais em Produção
+            </div>
+            <h2>Empresas que já operam com Funcionários Digitais DRYOS.</h2>
+            <p>Atendimento contínuo no WhatsApp oficial, triagem sem filas e dados sincronizados em tempo real.</p>
+          </div>
+
+          <div class="carousel-controls" aria-label="Controles do carrossel de clientes">
+            <button type="button" class="carousel-nav-btn" id="prevClientBtn" aria-label="Cliente anterior">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button type="button" class="carousel-nav-btn" id="nextClientBtn" aria-label="Próximo cliente">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="carousel-wrapper" id="clientCarouselWrapper">
+          <div class="carousel-track" id="clientCarouselTrack">
+            
+            <!-- Card 1: Academia Tio Sam -->
+            <div class="client-card">
+              <div>
+                <div class="c-card-top">
+                  <span class="c-card-nicho">Fitness & Esportes</span>
+                  <div class="c-card-live"><b></b> <span>WhatsApp 24/7</span></div>
+                </div>
+                <h3 class="c-card-name">Academia Tio Sam</h3>
+                <p class="c-card-desc">
+                  Atendimento instantâneo a novos alunos interessados, qualificação de modalidades, agendamento automatizado de aulas experimentais e recuperação ativa de planos vencidos.
+                </p>
+              </div>
+              <div class="c-card-bot">
+                <span>Resposta média</span>
+                <span class="highlight">&lt; 5 segundos</span>
+              </div>
+            </div>
+
+            <!-- Card 2: Clínica Novos Sorrisos -->
+            <div class="client-card">
+              <div>
+                <div class="c-card-top">
+                  <span class="c-card-nicho">Odontologia</span>
+                  <div class="c-card-live"><b></b> <span>WhatsApp 24/7</span></div>
+                </div>
+                <h3 class="c-card-name">Clínica Novos Sorrisos</h3>
+                <p class="c-card-desc">
+                  Triagem clínica humanizada de pacientes no WhatsApp, esclarecimento de dúvidas sobre implantes e ortodontia, e agendamento de avaliações diretamente na agenda médica.
+                </p>
+              </div>
+              <div class="c-card-bot">
+                <span>Agendamentos</span>
+                <span class="highlight">Triagem contínua 24h</span>
+              </div>
+            </div>
+
+            <!-- Card 3: MedClinic -->
+            <div class="client-card">
+              <div>
+                <div class="c-card-top">
+                  <span class="c-card-nicho">Saúde Integrada</span>
+                  <div class="c-card-live"><b></b> <span>WhatsApp 24/7</span></div>
+                </div>
+                <h3 class="c-card-name">MedClinic</h3>
+                <p class="c-card-desc">
+                  Gestão completa do atendimento para mais de 12 especialidades médicas, filtro de convênios vs. particular e confirmação automatizada com redução drástica de faltas.
+                </p>
+              </div>
+              <div class="c-card-bot">
+                <span>Especialidades</span>
+                <span class="highlight">12+ áreas médicas</span>
+              </div>
+            </div>
+
+            <!-- Card 4: Assis Sat -->
+            <div class="client-card">
+              <div>
+                <div class="c-card-top">
+                  <span class="c-card-nicho">Rastreamento & Frotas</span>
+                  <div class="c-card-live"><b></b> <span>WhatsApp 24/7</span></div>
+                </div>
+                <h3 class="c-card-name">Assis Sat</h3>
+                <p class="c-card-desc">
+                  Qualificação imediata de cotações para rastreamento veicular e telemetria de frotas comerciais, com envio de orçamentos rápidos e conexão direta ao CRM de vendas.
+                </p>
+              </div>
+              <div class="c-card-bot">
+                <span>Integração</span>
+                <span class="highlight">CRM em tempo real</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Carousel Indicators (Dots) -->
+        <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Indicadores dos clientes">
+          <button type="button" class="carousel-dot active" data-index="0" aria-label="Ir para Academia Tio Sam"></button>
+          <button type="button" class="carousel-dot" data-index="1" aria-label="Ir para Clínica Novos Sorrisos"></button>
+          <button type="button" class="carousel-dot" data-index="2" aria-label="Ir para MedClinic"></button>
+          <button type="button" class="carousel-dot" data-index="3" aria-label="Ir para Assis Sat"></button>
         </div>
 
       </div>
@@ -2110,6 +2425,118 @@
   <!-- ==================== LOGIC / SCRIPTS ==================== -->
   <script src="/js/dryos-site.js"></script>
   <script>
+  
+  // Clients Carousel Controller
+  (function () {
+    const track = document.getElementById('clientCarouselTrack');
+    const prevBtn = document.getElementById('prevClientBtn');
+    const nextBtn = document.getElementById('nextClientBtn');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const wrapper = document.getElementById('clientCarouselWrapper');
+
+    if (!track || !wrapper) return;
+
+    const cards = track.querySelectorAll('.client-card');
+    const totalCards = cards.length;
+    let currentIndex = 0;
+    let autoplayTimer = null;
+
+    function getVisibleCardsCount() {
+      if (window.innerWidth <= 640) return 1;
+      if (window.innerWidth <= 1024) return 2;
+      return 4;
+    }
+
+    function getMaxIndex() {
+      const visible = getVisibleCardsCount();
+      return Math.max(0, totalCards - visible);
+    }
+
+    function updateCarousel() {
+      if (!cards.length) return;
+      const cardWidth = cards[0].getBoundingClientRect().width;
+      const gap = 24; // 1.5rem
+      const maxIdx = getMaxIndex();
+      if (currentIndex > maxIdx) currentIndex = 0;
+      if (currentIndex < 0) currentIndex = maxIdx;
+
+      const offset = currentIndex * (cardWidth + gap);
+      track.style.transform = `translateX(-${offset}px)`;
+
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === currentIndex);
+      });
+    }
+
+    function nextSlide() {
+      const maxIdx = getMaxIndex();
+      currentIndex = currentIndex >= maxIdx ? 0 : currentIndex + 1;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      const maxIdx = getMaxIndex();
+      currentIndex = currentIndex <= 0 ? maxIdx : currentIndex - 1;
+      updateCarousel();
+    }
+
+    if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); resetAutoplay(); });
+    if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); resetAutoplay(); });
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', function () {
+        currentIndex = parseInt(this.getAttribute('data-index'), 10) || 0;
+        updateCarousel();
+        resetAutoplay();
+      });
+    });
+
+    // Touch / Swipe support
+    let startX = 0;
+    let endX = 0;
+
+    wrapper.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+
+    wrapper.addEventListener('touchend', (e) => {
+      endX = e.changedTouches[0].clientX;
+      const diff = startX - endX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0) nextSlide();
+        else prevSlide();
+        resetAutoplay();
+      }
+    }, { passive: true });
+
+    function startAutoplay() {
+      stopAutoplay();
+      autoplayTimer = setInterval(nextSlide, 4500);
+    }
+
+    function stopAutoplay() {
+      if (autoplayTimer) {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+    }
+
+    function resetAutoplay() {
+      stopAutoplay();
+      startAutoplay();
+    }
+
+    wrapper.addEventListener('mouseenter', stopAutoplay);
+    wrapper.addEventListener('mouseleave', startAutoplay);
+
+    window.addEventListener('resize', () => {
+      updateCarousel();
+    });
+
+    updateCarousel();
+    startAutoplay();
+  })();
+
   // Phone Mask
   const telInput = document.getElementById('p-whatsapp');
   if (telInput) {
