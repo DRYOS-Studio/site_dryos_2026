@@ -15,3 +15,7 @@ Thumbs.db
 standalone-rafael/
 .env*
 .impeccable/
+graphify-out/
+*.docx
+*.pdf
+Termo_Aditivo*.md

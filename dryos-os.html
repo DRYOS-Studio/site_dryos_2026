@@ -52,6 +52,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .os-fd{display:grid;grid-template-columns:1fr 1fr}
 .os-fd div{padding:1rem 1.1rem;border-bottom:1px solid var(--linha);background:var(--superficie)}
 .os-fd div:nth-child(odd){border-right:1px solid var(--linha)}
+.os-fd img{grid-column:1;grid-row:1 / span 2;width:40px;height:40px;object-fit:cover;border-radius:50%}
+.os-fd b,.os-fd span{grid-column:2}
+.os-fd div{display:grid;grid-template-columns:40px 1fr;column-gap:.8rem;align-items:center}
 .os-fd b{display:block;font-family:var(--f-display);font-size:1.15rem;letter-spacing:-.02em;font-weight:700;color:var(--carvalho)}
 .os-fd span{color:var(--cinza);font-size:10px}
 .os-mod{display:flex;justify-content:flex-start;gap:.35rem 1rem;padding:.75rem 1.1rem;color:var(--cinza);font-size:10px;flex-wrap:wrap;background:var(--papel)}
@@ -160,10 +163,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="os">
         <div class="os-head"><span class="name">DRYOS OS</span><span class="mono"><span class="dot"></span>Funcionários Digitais</span></div>
         <div class="os-fd">
-          <div><b>Íris</b><span class="mono">Atendimento</span></div>
-          <div><b>Theo</b><span class="mono">Cobrança</span></div>
-          <div><b>Nero</b><span class="mono">Números do negócio</span></div>
-          <div><b>Atlas</b><span class="mono">Entrada de clientes</span></div>
+          <div><img src="/images/funcionarios/iris.jpg" alt="" width="40" height="40" loading="lazy"><b>Íris</b><span class="mono">Atendimento</span></div>
+          <div><img src="/images/funcionarios/theo.jpg" alt="" width="40" height="40" loading="lazy"><b>Theo</b><span class="mono">Cobrança</span></div>
+          <div><img src="/images/funcionarios/nero.jpg" alt="" width="40" height="40" loading="lazy"><b>Nero</b><span class="mono">Números do negócio</span></div>
+          <div><img src="/images/funcionarios/atlas.jpg" alt="" width="40" height="40" loading="lazy"><b>Atlas</b><span class="mono">Entrada de clientes</span></div>
         </div>
         <div class="os-mod mono"><span>Inbox</span><span>·</span><span>CRM</span><span>·</span><span>Automações</span><span>·</span><span>Agentes de IA</span></div>
       </div>
@@ -190,6 +193,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <ul><li>Responder e qualificar no WhatsApp</li><li>Avisar vencimento e confirmar pagamento</li><li>Cruzar os números durante a noite</li><li>Recolher documentos e liberar acessos</li></ul>
       </div>
     </div>
+    <a class="cta diagnostico-cta" href="/contato#diagnostico-form">Solicitar diagnóstico gratuito <span class="arr">→</span></a>
   </div>
 </section>
 
@@ -242,12 +246,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </ul>
         </div>
         <div>
-          <h6 class="mono">Projetos</h6>
-          <ul><li><a href="/projetos">Portfólio</a></li></ul>
-        </div>
-        <div>
-          <h6 class="mono">Clientes</h6>
-          <ul><li><a href="/clientes">Depoimentos</a></li></ul>
+          <h6 class="mono">Trabalho</h6>
+          <ul>
+            <li><a href="/projetos">Portfólio</a></li>
+            <li><a href="/clientes">Clientes e depoimentos</a></li>
+          </ul>
         </div>
         <div>
           <h6 class="mono">Contato</h6>
@@ -255,7 +258,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <li><a href="/contato#diagnostico-form" class="diagnostico-cta">Diagnóstico</a></li>
             <li><a href="https://wa.me/5521967287595" id="whatsapp-site" target="_blank" rel="noopener">WhatsApp</a></li>
             <li><a href="mailto:contato@dryos.com.br">contato@dryos.com.br</a></li>
-            <li><a href="https://www.linkedin.com/company/dryos-studio" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="mono">Redes sociais</h6>
+          <ul>
+            <li><a href="https://www.linkedin.com/company/dryos-studio" target="_blank" rel="noopener noreferrer">LinkedIn DRYOS</a></li>
           </ul>
         </div>
       </div>
