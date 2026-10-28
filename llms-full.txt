@@ -1238,6 +1238,7 @@ Simulação indicativa: a comissão real incide sobre a receita líquida recebid
 Matriz Operacional
 ## Divisão transparente de papéis. Você não precisa programar nada.
 Entenda exatamente o papel do indicador, do franqueado e da engenharia central da DRYOS.
+Arraste horizontalmente para comparar todos os modelos
 Etapa do Projeto
 Modelo Indicação (10%)
 Modelo Franquia (30%)
