@@ -196,7 +196,7 @@ module.exports = async (req, res) => {
     idempotencyKey: `${phone}:${email}`,
     name,
     source: String(body.source || 'site-apresentacao-core').slice(0, 80),
-    spark: String(body.spark || '').slice(0, 40) || null,
+    spark: String(body.spark || '').slice(0, 300) || null,
     cargo: String(body.cargo || '').slice(0, 120) || null,
     produto_interesse: String(body.produto_interesse || '').slice(0, 80) || null,
     faturamento_mensal: String(body.faturamento_mensal || '').slice(0, 80) || null,
@@ -226,6 +226,58 @@ module.exports = async (req, res) => {
       cf_dor_principal: rdLabel('dor_principal', q.dor_principal),
       cf_qualificacao: q.qualificacao,
     };
+  } else if (payload.source === 'site-parceiros') {
+    const modeloLabels = {
+      franquia: 'Franquia (30% recorrente)',
+      indicacao: 'Indicação (10% recorrente)',
+      ambos: 'Avaliar ambos os modelos',
+    };
+    const tipoLabels = {
+      agencia_marketing: 'Agência de Marketing / Performance',
+      consultoria_vendas: 'Consultoria de Vendas / RevOps',
+      integrador_crm: 'Integrador de CRM / Automações',
+      bpo_financeiro_contabil: 'BPO Financeiro / Contabilidade',
+      outro: 'Outro Modelo B2B / Empreendedor',
+    };
+    const clientesLabels = {
+      '1_a_5': '1 a 5 clientes ativos',
+      '6_a_15': '6 a 15 clientes ativos',
+      '16_a_40': '16 a 40 clientes ativos',
+      'mais_de_40': 'Mais de 40 clientes ativos',
+      'sem_carteira': 'Ainda não tem carteira ativa',
+    };
+    const nichoLabels = {
+      saude_clinicas: 'Saúde, Médicos e Clínicas',
+      juridico: 'Escritórios de Advocacia',
+      servicos_b2b: 'Serviços B2B e Tecnologia',
+      imobiliario: 'Imobiliário e Construção',
+      varejo_ecommerce: 'Varejo e E-commerce',
+      multiplos: 'Carteira Diversificada',
+    };
+
+    const empresaVal = String(body.empresa || '').trim().slice(0, 120);
+    const modeloVal = modeloLabels[body.modelo] || (body.modelo ? String(body.modelo).slice(0, 80) : '');
+    const tipoVal = tipoLabels[body.tipo] || (body.tipo ? String(body.tipo).slice(0, 80) : '');
+    const clientesVal = clientesLabels[body.clientes] || (body.clientes ? String(body.clientes).slice(0, 80) : '');
+    const nichoVal = nichoLabels[body.nicho] || (body.nicho ? String(body.nicho).slice(0, 80) : '');
+    const msgVal = String(body.mensagem || '').trim().slice(0, 500);
+
+    cf = {
+      company_name: empresaVal || undefined,
+      cf_empresa: empresaVal || undefined,
+      cf_modelo_parceria: modeloVal || undefined,
+      cf_tipo_operacao: tipoVal || undefined,
+      cf_carteira_clientes: clientesVal || undefined,
+      cf_nicho: nichoVal || undefined,
+      cf_mensagem: msgVal || undefined,
+    };
+
+    payload.empresa = empresaVal || null;
+    payload.modelo_parceria = modeloVal || null;
+    payload.tipo_operacao = tipoVal || null;
+    payload.carteira_clientes = clientesVal || null;
+    payload.nicho = nichoVal || null;
+    payload.mensagem = msgVal || null;
   }
 
   // Core and RD are independent destinations, sent in parallel: one outage or slowness

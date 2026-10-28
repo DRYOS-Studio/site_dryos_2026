@@ -142,3 +142,29 @@ test('L6: legacy RD 400 is not retried', async () => {
   const { rd } = await runLead(legacyInputs[0], { rdStatus: [400, 200] });
   assert.equal(rd.length, 1);
 });
+
+test('PARCEIROS: conversion_identifier parceiros, fields mapped to RD and Core', async () => {
+  const input = {
+    name: 'Carlos Mendes',
+    email: 'carlos@agencia.com.br',
+    phone: '11988887777',
+    source: 'site-parceiros',
+    empresa: 'Apex Marketing',
+    modelo: 'franquia',
+    tipo: 'agencia_marketing',
+    clientes: '6_a_15',
+    nicho: 'saude_clinicas',
+    mensagem: 'Tenho 10 clínicas com dor no WhatsApp.',
+  };
+  const { rd, core, res } = await runLead(input);
+  assert.equal(res.status, 200);
+  assert.equal(rd[0].body.payload.conversion_identifier, 'parceiros');
+  assert.equal(rd[0].body.payload.name, 'Carlos Mendes');
+  assert.equal(rd[0].body.payload.company_name, 'Apex Marketing');
+  assert.equal(rd[0].body.payload.cf_modelo_parceria, 'Franquia (30% recorrente)');
+  assert.equal(rd[0].body.payload.cf_tipo_operacao, 'Agência de Marketing / Performance');
+  assert.equal(rd[0].body.payload.cf_carteira_clientes, '6 a 15 clientes ativos');
+  assert.equal(rd[0].body.payload.cf_nicho, 'Saúde, Médicos e Clínicas');
+  assert.equal(core[0].body.empresa, 'Apex Marketing');
+  assert.equal(core[0].body.modelo_parceria, 'Franquia (30% recorrente)');
+});

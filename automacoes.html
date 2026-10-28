@@ -180,6 +180,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .automation-flow .flow-tag { fill: var(--surface); stroke: var(--line); }
   .automation-flow .flow-tag-text { fill: var(--ink-soft); font-family: var(--font-mono); font-size: 11px; letter-spacing: .05em; text-transform: uppercase; }
   .automation-flow .flow-packet { fill: #93B596; filter: drop-shadow(0 0 4px rgba(31,58,42,.22)); }
+  .automation-visual { margin-top: 2.5rem; overflow: hidden; }
+  .automation-visual img { display: block; width: 100%; aspect-ratio: 16 / 7; object-fit: cover; }
+  .automation-visual figcaption { margin-top: .65rem; color: var(--mute); font-family: var(--font-mono); font-size: 10px; letter-spacing: .05em; text-transform: uppercase; }
   .sparks-rule { display: none; }
   .sol.reveal.in .sol-flow .fx { animation: flow-step 3.2s var(--motion-ease) infinite; }
   .sol.reveal.in .sol-flow .fx:nth-of-type(2) { animation-delay: .8s; }
@@ -860,6 +863,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="eyebrow reveal"><span class="label">— As automações</span><span class="num">02 / 08</span></div>
     <h2 class="sec-title reveal">Sete frentes. <strong>Uma dor de cada vez.</strong></h2>
     <p class="sec-intro reveal">Cada automação tem escopo fixo, prazo definido e SLA documentado. O que está listado em "o que entra" é o que a gente entrega. Não tem "e muito mais".</p>
+    <figure class="automation-visual reveal">
+      <img src="/images/site/automation-workflow.webp" alt="Pessoa acompanhando o fluxo entre mensagens no celular e trabalho no computador" width="1200" height="800" loading="lazy" decoding="async">
+      <figcaption>Mensagens, regras e sistemas conectados ao fluxo de trabalho.</figcaption>
+    </figure>
 
     <!-- 01 ATENDIMENTO -->
     <div class="sol reveal" style="margin-top:3rem">
@@ -1446,12 +1453,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </ul>
         </div>
         <div>
-          <h6 class="mono">Projetos</h6>
-          <ul><li><a href="/projetos">Portfólio</a></li></ul>
-        </div>
-        <div>
-          <h6 class="mono">Clientes</h6>
-          <ul><li><a href="/clientes">Depoimentos</a></li></ul>
+          <h6 class="mono">Trabalho</h6>
+          <ul>
+            <li><a href="/projetos">Portfólio</a></li>
+            <li><a href="/clientes">Clientes e depoimentos</a></li>
+          </ul>
         </div>
         <div>
           <h6 class="mono">Contato</h6>
@@ -1459,7 +1465,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li><a href="/contato#diagnostico-form" class="diagnostico-cta">Diagnóstico</a></li>
             <li><a href="https://wa.me/5521967287595" id="whatsapp-site" target="_blank" rel="noopener">WhatsApp</a></li>
             <li><a href="mailto:contato@dryos.com.br">contato@dryos.com.br</a></li>
-            <li><a href="https://www.linkedin.com/company/dryos-studio" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="mono">Redes sociais</h6>
+          <ul>
+            <li><a href="https://www.linkedin.com/company/dryos-studio" target="_blank" rel="noopener noreferrer">LinkedIn DRYOS</a></li>
           </ul>
         </div>
       </div>

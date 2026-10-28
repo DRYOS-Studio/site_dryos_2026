@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Programa de parceiros DRYOS | Comissão por indicação</title>
-  <meta name="description" content="Indique Funcionários Digitais para clientes da sua agência ou consultoria e receba comissão recorrente conforme as condições do programa DRYOS.">
+  <title>Programa de Parceiros e Franquia DRYOS | 30% e 10% de Recorrência</title>
+  <meta name="description" content="Construa uma carteira de receita recorrente vendendo (30% MRR) ou indicando (10% MRR) Funcionários Digitais DRYOS. Zero programação: IA e suporte 100% gerenciados pela DRYOS.">
   <link rel="canonical" href="https://www.dryos.com.br/parceiros">
   <meta name="robots" content="index, follow">
 
   <!-- OpenGraph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Programa de parceiros DRYOS">
-  <meta property="og:description" content="Indique Funcionários Digitais para seus clientes. A DRYOS assume a implementação e a operação técnica conforme o escopo acordado.">
+  <meta property="og:title" content="Programa de Parceiros e Franquia DRYOS | 30% e 10% de Recorrência">
+  <meta property="og:description" content="Construa uma carteira de receita recorrente vendendo (30% MRR) ou indicando (10% MRR) Funcionários Digitais DRYOS. Zero programação: IA e suporte 100% DRYOS.">
   <meta property="og:url" content="https://www.dryos.com.br/parceiros">
   <meta property="og:image" content="https://www.dryos.com.br/images/og/og-home.png">
   <meta property="og:locale" content="pt_BR">
@@ -26,6 +26,25 @@
   <link rel="stylesheet" href="/css/site-footer.css">
   <link rel="stylesheet" href="/css/site-mobile-nav.css">
   <link rel="stylesheet" href="/css/site-nav-dropdown.css">
+
+  <!-- Structured Data: Partner & Franchise Program -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Programa de Parceiros e Franquia DRYOS",
+    "provider": {
+      "@type": "Organization",
+      "name": "DRYOS",
+      "url": "https://www.dryos.com.br",
+      "logo": "https://www.dryos.com.br/images/brand/dryos-logo-white.png"
+    },
+    "description": "Programa de expansão e parcerias comerciais para venda ativa (Modelo Franquia 30% recorrente) e indicação de empresas (Modelo Indicação 10% recorrente) de Funcionários Digitais de Inteligência Artificial.",
+    "serviceType": "Parceria Comercial e Franquia de IA",
+    "areaServed": "BR",
+    "url": "https://www.dryos.com.br/parceiros"
+  }
+  </script>
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -117,7 +136,6 @@
     padding: 0 var(--gutter);
     position: relative;
   }
-  /* Evita gutter duplo: a seção já aplica --gutter nas laterais */
   section[class*="-sec"] > .wrap {
     padding-left: 0;
     padding-right: 0;
@@ -130,7 +148,7 @@
     opacity: 1;
   }
 
-  /* Utility badges and highlights */
+  /* Eyebrows and Badges */
   .eyebrow {
     display: inline-flex;
     align-items: center;
@@ -152,14 +170,6 @@
     background: var(--emerald);
     display: inline-block;
   }
-  .eyebrow.light {
-    color: var(--oak);
-    background: var(--oak-tint);
-    border-color: rgba(31, 58, 42, 0.15);
-  }
-  .eyebrow.light b {
-    background: var(--oak);
-  }
 
   .px-highlight {
     color: #4ADE80;
@@ -176,7 +186,7 @@
     font-weight: 600;
     padding: 0.85rem 1.6rem;
     border-radius: var(--radius-sm);
-    transition: transform 0.2s, background-color 0.2s, border-color 0.2s;
+    transition: transform 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
     white-space: nowrap;
   }
   .btn-emerald {
@@ -198,75 +208,6 @@
     background: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.28);
     transform: translateY(-2px);
-  }
-
-  /* ------------------- HEADER / NAV ------------------- */
-  nav.header-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(8, 12, 9, 0.92);
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border-bottom: 1px solid var(--night-border);
-    transition: background 0.3s;
-  }
-  .nav-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 72px;
-  }
-  .brand-group {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  .brand-logo {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-  }
-  .brand-logo img {
-    height: 24px;
-    width: auto;
-  }
-  .brand-badge {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    padding: 0.2rem 0.55rem;
-    border-radius: 4px;
-    background: rgba(255, 255, 255, 0.08);
-    color: var(--mute-dark);
-    letter-spacing: 0.04em;
-  }
-  .nav-menu {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    list-style: none;
-  }
-  .nav-menu a {
-    font-size: 13.5px;
-    color: var(--mute-dark);
-    font-weight: 500;
-    transition: color 0.2s;
-  }
-  .nav-menu a:hover {
-    color: #fff;
-  }
-  .nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  .nav-link-subtle {
-    font-size: 13px;
-    color: var(--mute-dark);
-    transition: color 0.2s;
-  }
-  .nav-link-subtle:hover {
-    color: var(--emerald-light);
   }
 
   /* ------------------- HERO ------------------- */
@@ -291,7 +232,7 @@
   }
   .hero-copy h1 {
     font-family: var(--font-display);
-    font-size: clamp(2.4rem, 5.2vw, 4.4rem);
+    font-size: clamp(2.4rem, 5.2vw, 4.3rem);
     font-weight: 800;
     line-height: 1.05;
     letter-spacing: -0.035em;
@@ -301,9 +242,9 @@
   .hero-copy p.lead {
     font-size: clamp(1.05rem, 1.8vw, 1.25rem);
     color: #D6DED7;
-    line-height: 1.6;
+    line-height: 1.62;
     margin-bottom: 2.2rem;
-    max-width: 50ch;
+    max-width: 52ch;
   }
   .hero-ctas {
     display: flex;
@@ -439,7 +380,7 @@
     color: var(--emerald-light);
   }
 
-  /* ------------------- A TESE (EDITORIAL) ------------------- */
+  /* ------------------- A TESE (EDITORIAL SIXLABS STYLE) ------------------- */
   .tese-sec {
     padding: clamp(5rem, 9vw, 8rem) 0;
     background: var(--night);
@@ -478,7 +419,6 @@
     color: var(--paper);
   }
 
-  /* Comparison Cards: modelo tradicional vs Parceiro DRYOS */
   .tese-cards-col {
     display: flex;
     flex-direction: column;
@@ -528,6 +468,153 @@
     color: var(--mute-light, #525252);
   }
 
+  /* ------------------- DOIS MODELOS DE PARCERIA (NOVO) ------------------- */
+  .modelos-sec {
+    padding: clamp(5.5rem, 9.5vw, 8.5rem) 0;
+    background: #090E0A;
+    border-top: 1px solid var(--night-border);
+    border-bottom: 1px solid var(--night-border);
+    position: relative;
+  }
+  .modelos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 4vw, 3rem);
+    align-items: stretch;
+  }
+  .m-card {
+    background: var(--night-card);
+    border: 1px solid var(--night-border);
+    border-radius: var(--radius-xl);
+    padding: clamp(2.2rem, 5vw, 3.2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+  }
+  .m-card:hover {
+    transform: translateY(-4px);
+  }
+  .m-card.franquia {
+    border-color: rgba(74, 222, 128, 0.45);
+    background: linear-gradient(165deg, rgba(20, 38, 26, 0.85) 0%, rgba(12, 20, 15, 0.98) 100%);
+    box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.65);
+  }
+  .m-card.indicacao {
+    border-color: rgba(255, 255, 255, 0.14);
+    background: linear-gradient(165deg, rgba(20, 24, 21, 0.8) 0%, rgba(11, 15, 12, 0.98) 100%);
+    box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.5);
+  }
+  .m-header {
+    margin-bottom: 1.6rem;
+  }
+  .m-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    padding: 0.35rem 0.85rem;
+    border-radius: 100px;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+  }
+  .m-card.franquia .m-badge {
+    color: var(--emerald-light);
+    background: #0E2415;
+    border: 1px solid rgba(74, 222, 128, 0.4);
+  }
+  .m-card.indicacao .m-badge {
+    color: #E2E8E4;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+  }
+  .m-card h3 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3.2vw, 2.3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    margin-bottom: 0.8rem;
+    color: #fff;
+  }
+  .m-desc {
+    font-size: 15px;
+    color: #D6DED7;
+    line-height: 1.6;
+    margin-bottom: 1.6rem;
+  }
+  .m-payout-highlight {
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: var(--radius-md);
+    padding: 1.2rem 1.4rem;
+    border: 1px dashed var(--night-border-strong);
+    margin-bottom: 1.8rem;
+  }
+  .m-card.franquia .m-payout-highlight {
+    border-color: rgba(74, 222, 128, 0.35);
+    background: rgba(8, 20, 12, 0.65);
+  }
+  .m-card.indicacao .m-payout-highlight {
+    border-color: rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.03);
+  }
+  .m-payout-label {
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: var(--mute-dark);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  .m-payout-val {
+    font-family: var(--font-display);
+    font-size: 2.1rem;
+    font-weight: 800;
+    line-height: 1.1;
+  }
+  .m-card.franquia .m-payout-val {
+    color: var(--emerald-light);
+  }
+  .m-card.indicacao .m-payout-val {
+    color: #FAFAF8;
+  }
+  .m-payout-sub {
+    font-size: 13px;
+    color: var(--mute-dark);
+    margin-top: 0.3rem;
+  }
+  .m-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2.2rem;
+  }
+  .m-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 14.5px;
+    line-height: 1.5;
+    color: #E2E8E4;
+  }
+  .m-features li svg {
+    flex-shrink: 0;
+    margin-top: 3px;
+    color: var(--emerald);
+  }
+  .m-card.indicacao .m-features li svg {
+    color: #A3E635;
+  }
+  .m-footer {
+    margin-top: auto;
+  }
+  .m-footer .btn {
+    width: 100%;
+  }
+
   /* ------------------- CALCULADORA DE COMISSÃO (INTERATIVA) ------------------- */
   .calc-sec {
     padding: clamp(5rem, 9vw, 8rem) 0;
@@ -537,8 +624,8 @@
   }
   .sec-header-center {
     text-align: center;
-    max-width: 780px;
-    margin: 0 auto clamp(3rem, 6vw, 4.5rem);
+    max-width: 820px;
+    margin: 0 auto clamp(2.5rem, 5vw, 3.8rem);
   }
   .sec-header-center h2 {
     font-family: var(--font-display);
@@ -553,8 +640,43 @@
     font-size: clamp(1.05rem, 1.6vw, 1.2rem);
     color: #D6DED7;
     line-height: 1.6;
-    max-width: 56ch;
+    max-width: 58ch;
     margin: 0 auto;
+  }
+
+  /* Mode Toggle */
+  .calc-mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-bottom: 2.4rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.35rem;
+    border-radius: 100px;
+    border: 1px solid var(--night-border);
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mode-btn {
+    flex: 1;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0.65rem 0.9rem;
+    border-radius: 100px;
+    color: var(--mute-dark);
+    text-align: center;
+    transition: all 0.2s;
+  }
+  .mode-btn:hover {
+    color: #fff;
+  }
+  .mode-btn.active {
+    background: var(--emerald);
+    color: #051A0B;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
   }
 
   .calc-box {
@@ -618,39 +740,6 @@
     transform: scale(1.15);
   }
 
-  .tier-selector {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.6rem;
-  }
-  .tier-btn {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid var(--night-border);
-    border-radius: var(--radius-sm);
-    padding: 0.9rem 0.6rem;
-    text-align: center;
-    color: var(--mute-dark);
-    transition: all 0.2s;
-  }
-  .tier-btn strong {
-    display: block;
-    font-size: 13.5px;
-    color: #fff;
-    margin-bottom: 0.25rem;
-  }
-  .tier-btn span {
-    font-family: var(--font-mono);
-    font-size: 12px;
-  }
-  .tier-btn.active {
-    background: #122418;
-    border-color: rgba(74, 222, 128, 0.5);
-    color: var(--emerald-light);
-  }
-  .tier-btn.active strong {
-    color: var(--emerald-light);
-  }
-
   /* Calc Results Display */
   .calc-results-card {
     background: linear-gradient(160deg, #182A1F 0%, #0E1711 100%);
@@ -702,6 +791,48 @@
     color: var(--mute-dark);
   }
 
+  /* Comparative Dual View */
+  .cmp-res-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .cmp-card {
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid var(--night-border-strong);
+    border-radius: var(--radius-md);
+    padding: 1.2rem;
+  }
+  .cmp-card.franquia {
+    border-color: rgba(74, 222, 128, 0.4);
+    background: rgba(8, 20, 12, 0.6);
+  }
+  .cmp-card-tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--emerald-light);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  .cmp-card.indicacao .cmp-card-tag {
+    color: #D6DED7;
+  }
+  .cmp-card-val {
+    font-family: var(--font-display);
+    font-size: 1.65rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.1;
+  }
+  .cmp-card-sub {
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: var(--mute-dark);
+    margin-top: 0.3rem;
+  }
+
   /* ------------------- MATRIZ DE RESPONSABILIDADE ------------------- */
   .divisao-sec {
     padding: clamp(5rem, 9vw, 8rem) 0;
@@ -720,24 +851,28 @@
     border-collapse: collapse;
     text-align: left;
     background: var(--night-elevated);
-    min-width: 720px;
+    min-width: 820px;
   }
   .divisao-table th, .divisao-table td {
-    padding: 1.3rem 1.6rem;
+    padding: 1.3rem 1.4rem;
     border-bottom: 1px solid var(--night-border);
     line-height: 1.5;
-    max-width: 38ch;
+    font-size: 14px;
   }
   .divisao-table th {
     font-family: var(--font-display);
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 700;
     background: #0B110D;
     color: #fff;
   }
-  .divisao-table th.col-parceiro {
-    background: #142018;
-    color: var(--paper);
+  .divisao-table th.col-indicacao {
+    background: #111A13;
+    color: #D6DED7;
+  }
+  .divisao-table th.col-franquia {
+    background: #16261B;
+    color: var(--emerald-light);
   }
   .divisao-table th.col-dryos {
     background: var(--oak);
@@ -759,7 +894,7 @@
     margin-bottom: 0.2rem;
   }
   .divisao-cell-sub {
-    font-size: 13px;
+    font-size: 12.5px;
     color: var(--mute-dark);
   }
 
@@ -877,7 +1012,7 @@
     border-top: 1px solid var(--night-border);
   }
   .faq-grid {
-    max-width: 840px;
+    max-width: 860px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -922,7 +1057,7 @@
     font-size: 15px;
     color: var(--mute-dark);
     line-height: 1.65;
-    max-width: 60ch;
+    max-width: 64ch;
   }
 
   /* ------------------- FORMULÁRIO DE APLICAÇÃO ------------------- */
@@ -933,7 +1068,7 @@
   }
   .aplicacao-layout {
     display: grid;
-    grid-template-columns: 1fr 1.05fr;
+    grid-template-columns: 1fr 1.08fr;
     gap: clamp(3rem, 6vw, 5.5rem);
     align-items: start;
   }
@@ -1068,36 +1203,11 @@
     line-height: 1.5;
   }
 
-  /* ------------------- FOOTER ------------------- */
-  footer.page-footer {
-    padding: 4rem 0 3rem;
-    background: #050806;
-    border-top: 1px solid var(--night-border);
-  }
-  .footer-grid {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding-bottom: 2.5rem;
-    border-bottom: 1px solid var(--night-border);
-  }
-  .footer-bottom {
-    padding-top: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    font-size: 13px;
-    color: var(--mute-dark);
-  }
-
   /* ------------------- RESPONSIVE ------------------- */
   @media (max-width: 1024px) {
     .hero-layout,
     .tese-grid,
+    .modelos-grid,
     .calc-box,
     .aplicacao-layout,
     .elegivel-grid {
@@ -1116,15 +1226,19 @@
     .cosell-grid {
       grid-template-columns: 1fr;
     }
-    .nav-menu { display: none; }
   }
   @media (max-width: 640px) {
-    .tier-selector {
-      grid-template-columns: 1fr;
+    .calc-mode-toggle {
+      flex-direction: column;
+      border-radius: var(--radius-md);
+      gap: 0.3rem;
     }
-    .form-row {
-      grid-template-columns: 1fr;
+    .mode-btn {
+      width: 100%;
+      border-radius: var(--radius-sm);
     }
+    .form-row,
+    .cmp-res-grid,
     .res-sub-grid {
       grid-template-columns: 1fr;
     }
@@ -1157,8 +1271,6 @@
       overflow-wrap: anywhere;
     }
     .calc-box,
-    .calc-panel,
-    .tier-selector,
     .form-card {
       max-width: 100%;
       overflow-x: hidden;
@@ -1166,13 +1278,6 @@
     #resMonthly {
       font-size: clamp(1.35rem, 7vw, 2rem);
       overflow-wrap: anywhere;
-    }
-  }
-  @media (max-width: 390px) {
-    .hero-copy > .eyebrow {
-      font-size: 11px;
-      padding: 0.3rem 0.5rem;
-      letter-spacing: 0.02em;
     }
   }
 
@@ -1251,32 +1356,33 @@
         
         <div class="hero-copy">
           <div class="eyebrow">
-            <b></b> Programa de Parceiros Comerciais DRYOS · 30% Rev-Share
+            <b></b> EXPANSÃO & PARCERIAS DRYOS · COMISSÃO RECORRENTE MENSAL
           </div>
           <h1>
-            Indique Funcionários Digitais aos clientes da sua agência ou consultoria e <span class="px-highlight">receba comissão recorrente.</span>
+            Construa uma carteira de receita recorrente vendendo ou indicando <span class="px-highlight">Funcionários Digitais.</span>
           </h1>
           <p class="lead">
-            A DRYOS conduz a implementação e a operação técnica conforme o escopo contratado. O programa prevê comissão sobre a receita líquida recorrente dos clientes indicados que permanecerem ativos, conforme o contrato de parceria.
+            Empresas perdem vendas todos os dias porque demoram para responder no WhatsApp. Nossos Funcionários Digitais atendem em 5 segundos, separam curioso de cliente e agendam 24 horas por dia. Escolha como lucrar: ganhe 30% de comissão recorrente na venda ativa como Franqueado ou 10% recorrente apenas indicando clientes. Tecnologia, infraestrutura e suporte são 100% por conta da DRYOS.
           </p>
 
           <div class="hero-ctas">
-            <a href="#aplicacao" class="btn btn-emerald">Candidatar Minha Agência →</a>
-            <a href="#calculadora" class="btn btn-ghost-dark">Simular comissão potencial ↓</a>
+            <a href="#aplicacao" class="btn btn-emerald">Candidatar Minha Empresa →</a>
+            <a href="#modelos" class="btn btn-ghost-dark">Conhecer os 2 Modelos ↓</a>
+            <a href="#calculadora" class="btn btn-ghost-dark">Simular Recorrência</a>
           </div>
 
           <div class="hero-trust">
             <div class="trust-item">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-              <span>Comissão recorrente conforme contrato</span>
-            </div>
-            <div class="trust-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              <span>Suporte de Co-Selling: call técnica de fechamento</span>
+              <span>Comissão recorrente mensal (30% ou 10%) todo dia 10 via Pix/PJ</span>
             </div>
             <div class="trust-item">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <span>Sem cota mínima de indicações</span>
+              <span>Zero programação: suporte e inteligência artificial pela DRYOS</span>
+            </div>
+            <div class="trust-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span>Co-selling com engenheiro de soluções na mesa de fechamento</span>
             </div>
           </div>
         </div>
@@ -1306,23 +1412,23 @@
               <div class="p-client-row">
                 <div class="p-client-name">
                   <span>Clínica Odonto Prime</span>
-                  <span class="p-client-tag">· 2 Agentes (Íris + Theo)</span>
+                  <span class="p-client-tag">· Modelo Franquia</span>
                 </div>
                 <div class="p-client-comm">+ 30% recorrente</div>
               </div>
               <div class="p-client-row">
                 <div class="p-client-name">
                   <span>Albuquerque Advogados</span>
-                  <span class="p-client-tag">· 3 Funcionários Digitais (Operação completa)</span>
+                  <span class="p-client-tag">· Modelo Franquia</span>
                 </div>
                 <div class="p-client-comm">+ 30% recorrente</div>
               </div>
               <div class="p-client-row">
                 <div class="p-client-name">
                   <span>Distribuidora Nova Era</span>
-                  <span class="p-client-tag">· Integração Protheus ERP</span>
+                  <span class="p-client-tag">· Modelo Indicação</span>
                 </div>
-                <div class="p-client-comm">+ 30% recorrente</div>
+                <div class="p-client-comm">+ 10% recorrente</div>
               </div>
             </div>
 
@@ -1332,40 +1438,145 @@
       </div>
     </section>
 
-    <!-- ==================== A TESE (EDITORIAL) ==================== -->
-    <section class="tese-sec" id="modelo">
+    <!-- ==================== A TESE (EDITORIAL SIXLABS STYLE) ==================== -->
+    <section class="tese-sec" id="dor-mercado">
       <div class="wrap tese-grid">
         
         <div class="tese-copy">
           <div class="eyebrow">A Realidade do Mercado</div>
-          <h2>Por que agências comuns sofrem churn e consultorias têm teto de escala.</h2>
+          <h2>Por que as empresas perdem clientes no WhatsApp — e por que isso é a sua maior oportunidade.</h2>
           <p class="manifesto">
-            Você vende tráfego, SEO ou consultoria de vendas. Constrói a campanha, atrai os leads e entrega no WhatsApp do cliente. 
+            Toda empresa hoje tenta vender pelo WhatsApp. Investem em anúncios, tráfego pago, redes sociais e indicação. O lead chega interessado querendo comprar ou agendar uma consulta. Mas o que acontece na prática?
           </p>
           <p class="manifesto">
-            Quando a recepção demora a responder, o lead pode esfriar e a agência acaba cobrando por um resultado que depende também do atendimento do cliente.
+            A recepção está no telefone, o vendedor está almoçando ou a mensagem chega às 20h. O lead espera 30 minutos, uma hora, duas horas. Enquanto espera, ele volta no Google, procura o concorrente e fecha com quem respondeu em segundos.
           </p>
           <div class="tese-fecho">
-            Com os Funcionários Digitais da DRYOS, você reduz esse gargalo na captação. O lead recebe atendimento automatizado, é qualificado e pode ser encaminhado ao CRM conforme o escopo definido. A parceria prevê comissão recorrente sobre clientes ativos indicados.
+            Com os Funcionários Digitais da DRYOS, a empresa responde em 5 segundos, separa curiosos de clientes reais, esclarece dúvidas e realiza agendamentos 24 horas por dia. Você resolve o maior vazamento financeiro do seu cliente e recebe receita recorrente todo mês por isso.
           </div>
         </div>
 
         <div class="tese-cards-col">
           <div class="t-card t-danger">
-            <span class="t-card-badge">// O MODELO TRADICIONAL DE AGÊNCIA</span>
-            <h3>Venda de Horas e Churn Acelerado</h3>
+            <span class="t-card-badge">// O VAZAMENTO TRADICIONAL</span>
+            <h3>Leads Perdidos e Churn do Cliente</h3>
             <p>
-              Receita dependente de fee mensal volátil. A agência se esforça para gerar demanda, mas perde o contrato porque o time comercial do cliente falha no atendimento. Sem receita passiva, cada novo cliente exige contratar mais pessoas.
+              Empresas contratam tráfego ou consultoria, mas a conversão trava no atendimento lento do WhatsApp. O lead esfria, o faturamento não vem e o cliente cancela o contrato da agência culpando a geração de leads.
             </p>
           </div>
 
           <div class="t-card t-success">
-            <span class="t-card-badge">// O MODELO DE PARCERIA DRYOS</span>
-            <h3>Funcionários Digitais e comissão recorrente</h3>
+            <span class="t-card-badge">// A OPORTUNIDADE DRYOS</span>
+            <h3>Funcionários Digitais e Recorrência Passiva</h3>
             <p>
-              Você apresenta a solução ao cliente e participa do diagnóstico. A DRYOS implanta e acompanha a operação conforme o escopo acordado. A comissão incide sobre clientes indicados ativos, segundo as condições do contrato.
+              A DRYOS implanta e opera os agentes de IA diretamente no WhatsApp oficial. A resposta é imediata, a qualificação é automática e você recebe comissão recorrente mês a mês sobre cada cliente ativo na base.
             </p>
           </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== OS DOIS MODELOS DE PARCERIA ==================== -->
+    <section class="modelos-sec" id="modelos">
+      <div class="wrap">
+        
+        <div class="sec-header-center">
+          <div class="eyebrow">Formatos de Credenciamento</div>
+          <h2>Dois caminhos para lucrar com a expansão da Inteligência Artificial.</h2>
+          <p>Escolha o formato que melhor se adapta à sua estrutura: venda ativa com margem alta ou indicação pontual sem esforço comercial.</p>
+        </div>
+
+        <div class="modelos-grid">
+          
+          <!-- Card Modelo Franquia (30%) -->
+          <div class="m-card franquia">
+            <div>
+              <div class="m-header">
+                <span class="m-badge">30% DE COMISSÃO RECORRENTE · VENDA ATIVA</span>
+                <h3>Modelo Franquia</h3>
+                <p class="m-desc">
+                  Ideal para agências de marketing, consultorias de vendas/RevOps, integradores de CRM e empreendedores que desejam ter um portfólio robusto de IA para faturar alto com sua base de clientes.
+                </p>
+              </div>
+
+              <div class="m-payout-highlight">
+                <span class="m-payout-label">SUA COMISSÃO RECORRENTE</span>
+                <div class="m-payout-val">30% todo mês</div>
+                <p class="m-payout-sub">Sobre a mensalidade de cada cliente ativo, enquanto ele permanecer na base.</p>
+              </div>
+
+              <ul class="m-features">
+                <li>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Venda ativa na sua carteira:</strong> Você prospecta e lidera o fechamento comercial com decisores da sua rede.</span>
+                </li>
+                <li>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Co-selling com engenheiro:</strong> Nosso arquiteto de soluções participa da reunião para demonstrar a IA e responder dúvidas técnicas.</span>
+                </li>
+                <li>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Simulador real no WhatsApp:</strong> Demonstrações funcionais com o tom de voz do nicho do cliente no próprio celular dele.</span>
+                </li>
+                <li>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Zero dor de cabeça técnica:</strong> A DRYOS cuida de 100% da engenharia de prompts, APIs oficiais da Meta e suporte.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="m-footer">
+              <button type="button" class="btn btn-emerald select-model-btn" data-model="franquia">
+                Quero ser Franqueado (30%) →
+              </button>
+            </div>
+          </div>
+
+          <!-- Card Modelo Indicação (10%) -->
+          <div class="m-card indicacao">
+            <div>
+              <div class="m-header">
+                <span class="m-badge">10% DE COMISSÃO RECORRENTE · APENAS INDICAÇÃO</span>
+                <h3>Modelo Indicação</h3>
+                <p class="m-desc">
+                  Ideal para contabilidades, BPOs financeiros, consultores estratégicos e executivos que têm networking com decisores empresariais, mas não têm tempo ou interesse em vender tecnologia.
+                </p>
+              </div>
+
+              <div class="m-payout-highlight">
+                <span class="m-payout-label">SUA COMISSÃO RECORRENTE</span>
+                <div class="m-payout-val">10% todo mês</div>
+                <p class="m-payout-sub">Sobre a mensalidade de cada indicação convertida, enquanto o cliente estiver ativo.</p>
+              </div>
+
+              <ul class="m-features">
+                <li>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Apenas faça a ponte (Warm Intro):</strong> Identifique empresas com gargalo no atendimento e passe o contato do decisor.</span>
+                </li>
+                <li>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>A DRYOS conduz a venda completa:</strong> Apresentação, demonstração prática, proposta comercial e assinatura do contrato.</span>
+                </li>
+                <li>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Zero responsabilidade pós-venda:</strong> Nós cuidamos de todo o onboarding, integração com CRM e suporte ao cliente final.</span>
+                </li>
+                <li>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Repasse pontual no dia 10:</strong> Pagamento direto na conta PJ via Pix com extrato discriminado por empresa ativa.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="m-footer">
+              <button type="button" class="btn btn-ghost-dark select-model-btn" data-model="indicacao">
+                Quero ser Indicador (10%) →
+              </button>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -1376,9 +1587,16 @@
       <div class="wrap">
         
         <div class="sec-header-center">
-          <div class="eyebrow">Simulador de Comissões Recorrentes</div>
+          <div class="eyebrow">Simulador de Receita Recorrente</div>
           <h2>Estime a comissão recorrente da sua carteira.</h2>
-          <p>Informe quantos clientes indicados estariam ativos e a mensalidade média do serviço DRYOS elegível à comissão. A estimativa considera todos os clientes selecionados como ativos durante o período.</p>
+          <p>Alterne entre o Modelo Franquia (30%) e o Modelo Indicação (10%) ou veja o comparativo lado a lado para calcular seu faturamento mensal estimado.</p>
+        </div>
+
+        <!-- Mode Toggle -->
+        <div class="calc-mode-toggle" role="tablist" aria-label="Seletor de modelo para cálculo">
+          <button type="button" class="mode-btn active" id="btnModeFranquia" data-target="franquia">Franquia (30%)</button>
+          <button type="button" class="mode-btn" id="btnModeIndicacao" data-target="indicacao">Indicação (10%)</button>
+          <button type="button" class="mode-btn" id="btnModeComparativo" data-target="comparativo">Comparativo</button>
         </div>
 
         <div class="calc-box">
@@ -1394,7 +1612,7 @@
 
             <div class="ctrl-group">
               <label for="ticketSlider">
-                <span>Mensalidade DRYOS elegível por cliente (R$)</span>
+                <span>Mensalidade média do serviço por cliente (R$)</span>
                 <span class="val" id="ticketLabel">R$ 5.000</span>
               </label>
               <input type="range" id="ticketSlider" class="range-slider" min="1500" max="25000" value="5000" step="500">
@@ -1402,23 +1620,46 @@
           </div>
 
           <div class="calc-results-card">
-            <div class="res-block">
-              <span class="label">ESTIMATIVA DE COMISSÃO RECORRENTE (30% DO MRR ELEGÍVEL)</span>
-              <div class="big-num" id="resMonthly">R$ <span>15.000</span>/mês</div>
+            
+            <!-- Single Mode Display (Franquia ou Indicação) -->
+            <div id="resSingleMode">
+              <div class="res-block">
+                <span class="label" id="resModeLabel">ESTIMATIVA DE COMISSÃO · MODELO FRANQUIA (30% DO MRR)</span>
+                <div class="big-num" id="resMonthly">R$ <span>15.000</span>/mês</div>
+              </div>
+
+              <div class="res-sub-grid">
+                <div class="res-mini">
+                  <span>Projeção anual de repasse</span>
+                  <strong id="resAnnual">R$ 180.000/ano</strong>
+                </div>
+                <div class="res-mini">
+                  <span>Custo de Infraestrutura e IA</span>
+                  <strong style="color:var(--emerald-light)" id="resSubBenefit">R$ 0,00 (pela DRYOS)</strong>
+                </div>
+              </div>
             </div>
 
-            <div class="res-sub-grid">
-              <div class="res-mini">
-                <span>Projeção anual bruta, mantendo os clientes ativos</span>
-                <strong id="resAnnual">R$ 180.000/ano</strong>
-              </div>
-              <div class="res-mini">
-                <span>Custo de Infraestrutura</span>
-                <strong style="color:var(--emerald-light)">R$ 0,00 (pela DRYOS)</strong>
+            <!-- Comparative Mode Display (Both) -->
+            <div id="resComparativeMode" style="display:none;">
+              <span class="label" style="display:block;margin-bottom:0.8rem;color:var(--mute-dark);font-family:var(--font-mono);font-size:12px;">
+                COMPARATIVO DE RECORRÊNCIA MENSAL
+              </span>
+              <div class="cmp-res-grid">
+                <div class="cmp-card franquia">
+                  <span class="cmp-card-tag">MODELO FRANQUIA (30%)</span>
+                  <div class="cmp-card-val" id="cmpFranqMonthly">R$ 15.000/mês</div>
+                  <div class="cmp-card-sub" id="cmpFranqAnnual">R$ 180.000/ano</div>
+                </div>
+                <div class="cmp-card indicacao">
+                  <span class="cmp-card-tag">MODELO INDICAÇÃO (10%)</span>
+                  <div class="cmp-card-val" id="cmpIndMonthly">R$ 5.000/mês</div>
+                  <div class="cmp-card-sub" id="cmpIndAnnual">R$ 60.000/ano</div>
+                </div>
               </div>
             </div>
 
-            <p class="form-note">Simulação indicativa: a comissão real depende da receita líquida recebida, da permanência dos clientes e das condições do contrato.</p>
+            <p class="form-note">Simulação indicativa: a comissão real incide sobre a receita líquida recebida dos clientes ativos, conforme o contrato de parceria.</p>
 
             <a href="#aplicacao" class="btn btn-emerald" style="width:100%;margin-top:0.6rem;">Credenciar Minha Empresa para Essa Carteira →</a>
           </div>
@@ -1435,58 +1676,64 @@
         <div class="sec-header-center">
           <div class="eyebrow">Matriz Operacional</div>
           <h2>Divisão transparente de papéis. Você não precisa programar nada.</h2>
-          <p>Entenda exatamente o que fica com o parceiro e o que a engenharia da DRYOS executa.</p>
+          <p>Entenda exatamente o papel do indicador, do franqueado e da engenharia central da DRYOS.</p>
         </div>
 
         <div class="divisao-table-wrap">
           <table class="divisao-table">
             <thead>
               <tr>
-                <th style="width:30%">Etapa do Projeto</th>
-                <th class="col-parceiro" style="width:35%">Papel do Parceiro (Sua Empresa)</th>
-                <th class="col-dryos" style="width:35%">Responsabilidade da DRYOS</th>
+                <th style="width:25%">Etapa do Projeto</th>
+                <th class="col-indicacao" style="width:25%">Modelo Indicação (10%)</th>
+                <th class="col-franquia" style="width:25%">Modelo Franquia (30%)</th>
+                <th class="col-dryos" style="width:25%">Responsabilidade DRYOS</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>
-                  <span class="divisao-cell-title">1. Prospecção & Diagnóstico</span>
-                  <span class="divisao-cell-sub">Identificação da dor operacional</span>
+                  <span class="divisao-cell-title">1. Prospecção & Qualificação</span>
+                  <span class="divisao-cell-sub">Identificação da dor</span>
                 </td>
-                <td>Identifica o gargalo de atendimento ou qualificação na carteira existente.</td>
-                <td class="col-dryos">Fornece roteiros de diagnóstico e calculadoras de ROI para apoiar a reunião.</td>
+                <td>Apenas passa o contato e introduz o decisor ao time DRYOS.</td>
+                <td>Identifica o gargalo na carteira e agenda a demonstração com o cliente.</td>
+                <td class="col-dryos">Fornece scripts de abordagem, roteiros de diagnóstico e calculadoras de ROI.</td>
               </tr>
               <tr>
                 <td>
                   <span class="divisao-cell-title">2. Demonstração Técnica</span>
-                  <span class="divisao-cell-sub">Apresentação ao decisor final</span>
+                  <span class="divisao-cell-sub">Apresentação ao decisor</span>
                 </td>
-                <td>Apresenta a oportunidade de negócio e agenda a conferência técnica.</td>
-                <td class="col-dryos">Engenheiro de soluções da DRYOS participa da chamada para demonstrar o agente ao vivo.</td>
+                <td>Não participa da reunião (a DRYOS conduz 100%).</td>
+                <td>Conduz a abertura comercial e participa da chamada.</td>
+                <td class="col-dryos">Engenheiro de soluções da DRYOS entra ao vivo para demonstrar a IA e tirar objeções.</td>
               </tr>
               <tr>
                 <td>
-                  <span class="divisao-cell-title">3. Implantação e Integração</span>
-                  <span class="divisao-cell-sub">Configuração de CRM e WhatsApp</span>
+                  <span class="divisao-cell-title">3. Fechamento & Contrato</span>
+                  <span class="divisao-cell-sub">Formalização jurídica</span>
                 </td>
-                <td>Valida o fluxo com o cliente e alinha o tom de voz comercial.</td>
-                <td class="col-dryos">Executa toda a engenharia de prompts, webhooks, credenciais de API oficial e testes de carga.</td>
+                <td>Nenhum envolvimento burocrático.</td>
+                <td>Apoia no alinhamento das condições comerciais.</td>
+                <td class="col-dryos">Emite a proposta executiva e o contrato de prestação de serviços de tecnologia.</td>
               </tr>
               <tr>
                 <td>
-                  <span class="divisao-cell-title">4. Sustentação e Suporte</span>
-                  <span class="divisao-cell-sub">Operação conforme escopo acordado</span>
+                  <span class="divisao-cell-title">4. Implantação e Integração</span>
+                  <span class="divisao-cell-sub">WhatsApp Oficial e CRM</span>
                 </td>
-                <td>Acompanha os relatórios de conversão e mantém o relacionamento estratégico.</td>
-                <td class="col-dryos">Monitora a operação e realiza manutenção e ajustes conforme o escopo acordado.</td>
+                <td>Nenhum envolvimento técnico.</td>
+                <td>Acompanha a validação de tom de voz com o cliente.</td>
+                <td class="col-dryos">Executa toda a engenharia de prompts, homologação de API oficial da Meta e webhooks.</td>
               </tr>
               <tr>
                 <td>
-                  <span class="divisao-cell-title">5. Repasse Financeiro</span>
-                  <span class="divisao-cell-sub">Comissão enquanto o cliente estiver elegível</span>
+                  <span class="divisao-cell-title">5. Suporte e Repasse</span>
+                  <span class="divisao-cell-sub">Operação contínua</span>
                 </td>
-                <td>Emite a nota fiscal de intermediação de negócios no início do mês.</td>
-                <td class="col-dryos">Realiza o pagamento pontual no dia 10 de cada mês com extrato detalhado por cliente.</td>
+                <td>Recebe 10% de comissão todo dia 10 com extrato.</td>
+                <td>Mantém relacionamento e recebe 30% todo dia 10.</td>
+                <td class="col-dryos">Sustentação técnica contínua 24/7 e pagamento pontual via Pix/PJ.</td>
               </tr>
             </tbody>
           </table>
@@ -1502,7 +1749,7 @@
         <div class="sec-header-center">
           <div class="eyebrow">Apoio Comercial Completo</div>
           <h2>Você não vende sozinho. Vendemos lado a lado com você.</h2>
-          <p>A DRYOS oferece todo o arsenal de apoio para você fechar clientes de alto ticket sem travas técnicas.</p>
+          <p>A DRYOS oferece todo o arsenal de apoio para você fechar contratos de alto ticket sem travas técnicas.</p>
         </div>
 
         <div class="cosell-grid">
@@ -1512,7 +1759,7 @@
               <div class="cosell-num">01</div>
               <h3>Engenheiro na Mesa de Pitch</h3>
               <p>
-                Quando o seu cliente fizer perguntas profundas sobre segurança, LGPD, latência de resposta ou regras de integração com o ERP dele, nosso arquiteto responde e resolve as objeções na hora.
+                Quando o cliente fizer perguntas profundas sobre segurança, LGPD, latência de resposta ou regras de integração com ERPs e CRMs, nosso arquiteto responde e resolve as objeções na hora.
               </p>
             </div>
             <span class="cosell-badge-pill">Co-Selling Ativo</span>
@@ -1523,7 +1770,7 @@
               <div class="cosell-num">02</div>
               <h3>Simulador Real no WhatsApp</h3>
               <p>
-                Nada vende mais rápido do que o cliente ver a IA funcionando no próprio celular. Liberamos instâncias de demonstração personalizadas para o segmento do seu prospect (médico, jurídico, varejo).
+                Nada fecha contratos mais rápido do que o cliente ver a IA funcionando no próprio celular. Liberamos instâncias de demonstração personalizadas para o segmento do seu prospect (saúde, advocacia, serviços, comércio).
               </p>
             </div>
             <span class="cosell-badge-pill">Demonstração Interativa</span>
@@ -1534,7 +1781,7 @@
               <div class="cosell-num">03</div>
               <h3>Materiais Co-Branded</h3>
               <p>
-                Tenha acesso a decks de apresentação executiva, matrizes de cálculo de ROI, modelos de proposta comercial e contratos jurídicos de prestação de serviços validados para agilizar o fechamento.
+                Tenha acesso a decks de apresentação executiva, matrizes de cálculo de ROI, modelos de proposta comercial e termos validados para acelerar o ciclo de fechamento.
               </p>
             </div>
             <span class="cosell-badge-pill">Arsenal de Vendas</span>
@@ -1562,11 +1809,11 @@
             <ul class="el-list">
               <li>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Agências de Marketing e Performance:</strong> Que já geram tráfego para PMEs e querem resolver o gargalo de atendimento de vendas dos clientes.</span>
+                <span><strong>Agências de Marketing e Performance:</strong> Que já geram tráfego para empresas e querem resolver o gargalo de atendimento de vendas dos clientes.</span>
               </li>
               <li>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Consultores comerciais e de operações:</strong> Profissionais que desenham processos de vendas e precisam de uma ferramenta executora automatizada.</span>
+                <span><strong>Consultores comerciais e de operações:</strong> Profissionais que desenham processos comerciais e precisam de uma ferramenta executora automatizada.</span>
               </li>
               <li>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1574,7 +1821,7 @@
               </li>
               <li>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>BPOs Financeiros e Contabilidades Estratégicas:</strong> Que têm carteira ativa de clientes empresariais precisando de eficiência de folha.</span>
+                <span><strong>BPOs Financeiros e Contabilidades Estratégicas:</strong> Que têm carteira ativa de clientes empresariais precisando de eficiência operacional no WhatsApp.</span>
               </li>
             </ul>
           </div>
@@ -1584,15 +1831,15 @@
             <ul class="el-list">
               <li>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                <span><strong>Afiliados de Infoproduto ou Tráfego Direto:</strong> Não atuamos com vendas massivas de cursos ou produtos de ticket baixo.</span>
+                <span><strong>Afiliados de Infoproduto ou Tráfego Direto:</strong> Não atuamos com venda massiva de cursos, rifas ou produtos de baixo ticket.</span>
               </li>
               <li>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                <span><strong>Operadores de Disparos em Massa (Spam):</strong> Nossos funcionários digitais operam exclusivamente com APIs oficiais em conformidade com as regras da Meta.</span>
+                <span><strong>Operadores de Disparos em Massa (Spam):</strong> Nossos funcionários digitais operam exclusivamente com APIs oficiais da Meta em total conformidade.</span>
               </li>
               <li>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                <span><strong>Pessoas Sem Experiência B2B:</strong> O modelo exige capacidade de diagnosticar problemas empresariais reais com decisores.</span>
+                <span><strong>Pessoas Sem Experiência B2B:</strong> O modelo exige capacidade de dialogar com tomadores de decisão sobre problemas empresariais reais.</span>
               </li>
             </ul>
           </div>
@@ -1608,43 +1855,57 @@
         
         <div class="sec-header-center">
           <div class="eyebrow">Dúvidas Frequentes</div>
-          <h2>Perguntas comuns sobre o modelo de parceria.</h2>
+          <h2>Perguntas comuns sobre os modelos de parceria e franquia.</h2>
         </div>
 
         <div class="faq-grid">
           
           <details class="faq-item">
-            <summary>Quando e como recebo o pagamento da comissão de 30%?</summary>
+            <summary>Qual a diferença prática entre o Modelo Franquia (30%) e o Modelo Indicação (10%)?</summary>
             <p>
-              O repasse é realizado todo dia 10 de cada mês, diretamente na conta bancária da sua pessoa jurídica (PJ), via Pix ou TED. O valor corresponde a 30% da receita líquida recorrente gerada por todos os clientes ativos indicados pela sua empresa no mês anterior.
+              No <strong>Modelo Franquia (30%)</strong>, você atua ativamente na venda: prospecta o cliente, agenda a reunião comercial e conduz o pitch (com o apoio do nosso engenheiro). Já no <strong>Modelo Indicação (10%)</strong>, você apenas faz a ponte: passa o contato do decisor e o time comercial da DRYOS cuida de 100% da reunião, proposta, fechamento e onboarding.
             </p>
           </details>
 
           <details class="faq-item">
-            <summary>Por quanto tempo recebo a comissão?</summary>
+            <summary>Quando e como recebo o pagamento da comissão?</summary>
             <p>
-              A comissão recorrente é paga enquanto o cliente indicado permanecer ativo e adimplente, conforme as condições do contrato de parceria. A duração da receita depende da permanência de cada cliente.
+              O repasse é realizado todo dia 10 de cada mês, diretamente na conta bancária da sua pessoa jurídica (PJ), via Pix ou TED. O valor corresponde a 30% (Franquia) ou 10% (Indicação) da receita líquida recorrente gerada pelos clientes indicados ativos no mês anterior, acompanhado de extrato detalhado.
             </p>
           </details>
 
           <details class="faq-item">
-            <summary>Quem assina o contrato e emite a nota fiscal para o cliente final?</summary>
+            <summary>Por quanto tempo recebo a comissão recorrente?</summary>
             <p>
-              No modelo de Rev-Share padrão, a DRYOS faz o contrato de prestação de serviços de tecnologia diretamente com o cliente final e cuida da cobrança e suporte. Sua empresa emite mensalmente para a DRYOS uma nota fiscal de intermediação de negócios ou comissionamento.
+              A comissão recorrente é paga todos os meses enquanto o cliente indicado permanecer ativo e adimplente com a DRYOS, conforme as condições do contrato de parceria.
             </p>
           </details>
 
           <details class="faq-item">
-            <summary>Existe meta mínima mensal para se manter credenciado?</summary>
+            <summary>Preciso ter conhecimento técnico em programação ou IA?</summary>
             <p>
-              Não aplicamos cotas mínimas punitivas ou perda de credenciamento forçada. Valorizamos parceiros que prezam pela qualidade do diagnóstico e retenção a longo prazo, e não apenas pelo volume desordenado de indicações.
+              Não. Toda a engenharia de inteligência artificial, integração de APIs oficiais do WhatsApp, conexão com CRMs e manutenção dos servidores é feita 100% pelo time técnico da DRYOS. Seu foco fica exclusivamente no relacionamento comercial ou na indicação de empresas.
             </p>
           </details>
 
           <details class="faq-item">
-            <summary>Posso aplicar minha própria margem de lucro (White-Label)?</summary>
+            <summary>Quem assina o contrato e atende o suporte do cliente final?</summary>
             <p>
-              Sim. Além do modelo de Rev-Share direto de 30%, oferecemos a modalidade de atacado estruturado para agências consolidadas que preferem faturar diretamente o cliente final com marca própria (White-Label), comprando as licenças da DRYOS com desconto de volume. Detalhamos essa opção na entrevista de credenciamento.
+              A DRYOS formaliza o contrato de prestação de serviços de tecnologia diretamente com o cliente final e assume o suporte técnico e a sustentação 24/7. Sua empresa emite mensalmente para a DRYOS uma nota fiscal de intermediação de negócios ou comissionamento.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Posso migrar do Modelo de Indicação para o Modelo Franquia no futuro?</summary>
+            <p>
+              Sim! Muitos parceiros começam indicando os primeiros clientes para validar o modelo (10%) e, após perceberem a alta demanda e aceitação do mercado, se credenciam como Franqueados (30%) para conduzir as vendas ativamente na sua região.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Existe opção de White-Label com marca própria?</summary>
+            <p>
+              Sim. Para agências consolidadas que preferem faturar diretamente o cliente final com sua própria marca, oferecemos a modalidade de atacado estruturado com desconto por volume de licenças. Detalhamos essa alternativa na entrevista de credenciamento.
             </p>
           </details>
 
@@ -1659,9 +1920,9 @@
         
         <div class="ap-copy">
           <div class="eyebrow">Credenciamento Oficial</div>
-          <h2>Candidate a sua agência ou consultoria para a rede DRYOS.</h2>
+          <h2>Candidate a sua empresa para a rede de parceiros DRYOS.</h2>
           <p class="lead">
-            Analisamos cada aplicação manualmente para garantir alinhamento de qualidade e exclusividade de atendimento por praça e nicho.
+            Analisamos cada inscrição manualmente para garantir alinhamento de perfil, qualidade de atendimento e exclusividade regional e de nicho.
           </p>
 
           <div class="ap-steps-list">
@@ -1669,21 +1930,21 @@
               <div class="ap-step-num">1</div>
               <div class="ap-step-info">
                 <h3>Preencha a Ficha ao Lado</h3>
-                <p>Conte sobre sua agência, carteira de clientes e região de atuação.</p>
+                <p>Conte sobre a sua empresa, nicho atendido e o modelo de parceria desejado.</p>
               </div>
             </div>
             <div class="ap-step">
               <div class="ap-step-num">2</div>
               <div class="ap-step-info">
-                <h3>Entrevista Técnica de 20 Minutos</h3>
-                <p>Alinhamento de modelo de comissão, acesso ao portal do parceiro e demonstração ao vivo.</p>
+                <h3>Entrevista de Alinhamento de 20 Minutos</h3>
+                <p>Apresentação dos modelos de comissão, demonstração prática e liberação de materiais.</p>
               </div>
             </div>
             <div class="ap-step">
               <div class="ap-step-num">3</div>
               <div class="ap-step-info">
-                <h3>Início de Co-Selling</h3>
-                <p>Receba os materiais de vendas e agende as primeiras chamadas de fechamento com nosso time.</p>
+                <h3>Início das Indicações ou Vendas</h3>
+                <p>Receba seu link e credenciais no Portal do Parceiro e comece a gerar receita recorrente.</p>
               </div>
             </div>
           </div>
@@ -1697,7 +1958,18 @@
           </div>
 
           <form id="partnerForm" novalidate>
-            
+            <!-- Honeypot anti-spam field (hidden from real users) -->
+            <input type="text" id="hp_ref" name="hp_ref" style="display:none!important;" tabindex="-1" autocomplete="off">
+
+            <div class="form-group">
+              <label for="p-modelo">Modelo de Interesse *</label>
+              <select id="p-modelo" name="modelo" required>
+                <option value="franquia" selected>Modelo Franquia (30% recorrente - Venda ativa com apoio)</option>
+                <option value="indicacao">Modelo Indicação (10% recorrente - Apenas indicação de contatos)</option>
+                <option value="ambos">Quero avaliar ambos os modelos na entrevista</option>
+              </select>
+            </div>
+
             <div class="form-group">
               <label for="p-nome">Seu Nome Completo *</label>
               <input type="text" id="p-nome" name="nome" placeholder="Ex: Rodrigo Albuquerque" required autocomplete="name">
@@ -1723,10 +1995,10 @@
                 <label for="p-tipo">Tipo de Operação *</label>
                 <select id="p-tipo" name="tipo" required>
                   <option value="agencia_marketing">Agência de Marketing / Performance</option>
-                  <option value="consultoria_revops">Consultoria de Vendas / Operações</option>
+                  <option value="consultoria_vendas">Consultoria de Vendas / RevOps</option>
                   <option value="integrador_crm">Integrador de CRM / Automações</option>
-                  <option value="consultoria_empresarial">Consultoria Empresarial / BPO</option>
-                  <option value="outro">Outro Modelo B2B</option>
+                  <option value="bpo_financeiro_contabil">BPO Financeiro / Contabilidade</option>
+                  <option value="outro">Outro Modelo B2B / Empreendedor</option>
                 </select>
               </div>
             </div>
@@ -1739,6 +2011,7 @@
                   <option value="6_a_15" selected>6 a 15 clientes ativos</option>
                   <option value="16_a_40">16 a 40 clientes ativos</option>
                   <option value="mais_de_40">Mais de 40 clientes ativos</option>
+                  <option value="sem_carteira">Ainda não tenho carteira de clientes</option>
                 </select>
               </div>
               <div class="form-group">
@@ -1756,7 +2029,7 @@
 
             <div class="form-group">
               <label for="p-mensagem">Contexto Adicional (Opcional)</label>
-              <textarea id="p-mensagem" name="mensagem" rows="3" placeholder="Conte brevemente sobre os principais gargalos de atendimento dos seus clientes..."></textarea>
+              <textarea id="p-mensagem" name="mensagem" rows="3" placeholder="Conte brevemente sobre o perfil dos seus clientes e as maiores dores de atendimento que você observa..."></textarea>
             </div>
 
             <div id="pFormStatus" style="font-size:13.5px;margin-bottom:0.8rem;text-align:center;display:none;"></div>
@@ -1803,12 +2076,11 @@
           </ul>
         </div>
         <div>
-          <h6 class="mono">Projetos</h6>
-          <ul><li><a href="/projetos">Portfólio</a></li></ul>
-        </div>
-        <div>
-          <h6 class="mono">Clientes</h6>
-          <ul><li><a href="/clientes">Depoimentos</a></li></ul>
+          <h6 class="mono">Trabalho</h6>
+          <ul>
+            <li><a href="/projetos">Portfólio</a></li>
+            <li><a href="/clientes">Clientes e depoimentos</a></li>
+          </ul>
         </div>
         <div>
           <h6 class="mono">Contato</h6>
@@ -1816,7 +2088,12 @@
             <li><a href="/contato#diagnostico-form" class="diagnostico-cta">Diagnóstico</a></li>
             <li><a href="https://wa.me/5521967287595" id="whatsapp-site" target="_blank" rel="noopener">WhatsApp</a></li>
             <li><a href="mailto:contato@dryos.com.br">contato@dryos.com.br</a></li>
-            <li><a href="https://www.linkedin.com/company/dryos-studio" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="mono">Redes sociais</h6>
+          <ul>
+            <li><a href="https://www.linkedin.com/company/dryos-studio" target="_blank" rel="noopener noreferrer">LinkedIn DRYOS</a></li>
           </ul>
         </div>
       </div>
@@ -1851,14 +2128,30 @@
     });
   }
 
+  // Model Selection Buttons on Cards
+  document.querySelectorAll('.select-model-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const targetModel = this.getAttribute('data-model');
+      const selectEl = document.getElementById('p-modelo');
+      if (selectEl && targetModel) {
+        selectEl.value = targetModel;
+      }
+      const aplicacaoSec = document.getElementById('aplicacao');
+      if (aplicacaoSec) {
+        aplicacaoSec.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
   // Interactive MRR Calculator
   let currentClients = 10;
   let currentTicket = 5000;
+  let currentMode = 'franquia'; // 'franquia', 'indicacao', 'comparativo'
 
   function updateCalculator() {
     const revTotal = currentClients * currentTicket;
-    const revCommMonthly = Math.round(revTotal * 0.30);
-    const revCommAnnual = revCommMonthly * 12;
+    const commFranquia = Math.round(revTotal * 0.30);
+    const commIndicacao = Math.round(revTotal * 0.10);
 
     const labelCount = document.getElementById('clientCountLabel');
     if (labelCount) {
@@ -1870,16 +2163,63 @@
       labelTicket.textContent = `R$ ${currentTicket.toLocaleString('pt-BR')}`;
     }
 
+    const resSingle = document.getElementById('resSingleMode');
+    const resComparative = document.getElementById('resComparativeMode');
+    const labelMode = document.getElementById('resModeLabel');
     const elMonthly = document.getElementById('resMonthly');
-    if (elMonthly) {
-      elMonthly.innerHTML = `R$ <span>${revCommMonthly.toLocaleString('pt-BR')}</span>/mês`;
-    }
-
     const elAnnual = document.getElementById('resAnnual');
-    if (elAnnual) {
-      elAnnual.textContent = `R$ ${revCommAnnual.toLocaleString('pt-BR')}/ano`;
+    const elSubBenefit = document.getElementById('resSubBenefit');
+
+    if (currentMode === 'comparativo') {
+      if (resSingle) resSingle.style.display = 'none';
+      if (resComparative) resComparative.style.display = 'block';
+
+      const cmpFranqM = document.getElementById('cmpFranqMonthly');
+      const cmpFranqA = document.getElementById('cmpFranqAnnual');
+      const cmpIndM = document.getElementById('cmpIndMonthly');
+      const cmpIndA = document.getElementById('cmpIndAnnual');
+
+      if (cmpFranqM) cmpFranqM.textContent = `R$ ${commFranquia.toLocaleString('pt-BR')}/mês`;
+      if (cmpFranqA) cmpFranqA.textContent = `R$ ${(commFranquia * 12).toLocaleString('pt-BR')}/ano`;
+      if (cmpIndM) cmpIndM.textContent = `R$ ${commIndicacao.toLocaleString('pt-BR')}/mês`;
+      if (cmpIndA) cmpIndA.textContent = `R$ ${(commIndicacao * 12).toLocaleString('pt-BR')}/ano`;
+    } else {
+      if (resSingle) resSingle.style.display = 'block';
+      if (resComparative) resComparative.style.display = 'none';
+
+      const isFranq = currentMode === 'franquia';
+      const monthly = isFranq ? commFranquia : commIndicacao;
+      const annual = monthly * 12;
+
+      if (labelMode) {
+        labelMode.textContent = isFranq 
+          ? 'ESTIMATIVA DE COMISSÃO · MODELO FRANQUIA (30% DO MRR)'
+          : 'ESTIMATIVA DE COMISSÃO · MODELO INDICAÇÃO (10% DO MRR)';
+      }
+      if (elMonthly) {
+        elMonthly.innerHTML = `R$ <span>${monthly.toLocaleString('pt-BR')}</span>/mês`;
+      }
+      if (elAnnual) {
+        elAnnual.textContent = `R$ ${annual.toLocaleString('pt-BR')}/ano`;
+      }
+      if (elSubBenefit) {
+        elSubBenefit.textContent = isFranq
+          ? 'R$ 0,00 (100% por conta da DRYOS)'
+          : 'Zero (DRYOS conduz toda a venda e demo)';
+      }
     }
   }
+
+  // Calculator Mode Toggle Buttons
+  const modeBtns = document.querySelectorAll('.mode-btn');
+  modeBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      modeBtns.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      currentMode = this.getAttribute('data-target') || 'franquia';
+      updateCalculator();
+    });
+  });
 
   const slider = document.getElementById('clientSlider');
   if (slider) {
@@ -1899,12 +2239,24 @@
 
   updateCalculator();
 
-  // Partner Form Submission
+  // Partner Form Submission (Connected to /api/lead & RD Station)
   const partnerForm = document.getElementById('partnerForm');
   if (partnerForm) {
     partnerForm.addEventListener('submit', function (e) {
       e.preventDefault();
 
+      const hpRef = document.getElementById('hp_ref');
+      if (hpRef && hpRef.value) {
+        // Honeypot caught bot: silently pretend success
+        const statusEl = document.getElementById('pFormStatus');
+        if (statusEl) {
+          statusEl.style.display = 'block';
+          statusEl.textContent = 'Inscrição registrada!';
+        }
+        return;
+      }
+
+      const elModelo = document.getElementById('p-modelo');
       const elNome = document.getElementById('p-nome');
       const elEmail = document.getElementById('p-email');
       const elTel = document.getElementById('p-whatsapp');
@@ -1917,10 +2269,11 @@
       const submitBtn = document.getElementById('pBtnSubmit');
 
       // Clear existing invalid states
-      [elNome, elEmail, elTel, elEmpresa, elTipo, elClientes, elNicho].forEach(el => {
-        el.removeAttribute('aria-invalid');
+      [elModelo, elNome, elEmail, elTel, elEmpresa, elTipo, elClientes, elNicho].forEach(el => {
+        if (el) el.removeAttribute('aria-invalid');
       });
 
+      const modelo = elModelo ? elModelo.value : 'franquia';
       const nome = elNome.value.trim();
       const email = elEmail.value.trim();
       const rawTel = elTel.value.trim();
@@ -1966,21 +2319,37 @@
       submitBtn.disabled = true;
       statusEl.style.display = 'block';
       statusEl.style.color = '#34D399';
-      statusEl.textContent = 'Registrando credenciamento…';
+      statusEl.textContent = 'Registrando inscrição e direcionando ao canal oficial...';
 
+      // Build payload for /api/lead (dispatches to RD Station and DRYOS Core)
+      // Note: we pass 'empresa' (not 'company', which is reserved for bot honeypots in api/lead.js)
       const payload = {
         name: nome,
         email: email,
         phone: telDigits,
-        company: empresa,
+        empresa: empresa,
+        modelo: modelo,
+        tipo: tipo,
+        clientes: clientes,
+        nicho: nicho,
+        mensagem: mensagem,
         source: 'site-parceiros',
-        spark: `Tipo: ${tipo} | Clientes: ${clientes} | Nicho: ${nicho} | Mensagem: ${mensagem}`
+        spark: `Modelo: ${modelo} | Tipo: ${tipo} | Clientes: ${clientes} | Nicho: ${nicho} | Mensagem: ${mensagem}`
       };
 
+      // Collect URL tracking params if present
+      const urlParams = new URLSearchParams(window.location.search);
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(function(k) {
+        const val = urlParams.get(k);
+        if (val) payload[k] = val;
+      });
+
+      const modeloTexto = modelo === 'franquia' ? 'Franquia (30% recorrente)' : (modelo === 'indicacao' ? 'Indicação (10% recorrente)' : 'Avaliar ambos os modelos');
       const textMsg = encodeURIComponent(
-        `Olá! Acabei de enviar minha candidatura para o Programa de Parceiros DRYOS.\n\n` +
+        `Olá! Acabei de enviar minha candidatura para o Programa de Expansão DRYOS.\n\n` +
         `*Nome:* ${nome}\n` +
         `*Empresa:* ${empresa}\n` +
+        `*Modelo de Interesse:* ${modeloTexto}\n` +
         `*Operação:* ${tipo}\n` +
         `*Carteira Atual:* ${clientes}\n` +
         `*Principal Nicho:* ${nicho}`
@@ -1996,10 +2365,10 @@
           if (!res.ok) throw new Error('lead-failed');
           try {
             if (typeof window.dryosTrackGenerateLead === 'function') {
-              window.dryosTrackGenerateLead('parceiros', { tipo: tipo, clientes: clientes });
+              window.dryosTrackGenerateLead('parceiros', { modelo: modelo, tipo: tipo, clientes: clientes });
             }
           } catch (trackErr) { /* GTM */ }
-          statusEl.textContent = 'Registrando credenciamento e direcionando ao canal oficial...';
+          statusEl.textContent = 'Inscrição registrada no RD Station! Abrindo atendimento WhatsApp...';
           setTimeout(function () {
             window.location.href = waUrl;
           }, 900);
@@ -2007,7 +2376,7 @@
         .catch(function () {
           submitBtn.disabled = false;
           statusEl.style.color = '#F87171';
-          statusEl.textContent = 'Não foi possível registrar agora. Tente novamente ou fale conosco pelo WhatsApp.';
+          statusEl.textContent = 'Não foi possível registrar agora. Tente novamente ou fale conosco diretamente pelo WhatsApp.';
         });
     });
   }
